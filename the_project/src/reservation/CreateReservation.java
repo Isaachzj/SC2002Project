@@ -81,7 +81,7 @@ public class CreateReservation {
 		
 		//Create Reservation Object
 		Reservation reservation = new Reservation(room, checkInDate, checkInTime, checkOutDate, checkOutTime, numOfWeekday, numOfWeekend, numOfGuest);
-		//Add Reservaton Object
+		//Add guest to reservation guest list
 		reservation.addGuest();
 		
 		//passes Reservation object to the room

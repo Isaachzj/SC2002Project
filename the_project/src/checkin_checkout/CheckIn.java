@@ -30,9 +30,16 @@ public class CheckIn {
 			return;
 		}
 		
-		//Creating the Reservation
+		//Creating the Reservation object
 		Reservation reservation = CreateReservation.createReservation(room);
+		
+		//Add Reservation object to Hotel
 		hotel.addReservation(reservation);
+		
+		//Update Guest List of Hotel
+		for (int i=0; i<reservation.getArray().size(); i++) {
+			hotel.addGuests(reservation);
+		}
 		
 	}
 }

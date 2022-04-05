@@ -1,6 +1,7 @@
 package hotel;
 
 import guest.*;
+import reservation.*;
 import list_methods.*;
 
 public class GuestListManipulator implements AddGivenObject, RemoveGivenObject{
@@ -10,25 +11,33 @@ public class GuestListManipulator implements AddGivenObject, RemoveGivenObject{
 		this.hotel = hotel;
 	}
 	
-	public void addList(Object daGuest) throws ArrayException{
-		Guest guest;
+	public void addList(Object daReservation) throws ArrayException{
+		Reservation reservation;
 		
-		if (daGuest==null) {throw new ArrayException("Error!!");}
-		else if (!(daGuest instanceof Guest)) { throw new ArrayException("Error!!");}
-		else {guest = (Guest) daGuest;} 
+		if (daReservation==null) {throw new ArrayException("Error!!");}
+		else if (!(daReservation instanceof Reservation)) { throw new ArrayException("Error!!");}
+		else {reservation = (Reservation) daReservation;} 
 		
-		hotel.getGuestList().add(guest);
+		//Traversing array of guest in reservation and adding them to Hotel Guest List
+		for (int i=0; i<reservation.getArray().size(); i++) {
+			Guest guest = reservation.getArray().get(i);
+			hotel.getGuestList().add(guest);	
+		}
 	}
 	
 	//Checkout function will pass all guest object stored in reservation to this to remove
-	public void removeList(Object daGuest) throws ArrayException{
-		Guest guest;
+	public void removeList(Object daReservation) throws ArrayException{
+		Reservation reservation;
 		
-		if (daGuest==null) {throw new ArrayException("Error!!");}
-		else if (!(daGuest instanceof Guest)) { throw new ArrayException("Error!!");}
-		else {guest = (Guest) daGuest;} 
+		if (daReservation==null) {throw new ArrayException("Error!!");}
+		else if (!(daReservation instanceof Reservation)) { throw new ArrayException("Error!!");}
+		else {reservation = (Reservation) daReservation;} 
 		
-		hotel.getGuestList().remove(guest);
+		//Traversing array of guest in reservation and adding them to Hotel Guest List
+		for (int i=0; i<reservation.getArray().size(); i++) {
+			Guest guest = reservation.getArray().get(i);
+			hotel.getGuestList().add(guest);	
+		}
 	}
 	
 }
