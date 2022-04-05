@@ -10,4 +10,6 @@ import java.util.*;
 public class CheckIn {
 	public static void checkIn() throws ArrayException{
 		
+	}
+		
 }
