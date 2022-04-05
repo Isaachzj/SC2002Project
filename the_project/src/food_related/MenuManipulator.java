@@ -137,15 +137,15 @@ public class MenuManipulator implements AddNew,RemoveStandard,Set, Get {
 	}//end set method
 
 //============================================================================================================================================
-	public Food getEntry() throws ArrayException { //For Room Service
+	public Food getEntry(){ //For Room Service
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the item number:");
 		int food_num = sc.nextInt();
 		sc.nextLine();
 		
-		if (food_num<=0 || food_num>menu.getArray().size()) 
-			throw new ArrayException("Invalid option!!");
+		while (food_num<=0 || food_num>menu.getArray().size()) 
+			{food_num = sc.nextInt(); sc.nextLine();}
 	
 		Food food = menu.getArray().get(food_num-1);
 		return food;

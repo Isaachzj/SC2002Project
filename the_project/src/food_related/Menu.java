@@ -40,7 +40,7 @@ public class Menu{
 		mm.set();
 	}
 	
-	public Food getFood() throws ArrayException {
+	public Food getFood() {
 		MenuManipulator mm = new MenuManipulator(this);
 		return mm.getEntry();
 	}	
