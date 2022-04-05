@@ -21,6 +21,6 @@ public class CheckIn {
 		TypeOfRoom roomType = TypeOfRoom.values()[choice-1];
 		
 		//Getting available room
-		hotel.
+		hotel.getRoom(roomType);
 	}
 }

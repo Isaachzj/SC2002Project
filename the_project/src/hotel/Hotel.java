@@ -85,6 +85,6 @@ public class Hotel {
 		}//end for
 		
 		//if no rooms are vacant
-		System.out.print
+		return null;
 	}
 }
