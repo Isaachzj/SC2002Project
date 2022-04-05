@@ -1,15 +1,17 @@
-package checkin_checkout;
+package hotel_app;
 
+import java.util.Scanner;
+
+import Room.Room;
 import enumeration.TypeOfRoom;
-import hotel.*;
-import reservation.*;
-import Room.*;
-import list_methods.*;
-import java.util.*;
+import hotel.Hotel;
+import reservation.CreateReservation;
+import reservation.Reservation;
+import list
 
-public class CheckIn {
-	public static void checkIn(Hotel hotel) throws ArrayException{
-		Scanner sc = new Scanner(System.in);
+public class MakeReservation {
+	public static void makeReservation(Hotel hotel) throws ArrayException{
+Scanner sc = new Scanner(System.in);
 		
 		//Ask for room type (Not hardcoded!)
 		System.out.println("Choose Room Type (Select Number):");
@@ -40,6 +42,5 @@ public class CheckIn {
 		hotel.addGuests(reservation);
 		
 		System.out.println("Reserved Room Successfully!!");
-		
 	}
 }
