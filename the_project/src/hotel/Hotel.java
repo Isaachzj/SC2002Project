@@ -1,6 +1,7 @@
 package hotel;
 
 import Room.*;
+import enumeration.AvailStatus;
 import guest.*;
 import reservation.*;
 import list_methods.*;
@@ -75,8 +76,11 @@ public class Hotel {
 	}
 	
 	//Room Related
-	public void getRoom(TypeOfRoom roomType) {
+	public Room getRoom(TypeOfRoom roomType) {
 		for (int i=0; i<this.roomList.size(); i++)
-			if (roomList.get(i))
+			Room room = roomList.get(i);
+			if (room.getRoomType() == TypeOfRoom.roommroom.getAvail() == AvailStatus.VACANT) {
+				return 
+			}
 	}
 }
