@@ -7,11 +7,11 @@ import enumeration.TypeOfRoom;
 import hotel.Hotel;
 import reservation.CreateReservation;
 import reservation.Reservation;
-import list
+import list_methods.*;
 
 public class MakeReservation {
 	public static void makeReservation(Hotel hotel) throws ArrayException{
-Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);
 		
 		//Ask for room type (Not hardcoded!)
 		System.out.println("Choose Room Type (Select Number):");
