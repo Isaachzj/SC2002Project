@@ -32,7 +32,7 @@ public class MakeReservation {
 			return;
 		}
 		
-		//Creating the Reservation object
+		//Creating the Reservation object. RANDOMCOMENTKENKJFS
 		Reservation reservation = CreateReservation.createReservation(room);
 		
 		//Add Reservation object to Hotel
