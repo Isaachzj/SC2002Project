@@ -4,6 +4,7 @@ import Room.*;
 import guest.*;
 import reservation.*;
 import list_methods.*;
+import enumeration.*;
 import java.util.ArrayList;
 
 public class Hotel {
@@ -72,5 +73,18 @@ public class Hotel {
 	public void removeReservation(Reservation reservation) throws ArrayException {
 		ReservationListManipulator rlm = new ReservationListManipulator(this);
 		rlm.removeList(reservation);
+	}
+	
+	//Room Related
+	public Room getRoom(TypeOfRoom roomType) {
+		for (int i=0; i<this.roomList.size(); i++) {
+			Room room = roomList.get(i);
+			if (room.getRoomType() == roomType && room.getAvail() == AvailStatus.VACANT) {
+				return room;
+			}//end if
+		}//end for
+		
+		//if no rooms are vacant
+		return null;
 	}
 }
