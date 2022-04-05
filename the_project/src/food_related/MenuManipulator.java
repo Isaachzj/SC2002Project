@@ -3,7 +3,7 @@ import list_methods.*;
 import java.util.Scanner;
 
 
-public class MenuManipulator implements AddNew,Remove,Set, Get {
+public class MenuManipulator implements AddNew,RemoveStandard,Set, Get {
 	private Menu menu; 
 	
 	//Constructor (For SRP)

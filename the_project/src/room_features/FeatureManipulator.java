@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import list_methods.*;
 
-public class FeatureManipulator implements AddNew,Remove,Set {
+public class FeatureManipulator implements AddNew,RemoveStandard,Set {
 	private RoomFeatures rf;
 	
 	public FeatureManipulator(RoomFeatures rf) {

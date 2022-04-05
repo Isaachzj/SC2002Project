@@ -1,5 +1,5 @@
 package list_methods;
 
-public class RemoveGivenObject {
-
+public interface RemoveGivenObject {
+	public void removeList(Object object) throws ArrayException;
 }
