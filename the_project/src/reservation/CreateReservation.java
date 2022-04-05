@@ -39,7 +39,7 @@ public class CreateReservation {
 		}
 		System.out.println("Enter Day:");
 		int checkInDay = sc.nextInt(); sc.nextLine();
-		while (checkInDay<=0 || checkInMonth>31) {
+		while (checkInDay<=0 || checkInDay>31) {
 			System.out.println("Enter a valid day!");
 			checkInMonth = sc.nextInt(); sc.nextLine();
 		}		
@@ -48,7 +48,7 @@ public class CreateReservation {
 		System.out.println("Enter Check In Time in 24 hours format:");
 		int checkInTime = sc.nextInt(); sc.nextLine();
 		//IMPLEMENT ERROR CHECKING HERE
-		while (checkInTime<=0 || checkInMonth>2359) {
+		while (checkInTime<=0 || checkInTime>2359) {
 			System.out.println("Enter a valid day!");
 			checkInTime = sc.nextInt(); sc.nextLine();
 		}
@@ -68,7 +68,7 @@ public class CreateReservation {
 		}
 		System.out.println("Enter Day:");
 		int checkOutDay = sc.nextInt();		
-		while (checkInDay<=0 || checkInMonth>31) {
+		while (checkInDay<=0 || checkInDay>31) {
 			System.out.println("Enter a valid day!");
 			checkInMonth = sc.nextInt(); sc.nextLine();
 		}		
@@ -76,6 +76,10 @@ public class CreateReservation {
 		System.out.println("Enter Check In Time in 24 hours format:");
 		int checkOutTime = sc.nextInt(); sc.nextLine();
 		//IMPLEMENT ERROR CHECKING HERE
+		while (checkOutTime<=0 || checkOutTime>2359) {
+			System.out.println("Enter a valid day!");
+			checkInTime = sc.nextInt(); sc.nextLine();
+		}
 		long numOfWeekday = LengthOfStay.calcWeekDays(LocalDate.of(checkInYear, checkInMonth, checkInDay), LocalDate.of(checkOutYear, checkOutMonth, checkOutDay));
 		long numOfWeekend = LengthOfStay.calcWeekDays(LocalDate.of(checkInYear, checkInMonth, checkInDay), LocalDate.of(checkOutYear, checkOutMonth, checkOutDay));
 		
