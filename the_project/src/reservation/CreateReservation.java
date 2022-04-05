@@ -16,7 +16,7 @@ public class CreateReservation {
 		System.out.println("Enter number of guests:");
 		int numOfGuest = sc.nextInt();
 		int maxOccupancy = room.getMaxOccupancy();
-		while (numOfGuest<0) {
+		while (numOfGuest<=0) {
 			System.out.println("Enter a valid number!");
 			numOfGuest = sc.nextInt(); sc.nextLine();
 		}
