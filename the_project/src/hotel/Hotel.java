@@ -1,10 +1,10 @@
 package hotel;
 
 import Room.*;
-import enumeration.AvailStatus;
 import guest.*;
 import reservation.*;
 import list_methods.*;
+import enumeration.*;
 import java.util.ArrayList;
 
 public class Hotel {
@@ -77,10 +77,14 @@ public class Hotel {
 	
 	//Room Related
 	public Room getRoom(TypeOfRoom roomType) {
-		for (int i=0; i<this.roomList.size(); i++)
+		for (int i=0; i<this.roomList.size(); i++) {
 			Room room = roomList.get(i);
-			if (room.getRoomType() == TypeOfRoom.roommroom.getAvail() == AvailStatus.VACANT) {
-				return 
-			}
+			if (room.getRoomType() == roomType && room.getAvail() == AvailStatus.VACANT) {
+				return room;
+			}//end if
+		}//end for
+		
+		//if no rooms are vacant
+		System.out.print
 	}
 }
