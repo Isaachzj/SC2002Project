@@ -73,4 +73,10 @@ public class Hotel {
 		ReservationListManipulator rlm = new ReservationListManipulator(this);
 		rlm.removeList(reservation);
 	}
+	
+	//Room Related
+	public void getRoom(TypeOfRoom roomType) {
+		for (int i=0; i<this.roomList.size(); i++)
+			if (roomList.get(i))
+	}
 }
