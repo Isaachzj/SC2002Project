@@ -2,10 +2,13 @@ package checkin_checkout;
 
 import enumeration.TypeOfRoom;
 import hotel.*;
+import reservation.*;
+import Room.*;
+import list_methods.*;
 import java.util.*;
 
 public class CheckIn {
-	public static void checkIn(Hotel hotel) {
+	public static void checkIn(Hotel hotel) throws ArrayException{
 		Scanner sc = new Scanner(System.in);
 		
 		//Ask for room type (Not hardcoded!)
@@ -21,6 +24,15 @@ public class CheckIn {
 		TypeOfRoom roomType = TypeOfRoom.values()[choice-1];
 		
 		//Getting available room
-		hotel.getRoom(roomType);
+		Room room = hotel.getRoom(roomType);
+		if (room==null) {
+			System.out.println("All %s rooms are not available. Say sorry to the customer:)");
+			return;
+		}
+		
+		//Creating the Reservation
+		Reservation reservation = CreateReservation.createReservation(room);
+		hotel.addReservation(reservation);
+		
 	}
 }
