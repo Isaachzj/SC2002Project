@@ -2,12 +2,14 @@ package hotel;
 
 import Room.*;
 import guest.*;
+import reservation.*;
+import list_methods.*;
 import java.util.ArrayList;
 
 public class Hotel {
 
 	private ArrayList<Room> roomList;
-	//private ArrayList<Reservation> reservationList;
+	private ArrayList<Reservation> reservationList;
 	private ArrayList<Guest> guestList;
 	
 	public Hotel() {
@@ -42,17 +44,33 @@ public class Hotel {
 //==============================Guest==============================
 		this.guestList = new ArrayList<Guest>();
 //==============================Reservation==============================
-		//this.reservationList = new ArrayList<Reservation>();
+		this.reservationList = new ArrayList<Reservation>();
 	}
 	
 	//get methods
+	protected ArrayList<Room> getRoomList() {return this.roomList;}	
 	protected ArrayList<Guest> getGuestList() {return this.guestList;}
+	protected ArrayList<Reservation> getReservationList() {return this.reservationList;}
 	
-	/*
-	public ArrayList<Room> getSingleArray() {return this.SingleList;}
-	public ArrayList<Room> getDoubleArray() {return this.DoubleList;}
-	public ArrayList<Room> getDeluxeArray() {return this.DeluxeList;}
-	public ArrayList<Room> getVIPArray() {return this.VIPlist;}
-	 */
-	public ArrayList<Room> getRoomList() {return this.roomList;}
+	//Guest Related
+	public void addGuests(Reservation reservation) throws ArrayException {
+		GuestListManipulator glm = new GuestListManipulator(this);
+		glm.addList(reservation);
+	}
+	
+	public void removeGuests(Reservation reservation) throws ArrayException {
+		GuestListManipulator glm = new GuestListManipulator(this);
+		glm.removeList(reservation);
+	}
+	
+	//Reservation Related
+	public void addReservation(Reservation reservation) throws ArrayException {
+		ReservationListManipulator rlm = new ReservationListManipulator(this);
+		rlm.addList(reservation);
+	}
+	
+	public void removeReservation(Reservation reservation) throws ArrayException {
+		ReservationListManipulator rlm = new ReservationListManipulator(this);
+		rlm.removeList(reservation);
+	}
 }

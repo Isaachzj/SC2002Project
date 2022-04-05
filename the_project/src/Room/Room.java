@@ -1,6 +1,5 @@
 package Room;
 
-import java.util.ArrayList;
 import enumeration.AvailStatus;
 import enumeration.TypeOfRoom;
 import food_related.*;

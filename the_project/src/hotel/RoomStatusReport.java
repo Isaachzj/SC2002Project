@@ -41,7 +41,7 @@ private Hotel hotel;
 			
 			//Appending room number to correct string in Array
 			if (array[enum_index].compareTo("\tRoom Number: ")==0) { //if you are adding the first room number
-				array[enum_index] = array[enum_index] + rn;
+				array[enum_index] = array[enum_index] + rn; //string concatenation
 				count[enum_index]++;
 			}
 			else if (count[enum_index]%6==0) { //add newline every 6 rooms 

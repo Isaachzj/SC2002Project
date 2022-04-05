@@ -1,9 +1,11 @@
 package guest;
+
+import reservation.*;
 import enumeration.TypeOfGender;
 import java.util.*;
 
 public class CreateGuest {
-	public static Guest createReserver() {
+	public static Guest createReserver(Reservation reservationDetails) {
 		Scanner sc = new Scanner(System.in);
 		
 		// Creating Identity Object
@@ -26,7 +28,7 @@ public class CreateGuest {
 		System.out.print("Enter your Nationality: ");
 		String nationality = sc.nextLine();
 		
-		Guest guest = new Guest(name, nationality, gender, id, CCinfo, CDetails);
+		Guest guest = new Guest(name, nationality, gender, id, CCinfo, CDetails, reservationDetails);
 		System.out.println();
 		return guest;
 		//PrintGuestInfo PGI = new PrintGuestInfo();
@@ -37,7 +39,7 @@ public class CreateGuest {
 		
 		// return guest;
 	}
-	public static Guest createGuest() {
+	public static Guest createGuest(Reservation reservationDetails) {
 		Scanner sc = new Scanner(System.in);
 		// Creating Identity Object
 		Identity id = CreateIdentity.createIdentity();
@@ -55,7 +57,7 @@ public class CreateGuest {
 		System.out.print("Enter your Nationality: ");
 		String nationality = sc.nextLine();		
 		
-		Guest guest = new Guest(name, nationality, gender, id, null, CDetails);
+		Guest guest = new Guest(name, nationality, gender, id, null, CDetails, reservationDetails);
 		System.out.println();
 		return guest;
 		

@@ -59,4 +59,8 @@ public class Reservation {
 		this.numOfGuest = numOfGuest;
 	}
 	
+	public void addGuest() {
+		ReservationGuestListManipulator rglm = new ReservationGuestListManipulator(this);
+		rglm.addList();
+	}
 }
