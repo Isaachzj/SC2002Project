@@ -2,11 +2,11 @@ package hotel_app;
 
 import java.util.Scanner;
 
-import Room.Room;
 import enumeration.TypeOfRoom;
 import hotel.Hotel;
 import reservation.CreateReservation;
 import reservation.Reservation;
+import room.Room;
 import list_methods.*;
 
 public class MakeReservation {

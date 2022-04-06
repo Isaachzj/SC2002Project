@@ -1,6 +1,6 @@
 package reservation;
-import Room.*;
 import guest.*;
+import room.*;
 
 import java.util.ArrayList;
 import java.util.Scanner;

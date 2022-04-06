@@ -1,4 +1,4 @@
-package Room;
+package room;
 
 import enumeration.AvailStatus;
 import enumeration.TypeOfBed;
@@ -9,32 +9,32 @@ import food_related.Menu;
 import room_features.RoomFeatures;
 import room_rate.RoomRate;
 
-public class DoubleRoom extends Room{
-	public DoubleRoom(int floor, int num) {
+public class DeluxeRoom extends Room{
+	public DeluxeRoom(int floor, int num) {
 		super();		
 		//Single Room Food
-		String food1 = "Chicken Rice";
-		double price1 = 5.00;
-		String des1 = "Best Chicken Rice you've ever had!";
+		String food1 = "Abalone Noodle";
+		double price1 = 18.00;
+		String des1 = "Freshly caught from the Ocean!";
 		
-		String food2 = "Braised Duck Rice";
-		double price2 = 7.00;
-		String des2 = "Best Duck Rice you've ever had!";
+		String food2 = "Olive Fried Rice";
+		double price2 = 15.00;
+		String des2 = "Number 1 in Singapore!";
 		
-		String food3 = "Roasted Duck Rice";
-		double price3 = 8.00;
-		String des3 = "Duck is irish!";
+		String food3 = "Ribeye Steak";
+		double price3 = 28.00;
+		String des3 = "Free-range beef!";
 		
-		String food4 = "Curry Chicken Rice";
-		double price4 = 8.00;
-		String des4 = "Definitely better than New York Time's version!";
+		String food4 = "Pasta";
+		double price4 = 15.00;
+		String des4 = "Pastamania!";
 		
-		String food5 = "Hor Fun";
-		double price5 = 8.00;
-		String des5 = "Soooo Fun!";
+		String food5 = "Salmon Don";
+		double price5 = 20.00;
+		String des5 = "Not from Don Don Donki!";
 		
 		// Instantiating necessary objects
-		RoomFeatures ff = new RoomFeatures(TypeOfBed.SINGLE , ViewType.STANDARD, 1, true, false);
+		RoomFeatures ff = new RoomFeatures(TypeOfBed.QUEEN , ViewType.CITY, 1, true, false);
 		RoomRate rr = new RoomRate(50, 80, 0);
 
 		
@@ -47,10 +47,10 @@ public class DoubleRoom extends Room{
 		Menu mm = new Menu(f1, f2, f3, f4, f5);
 		
 		//Overriding attributes of super()
-		this.roomType = TypeOfRoom.DOUBLE;
+		this.roomType = TypeOfRoom.DELUXE;
 		this.roomFloor = floor;
 		this.roomNumber = num;
-		this.maxOccupancy = 2;
+		this.maxOccupancy = 3;
 		this.availability = AvailStatus.VACANT;
 		this.feature = ff;
 		this.rate = rr;

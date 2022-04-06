@@ -1,4 +1,4 @@
-package Room;
+package room;
 
 import enumeration.AvailStatus;
 import enumeration.TypeOfRoom;

@@ -1,4 +1,4 @@
-package Room;
+package room;
 import list_methods.*;
 
 public class DisplayRoom {

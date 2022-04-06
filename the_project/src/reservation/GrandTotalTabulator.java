@@ -1,7 +1,7 @@
 package reservation;
 
+import room.*;
 import room_rate.*;
-import Room.*;
 
 public class GrandTotalTabulator {
 	public double grandTotal(Reservation reservation) {

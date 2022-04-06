@@ -3,10 +3,11 @@ package reservation;
 import java.util.Scanner;
 import java.time.LocalDateTime;
 import java.time.LocalDate;
-import Room.*;
+
 import hotel.*;
 import guest.*;
 import list_methods.ArrayException;
+import room.*;
 import enumeration.AvailStatus;
 
 public class CreateReservation {

@@ -1,7 +1,8 @@
 package hotel;
 
 import enumeration.*;
-import Room.*;
+import room.*;
+
 import java.util.*;
 
 public class RoomStatusReport {

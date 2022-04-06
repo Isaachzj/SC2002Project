@@ -1,4 +1,4 @@
-package Room;
+package room;
 
 import enumeration.AvailStatus;
 import enumeration.TypeOfBed;
@@ -9,8 +9,8 @@ import food_related.Menu;
 import room_features.RoomFeatures;
 import room_rate.RoomRate;
 
-public class SingleRoom extends Room{
-	public SingleRoom(int floor, int num) {
+public class DoubleRoom extends Room{
+	public DoubleRoom(int floor, int num) {
 		super();		
 		//Single Room Food
 		String food1 = "Chicken Rice";
@@ -45,13 +45,12 @@ public class SingleRoom extends Room{
 		Food f5 = new Food(food5, price5, des5);
 
 		Menu mm = new Menu(f1, f2, f3, f4, f5);
-	
 		
 		//Overriding attributes of super()
-		this.roomType = TypeOfRoom.SINGLE;
+		this.roomType = TypeOfRoom.DOUBLE;
 		this.roomFloor = floor;
 		this.roomNumber = num;
-		this.maxOccupancy = 1;
+		this.maxOccupancy = 2;
 		this.availability = AvailStatus.VACANT;
 		this.feature = ff;
 		this.rate = rr;

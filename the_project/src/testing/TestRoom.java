@@ -7,8 +7,8 @@ import enumeration.ViewType;
 import food_related.*;
 import room_features.*;
 import room_rate.*;
-import Room.*;
 import list_methods.*;
+import room.*;
 
 public class TestRoom {
 	public static void main(String[] args) {

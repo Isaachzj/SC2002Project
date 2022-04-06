@@ -1,4 +1,4 @@
-package Room;
+package room;
 
 import enumeration.*;
 import food_related.*;

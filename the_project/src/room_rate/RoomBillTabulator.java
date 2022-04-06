@@ -1,6 +1,6 @@
 package room_rate;
 
-import Room.*;
+import room.*;
 
 public class RoomBillTabulator {
 	public static double calculateRoomBill(Room room, long numOfWeekdays, long numOfWeekends) {
