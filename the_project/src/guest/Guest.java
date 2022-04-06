@@ -24,7 +24,7 @@ public class Guest {
 	}	
 	
 	// get methods
-	protected String getname() {return this.name;}
+	public String getname() {return this.name;}
 	protected String getnationality() {return this.nationality;}
 	protected TypeOfGender getGender() {return this.gender;}
 	protected Identity getIdentity() {return this.identity;}

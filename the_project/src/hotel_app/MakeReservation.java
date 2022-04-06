@@ -32,14 +32,11 @@ public class MakeReservation {
 			return;
 		}
 		
-		//Creating the Reservation object. RANDOMCOMENTKENKJFS
+		//Creating the Reservation object.
 		Reservation reservation = CreateReservation.createReservation(room);
 		
 		//Add Reservation object to Hotel
 		hotel.addReservation(reservation);
-		
-		//Update Guest List of Hotel
-		hotel.addGuests(reservation);
 		
 		System.out.println("Reserved Room Successfully!!");
 	}

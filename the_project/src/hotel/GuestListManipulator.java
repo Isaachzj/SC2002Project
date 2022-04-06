@@ -3,8 +3,9 @@ package hotel;
 import guest.*;
 import reservation.*;
 import list_methods.*;
+import java.util.*;
 
-public class GuestListManipulator implements AddGivenObject, RemoveGivenObject{
+public class GuestListManipulator implements AddGivenObject, RemoveGivenObject {
 	private Hotel hotel;
 	
 	public GuestListManipulator(Hotel hotel) {
@@ -39,5 +40,22 @@ public class GuestListManipulator implements AddGivenObject, RemoveGivenObject{
 			hotel.getGuestList().add(guest);	
 		}
 	}
+
+	/* TO BE DELETED
+	//Asks for guest name and ID and retrieves the correct Guest object
+	public Guest getEntry() {
+		Guest guest;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the Guest name:");
+		String guestName = sc.nextLine();
+		
+		//Compare with guest
+		for (int i=0; i<hotel.getGuestList().size(); i++) {
+			Guest curGuest = hotel.getGuestList().get(i);
+			
+		}
+		
+		return guest;
+	}*/
 	
 }
