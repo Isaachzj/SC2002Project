@@ -11,8 +11,8 @@ public class Reservation {
 	protected Room room;
 	
 
-	protected LocalDateTime checkInDateTime;
-	protected LocalDateTime checkOutDateTime;
+	protected LocalDateTime checkInDateTime; //@YanKai note the changes
+	protected LocalDateTime checkOutDateTime; //@YanKai note the changes
 	protected long numOfWeekday;
 	protected long numOfWeekend;
 	protected int numOfGuest;
@@ -26,34 +26,28 @@ public class Reservation {
 	public ArrayList<Guest> getArray() {return this.guestList;}
 	public int getNumOfGuest() {return this.numOfGuest;}
 
-	public void setCheckInDateTime(int checkInTime) {this.checkInTime = checkInTime;}
-	public void setCheckOutTime(int checkOutTime) {this.checkOutTime = checkOutTime;}
+	public void setCheckInDateTime(LocalDateTime checkInDateTime) {this.checkInDateTime = checkInDateTime;} //@YanKai note the changes
+	public void setCheckOutDateTime(LocalDateTime checkOutDateTime) {this.checkOutDateTime = checkOutDateTime;} //@YanKai note the changes
 	public void setNumOfWeekday(long numOfWeekday) {this.numOfWeekday = numOfWeekday;}
 	public void setNumOfWeekend(long numOfWeekend) {this.numOfWeekend = numOfWeekend;}
 	
 	public Guest getGuest() {return this.guestList.get(0);}
 	
-	public Reservation(Room room) {
+	public Reservation(Room room) { 
 		this.room = room;
-		this.checkInDate = null;
-		this.checkInTime = 0000;
-		this.checkOutDate = null;
-		this.checkOutTime = 0000;
 		this.numOfWeekday = 0;
 		this.numOfWeekend = 0;
 		this.numOfGuest = 0;
 		this.guestList = new ArrayList<Guest>();
 	}
 	
-	public Reservation(Room room, LocalDate checkInDate, int checkInTime, LocalDate checkOutDate, int checkOutTime, long numOfWeekday, long numOfWeekend, int numOfGuest) {
+	public Reservation(Room room, LocalDateTime checkInDateTime, LocalDateTime checkOutDateTime, long numOfWeekday, long numOfWeekend, int numOfGuest) {
 		this.room = room;
-		this.checkInDate = checkInDate;
-		this.checkInTime = checkInTime;
-		this.checkOutDate = checkOutDate;
-		this.checkOutTime = checkOutTime;
 		this.numOfWeekday = numOfWeekday;
 		this.numOfWeekend = numOfWeekend;
 		this.numOfGuest = numOfGuest;
+		this.checkInDateTime = checkInDateTime;//@YanKai note the changes
+		this.checkOutDateTime = checkOutDateTime;//@YanKai note the changes
 	}
 	
 	public void addGuest() {
