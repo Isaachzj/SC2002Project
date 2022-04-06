@@ -6,14 +6,21 @@ import reservation.*;
 import Room.*;
 import list_methods.*;
 import java.util.*;
+import java.time.LocalDateTime;
 
 public class CheckIn {
 	public static void checkIn(Hotel hotel) throws ArrayException{
 		
-		//Ask for guest name to find reservation object
+		//Obtain Reservation object
+		Reservation reservation = hotel.getReservation();
+		if (reservation==null) {
+			System.out.println("Reservation not found! Ask if the customer wants to make a reservation!");
+			return;
+		}
 		
+		LocalDateTime curDateTime = LocalDateTime.now();
+		//Input date and time and checks difference
 		
-		//Input date and time
 		
 		//Check if check in is not 1 hour after indicated check in time
 		

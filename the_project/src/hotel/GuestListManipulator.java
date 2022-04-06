@@ -41,7 +41,7 @@ public class GuestListManipulator implements AddGivenObject, RemoveGivenObject {
 		}
 	}
 
-	/* TO BE DELETED
+	/* TO BE COMPLETED
 	//Asks for guest name and ID and retrieves the correct Guest object
 	public Guest getEntry() {
 		Guest guest;

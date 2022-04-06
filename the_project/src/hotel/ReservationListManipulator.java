@@ -35,8 +35,8 @@ public class ReservationListManipulator implements AddGivenObject, RemoveGivenOb
 	//To be called in checkin function
 	public Reservation getEntry() {
 		Reservation reservation;
-		boolean found;
-		int index;
+		boolean found=false;
+		int index = -1;
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the Reserver's name:");
@@ -48,13 +48,15 @@ public class ReservationListManipulator implements AddGivenObject, RemoveGivenOb
 			Guest reserver = curReservation.getArray().get(0); //gets the first reserver
 			//if inputed name matches reserver's name in reservation
 			if (reserverName.compareTo(reserver.getname())==0) {
-				
+				index = i; found = true;
 			}
 		}
 		
+		//if not found return null
+		if (!found) return null;
 		
-		
-		
+		//get reservation and return it
+		reservation = hotel.getReservationList().get(index);
 		return reservation;
 	}	
 }
