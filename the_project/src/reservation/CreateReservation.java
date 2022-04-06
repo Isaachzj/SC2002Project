@@ -1,6 +1,7 @@
 package reservation;
 
 import java.util.Scanner;
+import java.time.LocalDateTime;
 import java.time.LocalDate;
 import Room.*;
 import hotel.*;
@@ -25,6 +26,18 @@ public class CreateReservation {
 		
 		//Enter check in date
 		System.out.println("Enter Check In Dates:");
+		System.out.println("Enter Check In Hour in 24 hours format:");
+		int checkInHour = sc.nextInt(); sc.nextLine();
+		while (checkInHour<0 || checkInHour>=24) {
+			System.out.println("Enter a valid Hour!");
+			checkInHour = sc.nextInt(); sc.nextLine();
+		}
+		System.out.println("Enter Check In Hour in 24 hours format:");
+		int checkInMinute = sc.nextInt(); sc.nextLine();
+		while (checkInMinute<0 || checkInMinute>=60) {
+			System.out.println("Enter a valid Hour!");
+			checkInHour = sc.nextInt(); sc.nextLine();
+		}
 		System.out.println("Enter Year:");
 		int checkInYear = sc.nextInt(); sc.nextLine();
 		while (checkInYear<2022) {
@@ -39,21 +52,29 @@ public class CreateReservation {
 		}
 		System.out.println("Enter Day:");
 		int checkInDay = sc.nextInt(); sc.nextLine();
-		while (checkInDay<=0 || checkInDay>31) {
-			System.out.println("Enter a valid day!");
-			checkInMonth = sc.nextInt(); sc.nextLine();
-		}		
-		LocalDate checkInDate = LocalDate.of(checkInYear, checkInMonth, checkInDay);
-		//Enter check in time
-		System.out.println("Enter Check In Time in 24 hours format:");
-		int checkInTime = sc.nextInt(); sc.nextLine();
-		//IMPLEMENT ERROR CHECKING HERE
-		while (checkInTime<=0 || checkInTime>2359) {
-			System.out.println("Enter a valid day!");
-			checkInTime = sc.nextInt(); sc.nextLine();
-		}
+		LocalDateTime checkInDateTime;
+		while (true) {
+			try {
+				checkInDateTime = LocalDateTime.of(checkInYear, checkInMonth, checkInDay, checkInHour, checkInMinute);
+				break;
+			}
+			catch (Exception e) {System.out.println("Enter a valid day:");continue;}
+		}	
+
 		System.out.println("----------------------------------------------");
 		System.out.println("Enter Check out Dates:");
+		System.out.println("Enter Check Out Hour in 24 hours format:");
+		int checkOutHour = sc.nextInt(); sc.nextLine();
+		while (checkOutHour<0 || checkOutHour>=24) {
+			System.out.println("Enter a valid Hour!");
+			checkOutHour = sc.nextInt(); sc.nextLine();
+		}
+		System.out.println("Enter Check In Hour in 24 hours format:");
+		int checkOutMinute = sc.nextInt(); sc.nextLine();
+		while (checkOutMinute<0 || checkOutMinute>=60) {
+			System.out.println("Enter a valid Hour!");
+			checkOutHour = sc.nextInt(); sc.nextLine();
+		}
 		System.out.println("Enter Year:");
 		int checkOutYear = sc.nextInt(); sc.nextLine();
 		while (checkInYear<2022) {
@@ -67,24 +88,21 @@ public class CreateReservation {
 			checkInMonth = sc.nextInt(); sc.nextLine();
 		}
 		System.out.println("Enter Day:");
-		int checkOutDay = sc.nextInt();		
-		while (checkInDay<=0 || checkInDay>31) {
-			System.out.println("Enter a valid day!");
-			checkInMonth = sc.nextInt(); sc.nextLine();
-		}		
-		LocalDate checkOutDate = LocalDate.of(checkOutYear, checkOutMonth, checkOutDay);
-		System.out.println("Enter Check In Time in 24 hours format:");
-		int checkOutTime = sc.nextInt(); sc.nextLine();
-		//IMPLEMENT ERROR CHECKING HERE
-		while (checkOutTime<=0 || checkOutTime>2359) {
-			System.out.println("Enter a valid day!");
-			checkInTime = sc.nextInt(); sc.nextLine();
+		int checkOutDay = sc.nextInt(); sc.nextLine();
+		LocalDateTime checkOutDateTime;
+		while (true) {
+			try {
+				checkOutDateTime = LocalDateTime.of(checkOutYear, checkOutMonth, checkOutDay, checkOutHour, checkOutMinute);
+				break;
+			}
+			catch (Exception e) {System.out.println("Enter a valid day:");continue;}
 		}
+		//IMPLEMENT ERROR CHECKING HERE
 		long numOfWeekday = LengthOfStay.calcWeekDays(LocalDate.of(checkInYear, checkInMonth, checkInDay), LocalDate.of(checkOutYear, checkOutMonth, checkOutDay));
 		long numOfWeekend = LengthOfStay.calcWeekDays(LocalDate.of(checkInYear, checkInMonth, checkInDay), LocalDate.of(checkOutYear, checkOutMonth, checkOutDay));
 		
 		//Create Reservation Object
-		Reservation reservation = new Reservation(room, checkInDate, checkInTime, checkOutDate, checkOutTime, numOfWeekday, numOfWeekend, numOfGuest);
+		Reservation reservation = new Reservation(room, checkInDateTime, checkOutDateTime, numOfWeekday, numOfWeekend, numOfGuest);
 		//Add guest to reservation guest list
 		reservation.addGuest();
 		
