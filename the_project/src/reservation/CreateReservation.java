@@ -102,8 +102,13 @@ public class CreateReservation {
 		long numOfWeekend = LengthOfStay.calcWeekDays(LocalDate.of(checkInYear, checkInMonth, checkInDay), LocalDate.of(checkOutYear, checkOutMonth, checkOutDay));
 		
 		//Create Reservation Object
+<<<<<<< HEAD
 		Reservation reservation = new Reservation(room, checkInDateTime, checkOutDateTime, numOfWeekday, numOfWeekend, numOfGuest);
 		//Add guest to reservation guest list
+=======
+		Reservation reservation = new Reservation(room, checkInDate, checkInTime, checkOutDate, checkOutTime, numOfWeekday, numOfWeekend, numOfGuest);
+		//Creates guests and add guests to reservation guest list
+>>>>>>> eaea6a49f5c7e88939968b8c1d8769547f64fc3f
 		reservation.addGuest();
 		
 		//passes Reservation object to the room

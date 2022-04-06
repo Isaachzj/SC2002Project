@@ -18,8 +18,10 @@ public class CheckIn {
 			return;
 		}
 		
+		//Compare Date Time differences
 		LocalDateTime curDateTime = LocalDateTime.now();
-		//Input date and time and checks difference
+		LocalDateTime checkInDateTime = reservation.getCheckInDateTime();
+		
 		
 		
 		//Check if check in is not 1 hour after indicated check in time
