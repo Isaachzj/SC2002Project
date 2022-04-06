@@ -4,7 +4,7 @@ import room.*;
 import room_rate.*;
 
 public class GrandTotalTabulator {
-	public double grandTotal(Reservation reservation) {
+	public static double grandTotal(Reservation reservation) {
 		Room room = reservation.getRoom();
 		
 		// Getting Room Bill based on length of stay

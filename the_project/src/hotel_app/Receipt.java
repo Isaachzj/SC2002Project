@@ -1,7 +1,10 @@
-package reservation;
-import guest.DisplayGuestInfo;
+package hotel_app;
+import reservation.*;
+import room.*;
+import guest.*;
+import food_related.*;
 
-public class DisplayReservation {
+public class Receipt{
 	public static void info(Reservation reservation) {
 		System.out.println("Room " + reservation.getRoom().getRoomNum());
 		System.out.println("Check In: " + reservation.getCheckInDateTime());
@@ -10,5 +13,13 @@ public class DisplayReservation {
 		System.out.println("Reservation made under:");
 		System.out.println("--------------------------");
 		DisplayGuestInfo.printInfo(reservation.getArray().get(0));
+		System.out.println("==========================");
+		DisplayRoomService drm = new DisplayRoomService(reservation.getRoom().getRoomService());
+		drm.printArray();
+		double grandTotal = GrandTotalTabulator.grandTotal(reservation);
+		System.out.println("++++++++++++++++++++++++++");
+		System.out.println("Grand Total: $%.2f" + grandTotal);
+		
 	}
+	
 }

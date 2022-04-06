@@ -10,9 +10,13 @@ public class DisplayRoomService implements Print {
 	
 	public void printArray() {
 		//System.out.println("=============== Order ===============");
-		if (rs.getArray().size()==0) 
+		if (rs.getArray().size()==0) {
 			System.out.println("--No orders taken!--");
+			return;
+		}
 		
+		System.out.println("=============== ROOM SERVICE ===============");
+		System.out.println("++++++++++++++++++++++++++++++++++++++++++++");
 		for (int i=0; i<rs.getArray().size(); i++) {
 			System.out.printf("=============== Order %d ===============\n", i);
 			Order curOrder = rs.getArray().get(i);

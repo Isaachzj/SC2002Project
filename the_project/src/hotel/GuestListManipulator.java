@@ -37,7 +37,7 @@ public class GuestListManipulator implements AddGivenObject, RemoveGivenObject {
 		//Traversing array of guest in reservation and adding them to Hotel Guest List
 		for (int i=0; i<reservation.getArray().size(); i++) {
 			Guest guest = reservation.getArray().get(i);
-			hotel.getGuestList().add(guest);	
+			hotel.getGuestList().remove(guest);	
 		}
 	}
 
