@@ -1,5 +1,6 @@
 package hotel_app;
 
+import enumeration.AvailStatus;
 import enumeration.TypeOfRoom;
 import hotel.*;
 import reservation.*;
@@ -7,6 +8,7 @@ import room.*;
 import list_methods.*;
 import java.util.*;
 import java.time.LocalDateTime;
+import java.time.Duration;
 
 public class CheckIn {
 	public static void checkIn(Hotel hotel) throws ArrayException{
@@ -19,12 +21,14 @@ public class CheckIn {
 		}
 		
 		//Compare Date Time differences
-		LocalDateTime curDateTime = LocalDateTime.now();
+		LocalDateTime currentDateTime = DateTime.getLocalDateTime("Current");
 		LocalDateTime checkInDateTime = reservation.getCheckInDateTime();
+		if (currentDateTime.isBefore(checkInDateTime.plusHours(1))) { //Check if check in is not 1 hour after indicated check in time
+			reservation.getRoom().setAvail(AvailStatus.OCCUPIED);
+			// @isaac idk what else uhh
+		}
 		
 		
-		
-		//Check if check in is not 1 hour after indicated check in time
 		
 		//Checking in
 		//Update Guest List of Hotel

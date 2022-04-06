@@ -26,78 +26,12 @@ public class CreateReservation {
 		if (numOfGuest>maxOccupancy) {System.out.println("You have exceeded the maximum occupancy for this room!"); return null;}
 		
 		//Enter check in date
-		System.out.println("Enter Check In Dates:");
-		System.out.println("Enter Check In Hour in 24 hours format:");
-		int checkInHour = sc.nextInt(); sc.nextLine();
-		while (checkInHour<0 || checkInHour>=24) {
-			System.out.println("Enter a valid Hour!");
-			checkInHour = sc.nextInt(); sc.nextLine();
-		}
-		System.out.println("Enter Check In Hour in 24 hours format:");
-		int checkInMinute = sc.nextInt(); sc.nextLine();
-		while (checkInMinute<0 || checkInMinute>=60) {
-			System.out.println("Enter a valid Hour!");
-			checkInHour = sc.nextInt(); sc.nextLine();
-		}
-		System.out.println("Enter Year:");
-		int checkInYear = sc.nextInt(); sc.nextLine();
-		while (checkInYear<2022) {
-			System.out.println("Enter a valid year!");
-			checkInYear = sc.nextInt(); sc.nextLine();
-		}	
-		System.out.println("Enter Month in Number format (E.g. 1 for Jan, 2 for Feb) :");
-		int checkInMonth = sc.nextInt(); sc.nextLine();
-		while (checkInMonth<=0 || checkInMonth>12) {
-			System.out.println("Enter a valid month!");
-			checkInMonth = sc.nextInt(); sc.nextLine();
-		}
-		System.out.println("Enter Day:");
-		int checkInDay = sc.nextInt(); sc.nextLine();
-		LocalDateTime checkInDateTime;
-		while (true) {
-			try {
-				checkInDateTime = LocalDateTime.of(checkInYear, checkInMonth, checkInDay, checkInHour, checkInMinute);
-				break;
-			}
-			catch (Exception e) {System.out.println("Enter a valid day:");continue;}
-		}	
+		LocalDateTime checkInDateTime = DateTime.getLocalDateTime("Check In");
 
 		System.out.println("----------------------------------------------");
-		System.out.println("Enter Check out Dates:");
-		System.out.println("Enter Check Out Hour in 24 hours format:");
-		int checkOutHour = sc.nextInt(); sc.nextLine();
-		while (checkOutHour<0 || checkOutHour>=24) {
-			System.out.println("Enter a valid Hour!");
-			checkOutHour = sc.nextInt(); sc.nextLine();
-		}
-		System.out.println("Enter Check In Hour in 24 hours format:");
-		int checkOutMinute = sc.nextInt(); sc.nextLine();
-		while (checkOutMinute<0 || checkOutMinute>=60) {
-			System.out.println("Enter a valid Hour!");
-			checkOutHour = sc.nextInt(); sc.nextLine();
-		}
-		System.out.println("Enter Year:");
-		int checkOutYear = sc.nextInt(); sc.nextLine();
-		while (checkInYear<2022) {
-			System.out.println("Enter a valid year!");
-			checkInYear = sc.nextInt(); sc.nextLine();
-		}	
-		System.out.println("Enter Month in Number format (E.g. 1 for Jan, 2 for Feb) :");
-		int checkOutMonth = sc.nextInt(); sc.nextLine();
-		while (checkInMonth<=0 || checkInMonth>12) {
-			System.out.println("Enter a valid month!");
-			checkInMonth = sc.nextInt(); sc.nextLine();
-		}
-		System.out.println("Enter Day:");
-		int checkOutDay = sc.nextInt(); sc.nextLine();
-		LocalDateTime checkOutDateTime;
-		while (true) {
-			try {
-				checkOutDateTime = LocalDateTime.of(checkOutYear, checkOutMonth, checkOutDay, checkOutHour, checkOutMinute);
-				break;
-			}
-			catch (Exception e) {System.out.println("Enter a valid day:");continue;}
-		}
+		
+		LocalDateTime checkOutDateTime = DateTime.getLocalDateTime("Check Out");
+		
 		//IMPLEMENT ERROR CHECKING HERE
 		long numOfWeekday = LengthOfStay.calcWeekDays(checkInDateTime.toLocalDate(), checkOutDateTime.toLocalDate());
 		long numOfWeekend = LengthOfStay.calcWeekDays(checkInDateTime.toLocalDate(), checkOutDateTime.toLocalDate());

@@ -15,8 +15,7 @@ public class CheckOut {
 		Reservation reservation = hotel.getReservation();
 		ReservationListManipulator rlm = new ReservationListManipulator(hotel);
 		rlm.removeList(reservation);
-		GuestListManipulator glm = new GuestListManipulator(hotel);
-		glm.removeList(reservation);
+		hotel.removeGuests(reservation);
 		reservation.getRoom().reset();
 
 		Receipt.info(reservation);
