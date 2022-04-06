@@ -19,8 +19,8 @@ public class Reservation {
 	protected ArrayList<Guest> guestList = new ArrayList<Guest>();
 	
 	public Room getRoom() {return this.room;}
-	public LocalDateTime getCheckInDate() {return this.checkInDateTime;}
-	public LocalDateTime getCheckOutDate() {return this.checkOutDateTime;}
+	public LocalDateTime getCheckInDateTime() {return this.checkInDateTime;}
+	public LocalDateTime getCheckOutDateTime() {return this.checkOutDateTime;}
 	public long getNumOfWeekday() {return this.numOfWeekday;}
 	public long getNumOfWeekend() {return this.numOfWeekend;}
 	public ArrayList<Guest> getArray() {return this.guestList;}
