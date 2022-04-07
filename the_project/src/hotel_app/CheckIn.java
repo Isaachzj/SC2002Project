@@ -24,7 +24,13 @@ public class CheckIn {
 		LocalDateTime currentDateTime = DateTime.getLocalDateTime("Current");
 		LocalDateTime checkInDateTime = reservation.getCheckInDateTime();
 		if (currentDateTime.isBefore(checkInDateTime.plusHours(1))) { //Check if check in is not 1 hour after indicated check in time
-			reservation.getRoom().setAvail(AvailStatus.OCCUPIED);
+			if (reservation.getRoom().getAvail()==AvailStatus.OCCUPIED) {
+				System.out.println("Already Checked in");
+			}
+			else {
+				reservation.getRoom().setAvail(AvailStatus.OCCUPIED);
+				System.out.println("Checked in!");
+			}
 			// @isaac idk what else uhh
 		}
 		
