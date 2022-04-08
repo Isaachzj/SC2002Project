@@ -3,15 +3,18 @@ import reservation.*;
 import room.*;
 import guest.*;
 import food_related.*;
+import java.time.format.DateTimeFormatter;
 
 public class Receipt{
 	public static void info(Reservation reservation) {
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
 		System.out.println("========== Receipt ==========");
-		System.out.println("Room " + reservation.getRoom().getRoomNum());
-		System.out.println("Check In: " + reservation.getCheckInDateTime());
-		System.out.println("Number of people staying: " + reservation.getNumOfGuest());
+		System.out.printf("(%s) Room Number %d\n", reservation.getRoom().getRoomType(), reservation.getRoom().getRoomNum());
+		System.out.println("Check In: " + reservation.getCheckInDateTime().format(formatter));
+		System.out.println("Check Out: " + reservation.getCheckOutDateTime().format(formatter));
+		System.out.println("Number of guests: " + reservation.getNumOfGuest());
 		System.out.println();
-		System.out.println("Reservation made under:");
+		System.out.println("Reservation Made Under:");
 		System.out.println("--------------------------------------");
 		DisplayGuestInfo.printInfo(reservation.getArray().get(0));
 		System.out.println("==========================");

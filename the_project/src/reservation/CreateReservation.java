@@ -33,8 +33,12 @@ public class CreateReservation {
 		LocalDateTime checkOutDateTime = DateTime.getLocalDateTime("Check Out");
 		
 		//IMPLEMENT ERROR CHECKING HERE
+		while (checkOutDateTime.isBefore(checkInDateTime)) {
+			System.out.println("You cannot check out before check in!");
+			checkOutDateTime = DateTime.getLocalDateTime("Check Out");
+		}
 		long numOfWeekday = LengthOfStay.calcWeekDays(checkInDateTime.toLocalDate(), checkOutDateTime.toLocalDate());
-		long numOfWeekend = LengthOfStay.calcWeekDays(checkInDateTime.toLocalDate(), checkOutDateTime.toLocalDate());
+		long numOfWeekend = LengthOfStay.calcWeekEnds(checkInDateTime.toLocalDate(), checkOutDateTime.toLocalDate());
 		
 		//Create Reservation Object
 
