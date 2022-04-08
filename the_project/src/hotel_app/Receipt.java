@@ -7,7 +7,7 @@ import java.time.format.DateTimeFormatter;
 
 public class Receipt{
 	public static void info(Reservation reservation) {
-		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm");
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd   |   HH:mm");
 		System.out.println("========== Receipt ==========");
 		System.out.printf("(%s) Room Number %d\n", reservation.getRoom().getRoomType(), reservation.getRoom().getRoomNum());
 		System.out.println("Check In: " + reservation.getCheckInDateTime().format(formatter));
