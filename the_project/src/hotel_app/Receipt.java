@@ -10,7 +10,7 @@ public class Receipt{
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd   |   HH:mm");
 		System.out.println("========== Receipt ==========");
 		System.out.printf("(%s) Room Number %d\n", reservation.getRoom().getRoomType(), reservation.getRoom().getRoomNum());
-		System.out.println("Check In: " + reservation.getCheckInDateTime().format(formatter));
+		System.out.println("Check In:  " + reservation.getCheckInDateTime().format(formatter));
 		System.out.println("Check Out: " + reservation.getCheckOutDateTime().format(formatter));
 		System.out.println("Number of guests: " + reservation.getNumOfGuest());
 		System.out.println();
@@ -22,7 +22,7 @@ public class Receipt{
 		drm.printArray();
 		double grandTotal = GrandTotalTabulator.grandTotal(reservation);
 		System.out.println("++++++++++++++++++++++++++");
-		System.out.printf("Grand Total: $%.2f\n", grandTotal);
+		System.out.printf("Grand Total: $%.2f\n\n", grandTotal);
 		
 	}
 	

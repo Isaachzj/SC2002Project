@@ -12,7 +12,7 @@ public class HotelMainApp {//randomcomment
 		System.out.println("1: Make a reservation");
 		System.out.println("2: Check in");
 		System.out.println("3: Check out");
-		System.out.println("4: "); // HI MAYBE ORDER ROOM SERVICE HERE?
+		System.out.println("4: Room Service");
 		int choice = 0;
 		do {
 			try {
@@ -30,6 +30,10 @@ public class HotelMainApp {//randomcomment
 					}
 					case 3: {
 						CheckOut.checkOut(hotel);
+						break;
+					}
+					case 4: {
+						// HELPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP
 						break;
 					}
 					default:
