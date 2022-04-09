@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class DateTime {
 	public static LocalDateTime getLocalDateTime(String text) {
 		Scanner sc = new Scanner(System.in);
-		System.out.printf("Enter %s Dates:\n",text);
+		System.out.printf("=====Enter %s Date Details=====\n",text);
 		System.out.printf("Enter %s Hour in 24 hours format:\n",text);
 		int hour = sc.nextInt(); sc.nextLine();
 		while (hour<0 || hour>=24) {

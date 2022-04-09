@@ -1,9 +1,9 @@
-package hotel_app;
+package app_hotel;
 import java.util.Scanner;
 import hotel.*;
 import list_methods.*;
 
-public class HotelMainApp {//randomcomment
+public class HotelMainApp {
 	
 	public static void main (String[] args ) {
 		Scanner sc = new Scanner(System.in);
@@ -13,6 +13,8 @@ public class HotelMainApp {//randomcomment
 		System.out.println("2: Check in");
 		System.out.println("3: Check out");
 		System.out.println("4: Room Service");
+		System.out.println("5: Room Reports");
+		System.out.println("")
 		int choice = 0;
 		do {
 			try {
@@ -36,17 +38,20 @@ public class HotelMainApp {//randomcomment
 						// HELPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP
 						break;
 					}
+					case 5: {
+						DisplayHotel.info(hotel);
+						break;
+					}
 					default:
 						System.out.println("Enter a valid choice");
 						break;
 				}
 			}
 			catch (ArrayException e) {continue;}
+			catch (Exception e) {System.out.println("Process terminated"); continue;}
 			
 		} while (choice!=4);
 	}
-	//lol
-	//Hi Tomoki
+
 }
 
-//some random comment

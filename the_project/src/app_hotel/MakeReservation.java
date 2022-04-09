@@ -1,4 +1,4 @@
-package hotel_app;
+package app_hotel;
 
 import java.util.Scanner;
 
@@ -26,7 +26,7 @@ public class MakeReservation {
 		TypeOfRoom roomType = TypeOfRoom.values()[choice-1];
 		
 		//Getting available room
-		Room room = hotel.getRoom(roomType);
+		Room room = hotel.getVacantRoom(roomType);
 		if (room==null) {
 			System.out.println("All %s rooms are not available. Say sorry to the customer:)");
 			return;

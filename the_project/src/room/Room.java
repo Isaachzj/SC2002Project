@@ -22,9 +22,10 @@ public abstract class Room
 	protected RoomService roomService;
 	
 	//default constructor (creates the reservation and roomService object, also sets availability to VACANT by default)
-	public Room() {
+	public Room(Menu menu) {
 		this.availability = AvailStatus.VACANT;
 		this.roomService = new RoomService();
+		this.menuList = menu;
 		//Rest of objects are initialized to null/zero by default
 	}
 	

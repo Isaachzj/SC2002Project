@@ -34,14 +34,13 @@ public class CreateReservation {
 		
 		//IMPLEMENT ERROR CHECKING HERE
 		while (checkOutDateTime.isBefore(checkInDateTime)) {
-			System.out.println("You cannot check out before check in!");
+			System.out.println("You trying to be funny isit?! Cannot check out before checking in!!");
 			checkOutDateTime = DateTime.getLocalDateTime("Check Out");
 		}
 		long numOfWeekday = LengthOfStay.calcWeekDays(checkInDateTime.toLocalDate(), checkOutDateTime.toLocalDate());
 		long numOfWeekend = LengthOfStay.calcWeekEnds(checkInDateTime.toLocalDate(), checkOutDateTime.toLocalDate());
 		
 		//Create Reservation Object
-
 		Reservation reservation = new Reservation(room, checkInDateTime, checkOutDateTime, numOfWeekday, numOfWeekend, numOfGuest);
 		//Add guest to reservation guest list
 

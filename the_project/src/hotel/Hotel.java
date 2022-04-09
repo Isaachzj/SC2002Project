@@ -1,10 +1,13 @@
 package hotel;
 
 import guest.*;
+import food_related.*;
 import reservation.*;
 import room.*;
 import list_methods.*;
 import enumeration.*;
+import food_related.CreateMenu;
+
 import java.util.ArrayList;
 
 public class Hotel {
@@ -14,17 +17,20 @@ public class Hotel {
 	private ArrayList<Guest> guestList;
 	
 	public Hotel() {
+//==============================Room Menus==============================
+		ArrayList<Menu> allMenus = CreateMenu.createMenu();
+		// (RoomType-Index): Single-0, Double-1, Deluxe-2, VIP-3
 //==============================Rooms==============================
 		this.roomList = new ArrayList<Room>();
 		//Single Rooms (18 rooms - first 6 rooms of levels 02-05)
 		for (int i=2; i<=5; i++) {
 			for (int y=1; y<=12; y++) {
 				if (y<=6){
-					SingleRoom room = new SingleRoom(i,y);
+					SingleRoom room = new SingleRoom(allMenus.get(0),i,y);
 					roomList.add(room);							
 				}
 				else{
-					DoubleRoom room = new DoubleRoom(i,y);
+					DoubleRoom room = new DoubleRoom(allMenus.get(1),i,y);
 					roomList.add(room);	
 				}
 			} 
@@ -32,12 +38,12 @@ public class Hotel {
 			
 		//Deluxe Rooms (8 rooms)
 		for (int i=1; i<=8; i++) {
-			DeluxeRoom room = new DeluxeRoom(6,i);
+			DeluxeRoom room = new DeluxeRoom(allMenus.get(2),6,i);
 			roomList.add(room);
 		}		
 		//VIPSuite (4 rooms)
 		for (int i=1; i<=4; i++) {
-			VIPSuite room = new VIPSuite(7,i);
+			VIPSuite room = new VIPSuite(allMenus.get(3),7,i);
 			roomList.add(room);		
 		}
 		
@@ -81,15 +87,14 @@ public class Hotel {
 	}
 	
 	//Room Related
-	public Room getRoom(TypeOfRoom roomType) {
-		for (int i=0; i<this.roomList.size(); i++) {
-			Room room = roomList.get(i);
-			if (room.getRoomType() == roomType && room.getAvail() == AvailStatus.VACANT) {
-				return room;
-			}//end if
-		}//end for
-		
-		//if no rooms are vacant
-		return null;
+	public Room getVacantRoom(TypeOfRoom roomType) {
+		RoomListManipulator rlm = new RoomListManipulator(this);
+		return rlm.getVacantRoom(roomType);	
+	}	
+	
+	public Room getRoom() {
+		RoomListManipulator rlm = new RoomListManipulator(this);
+		return rlm.getEntry();	
 	}
+
 }

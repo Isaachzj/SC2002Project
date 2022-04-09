@@ -1,4 +1,4 @@
-package hotel_app;
+package app_hotel;
 
 import enumeration.AvailStatus;
 import enumeration.TypeOfRoom;
@@ -31,16 +31,15 @@ public class CheckIn {
 				reservation.getRoom().setAvail(AvailStatus.OCCUPIED);
 				System.out.println("Checked in!");
 			}
-			// @isaac idk what else uhh
 		}
-		
-		
-		
-		//Checking in
-		//Update Guest List of Hotel
+		else { //Remove reservation and guests from lists if check in is after 1 hour from indicated time
+			hotel.removeGuests(reservation);
+			hotel.removeReservation(reservation);
+			System.out.println("Guests are late. Reservation terminated. DEAL WITH IT!!");
+			return;
+		}
 		
 		//adds guests in reservation to the guest list
 		hotel.addGuests(reservation);
 	}
-		
 }
