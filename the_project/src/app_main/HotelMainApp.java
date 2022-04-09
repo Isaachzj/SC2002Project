@@ -1,5 +1,10 @@
-package app_hotel;
+package app_main;
 import java.util.Scanner;
+
+import app_hotel.CheckIn;
+import app_hotel.CheckOut;
+import app_hotel.Report;
+import app_hotel.MakeReservation;
 import hotel.*;
 import list_methods.*;
 
@@ -39,7 +44,7 @@ public class HotelMainApp {
 						break;
 					}
 					case 5: {
-						DisplayHotel.info(hotel);
+						Report.info(hotel);
 						break;
 					}
 					default:

@@ -3,7 +3,7 @@ package app_hotel;
 import hotel.*;
 import java.util.*;
 
-public class DisplayHotel {
+public class Report {
 	
 	public static void info(Hotel hotel) {
 		Scanner sc = new Scanner(System.in);
