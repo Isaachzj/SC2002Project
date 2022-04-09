@@ -56,9 +56,6 @@ public class Hotel {
 	}
 	
 
-
-
-	
 	//Guest Related
 	public void addGuests(Reservation reservation) throws ArrayException {
 		GuestListManipulator glm = new GuestListManipulator(this);
