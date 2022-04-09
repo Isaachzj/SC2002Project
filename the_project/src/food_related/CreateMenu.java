@@ -90,10 +90,10 @@ public class CreateMenu {
 		Menu menuDeluxe = new Menu(f11, f12, f13, f14, f15);
 		Menu menuVIP = new Menu(f6, f7, f8, f9, f10);
 		
-		allMenus.set(0, menuSingle);
-		allMenus.set(1, menuDouble);
-		allMenus.set(2, menuDeluxe);
-		allMenus.set(3, menuVIP);
+		allMenus.add(menuSingle);
+		allMenus.add(menuDouble);
+		allMenus.add(menuDeluxe);
+		allMenus.add(menuVIP);
 		
 		return allMenus;
 	}

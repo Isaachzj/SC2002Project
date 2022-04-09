@@ -14,7 +14,7 @@ public class HotelMainApp {
 		System.out.println("3: Check out");
 		System.out.println("4: Room Service");
 		System.out.println("5: Room Reports");
-		System.out.println("")
+		System.out.println("");
 		int choice = 0;
 		do {
 			try {

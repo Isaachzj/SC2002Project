@@ -17,7 +17,7 @@ public class DisplayRoom {
 		room.getRoomFeatures().info(); 
 		//Display menu
 		System.out.println("Room Menu: ");	
-		room.getMenuList().info(); //handle exception outside
+		room.getMenu().info(); //handle exception outside
 		//Prints RoomService orders
 		room.getRoomService().info();	
 	}

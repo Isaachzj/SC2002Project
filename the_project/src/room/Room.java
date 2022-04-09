@@ -17,7 +17,7 @@ public abstract class Room
 	protected int roomNumber;
 	protected int maxOccupancy;
 	protected RoomRate rate;
-	protected Menu menuList;
+	protected Menu menu;
 	protected Reservation reservation;
 	protected RoomService roomService;
 	
@@ -25,7 +25,7 @@ public abstract class Room
 	public Room(Menu menu) {
 		this.availability = AvailStatus.VACANT;
 		this.roomService = new RoomService();
-		this.menuList = menu;
+		this.menu = menu;
 		//Rest of objects are initialized to null/zero by default
 	}
 	
@@ -37,7 +37,7 @@ public abstract class Room
 	public int getRoomNum() {return this.roomNumber;}	
 	public int getMaxOccupancy() {return this.maxOccupancy;}
 	public RoomRate getRate() {return rate;}
-	public Menu getMenuList() {return menuList;}
+	public Menu getMenu() {return menu;}
 	public Reservation getReservation() {return reservation;}
 	public RoomService getRoomService() {return roomService;}
 	
@@ -46,10 +46,6 @@ public abstract class Room
 	public void setAvail(AvailStatus availability) {this.availability = availability;}
 	public void setReservation(Reservation reservation) {this.reservation = reservation;}
 	
-	//print info method
-	/*public void info() throws ArrayException {
-		DisplayRoom.info(this);
-	}*/
 	
 	//resets room upon check out (to be used by Check out function)
 	public void reset() throws ArrayException{

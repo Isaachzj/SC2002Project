@@ -7,10 +7,11 @@ import enumeration.TypeOfRoom;
 import hotel.Hotel;
 import food_related.Menu;
 import room.Room;
+import list_methods.*;
 import java.util.*;
 
 public class UpdateRoomMenu {
-	public static void updateRoomMenu(Hotel hotel) {
+	public static void updateRoomMenu(Hotel hotel) throws ArrayException {
 		Scanner sc = new Scanner(System.in);
 		//Ask for room type (Not hardcoded!)
 		System.out.println("Choose Room Type (Select option):\n-Enter an alphabet to terminate-");
@@ -22,7 +23,9 @@ public class UpdateRoomMenu {
 			System.out.println("Enter a valid choice or i'll cut your pay!!");
 			typeChoice = sc.nextInt(); sc.nextLine();
 		}
-		TypeOfRoom roomType = TypeOfRoom.values()[typeChoice-1];
+		
+		//Getting the menu
+		Menu menu = hotel.getMenu(typeChoice);
 		
 		//Select what u wanna do with the menu
 		System.out.println("Choose an option: \nEnter an alphabet to terminate-:");
@@ -33,12 +36,19 @@ public class UpdateRoomMenu {
 			choice = sc.nextInt(); sc.nextLine();
 		}
 		
+		switch(choice) {
+		case(1):
+			menu.addFood();
+			break;
+		case(2):
+			menu.removeFood();
+			break;
+		case(3):
+			menu.updateFood();
+			break;
+	
+		}//end switch
 		
-		
-		ArrayList<Room> rooms = hotel.getRooms(roomType);
-		for (int i=0; i<rooms.size(); i++) {
-			Menu menu = rooms.get(i).getMenuList();
-			System.out.println("Choose a")
-		}
+		return;
 	}
 }

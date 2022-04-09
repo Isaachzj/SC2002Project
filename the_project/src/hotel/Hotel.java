@@ -15,11 +15,12 @@ public class Hotel {
 	private ArrayList<Room> roomList;
 	private ArrayList<Reservation> reservationList;
 	private ArrayList<Guest> guestList;
+	private ArrayList<Menu> menuList; 
 	
 	public Hotel() {
 //==============================Room Menus==============================
-		ArrayList<Menu> allMenus = CreateMenu.createMenu();
-		// (RoomType-Index): Single-0, Double-1, Deluxe-2, VIP-3
+		ArrayList<Menu> allMenus = CreateMenu.createMenu(); // (RoomType-Index): Single-0, Double-1, Deluxe-2, VIP-3
+		this.menuList = allMenus;
 //==============================Rooms==============================
 		this.roomList = new ArrayList<Room>();
 		//Single Rooms (18 rooms - first 6 rooms of levels 02-05)
@@ -54,10 +55,9 @@ public class Hotel {
 		this.reservationList = new ArrayList<Reservation>();
 	}
 	
-	//get methods
-	protected ArrayList<Room> getRoomList() {return this.roomList;}	
-	protected ArrayList<Guest> getGuestList() {return this.guestList;}
-	protected ArrayList<Reservation> getReservationList() {return this.reservationList;}
+
+
+
 	
 	//Guest Related
 	public void addGuests(Reservation reservation) throws ArrayException {
@@ -69,6 +69,10 @@ public class Hotel {
 		GuestListManipulator glm = new GuestListManipulator(this);
 		glm.removeList(reservation);
 	}
+
+	protected ArrayList<Guest> getGuestList() {return this.guestList;}
+	
+	
 	
 	//Reservation Related
 	public void addReservation(Reservation reservation) throws ArrayException {
@@ -86,6 +90,11 @@ public class Hotel {
 		return rlm.getEntry();
 	}
 	
+	protected ArrayList<Reservation> getReservationList() {return this.reservationList;}
+	
+	
+	
+	
 	//Room Related
 	public Room getVacantRoom(TypeOfRoom roomType) {
 		RoomListManipulator rlm = new RoomListManipulator(this);
@@ -95,6 +104,15 @@ public class Hotel {
 	public Room getRoom() {
 		RoomListManipulator rlm = new RoomListManipulator(this);
 		return rlm.getEntry();	
+	}
+	
+	protected ArrayList<Room> getRoomList() {return this.roomList;}	
+	
+	
+	
+	//Menu Related
+	public Menu getMenu(int choice) {
+		return menuList.get(choice-1);
 	}
 
 }

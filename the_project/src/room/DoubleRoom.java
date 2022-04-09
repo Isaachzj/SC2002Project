@@ -21,6 +21,6 @@ public class DoubleRoom extends Room{
 		this.availability = AvailStatus.VACANT;
 		this.feature = ff;
 		this.rate = rr;
-		this.menuList = menu;
+		this.menu = menu;
 	}
 }
