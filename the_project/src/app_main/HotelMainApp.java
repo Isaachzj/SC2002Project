@@ -40,7 +40,7 @@ public class HotelMainApp {
 						break;
 					}
 					case 4: {
-						// HELPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP
+						// HELPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP (Tmr I do :)
 						break;
 					}
 					case 5: {
