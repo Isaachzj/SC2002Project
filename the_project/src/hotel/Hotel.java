@@ -69,6 +69,11 @@ public class Hotel {
 		GuestListManipulator glm = new GuestListManipulator(this);
 		glm.removeList(reservation);
 	}
+	
+	public Guest getGuest() {
+		GuestListManipulator glm = new GuestListManipulator(this);
+		return glm.getEntry();
+	}
 
 	protected ArrayList<Guest> getGuestList() {return this.guestList;}
 	

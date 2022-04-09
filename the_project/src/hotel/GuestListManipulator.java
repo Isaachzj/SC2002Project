@@ -41,21 +41,24 @@ public class GuestListManipulator implements AddGivenObject, RemoveGivenObject {
 		}
 	}
 
-	/* TO BE COMPLETED
-	//Asks for guest name and ID and retrieves the correct Guest object
+
+	//Asks for guest name and mobile number and retrieves the correct Guest object
 	public Guest getEntry() {
-		Guest guest;
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the Guest name:");
 		String guestName = sc.nextLine();
+		System.out.println("Enter the Guest mobile number:");
+		String mobileNumber = sc.nextLine();
 		
 		//Compare with guest
 		for (int i=0; i<hotel.getGuestList().size(); i++) {
 			Guest curGuest = hotel.getGuestList().get(i);
-			
+			if (guestName.compareTo(curGuest.getName())==0 && mobileNumber.compareTo(curGuest.getContacts().getMobileNumber())==0) {
+				return curGuest;
+			}
 		}
 		
-		return guest;
-	}*/
+		return null;
+	}
 	
 }

@@ -15,14 +15,14 @@ public class ContactDetails {
 	}
 	
 	//get methods
-	protected String getmobileNumber() {return this.mobileNumber;}
-	protected String getemailAddress() {return this.emailAddress;}
-	protected String gethomeAddress() {return this.homeAddress;}
-	protected String getcountry() {return this.country;}
+	public String getMobileNumber() {return this.mobileNumber;}
+	protected String getEmailAddress() {return this.emailAddress;}
+	protected String getHomeAddress() {return this.homeAddress;}
+	protected String getCountry() {return this.country;}
 	
 	//set methods
-	protected void setmobileNumber(String MN) {this.mobileNumber = MN;}
-	protected void setemailAddress(String EA) {this.emailAddress = EA;}
-	protected void sethomeAddress(String HA) {this.homeAddress = HA;}
-	protected void setcountry(String country) {this.country = country;}
+	protected void setMobileNumber(String MN) {this.mobileNumber = MN;}
+	protected void setEmailAddress(String EA) {this.emailAddress = EA;}
+	protected void setHomeAddress(String HA) {this.homeAddress = HA;}
+	protected void setCountry(String country) {this.country = country;}
 }

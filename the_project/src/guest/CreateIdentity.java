@@ -12,7 +12,7 @@ public class CreateIdentity {
 		System.out.println("Select ANY OTHER NUMBER for IDTYPE Passport");
 		int choice = sc.nextInt();
 		sc.nextLine();
-		System.out.print("Enter your Identification number: ");
+		System.out.print("Enter your Identification Number: ");
 		String IDnumber = sc.nextLine();
 		switch(choice) {
 			case 1:

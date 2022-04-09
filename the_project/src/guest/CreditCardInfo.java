@@ -17,16 +17,16 @@ public class CreditCardInfo {
 	}
 	
 	//get methods
-	protected String getcreditCardNum(){return this.creditCardNum;}
-	protected String getcreditCardBank(){return this.creditCardBank;}
+	protected String getCreditCardNum(){return this.creditCardNum;}
+	protected String getCreditCardBank(){return this.creditCardBank;}
 	protected String creditCardExpiry(){return this.creditCardExpiry;}
 	protected String billingAddress(){return this.billingAddress;}
 	protected String billingName(){return this.billingName;}
 	
 	//set methods
-	protected void setcreditCardNum(String CCN) {this.creditCardNum = CCN;}
-	protected void setcreditCardBank(String CCB) {this.creditCardBank = CCB;}
-	protected void setcreditCardExpiry(String CCE) {this.creditCardExpiry = CCE;}
-	protected void setbillingAddress(String BA) {this.billingAddress = BA;}
-	protected void setbillingName(String BN) {this.billingAddress = BN;}
+	protected void setCreditCardNum(String CCN) {this.creditCardNum = CCN;}
+	protected void setCreditCardBank(String CCB) {this.creditCardBank = CCB;}
+	protected void setCreditCardExpiry(String CCE) {this.creditCardExpiry = CCE;}
+	protected void setBillingAddress(String BA) {this.billingAddress = BA;}
+	protected void setBillingName(String BN) {this.billingAddress = BN;}
 }

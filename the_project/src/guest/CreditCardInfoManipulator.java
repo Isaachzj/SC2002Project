@@ -3,7 +3,12 @@ import java.util.Scanner;
 
 public class CreditCardInfoManipulator {
 	//CreditCardInfo CCinfo = new CreditCardInfo(CCNum, CCBank, ExpiryDate, BillName, BillAddress);
-	public static void updateinfo(Guest guest) {
+	public static void updateCreditCardInfo(Guest guest) {
+		// Check if guest==null
+		if (guest==null) {
+			System.out.println("Guest does not exist! (GHOSTTTTT)");
+			return;
+		}
 		// Updating CreditCardInfo Object
 			Scanner sc = new Scanner(System.in);
 			System.out.println("--------- Enter Credit Card details --------");
@@ -17,10 +22,12 @@ public class CreditCardInfoManipulator {
 			String BillName = sc.nextLine();
 			System.out.print("Enter your new Billing Address: ");
 			String BillAddress = sc.nextLine();
-			guest.getcreditCardDetails().setcreditCardNum(CCNum);
-			guest.getcreditCardDetails().setcreditCardBank(CCBank);
-			guest.getcreditCardDetails().setcreditCardExpiry(ExpiryDate);
-			guest.getcreditCardDetails().setbillingName(BillName);
-			guest.getcreditCardDetails().setbillingAddress(BillAddress);
+			guest.getCreditCardDetails().setCreditCardNum(CCNum);
+			guest.getCreditCardDetails().setCreditCardBank(CCBank);
+			guest.getCreditCardDetails().setCreditCardExpiry(ExpiryDate);
+			guest.getCreditCardDetails().setBillingName(BillName);
+			guest.getCreditCardDetails().setBillingAddress(BillAddress);
+			System.out.println("Credit Card Info updated successfully!");
+			return;
 	}
 }

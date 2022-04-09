@@ -1,9 +1,45 @@
 package app_guest;
 
+import hotel.Hotel;
+import java.util.Scanner;
+
+import guest.CreditCardInfoManipulator;
+import guest.DisplayGuestInfo;
+
 public class GuestRelated {
-	/* Contains switch statement that
-	 	1. Updates credit card info of guest
-	 	2. Retrieve (print) specified guest info
-	 	3. Room service on behalf of guest 
-	 */
+		/* Contains switch statement that
+		 	1. Updates credit card info of guest
+		 	2. Retrieve (print) specified guest info
+		 	3. Room service on behalf of guest 
+		 */
+	public static void guestRelated(Hotel hotel) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("========== GUEST RELATED ==========");
+		System.out.println("Choose an option (Select option)\n-Enter an alphabet to terminate-:"
+				+ "\n1. Update Credit Card Information\n2. Retrieve Guest Information\n3.Room Service");
+		int choice = sc.nextInt(); sc.nextLine();	
+		while (choice<=0 || choice>3) {
+			System.out.println("Enter a valid choice!");
+			choice = sc.nextInt(); sc.nextLine();
+		}
+		
+		do {
+			switch(choice) {
+			case(1):
+				CreditCardInfoManipulator.updateCreditCardInfo(hotel.getGuest());
+				break;
+	
+			case(2):
+				DisplayGuestInfo.printInfo(hotel.getGuest());
+				break;
+				
+			case(3):
+				
+				break;
+								
+			default:
+				System.out.println("Enter a valid option!");
+			}
+		} while (choice<=0||choice>3);
+	}//end method
 }

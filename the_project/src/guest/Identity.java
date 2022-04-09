@@ -2,23 +2,20 @@ package guest;
 import enumeration.TypeOfID;
 
 public class Identity {
-	private String identity;
-	private TypeOfID identityType;
+	private String idNumber;
+	private TypeOfID idType;
 	
 	//Constructor
-	public Identity(String identity) {
-		this.identityType = TypeOfID.PASSPORT;
-	}
-	public Identity(String identity, TypeOfID identityType) {
-		this.identity = identity;
-		this.identityType = identityType;
+	public Identity(String idNumber, TypeOfID idType) {
+		this.idNumber = idNumber;
+		this.idType = idType;
 	}
 	
 	//get methods
-	protected TypeOfID getidentityType() {return this.identityType;}
-	protected String getidentity() {return this.identity;}
+	protected TypeOfID getIdType() {return this.idType;}
+	protected String getIdNumber() {return this.idNumber;}
 	
 	//set methods
-	protected void setidentityType(TypeOfID idtype) {this.identityType = idtype;}
-	protected void setidentity(String id) {this.identity = id;}
+	protected void setIdType(TypeOfID idType) {this.idType = idType;}
+	protected void setIdNumber(String id) {this.idNumber = id;}
 }

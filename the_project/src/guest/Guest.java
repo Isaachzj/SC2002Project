@@ -24,16 +24,17 @@ public class Guest {
 	}	
 	
 	// get methods
-	public String getname() {return this.name;}
-	protected String getnationality() {return this.nationality;}
+	public String getName() {return this.name;}
+	public ContactDetails getContacts() {return this.contacts;}	
+	protected String getNationality() {return this.nationality;}
 	protected TypeOfGender getGender() {return this.gender;}
 	protected Identity getIdentity() {return this.identity;}
-	protected CreditCardInfo getcreditCardDetails() {return this.creditCardDetails;}
-	protected ContactDetails getcontacts() {return this.contacts;}
+	protected CreditCardInfo getCreditCardDetails() {return this.creditCardDetails;}
+
 	
 	public Reservation getReservation() {return this.reservationDetails;}
 	
 	//set methods
-	protected void setname(String Name) {this.name = Name;}
-	protected void setnationality(String Nationality) {this.nationality = Nationality;}
+	protected void setName(String Name) {this.name = Name;}
+	protected void setNationality(String Nationality) {this.nationality = Nationality;}
 }
