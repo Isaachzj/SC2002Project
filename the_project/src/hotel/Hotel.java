@@ -21,6 +21,7 @@ public class Hotel {
 //==============================Room Menus==============================
 		ArrayList<Menu> allMenus = CreateMenu.createMenu(); // (RoomType-Index): Single-0, Double-1, Deluxe-2, VIP-3
 		this.menuList = allMenus;
+		
 //==============================Rooms==============================
 		this.roomList = new ArrayList<Room>();
 		//Single Rooms (18 rooms - first 6 rooms of levels 02-05)
@@ -47,8 +48,7 @@ public class Hotel {
 			VIPSuite room = new VIPSuite(allMenus.get(3),7,i);
 			roomList.add(room);		
 		}
-		
-		
+				
 //==============================Guest==============================
 		this.guestList = new ArrayList<Guest>();
 //==============================Reservation==============================
