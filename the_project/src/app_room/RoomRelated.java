@@ -41,7 +41,7 @@ public class RoomRelated {
 			case(4):
 				Room room = hotel.getRoom();
 				if (room==null) {System.out.println("No such room exists!!"); break;}
-				System.out.printf("Room is %s", room.getAvail());
+				System.out.printf("Room is %s\n", room.getAvail());
 				break;
 				
 			case(5):

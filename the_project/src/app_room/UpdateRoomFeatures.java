@@ -18,7 +18,7 @@ public class UpdateRoomFeatures  {
 		
 		//Select what u wanna do with the room
 		System.out.println("Choose an option: \nEnter an alphabet to terminate-:");
-		System.out.println("\n1. Add Feature\n2. Remove Feature\n3. Update Feature");
+		System.out.println("1. Add Feature\n2. Remove Feature\n3. Update Feature");
 		int choice = sc.nextInt(); sc.nextLine();
 		while (choice<=0|| choice>=3) {
 			System.out.println("Are you blind? Enter again lah!");
@@ -35,9 +35,11 @@ public class UpdateRoomFeatures  {
 		case(3):
 			room.getRoomFeatures().updateFeatures();
 			break;
-	
 		}//end switch
 		
+		System.out.println("Successful!");
+		//Displays the room information
+		room.getRoomFeatures().info();
 		return;
 	}
 }
