@@ -42,6 +42,6 @@ public class StayRelated {
 			default:
 				System.out.println("Enter a valid option!");
 			}
-		} while (choice<=0||choice>4);
+		} while (choice<=0||choice>3);
 	}//end method
 }

@@ -16,7 +16,7 @@ public class RoomRelated {
 		*/
 		Scanner sc = new Scanner(System.in);
 		System.out.println("========== ROOM RELATED ==========");
-		System.out.println("Choose an option (Select option)\n-Enter an alphabet to terminate-:"
+		System.out.println("Choose an option (Select option)\n- Enter an alphabet to terminate -:"
 				+ "\n1. Update Room Status\n2. Update Menu\n3. Update Room Features\n4. Check Room Availability\n5. Room reports");
 		int choice = sc.nextInt(); sc.nextLine();	
 		while (choice<=0 || choice>5) {
@@ -51,6 +51,6 @@ public class RoomRelated {
 			default:
 				System.out.println("Enter a valid option!");
 			}
-		} while (choice<=0||choice>4);
+		} while (choice<=0||choice>5);
 	}//end method
 }

@@ -3,6 +3,9 @@ package app_guest;
 import hotel.Hotel;
 import guest.Guest;
 import room.*;
+
+import java.util.concurrent.TimeUnit;
+
 import food_related.*;
 import list_methods.*;
 
@@ -26,7 +29,18 @@ public class MakeRoomService {
 		roomService.addOrder(order);
 		
 		//Print the order out
-		System.out.println("Order Successfully Created! \nHere are the details:");
+		System.out.println("Order Confirmed! \nHere are the details:");
 		order.info();
+		
+		try {Thread.sleep(1000);}
+		catch(InterruptedException e) {System.out.println(e.getLocalizedMessage());}
+		
+		System.out.println("Order is being prepared! \nHere are the details:");
+		
+		try {Thread.sleep(1000);}
+		catch(InterruptedException e) {System.out.println(e.getLocalizedMessage());}
+		
+		System.out.println("Order has been completed and delivered to room successfully!");
+		
 	}
 }

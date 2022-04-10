@@ -19,12 +19,11 @@ public class ReservationGuestListManipulator implements AddNew{
 		reservation.getArray().add(reserver);
 		
 		for (int i=1;i<reservation.getNumOfGuest();i++) {
-			System.out.printf("----------------- Guest %d details-----------------\n",i);
+			System.out.printf("\n----------------- Guest %d details-----------------\n",i);
 			Guest guest = CreateGuest.createGuest(reservation);
 			reservation.getArray().add(guest);
 		}//end for
 		
 		return;
-	}//end method
-	
+	}//end method	
 }//end class

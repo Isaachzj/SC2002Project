@@ -46,7 +46,7 @@ public class MakeReservation {
 		if (numOfGuest>maxOccupancy) {System.out.println("You have exceeded the maximum occupancy for this room! \nProcess Terminated!"); return;}
 		
 		
-	//Entering Check In and Check out details
+	//Entering Check In and Check out date time details
 		LocalDateTime checkInDateTime = DateTime.getLocalDateTime("Check In");
 		System.out.println("----------------------------------------------");
 		LocalDateTime checkOutDateTime = DateTime.getLocalDateTime("Check Out");

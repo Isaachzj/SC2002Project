@@ -12,17 +12,20 @@ public class HotelMainApp {
 	public static void main (String[] args ) {
 		Scanner sc = new Scanner(System.in);
 		Hotel hotel = new Hotel();
-		System.out.println("Welcome to the Hotel App System!");
-		System.out.println("1: Stay Related Functions");
-		System.out.println("2: Guest Related Functions");
-		System.out.println("3: Room Related Functions");
-		System.out.println("");
 		int choice = 0;
+		
 		do {
+			System.out.println("Welcome to the Hotel App System!");
+			System.out.println("(Enter an alphabet to terminate)");
+			System.out.println("1: Stay Related Functions");
+			System.out.println("2: Guest Related Functions");
+			System.out.println("3: Room Related Functions");
+			System.out.println("4. Terminate system");
+			System.out.println("");
 			try {
 				System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 				System.out.println("Enter your choice:");
-				choice = sc.nextInt();
+				choice = sc.nextInt(); sc.nextLine();
 				switch (choice) {
 					case 1: {
 						StayRelated.stayRelated(hotel);
@@ -36,14 +39,19 @@ public class HotelMainApp {
 						RoomRelated.roomRelated(hotel);
 						break;
 					}
+					
+					case 4: {
+						System.out.println("Don't be late for work tomorrow!");
+						break;
+					}
 
 					default:
 						System.out.println("Enter a valid choice");
 						break;
 				}
 			}
-			catch (ArrayException e) {continue;}
-			catch (Exception e) {System.out.println("Process terminated"); continue;}
+			catch (ArrayException e) {System.out.println(e.getMessage()); continue;}
+			catch (Exception ee) {System.out.println("Process terminated\n"); sc.nextLine(); continue;}
 			
 		} while (choice!=4);
 	}//end method
