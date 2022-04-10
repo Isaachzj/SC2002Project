@@ -29,7 +29,7 @@ public class UpdateRoomMenu {
 		
 		//Select what u wanna do with the menu
 		System.out.println("Choose an option: \nEnter an alphabet to terminate-:");
-		System.out.println("\n1. Add Food\n2. Remove Food\n3. Update Food");
+		System.out.println("1. Add Food\n2. Remove Food\n3. Update Food");
 		int choice = sc.nextInt(); sc.nextLine();
 		while (choice<=0|| choice>=3) {
 			System.out.println("Are you blind? Enter again lah!");
@@ -46,9 +46,10 @@ public class UpdateRoomMenu {
 		case(3):
 			menu.updateFood();
 			break;
-	
 		}//end switch
 		
+		System.out.println("Menu has been updated accordingly!\n");
+		menu.info();	
 		return;
 	}
 }

@@ -15,15 +15,11 @@ public class GuestRelated {
 		 */
 	public static void guestRelated(Hotel hotel) throws ArrayException {
 		Scanner sc = new Scanner(System.in);
-		int choice=0;
 		
 		System.out.println("\n========== GUEST RELATED ==========");
 		System.out.println("Choose an option (Select option)\n-Enter an alphabet to terminate-:"
-				+ "\n1. Update Credit Card Information\n2. Retrieve Guest Information\n3.Room Service");
-		
-		try{choice = sc.nextInt(); sc.nextLine();}
-		catch(Exception e) {System.out.println("Process Terminated"); sc.nextLine(); return;}
-		
+				+ "\n1. Update Credit Card Information\n2. Retrieve Guest Information\n3. Room Service");	
+		int choice = sc.nextInt(); sc.nextLine();	
 		while (choice<=0 || choice>3) {
 			System.out.println("Enter a valid choice!");
 			choice = sc.nextInt(); sc.nextLine();

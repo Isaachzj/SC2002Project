@@ -12,24 +12,32 @@ private Hotel hotel;
 		this.hotel = htl;
 	}
 	
-	public void printStatusReport() {
+	public void printOccupancyReport() {
 		int enum_index=0;
 		int rF=0, rN=0; //Room Number (rn) = <Floor Number (rF)><Second Number (rN)>
 		String rn; 
 		String array[] = new String[TypeOfRoom.values().length]; //Holds the list of vacant rooms for each Room Type
-		Integer count[] = new Integer[TypeOfRoom.values().length]; //Counts the number of room added to each array element (for adding newline)
+		Integer count[] = new Integer[TypeOfRoom.values().length]; //Counts the number of room added to each array element 
+		Integer totalCount[] = new Integer[TypeOfRoom.values().length]; //Counts the total number of each type of room there are
 		ArrayList<Room> roomList = hotel.getRoomList();
 		
-		//Initialise array and count
+		//Initialise array and count and totalCount
 		for (int i=0; i<array.length; i++) {
 			array[i] = "\tRoom Number: ";
 			count[i] = 0;
+			totalCount[i] = 0;
 		}
 		
 		//Checking every room individually regardless of their Room Type (#Inheritance)
 		for (int i=0; i<roomList.size(); i++) {
 			Room room = roomList.get(i);
-			enum_index = room.getRoomType().ordinal();
+			enum_index = room.getRoomType().ordinal(); //Getting the correct roomType in enumeration index form
+			
+			//Updating totalCount
+			totalCount[enum_index]++;
+			
+			//Do not add non-vacant rooms to the array 
+			if (room.getAvail() != AvailStatus.VACANT) {continue;}
 			
 			rF = room.getRoomFloor();
 			rN = room.getRoomNum();
@@ -57,13 +65,13 @@ private Hotel hotel;
 		
 		//Printing report
 		for (int i=0; i<TypeOfRoom.values().length; i++) {
-			System.out.printf("%s : \n", TypeOfRoom.values()[i]);
+			System.out.printf("%s : Number : %d out of %d\n", TypeOfRoom.values()[i], count[i], totalCount[i]);
 			System.out.println(array[i]);
 			System.out.println();
 		}
 	}
 	
-	public void printOccupancyReport() {
+	public void printStatusReport() {
 		int enum_index=0;
 		int rF=0, rN=0; //Room Number (rn) = <Floor Number (rF)><Second Number (rN)>
 		String rn; 

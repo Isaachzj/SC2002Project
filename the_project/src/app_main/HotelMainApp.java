@@ -21,7 +21,7 @@ public class HotelMainApp {
 			System.out.println("2: Guest Related Functions");
 			System.out.println("3: Room Related Functions");
 			System.out.println("4. Terminate system");
-			System.out.println("");
+			
 			try {
 				System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 				System.out.println("Enter your choice:");
@@ -53,10 +53,9 @@ public class HotelMainApp {
 			catch (ArrayException e) {System.out.println(e.getMessage()); continue;}
 			catch (Exception ee) {
 				System.out.println("Process terminated\n"); 
-				sc.nextLine(); 
+				sc = new Scanner(System.in); // To clear multi line input in buffer
 				continue;
 				}
-			
 			
 		} while (choice!=4);
 	}//end method
