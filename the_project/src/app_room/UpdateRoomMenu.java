@@ -29,21 +29,24 @@ public class UpdateRoomMenu {
 		
 		//Select what u wanna do with the menu
 		System.out.println("Choose an option: \nEnter an alphabet to terminate-:");
-		System.out.println("1. Add Food\n2. Remove Food\n3. Update Food");
+		System.out.println("1. Add Food\n2. Remove Food\n3. Update Food Price and/or Description");
 		int choice = sc.nextInt(); sc.nextLine();
-		while (choice<=0|| choice>=3) {
+		while (choice<=0|| choice>3) {
 			System.out.println("Are you blind? Enter again lah!");
 			choice = sc.nextInt(); sc.nextLine();
 		}
 		
 		switch(choice) {
 		case(1):
+			menu.info();
 			menu.addFood();
 			break;
 		case(2):
+			menu.info();
 			menu.removeFood();
 			break;
 		case(3):
+			menu.info();
 			menu.updateFood();
 			break;
 		}//end switch
