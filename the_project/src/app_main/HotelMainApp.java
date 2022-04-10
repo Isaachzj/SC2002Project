@@ -51,7 +51,12 @@ public class HotelMainApp {
 				}
 			}
 			catch (ArrayException e) {System.out.println(e.getMessage()); continue;}
-			catch (Exception ee) {System.out.println("Process terminated\n"); sc.nextLine(); continue;}
+			catch (Exception ee) {
+				System.out.println("Process terminated\n"); 
+				sc.nextLine(); 
+				continue;
+				}
+			
 			
 		} while (choice!=4);
 	}//end method
