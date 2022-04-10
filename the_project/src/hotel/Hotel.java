@@ -56,7 +56,7 @@ public class Hotel {
 	}
 	
 
-	//Guest Related
+	//Guest Related 
 	public void addGuests(Reservation reservation) throws ArrayException {
 		GuestListManipulator glm = new GuestListManipulator(this);
 		glm.addList(reservation);
@@ -76,7 +76,7 @@ public class Hotel {
 	
 	
 	
-	//Reservation Related
+	//Reservation Related 
 	public void addReservation(Reservation reservation) throws ArrayException {
 		ReservationListManipulator rlm = new ReservationListManipulator(this);
 		rlm.addList(reservation);
@@ -92,6 +92,16 @@ public class Hotel {
 		return rlm.getEntry();
 	}
 	
+	public Reservation getEarliestReservation(ArrayList<Reservation> reservationList) {
+		ReservationListManipulator rlm = new ReservationListManipulator(this);
+		return rlm.getEntry(reservationList);
+	}
+	
+	public ArrayList<Reservation> getRoomReservationList(Room room) {
+		ReservationListManipulator rlm = new ReservationListManipulator(this);
+		return rlm.getEntry(room);
+	}
+	
 	protected ArrayList<Reservation> getReservationList() {return this.reservationList;}
 	
 	
@@ -100,7 +110,7 @@ public class Hotel {
 	//Room Related
 	public Room getVacantRoom(TypeOfRoom roomType) {
 		RoomListManipulator rlm = new RoomListManipulator(this);
-		return rlm.getVacantRoom(roomType);	
+		return rlm.getEntry(roomType);	
 	}	
 	
 	public Room getRoom() {
@@ -108,9 +118,12 @@ public class Hotel {
 		return rlm.getEntry();	
 	}
 	
+	public ArrayList<Room> getSameTypeRooms(TypeOfRoom roomType) {
+		RoomListManipulator rlm = new RoomListManipulator(this);
+		return rlm.getSameTypeRooms(roomType);	
+	}
+	
 	protected ArrayList<Room> getRoomList() {return this.roomList;}	
-	
-	
 	
 	//Menu Related
 	public Menu getMenu(int choice) {

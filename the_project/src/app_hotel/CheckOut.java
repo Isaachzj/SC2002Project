@@ -18,12 +18,13 @@ public class CheckOut {
 			return;
 		}
 		Receipt.info(reservation);
-		//remove guests
+	//remove guests
 		hotel.removeGuests(reservation);
-		//remove reservation
-		hotel.removeReservation(reservation);
-		//resetting room to vacant (if have waitlist, need to search if have somemore reservation first (if true, change status to reserved)
-		reservation.getRoom().reset();
-		
+	//remove reservation
+		hotel.removeReservation(reservation); 
+	//resetting room according to whether there are still more reservations
+		ArrayList<Reservation> roomReservationList = hotel.getRoomReservationList(reservation.getRoom());
+		Reservation earliestReservation = hotel.getEarliestReservation(roomReservationList);
+		reservation.getRoom().reset(earliestReservation);
 	}
 }

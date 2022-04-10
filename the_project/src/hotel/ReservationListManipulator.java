@@ -1,9 +1,11 @@
 package hotel;
 
 import guest.*;
+import room.*;
 import reservation.*;
 import list_methods.*;
 import java.util.*;
+import java.time.LocalDateTime;
 
 public class ReservationListManipulator implements AddGivenObject, RemoveGivenObject, Get{
 	private Hotel hotel;
@@ -60,5 +62,38 @@ public class ReservationListManipulator implements AddGivenObject, RemoveGivenOb
 		//get reservation and return it
 		reservation = hotel.getReservationList().get(index);
 		return reservation;
-	}	
+	}
+	
+	//To be called in make reservation class (OVERLOADED)
+	public ArrayList<Reservation> getEntry(Room room) {
+		//This arraylist stores all reservations of the room
+		ArrayList<Reservation> roomReservationList = new ArrayList<Reservation>();
+		
+		for (int i=0; i<hotel.getReservationList().size(); i++) {
+			Reservation reservation = hotel.getReservationList().get(i);
+			if (reservation.getRoom() == room) {
+				roomReservationList.add(reservation);
+			}//end if
+		}//end for
+		return roomReservationList;
+	}
+	
+	//To be called in checkout class (OVERLOADED)
+	public Reservation getEntry(ArrayList<Reservation> reservationList) {
+		Reservation reservation=null;
+		LocalDateTime earliestTime = LocalDateTime.MAX;	
+		//if no more reservations
+		if (reservationList.size()==0) {
+			return reservation;
+		}
+		//getting earliest reservation
+		for (int i=0; i<reservationList.size(); i++) {
+			Reservation curReservation = reservationList.get(i);
+			if (curReservation.getCheckInDateTime().isBefore(earliestTime)) {
+				earliestTime = curReservation.getCheckInDateTime();
+				reservation = curReservation;
+			}//end if
+		}//end for
+		return reservation;
+	}
 }

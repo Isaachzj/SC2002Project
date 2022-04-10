@@ -30,7 +30,8 @@ public class RoomListManipulator implements Get{
 		return null;
 	}
 	
-	public Room getVacantRoom(TypeOfRoom roomType) {
+	//OVERLOADED
+	public Room getEntry(TypeOfRoom roomType) {
 		for (int i=0; i<hotel.getRoomList().size(); i++) {
 			Room room = hotel.getRoomList().get(i);
 			if (room.getRoomType() == roomType && room.getAvail() == AvailStatus.VACANT) {
@@ -42,7 +43,7 @@ public class RoomListManipulator implements Get{
 		return null;
 	}
 	
-	/*//used in the RoomRelated class to change menu items of a certain type of room (DUNNID ANYMORE!!)
+	
 	public ArrayList<Room> getSameTypeRooms(TypeOfRoom roomType){
 		ArrayList<Room> rooms = new ArrayList<Room>();
 		
@@ -53,5 +54,5 @@ public class RoomListManipulator implements Get{
 			}
 		}
 		return rooms;
-	}*/
+	}
 }
