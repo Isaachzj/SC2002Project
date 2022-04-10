@@ -14,12 +14,12 @@ public class ReservationGuestListManipulator implements AddNew{
 	
 	public void addList() {
 		//Create reserver
-		System.out.println("------------ Reservation Maker ------------");
+		System.out.println("\n------------ Reserver's details ------------");
 		Guest reserver = CreateGuest.createReserver(reservation);
 		reservation.getArray().add(reserver);
 		
 		for (int i=1;i<reservation.getNumOfGuest();i++) {
-			System.out.printf("----------------- Guest %d -----------------\n",i);
+			System.out.printf("----------------- Guest %d details-----------------\n",i);
 			Guest guest = CreateGuest.createGuest(reservation);
 			reservation.getArray().add(guest);
 		}//end for

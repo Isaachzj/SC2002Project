@@ -2,11 +2,12 @@ package guest;
 
 public class DisplayGuestInfo {
 	public static void printInfo(Guest guest) {
-		// Check if guest==null
+	
 		if (guest==null) {
 			System.out.println("Guest does not exist! (GHOSTTTTT)");
 			return;
 		}
+		
 		System.out.println("-------------Guest Details------------");
 		System.out.println("Name: "+ guest.getName());
 		System.out.println("Nationality: " + guest.getNationality());

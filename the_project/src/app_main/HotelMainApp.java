@@ -1,10 +1,9 @@
 package app_main;
 import java.util.Scanner;
 
-import app_hotel.CheckIn;
-import app_hotel.CheckOut;
-import app_hotel.Report;
-import app_hotel.MakeReservation;
+import app_guest.GuestRelated;
+import app_hotel.StayRelated;
+import app_room.RoomRelated;
 import hotel.*;
 import list_methods.*;
 
@@ -14,11 +13,9 @@ public class HotelMainApp {
 		Scanner sc = new Scanner(System.in);
 		Hotel hotel = new Hotel();
 		System.out.println("Welcome to the Hotel App System!");
-		System.out.println("1: Make a reservation");
-		System.out.println("2: Check in");
-		System.out.println("3: Check out");
-		System.out.println("4: Room Service");
-		System.out.println("5: Room Reports");
+		System.out.println("1: Stay Related Functions");
+		System.out.println("2: Guest Related Functions");
+		System.out.println("3: Room Related Functions");
 		System.out.println("");
 		int choice = 0;
 		do {
@@ -28,25 +25,18 @@ public class HotelMainApp {
 				choice = sc.nextInt();
 				switch (choice) {
 					case 1: {
-						MakeReservation.makeReservation(hotel);
+						StayRelated.stayRelated(hotel);
 						break;
 					}
 					case 2: {
-						CheckIn.checkIn(hotel);
+						GuestRelated.guestRelated(hotel);
 						break;
 					}
 					case 3: {
-						CheckOut.checkOut(hotel);
+						RoomRelated.roomRelated(hotel);
 						break;
 					}
-					case 4: {
-						// HELPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPP (Tmr I do :)
-						break;
-					}
-					case 5: {
-						Report.info(hotel);
-						break;
-					}
+
 					default:
 						System.out.println("Enter a valid choice");
 						break;
@@ -56,7 +46,6 @@ public class HotelMainApp {
 			catch (Exception e) {System.out.println("Process terminated"); continue;}
 			
 		} while (choice!=4);
-	}
-
-}
+	}//end method
+}//end class
 

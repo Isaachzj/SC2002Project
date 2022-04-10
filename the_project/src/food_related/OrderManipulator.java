@@ -16,7 +16,7 @@ public class OrderManipulator implements AddGivenObject{
 		int index=0;
 		Food food;
 		
-		//For this case, we will actually ensure that only a food object is passed to this function so this is actually uneeded but we kiasu :)
+		//For this case, we will actually ensure that only a food object is passed to this function so this is actually not needed but we kiasu :)
 		if (daFood==null) {throw new ArrayException("Error!!");}
 		else if (!(daFood instanceof Food)) { throw new ArrayException("Error!!");}
 		else {food = (Food) daFood;} 

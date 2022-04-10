@@ -1,4 +1,4 @@
-package app_hotel;
+package app_room;
 
 import hotel.*;
 import java.util.*;

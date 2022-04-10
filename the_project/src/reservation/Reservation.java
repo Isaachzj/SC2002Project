@@ -11,8 +11,8 @@ public class Reservation {
 	protected Room room;
 	
 
-	protected LocalDateTime checkInDateTime; //@YanKai note the changes
-	protected LocalDateTime checkOutDateTime; //@YanKai note the changes
+	protected LocalDateTime checkInDateTime; 
+	protected LocalDateTime checkOutDateTime; 
 	protected long numOfWeekday;
 	protected long numOfWeekend;
 	protected int numOfGuest;
@@ -26,8 +26,8 @@ public class Reservation {
 	public ArrayList<Guest> getArray() {return this.guestList;}
 	public int getNumOfGuest() {return this.numOfGuest;}
 
-	public void setCheckInDateTime(LocalDateTime checkInDateTime) {this.checkInDateTime = checkInDateTime;} //@YanKai note the changes
-	public void setCheckOutDateTime(LocalDateTime checkOutDateTime) {this.checkOutDateTime = checkOutDateTime;} //@YanKai note the changes
+	public void setCheckInDateTime(LocalDateTime checkInDateTime) {this.checkInDateTime = checkInDateTime;}
+	public void setCheckOutDateTime(LocalDateTime checkOutDateTime) {this.checkOutDateTime = checkOutDateTime;} 
 	public void setNumOfWeekday(long numOfWeekday) {this.numOfWeekday = numOfWeekday;}
 	public void setNumOfWeekend(long numOfWeekend) {this.numOfWeekend = numOfWeekend;}
 	
@@ -46,8 +46,8 @@ public class Reservation {
 		this.numOfWeekday = numOfWeekday;
 		this.numOfWeekend = numOfWeekend;
 		this.numOfGuest = numOfGuest;
-		this.checkInDateTime = checkInDateTime;//@YanKai note the changes
-		this.checkOutDateTime = checkOutDateTime;//@YanKai note the changes
+		this.checkInDateTime = checkInDateTime;
+		this.checkOutDateTime = checkOutDateTime;
 	}
 	
 	public void addGuest() {

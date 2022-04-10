@@ -1,6 +1,7 @@
 package app_guest;
 
 import hotel.Hotel;
+import list_methods.*;
 import java.util.Scanner;
 
 import guest.CreditCardInfoManipulator;
@@ -12,7 +13,7 @@ public class GuestRelated {
 		 	2. Retrieve (print) specified guest info
 		 	3. Room service on behalf of guest 
 		 */
-	public static void guestRelated(Hotel hotel) {
+	public static void guestRelated(Hotel hotel) throws ArrayException {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("========== GUEST RELATED ==========");
 		System.out.println("Choose an option (Select option)\n-Enter an alphabet to terminate-:"
@@ -34,7 +35,7 @@ public class GuestRelated {
 				break;
 				
 			case(3):
-				//Room service do tmr
+				MakeRoomService.makeRoomService(hotel.getGuest());
 				break;
 								
 			default:
