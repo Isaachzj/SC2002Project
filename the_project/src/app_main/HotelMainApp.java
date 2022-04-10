@@ -15,7 +15,7 @@ public class HotelMainApp {
 		int choice = 0;
 		
 		do {
-			System.out.println("Welcome to the Hotel App System!");
+			System.out.println("\nWelcome to the Hotel App System!");
 			System.out.println("(Enter an alphabet to terminate)");
 			System.out.println("1: Stay Related Functions");
 			System.out.println("2: Guest Related Functions");

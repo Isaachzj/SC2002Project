@@ -17,7 +17,7 @@ public class GuestRelated {
 		Scanner sc = new Scanner(System.in);
 		int choice=0;
 		
-		System.out.println("========== GUEST RELATED ==========");
+		System.out.println("\n========== GUEST RELATED ==========");
 		System.out.println("Choose an option (Select option)\n-Enter an alphabet to terminate-:"
 				+ "\n1. Update Credit Card Information\n2. Retrieve Guest Information\n3.Room Service");
 		

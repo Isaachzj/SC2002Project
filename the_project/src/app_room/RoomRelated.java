@@ -15,7 +15,7 @@ public class RoomRelated {
 			5. Room reports
 		*/
 		Scanner sc = new Scanner(System.in);
-		System.out.println("========== ROOM RELATED ==========");
+		System.out.println("\n========== ROOM RELATED ==========");
 		System.out.println("Choose an option (Select option)\n- Enter an alphabet to terminate -:"
 				+ "\n1. Update Room Status\n2. Update Menu\n3. Update Room Features\n4. Check Room Availability\n5. Room reports");
 		int choice = sc.nextInt(); sc.nextLine();	
