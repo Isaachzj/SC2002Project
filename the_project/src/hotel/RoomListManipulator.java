@@ -14,18 +14,13 @@ public class RoomListManipulator implements Get{
 	
 	public Room getEntry() {
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter the room floor:");
-		int roomFloor = sc.nextInt(); sc.nextLine();
 		System.out.println("Enter the room number");
-		int roomNumber = sc.nextInt(); sc.nextLine();
+		String roomNumber = sc.nextLine();
 		
 		for (int i=0; i<hotel.getRoomList().size(); i++) {
 			Room room = hotel.getRoomList().get(i);
-			if (room.getRoomFloor()==roomFloor) {
-				if (room.getRoomNum()==roomNumber) {
-					return room;
-				}//continues
-			}//continues
+			if (room.getRoomNum().compareTo(roomNumber)==0)
+				{return room;}		
 		}//end for
 		return null;
 	}

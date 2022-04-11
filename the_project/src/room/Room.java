@@ -13,8 +13,7 @@ public abstract class Room
 	protected TypeOfRoom roomType;
 	protected AvailStatus availability;
 	protected RoomFeatures feature;
-	protected int roomFloor;
-	protected int roomNumber;
+	protected String roomNumber;
 	protected int maxOccupancy;
 	protected RoomRate rate;
 	protected Menu menu;
@@ -33,8 +32,7 @@ public abstract class Room
 	public TypeOfRoom getRoomType() {return roomType;}
 	public AvailStatus getAvail() {return availability;}
 	public RoomFeatures getRoomFeatures() {return feature;}
-	public int getRoomFloor() {return this.roomFloor;}
-	public int getRoomNum() {return this.roomNumber;}	
+	public String getRoomNum() {return this.roomNumber;}	
 	public int getMaxOccupancy() {return this.maxOccupancy;}
 	public RoomRate getRate() {return rate;}
 	public Menu getMenu() {return menu;}

@@ -39,15 +39,9 @@ private Hotel hotel;
 			//Do not add non-vacant rooms to the array 
 			if (room.getAvail() != AvailStatus.VACANT) {continue;}
 			
-			rF = room.getRoomFloor();
-			rN = room.getRoomNum();
-			
-			//Getting the correct form for room number
-			if (rN<10)
-				rn = '0'+String.valueOf(rF)+'0'+String.valueOf(rN);
-			else
-				rn = '0'+String.valueOf(rF)+String.valueOf(rN);
-			
+			//getting room number
+			rn = room.getRoomNum();
+	
 			//Appending room number to correct string in Array
 			if (array[enum_index].compareTo("\tRoom Number: ")==0) { //if you are adding the first room number
 				array[enum_index] = array[enum_index] + rn; //string concatenation
@@ -90,14 +84,8 @@ private Hotel hotel;
 			Room room = roomList.get(i);
 			enum_index = room.getAvail().ordinal();
 			
-			rF = room.getRoomFloor();
-			rN = room.getRoomNum();
-			
-			//Getting the correct form for room number
-			if (rN<10)
-				rn = '0'+String.valueOf(rF)+'0'+String.valueOf(rN);
-			else
-				rn = '0'+String.valueOf(rF)+String.valueOf(rN);
+			//getting room number
+			rn = room.getRoomNum();
 			
 			//Appending room number to correct string in Array
 			if (array[enum_index].compareTo("\tRoom Number: ")==0) { //if you are adding the first room number

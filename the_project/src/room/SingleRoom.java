@@ -15,8 +15,13 @@ public class SingleRoom extends Room{
 		
 		//Overriding attributes of super()
 		this.roomType = TypeOfRoom.SINGLE;
-		this.roomFloor = floor;
-		this.roomNumber = num;
+		
+		//Getting the correct form for room number
+		if (num<10)
+			this.roomNumber = '0'+String.valueOf(floor)+'0'+String.valueOf(num);
+		else
+			this.roomNumber = '0'+String.valueOf(floor)+String.valueOf(num);
+		
 		this.maxOccupancy = 1;
 		this.availability = AvailStatus.VACANT;
 		this.feature = ff;
