@@ -95,15 +95,15 @@ public class Guest {
 	protected CreditCardInfo getCreditCardDetails() {return this.creditCardDetails;}
 
 	
-	//set methods
+	//set methods (CAN REMOVE AS NOT USED IN CODE)
 	/**
 	 * sets name of guest 
 	 * @param   Name this sets the guest's name
 	*/
-	protected void setName(String Name) {this.name = Name;}
+	//protected void setName(String Name) {this.name = Name;}
 	/**
 	 * sets nationality of guest 
 	 * @param   EA this sets the guest's nationality
 	*/
-	protected void setNationality(String Nationality) {this.nationality = Nationality;}
+	//protected void setNationality(String Nationality) {this.nationality = Nationality;}
 }
