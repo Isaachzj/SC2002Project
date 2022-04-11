@@ -16,12 +16,12 @@ public class ReservationGuestListManipulator implements AddStandard{
 		//Create reserver
 		System.out.println("\n------------ Reserver's details ------------");
 		Guest reserver = CreateGuest.createReserver(reservation);
-		reservation.getArray().add(reserver);
+		reservation.getGuestList().add(reserver);
 		
 		for (int i=1;i<reservation.getNumOfGuest();i++) {
 			System.out.printf("\n------------ Guest %d details------------\n",i);
 			Guest guest = CreateGuest.createGuest(reservation);
-			reservation.getArray().add(guest);
+			reservation.getGuestList().add(guest);
 		}//end for
 		
 		return;

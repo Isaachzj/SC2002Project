@@ -49,7 +49,7 @@ public class ReservationListManipulator implements AddGivenObject, RemoveGivenOb
 		//Compare with guest
 		for (int i=0; i<hotel.getReservationList().size(); i++) {
 			Reservation curReservation = hotel.getReservationList().get(i);
-			Guest reserver = curReservation.getArray().get(0); //gets the first reserver
+			Guest reserver = curReservation.getGuestList().get(0); //gets the first reserver
 			//if inputed name matches reserver's name in reservation
 			if (reserverName.compareTo(reserver.getName())==0 && mobileNumber.compareTo(reserver.getContacts().getMobileNumber())==0) {
 				index = i; found = true;

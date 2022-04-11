@@ -20,8 +20,8 @@ public class GuestListManipulator implements AddGivenObject, RemoveGivenObject {
 		else {reservation = (Reservation) daReservation;} 
 		
 		//Traversing array of guest in reservation and adding them to Hotel Guest List
-		for (int i=0; i<reservation.getArray().size(); i++) {
-			Guest guest = reservation.getArray().get(i);
+		for (int i=0; i<reservation.getGuestList().size(); i++) {
+			Guest guest = reservation.getGuestList().get(i);
 			hotel.getGuestList().add(guest);	
 		}
 	}
@@ -35,8 +35,8 @@ public class GuestListManipulator implements AddGivenObject, RemoveGivenObject {
 		else {reservation = (Reservation) daReservation;} 
 		
 		//Traversing array of guest in reservation and adding them to Hotel Guest List
-		for (int i=0; i<reservation.getArray().size(); i++) {
-			Guest guest = reservation.getArray().get(i);
+		for (int i=0; i<reservation.getGuestList().size(); i++) {
+			Guest guest = reservation.getGuestList().get(i);
 			hotel.getGuestList().remove(guest);	
 		}
 	}

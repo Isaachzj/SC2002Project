@@ -41,19 +41,14 @@ public class Reservation {
 	public LocalDateTime getCheckOutDateTime() {return this.checkOutDateTime;}
 	public long getNumOfWeekday() {return this.numOfWeekday;}
 	public long getNumOfWeekend() {return this.numOfWeekend;}
-	public ArrayList<Guest> getArray() {return this.guestList;}
+	public ArrayList<Guest> getGuestList() {return this.guestList;}
 	public int getNumOfGuest() {return this.numOfGuest;}
+	public Guest getGuest() {return this.guestList.get(0);}	
 
 	public void setCheckInDateTime(LocalDateTime checkInDateTime) {this.checkInDateTime = checkInDateTime;}
 	public void setCheckOutDateTime(LocalDateTime checkOutDateTime) {this.checkOutDateTime = checkOutDateTime;} 
 	public void setNumOfWeekday(long numOfWeekday) {this.numOfWeekday = numOfWeekday;}
 	public void setNumOfWeekend(long numOfWeekend) {this.numOfWeekend = numOfWeekend;}
-	
-	public Guest getGuest() {return this.guestList.get(0);}
-	
-
-	
-
 	
 	public void addGuest() {
 		ReservationGuestListManipulator rglm = new ReservationGuestListManipulator(this);

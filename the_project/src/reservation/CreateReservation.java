@@ -30,7 +30,7 @@ public class CreateReservation {
 			room.setAvail(AvailStatus.RESERVED);
 		}
 		
-		//reset method in room will auto assign upcoming reservation to reservation attribute in room after guests checkout
+		//NOTE: reset method in room will auto assign upcoming reservation to reservation attribute in room after guests checkout
 
 		return reservation; //returns Reservation object to add to reservation list in Hotel object
 	}

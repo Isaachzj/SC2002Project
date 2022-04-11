@@ -18,7 +18,7 @@ public class Receipt{
 		System.out.println();
 		System.out.println("Reservation Made Under:");
 		System.out.println("--------------------------------------");
-		DisplayGuestInfo.printInfo(reservation.getArray().get(0));
+		DisplayGuestInfo.printInfo(reservation.getGuestList().get(0));
 		System.out.println("==========================");
 		DisplayRoomService drm = new DisplayRoomService(reservation.getRoom().getRoomService());
 		drm.printArray();

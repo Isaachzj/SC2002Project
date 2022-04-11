@@ -8,6 +8,6 @@ public class DisplayReservation {
 		System.out.println("Number of people staying: " + reservation.getNumOfGuest());
 		System.out.println();
 		System.out.println("Reservation made under:\n");
-		DisplayGuestInfo.printInfo(reservation.getArray().get(0));
+		DisplayGuestInfo.printInfo(reservation.getGuestList().get(0));
 	}
 }
