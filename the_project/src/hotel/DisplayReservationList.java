@@ -12,7 +12,7 @@ public class DisplayReservationList implements Print {
 	}
 	
 	public void printArray() {
-		System.out.println("========== RESERVATION LIST ==========\"");
+		System.out.println("========== RESERVATION LIST ==========");
 		
 		if (hotel.getReservationList().size()==0) {
 			System.out.println("No Reservations at the present moment.");
@@ -23,6 +23,7 @@ public class DisplayReservationList implements Print {
 			System.out.printf("--Reservation %d --\n", i+1);
 			Reservation reservation = hotel.getReservationList().get(i);
 			DisplayReservation.info(reservation);
+			System.out.println("\n\n");
 		}
 		return;
 	}

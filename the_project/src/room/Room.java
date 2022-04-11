@@ -61,6 +61,7 @@ public abstract class Room
 		//if there are still existing reservations
 		else {
 			this.availability = AvailStatus.RESERVED;
+			//updates reservation object with upcoming reservation
 			this.reservation = reservation;
 		}
 		return;

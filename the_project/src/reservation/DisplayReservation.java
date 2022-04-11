@@ -3,12 +3,11 @@ import guest.DisplayGuestInfo;
 
 public class DisplayReservation {
 	public static void info(Reservation reservation) {
-		System.out.println("Room " + reservation.getRoom().getRoomNum());
+		System.out.println("Room 0" + reservation.getRoom().getRoomFloor() + reservation.getRoom().getRoomNum());
 		System.out.println("Check In: " + reservation.getCheckInDateTime());
 		System.out.println("Number of people staying: " + reservation.getNumOfGuest());
 		System.out.println();
-		System.out.println("Reservation made under:");
-		System.out.println("--------------------------");
+		System.out.println("Reservation made under:\n");
 		DisplayGuestInfo.printInfo(reservation.getArray().get(0));
 	}
 }
