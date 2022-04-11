@@ -21,7 +21,7 @@ public class Food {
 	/**
 	 * creates a Food object with input name, price and description
 	 * Follows the Single Dependency principle as sole responsibility is to create a Food object
-	 * Allso follows the Open-Closed principle as changes in the Display does not require a change in source code of modules
+	 * Also follows the Open-Closed principle as changes in the Display does not require a change in source code of modules
 	 * @param	name name of this food item
 	 * @param	price price of this food item
 	 * @param	description description of this food item
