@@ -5,11 +5,22 @@ import list_methods.*;
 public class OrderManipulator implements AddGivenObject{
 	private Order order;
 
-	
+	/**
+     * Returns the guest's order bill
+     * 
+     * @return this is the order bill of the guest
+	*/
 	public OrderManipulator(Order order) {
 		this.order = order;
 	}
 	
+	/**
+	 * Includes the ordered food into the order food list
+	 * If ordered food is either null or not an instance of Food class, then it will throw in an exception with an Error displayed to inform user that the object passed to this function is not a food object
+	 * Once it is confirmed that object passed to function is a food object, quantity of food to be included. System also ensures that quantity of food entered is a positive number
+	 * 
+	 * @param   daFood this is the food ordered by the guest
+	*/
 	// Adds the ordered food into the order food list
 	public void addList(Object daFood) throws ArrayException{
 		boolean found = false;
