@@ -3,11 +3,19 @@ import list_methods.*;
 
 public class DisplayOrder implements Print {
 	private Order order;
-	
+	/**
+	 * creates a DisplayOrder object and
+	 * adds this menu into this DisplayOrder 
+	 * @param order Order object
+	 */ 
 	public DisplayOrder(Order order) {
 		this.order = order;
 	}
 	
+	/**
+	 * if no orders taken, prints error message.
+	 * if orders available, prints out name, price and quantity of food items ordered.
+	 */ 
 	public void printArray() {
 		
 		if (order.getArray().size()==0) 
