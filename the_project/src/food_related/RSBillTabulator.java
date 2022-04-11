@@ -4,8 +4,8 @@ public class RSBillTabulator {
 	private RoomService rs;
 	
 	/**
-	 * creates a RSBillTabulator object and
-	 * adds this room service order into this RSBillTabulator 
+	 * Follows the Single Responsibility principle due to sole responsibility
+	 * It also follows the Open-Closed principle due to its software entities open for extension but closed for modifications
 	 * @param rs RSBillTabulator object
 	 */
 	public RSBillTabulator(RoomService rs) {
@@ -13,8 +13,7 @@ public class RSBillTabulator {
 	}
 	
 	/**
-	 * sums up all food item prices into totalBill 
-	 * and sets totalBill as RoomServiceBill in this room service order
+	 * this adds up all food item prices into totalBill and sets totalBill as RoomServiceBill in this room service order
 	 */
 	public void calculateRoomServiceBill() {
 		double totalBill=0.0;
