@@ -9,7 +9,7 @@ public class DisplayOrder implements Print {
 	 * The DisplayOrder class follows the Single Responsibility principle, as has a sole responsibility of displaying the Order 
 	 * Additionally; it follows the Open-Closed principle as changes in the Display does not require a change in source code of modules
 	 * It also follows the Dependency Injection principle as there are class for DisplayOrder and DisplayMenu
-	 * @param this is the order of the customer
+	 * @param	order this is the order of the customer
 	 */ 
 	public DisplayOrder(Order order) {
 		this.order = order;
