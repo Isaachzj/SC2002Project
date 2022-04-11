@@ -2,23 +2,35 @@ package guest;
 
 public class ContactDetails {
 	/**
+	 * #
 	 * this is the guest's mobile number
+	 * private method is used to ensure that it is only accessible inside ContactDetails class
+	 * this ensures encapsulation of sensitive information; in this case the guest's mobile number
 	 */
 	private String mobileNumber;
 	/**
 	 * this is the guest's email address
+	 * private method is used to ensure that it is only accessible inside ContactDetails class
+	 * this ensures encapsulation of sensitive information; in this case the guest's email address
 	 */
 	private String emailAddress;
 	/**
 	 * this is the guest's home address
+	 * private method is used to ensure that it is only accessible inside ContactDetails class
+	 * this ensures encapsulation of sensitive information; in this case the guest's home address
 	 */
 	private String homeAddress;
 	/**
 	 * this is the guest's country of origin
+	 * private method is used to ensure that it is only accessible inside ContactDetails class
+	 * this ensures encapsulation of sensitive information; in this case the guest's country of origin
 	 */
 	private String country;
 	
 	//Constructor
+	/**
+	 * # Constructor
+	 */
 	/**
 	 * stores the contact details of the guest from the parameter; their mobile number, email address, home address and country of origin
 	 * @param MN this is the guest's mobile number
@@ -34,6 +46,9 @@ public class ContactDetails {
 	}
 	
 	//get methods
+	/**
+	 * # get methods
+	 */
 	/**
 	 * gets the guest's mobile number
 	 * @return this is the guest's mobile number

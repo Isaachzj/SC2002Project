@@ -3,26 +3,39 @@ package guest;
 public class CreditCardInfo {
 	/**
 	 * this is the guest's credit card number
+	 * private method is used to ensure that it is only accessible inside CreditCardInfo class
+	 * this ensures encapsulation of sensitive information; in this case the guest's credit card number
 	 */
 	private String creditCardNum;
 	/**
 	 * this is the guest's credit card bank
+	 * private method is used to ensure that it is only accessible inside CreditCardInfo class
+	 * this ensures encapsulation of sensitive information; in this case the guest's credit card bank
 	 */
 	private String creditCardBank;
 	/**
 	 * this is the guest's credit card expiry
+	 * private method is used to ensure that it is only accessible inside CreditCardInfo class
+	 * this ensures encapsulation of sensitive information; in this case the guest's credit card expiry
 	 */
 	private String creditCardExpiry;
 	/**
 	 * this is the guest's billing address
+	 * private method is used to ensure that it is only accessible inside CreditCardInfo class
+	 * this ensures encapsulation of sensitive information; in this case the guest's billing address
 	 */
 	private String billingAddress;
 	/**
 	 * this is the guest's billing name
+	 * private method is used to ensure that it is only accessible inside CreditCardInfo class
+	 * this ensures encapsulation of sensitive information; in this case the guest's billing name
 	 */
 	private String billingName;
 	
 	//Constructor
+	/**
+	 * # Constructor
+	 */
 	/**
 	 * Instantiation of credit card information using the credit card number, bank, card expiry, billing address and billing name
 	 * @param CCN this is the guest's credit card number
@@ -40,6 +53,11 @@ public class CreditCardInfo {
 	}
 	
 	//get methods
+	/**
+	 * # get methods
+	 * We made it such that only methods returning guest's credit card number, bank, expiry, address and billing name is public
+	 * this ensures better encapsulation of information that are more private
+	 */
 	/**
 	 * All methods here are set to protected for better encapsulation.
 	 * Credit Card Info is only being retrieved and printed in the DisplayGuestInfo class within the same class.
@@ -70,6 +88,9 @@ public class CreditCardInfo {
 	protected String getBillingName(){return this.billingName;}
 	
 	//set methods
+	/**
+	 * # set methods
+	 */
 	/**
 	 * sets the credit card number of the guest
 	 * @param CCN this is the guest credit card number
