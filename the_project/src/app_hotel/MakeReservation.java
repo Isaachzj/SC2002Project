@@ -88,6 +88,8 @@ public class MakeReservation {
 					else if (curReservation.getCheckInDateTime().isAfter(checkInDateTime)) {
 						if (checkOutDateTime.isAfter(curReservation.getCheckInDateTime())) {overlap=true; break;} 
 					}
+					// if check in time is the same as that of an existing reservation, there is also an overlap
+					else if (curReservation.getCheckInDateTime() == checkInDateTime) {overlap=true; break;}
 				}//end inner for loop
 				
 				if (overlap) {overlap=false; continue;} //checking reservations of next room if have
