@@ -5,7 +5,7 @@ import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 
 public class LengthOfStay {
-	public static long calcWeekDays(final LocalDate start, final LocalDate end) {
+	public static long calcWeekDays(LocalDate start, LocalDate end) {
 	    DayOfWeek startW = start.getDayOfWeek();
 	    DayOfWeek endW = end.getDayOfWeek();
 	
@@ -22,7 +22,7 @@ public class LengthOfStay {
 	    return daysWithoutWeekends;
 	}
 	
-	public static long calcWeekEnds(final LocalDate start, final LocalDate end) {
+	public static long calcWeekEnds(LocalDate start, LocalDate end) {
 	    DayOfWeek startW = start.getDayOfWeek();
 	    DayOfWeek endW = end.getDayOfWeek();
 	
