@@ -12,11 +12,23 @@ import java.time.Duration;
 
 public class CheckIn {
 	public static void checkIn(Hotel hotel) throws ArrayException{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Choose an option\n1. Walk-In\n2. Prior Reservation");
+		int choice = sc.nextInt(); sc.nextLine();
+		while (choice<=0 || choice>2) {
+			System.out.println("Enter a valid choice!");
+			choice = sc.nextInt(); sc.nextLine();
+		}
+		//If walking in, make the reservation for the person then proceed as per normal
+		if (choice==1) {
+			MakeReservation.makeReservation(hotel);
+		}
 		
 		//Obtain Reservation object
 		Reservation reservation = hotel.getReservation();
+		
 		if (reservation==null) {
-			System.out.println("Reservation not found! Ask if the customer wants to make a reservation!");
+			System.out.println("Reservation not found! Ask if the customer wants to walk-in!");
 			return;
 		}
 		

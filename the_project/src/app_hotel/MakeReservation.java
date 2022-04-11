@@ -55,6 +55,10 @@ public class MakeReservation {
 			System.out.println("You trying to be funny isit?! Cannot check out before checking in!!");
 			checkOutDateTime = DateTime.getLocalDateTime("Check Out");
 		}
+		while (checkOutDateTime == checkInDateTime) {
+			System.out.println("You trying to be funny isit?! Cannot check in and out at the same time!!");
+			checkOutDateTime = DateTime.getLocalDateTime("Check Out");
+		}
 				
 	/*Getting room that allows for such a reservation
 	 * -	If there is a vacant room, assign reservation to that room
