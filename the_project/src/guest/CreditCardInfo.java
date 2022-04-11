@@ -41,6 +41,9 @@ public class CreditCardInfo {
 	
 	//get methods
 	/**
+	 * All methods here are set to protected for better encapsulation.
+	 * Credit Card Info is only being retrieved and printed in the DisplayGuestInfo class within the same class.
+	 * 
 	 * gets the guest's credit card number
 	 * @return this is the guest's credit card number
 	 */
@@ -54,17 +57,17 @@ public class CreditCardInfo {
 	 * gets the guest's credit card expiry
 	 * @return this is the guest's credit card expiry
 	 */
-	protected String creditCardExpiry(){return this.creditCardExpiry;}
+	protected String getCreditCardExpiry(){return this.creditCardExpiry;}
 	/**
 	 * gets the guest's credit card billing address
 	 * @return this is the guest's credit card billing address
 	 */
-	protected String billingAddress(){return this.billingAddress;}
+	protected String getBillingAddress(){return this.billingAddress;}
 	/**
 	 * gets the guest's credit card billing name
 	 * @return this is the guest's credit card billing name
 	 */
-	protected String billingName(){return this.billingName;}
+	protected String getBillingName(){return this.billingName;}
 	
 	//set methods
 	/**
