@@ -6,8 +6,9 @@ import java.util.*;
 
 public class CreateGuest {
 	/**
-	 * instantiation of Guest Object for reservation; from the details of id, credit card information, contact details and gender
-	 * @param reservationDetails this is the reservation details of the guest to be created
+	 * instantiation of the reserver (Guest object who made reservation)
+	 * @param reservationDetails holds the reserver's essential information ( id, credit card information, contact details, gender); 
+	 * needed for the instantiation
 	 * @return this is the guest details instantiated
 	 */
 	public static Guest createReserver(Reservation reservationDetails) {
@@ -46,8 +47,8 @@ public class CreateGuest {
 	}
 	
 	/**
-	 * instantiation of Guest Object for reservation; from the details of id, contact details and gender
-	 * case where credit card details not available; i.e. null
+	 * Similarly, this instantiates a regular occupant (Guest object who did not make the reservation but is staying in the room)
+	 * Unlike before, this guest object does not have any credit card details
 	 * @param reservationDetails this is the reservation details of the guest to be created
 	 * @return this is the guest details instantiated
 	 */
