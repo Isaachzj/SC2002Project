@@ -3,6 +3,13 @@ package food_related;
 import java.util.ArrayList;
 
 public class CreateMenu {
+	/**
+	 * Return the Array list of all Menu of the Food from 'Single', 'Double', 'Deluxe' and 'VIP'
+	 * Food item also has been instantiated into the Menu of Food respectively
+	 * The respective Menu for the different bed types has also been instantiated respectively
+	 * Follows the Interface Segregation principle; since Classes do not depend on interfaces that they do not use
+	 * @return the Array list of all Menu of the Food
+	 */
 	public static ArrayList<Menu> createMenu(){
 		ArrayList<Menu> allMenus = new ArrayList<Menu>();
 		
