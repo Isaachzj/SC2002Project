@@ -2,33 +2,23 @@ package guest;
 
 public class CreditCardInfo {
 	/**
-	 * this is the guest's credit card number
-	 * private method is used to ensure that it is only accessible inside CreditCardInfo class
-	 * this ensures encapsulation of sensitive information; in this case the guest's credit card number
+	 * this is the guest's credit card number (private attribute)
 	 */
 	private String creditCardNum;
 	/**
-	 * this is the guest's credit card bank
-	 * private method is used to ensure that it is only accessible inside CreditCardInfo class
-	 * this ensures encapsulation of sensitive information; in this case the guest's credit card bank
+	 * this is the guest's credit card bank (private attribute)
 	 */
 	private String creditCardBank;
 	/**
-	 * this is the guest's credit card expiry
-	 * private method is used to ensure that it is only accessible inside CreditCardInfo class
-	 * this ensures encapsulation of sensitive information; in this case the guest's credit card expiry
+	 * this is the guest's credit card expiry (private attribute)
 	 */
 	private String creditCardExpiry;
 	/**
-	 * this is the guest's billing address
-	 * private method is used to ensure that it is only accessible inside CreditCardInfo class
-	 * this ensures encapsulation of sensitive information; in this case the guest's billing address
+	 * this is the guest's billing address (private attribute)
 	 */
 	private String billingAddress;
 	/**
-	 * this is the guest's billing name
-	 * private method is used to ensure that it is only accessible inside CreditCardInfo class
-	 * this ensures encapsulation of sensitive information; in this case the guest's billing name
+	 * this is the guest's billing name (private attribute)
 	 */
 	private String billingName;
 	
