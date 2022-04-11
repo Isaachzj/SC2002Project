@@ -12,7 +12,7 @@ public class GuestListManipulator implements AddGivenObject, RemoveGivenObject {
 		this.hotel = hotel;
 	}
 	
-	public void addList(Object daReservation) throws ArrayException{
+	public void addEntry(Object daReservation) throws ArrayException{
 		Reservation reservation;
 		
 		if (daReservation==null) {throw new ArrayException("Error!!");}
@@ -27,7 +27,7 @@ public class GuestListManipulator implements AddGivenObject, RemoveGivenObject {
 	}
 	
 	//Checkout function will pass all guest object stored in reservation to this to remove
-	public void removeList(Object daReservation) throws ArrayException{
+	public void removeEntry(Object daReservation) throws ArrayException{
 		Reservation reservation;
 		
 		if (daReservation==null) {throw new ArrayException("Error!!");}

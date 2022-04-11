@@ -22,7 +22,7 @@ public class OrderManipulator implements AddGivenObject{
 	 * @param   daFood this is the food ordered by the guest
 	*/
 	// Adds the ordered food into the order food list
-	public void addList(Object daFood) throws ArrayException{
+	public void addEntry(Object daFood) throws ArrayException{
 		boolean found = false;
 		int index=0;
 		Food food;

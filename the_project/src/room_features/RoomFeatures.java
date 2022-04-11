@@ -44,7 +44,7 @@ public class RoomFeatures {
 	//Methods
 	public void addFeatures() throws ArrayException{
 		FeatureManipulator fm = new FeatureManipulator(this);
-		fm.addList();
+		fm.addEntry();
 	}
 	
 	public void removeFeatures() throws ArrayException{

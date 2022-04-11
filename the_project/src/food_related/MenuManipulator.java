@@ -3,7 +3,7 @@ import list_methods.*;
 import java.util.Scanner;
 
 
-public class MenuManipulator implements AddNew,RemoveStandard,Set, Get {
+public class MenuManipulator implements AddStandard,RemoveStandard,Set, Get {
 	private Menu menu; 
 	
 	//Constructor
@@ -22,7 +22,7 @@ public class MenuManipulator implements AddNew,RemoveStandard,Set, Get {
 	 * Upon adding, checks if there are existing entries available for the new food item
 	 * If food entry is found, will check if food wants to be updated instead
 	*/
-	public void addList() throws ArrayException{
+	public void addEntry() throws ArrayException{
 		boolean found = false;
 		Scanner sc = new Scanner (System.in);
 		

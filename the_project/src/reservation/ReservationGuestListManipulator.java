@@ -5,21 +5,21 @@ import guest.Guest;
 import list_methods.*;
 import java.util.Scanner;
 
-public class ReservationGuestListManipulator implements AddNew{
+public class ReservationGuestListManipulator implements AddStandard{
 	private Reservation reservation;
 	
 	public ReservationGuestListManipulator(Reservation reservation) {
 		this.reservation = reservation;
 	}
 	
-	public void addList() {
+	public void addEntry() {
 		//Create reserver
 		System.out.println("\n------------ Reserver's details ------------");
 		Guest reserver = CreateGuest.createReserver(reservation);
 		reservation.getArray().add(reserver);
 		
 		for (int i=1;i<reservation.getNumOfGuest();i++) {
-			System.out.printf("\n----------------- Guest %d details-----------------\n",i);
+			System.out.printf("\n------------ Guest %d details------------\n",i);
 			Guest guest = CreateGuest.createGuest(reservation);
 			reservation.getArray().add(guest);
 		}//end for

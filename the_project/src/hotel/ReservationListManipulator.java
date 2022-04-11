@@ -15,7 +15,7 @@ public class ReservationListManipulator implements AddGivenObject, RemoveGivenOb
 	}
 	
 	//To be called right after creating reservation (pass reservation object in)
-	public void addList(Object daReservation) throws ArrayException {
+	public void addEntry(Object daReservation) throws ArrayException {
 		Reservation reservation;
 		if (daReservation==null) {throw new ArrayException("Reservation Terminated!!");} //will be thrown when num of guests exceeds max occupancy when creating reservation
 		else if (!(daReservation instanceof Reservation)) { throw new ArrayException("Error!!");}
@@ -25,7 +25,7 @@ public class ReservationListManipulator implements AddGivenObject, RemoveGivenOb
 	}
 	
 	//To be called in checkout function
-	public void removeList(Object daReservation) throws ArrayException {
+	public void removeEntry(Object daReservation) throws ArrayException {
 		Reservation reservation;
 		if (daReservation==null) {throw new ArrayException("Error!!");}
 		else if (!(daReservation instanceof Reservation)) { throw new ArrayException("Error!!");}

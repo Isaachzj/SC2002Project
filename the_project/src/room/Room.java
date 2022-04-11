@@ -49,7 +49,7 @@ public abstract class Room
 	public void reset(Reservation reservation) throws ArrayException{
 		//Reset roomService object (essentially the array of orders and total bill of orders)
 		RoomServiceManipulator rsm = new RoomServiceManipulator(this.roomService);
-		rsm.resetList();
+		rsm.resetArray();
 		
 		//if no more existing reservations
 		if (reservation==null) {

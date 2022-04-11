@@ -55,7 +55,7 @@ public class Menu{
 	 */
 	public void addFood() throws ArrayException {
 		MenuManipulator mm = new MenuManipulator(this);
-		mm.addList();
+		mm.addEntry();
 	}
 	
 	/**

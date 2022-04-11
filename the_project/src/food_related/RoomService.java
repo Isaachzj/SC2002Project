@@ -51,7 +51,7 @@ public class RoomService {
 	public void addOrder(Order daOrder) throws ArrayException{
 		RoomServiceManipulator rsm = new RoomServiceManipulator(this);
 		RSBillTabulator rbt = new RSBillTabulator(this);
-		rsm.addList(daOrder);
+		rsm.addEntry(daOrder);
 		rbt.calculateRoomServiceBill();
 	}	
 	
@@ -71,7 +71,7 @@ public class RoomService {
 	 */
 	public void reset() throws ArrayException { 
 		RoomServiceManipulator rsm = new RoomServiceManipulator(this);
-		rsm.resetList();
+		rsm.resetArray();
 		this.roomServiceBill = 0.0;
 	}	
 }

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import list_methods.*;
 
-public class FeatureManipulator implements AddNew,RemoveStandard,Set {
+public class FeatureManipulator implements AddStandard,RemoveStandard,Set {
 	private RoomFeatures rf;
 	
 	public FeatureManipulator(RoomFeatures rf) {
@@ -12,7 +12,7 @@ public class FeatureManipulator implements AddNew,RemoveStandard,Set {
 	}
 	
 //============================================================================================================================================	
-	public void addList() throws ArrayException {
+	public void addEntry() throws ArrayException {
 		boolean found = false;
 		Scanner sc = new Scanner (System.in);
 		

@@ -59,12 +59,12 @@ public class Hotel {
 	//Guest Related 
 	public void addGuests(Reservation reservation) throws ArrayException {
 		GuestListManipulator glm = new GuestListManipulator(this);
-		glm.addList(reservation);
+		glm.addEntry(reservation);
 	}
 	
 	public void removeGuests(Reservation reservation) throws ArrayException {
 		GuestListManipulator glm = new GuestListManipulator(this);
-		glm.removeList(reservation);
+		glm.removeEntry(reservation);
 	}
 	
 	public Guest getGuest() {
@@ -79,12 +79,12 @@ public class Hotel {
 	//Reservation Related 
 	public void addReservation(Reservation reservation) throws ArrayException {
 		ReservationListManipulator rlm = new ReservationListManipulator(this);
-		rlm.addList(reservation);
+		rlm.addEntry(reservation);
 	}
 	
 	public void removeReservation(Reservation reservation) throws ArrayException {
 		ReservationListManipulator rlm = new ReservationListManipulator(this);
-		rlm.removeList(reservation);
+		rlm.removeEntry(reservation);
 	}
 	
 	public Reservation getReservation() {
