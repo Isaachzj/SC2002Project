@@ -34,15 +34,4 @@ public class Identity {
 	 */
 	protected String getIdNumber() {return this.idNumber;}
 	
-	//set methods
-	/**
-	 * sets id type of guest 
-	 * @param   Name this sets the guest's id type
-	*/
-	protected void setIdType(TypeOfID idType) {this.idType = idType;}
-	/**
-	 * sets id number of guest 
-	 * @param   Name this sets the guest's id number
-	*/
-	protected void setIdNumber(String id) {this.idNumber = id;}
 }
