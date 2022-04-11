@@ -13,6 +13,17 @@ public class Menu{
 	private int numOfFood;
 	
 	//Constructor (NEED TO ADD 2 MORE TYPES OF FOOD LATER ON!
+	/**
+	 * To add 2 more types of food at a later stage
+	 * Creates a new ArrayList of Food (Menu) and add the 5 Food items
+	 * Follows the Single Responsibility principle as sole responsibility to add Food items into the ArrayList (Menu)
+	 * Also follows the Open-Closed principle since the software entities is open for extension but closed for modifications
+	 * @param f1 this is the first food for the Menu
+	 * @param f2 this is the second food for the Menu
+	 * @param f3 this is the third food for the Menu
+	 * @param f4 this is the fourth food for the Menu
+	 * @param f5 this is the fifth food for the Menu
+	 */
 	public Menu(Food f1, Food f2, Food f3, Food f4, Food f5) {
 		this.foodList = new ArrayList<Food>();
 		this.foodList.add(f1);

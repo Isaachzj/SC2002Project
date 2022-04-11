@@ -7,6 +7,11 @@ public class MenuManipulator implements AddNew,RemoveStandard,Set, Get {
 	private Menu menu; 
 	
 	//Constructor (For SRP)
+	/**
+	 * This Constructor follows the Single Responsibility principle
+	 * Additionally, it follows the Open-Closed principle as its software entities is open for extension but closed for modifications
+	 * @param menuList this is the menu list
+	 */
 	public MenuManipulator(Menu menuList) {
 		this.menu = menuList;
 	}
