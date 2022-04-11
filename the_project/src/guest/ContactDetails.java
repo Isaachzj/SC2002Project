@@ -55,25 +55,4 @@ public class ContactDetails {
 	*/
 	protected String getCountry() {return this.country;}
 	
-	//set methods
-	/**
-	 * sets the mobile number of the guest
-	 * @param MN this sets the guest's mobile number
-	 */
-	protected void setMobileNumber(String MN) {this.mobileNumber = MN;}
-	/**
-	 * sets email address of guest 
-	 * @param   EA this sets the guest's email address
-	*/
-	protected void setEmailAddress(String EA) {this.emailAddress = EA;}
-	/**
-	 * sets home address of guest 
-	 * @param   HA this sets the guest's home address
-	*/
-	protected void setHomeAddress(String HA) {this.homeAddress = HA;}
-	/**
-	 * sets country of origin of guest 
-	 * @param   country this sets the guest's country of origin
-	*/
-	protected void setCountry(String country) {this.country = country;}
 }
