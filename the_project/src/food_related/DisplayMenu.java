@@ -3,12 +3,19 @@ import list_methods.*;
 
 public class DisplayMenu implements Print {
 	private Menu menu;
-	
+	/**
+	 * creates a DisplayMenu object and
+	 * adds this menu into this DisplayMenu 
+	 * @param menuList Menu object
+	 */ 
 	public DisplayMenu(Menu menuList) {
 		this.menu = menuList;
 	}
 	
 	//Overridding printArray() method in Print
+	/**
+	 * prints food items, index of food items, price of food items and description of food items in this menu
+	 */ 
 	public void printArray() {
 		
 		int size = menu.getNumOfFood();
