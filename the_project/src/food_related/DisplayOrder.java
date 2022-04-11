@@ -6,7 +6,10 @@ public class DisplayOrder implements Print {
 	/**
 	 * creates a DisplayOrder object and
 	 * adds this menu into this DisplayOrder 
-	 * @param order Order object
+	 * The DisplayOrder class follows the Single Responsibility principle, as has a sole responsibility of displaying the Menu 
+	 * Additionally; it follows the Open-Closed principle as changes in the Display does not require a change in source code of modules
+	 * It also follows the Dependency Injection principle as there are class for DisplayOrder and DisplayMenu
+	 * @param this is the order of the customer
 	 */ 
 	public DisplayOrder(Order order) {
 		this.order = order;
@@ -15,6 +18,7 @@ public class DisplayOrder implements Print {
 	/**
 	 * if no orders taken, prints error message.
 	 * if orders available, prints out name, price and quantity of food items ordered.
+	 * Overrides the printArray() method in Print
 	 */ 
 	public void printArray() {
 		

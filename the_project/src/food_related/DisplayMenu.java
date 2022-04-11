@@ -8,6 +8,7 @@ public class DisplayMenu implements Print {
 	 * The DisplayMenu class follows the Single Responsibility principle, as has a sole responsibility of displaying the Menu 
 	 * Additionally; it follows the Open-Closed principle as changes in the Display does not require a change in source code of modules
 	 * (i.e. open for extensions but not modifications)
+	 * It also follows the Dependency Injection principle as there are class for DisplayOrder and DisplayMenu
 	 * @param menuList Menu object
 	 */ 
 	public DisplayMenu(Menu menuList) {
