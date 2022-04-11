@@ -22,12 +22,12 @@ public class DisplayMenu implements Print {
 		
 		//printing menu
 		System.out.println("===============Menu===============");
-		System.out.println("Index-------Food Item-------Price-------Description");
+		System.out.println("Index----------Food Item--------------Price----------Description");
 		
 		if (size==0) {System.out.println("Nothing available at the moment...");}
 		for (int i=1; i<=size; i++) {
 			Food food = menu.getArray().get(i-1);
-			System.out.printf("%-12d%-10s%10.2f        %s\n", i, food.getFoodName(), food.getPrice(), food.getDescription());
+			System.out.printf("%-15d%-23s%-15.2f%-30s\n", i, food.getFoodName(), food.getPrice(), food.getDescription());
 		}
 		System.out.println("==================================");
 	}
