@@ -53,7 +53,7 @@ public class Hotel {
 		this.guestList = new ArrayList<Guest>();
 //==============================Reservation==============================
 		this.reservationList = new ArrayList<Reservation>();
-	}
+	} //end of constructor
 	
 
 	//Guest Related 
@@ -100,6 +100,11 @@ public class Hotel {
 	public ArrayList<Reservation> getRoomReservationList(Room room) {
 		ReservationListManipulator rlm = new ReservationListManipulator(this);
 		return rlm.getEntry(room);
+	}
+	
+	public void reservationInfo() {
+		DisplayReservationList drl = new DisplayReservationList(this);
+		drl.printArray();
 	}
 	
 	protected ArrayList<Reservation> getReservationList() {return this.reservationList;}

@@ -16,11 +16,11 @@ public class StayRelated {
 			3. Check-Out a guest
 		*/
 		Scanner sc = new Scanner(System.in);
-		System.out.println("\n========== HOTEL RELATED ==========");
+		System.out.println("\n========== STAY RELATED ==========");
 		System.out.println("Choose an option (Select option)\n-Enter an alphabet to terminate-:"
-				+ "\n1. Make a Reservation\n2. Check-In a guest\n3. Check-Out a guest");
+				+ "\n1. Make a Reservation\n2. Check-In a guest\n3. Check-Out a guest\n4. View all reservations");
 		int choice = sc.nextInt(); sc.nextLine();	
-		while (choice<=0 || choice>4) {
+		while (choice<=0 || choice>5) {
 			System.out.println("Enter a valid choice!");
 			choice = sc.nextInt(); sc.nextLine();
 		}
@@ -39,9 +39,13 @@ public class StayRelated {
 				CheckOut.checkOut(hotel);
 				break;
 				
+			case(4):
+				hotel.reservationInfo();
+				break;
+				
 			default:
 				System.out.println("Enter a valid option!");
 			}
-		} while (choice<=0||choice>3);
+		} while (choice<=0||choice>4);
 	}//end method
 }

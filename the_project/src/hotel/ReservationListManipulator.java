@@ -7,7 +7,7 @@ import list_methods.*;
 import java.util.*;
 import java.time.LocalDateTime;
 
-public class ReservationListManipulator implements AddGivenObject, RemoveGivenObject, Get{
+public class ReservationListManipulator implements AddGivenObject, RemoveGivenObject, Get {
 	private Hotel hotel;
 	
 	public ReservationListManipulator(Hotel hotel) {
@@ -96,4 +96,5 @@ public class ReservationListManipulator implements AddGivenObject, RemoveGivenOb
 		}//end for
 		return reservation;
 	}
+	
 }
