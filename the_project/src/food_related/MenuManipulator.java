@@ -12,6 +12,11 @@ public class MenuManipulator implements AddNew,RemoveStandard,Set, Get {
 	}
 //============================================================================================================================================
 	//For adding new Menu Items
+	/**
+	 * Allows new food item, its price and its description to be added into the Menu
+	 * Upon adding, checks if there are existing entries available for the new food item
+	 * If food entry is found, will check if food wants to be updated instead
+	*/
 	public void addList() throws ArrayException{
 		boolean found = false;
 		Scanner sc = new Scanner (System.in);
@@ -34,7 +39,12 @@ public class MenuManipulator implements AddNew,RemoveStandard,Set, Get {
 		}//end for
 		
 		if (found) throw new ArrayException("Food already exist! Do you want to update food entry instead?");
-		
+		/**
+		 * Creates new Food which stores the details of the new food name, its price and its description
+		 * @param   food_name this is the name of the new food
+		 * @param   price this is the price of the new food
+		 * @param   des this is the description of the new food
+		*/
 		Food new_food = new Food(food_name, price, des);
 		menu.getArray().add(new_food);	//getArray returns reference to ArrayList object
 		menu.setNumOfFood(menu.getNumOfFood()+1);
@@ -49,6 +59,11 @@ public class MenuManipulator implements AddNew,RemoveStandard,Set, Get {
 	*/
 //============================================================================================================================================
 	//Overriding removeList method in RemoveFood interface
+	/**
+	 * Allows existing food entry from the Menu to be removed
+	 * Upon removal, check if the item number exist in the Menu
+	 * If the item number requested for removal falls outside the Menu, i.e. it does not exist in the Menu, then exception is throw and error message displaying that food entry does not exist
+	*/
 	public void removeEntry() throws ArrayException{
 		
 		Scanner sc = new Scanner (System.in);
@@ -67,6 +82,12 @@ public class MenuManipulator implements AddNew,RemoveStandard,Set, Get {
 
 //============================================================================================================================================
 	//Overridden method in the Set interface
+	/**
+	 * Allows existing food entries from the Menu to be modified
+	 * Prior to the modification of food entries, choice given to either modify the existing food price, description or both
+	 * If the new price or new description added is the same as before, i.e. no changes to the existing food in the Menu, then Exception is thrown and error message displaying that price/ description is the same.
+	 * If none of the options chosen; message displaying for valid option to be chosen
+	*/
 	public void set() throws ArrayException{
 		int choice = 0;
 		
@@ -137,6 +158,10 @@ public class MenuManipulator implements AddNew,RemoveStandard,Set, Get {
 	}//end set method
 
 //============================================================================================================================================
+	/**
+     * Gets the food from the Menu with respect to the item number entered
+     * @return this is the food from the Menu respective to the entered item number
+    */
 	public Food getEntry(){ //For Room Service
 		
 		Scanner sc = new Scanner(System.in);
