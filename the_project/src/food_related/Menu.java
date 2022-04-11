@@ -3,7 +3,13 @@ import java.util.ArrayList;
 import list_methods.*;
 
 public class Menu{
+	/**
+	 * list of food items in this Menu
+	 */
 	private ArrayList<Food> foodList;
+	/**
+	 * number of food items in this Menu
+	 */
 	private int numOfFood;
 	
 	//Constructor (NEED TO ADD 2 MORE TYPES OF FOOD LATER ON!
@@ -17,34 +23,57 @@ public class Menu{
 		this.numOfFood = 5;	
 	}
 	
-	//get method 
+	//get method
+	/**
+	 * @return list of food items available in this Menu
+	 */
 	protected ArrayList<Food> getArray() {return foodList;}	//returns reference
+	/**
+	 * @return number of food items available in this Menu
+	 */
 	protected int getNumOfFood() {return numOfFood;}			//returns value
 	
 	//set method
+	/**
+	 * sets number of food items in this Menu
+	 */
 	protected void setNumOfFood(int num) {this.numOfFood = num;}	
 
-	
+	/**
+	 * creates a MenuManipulator object and adds a food item to this Menu
+	 */
 	public void addFood() throws ArrayException {
 		MenuManipulator mm = new MenuManipulator(this);
 		mm.addList();
 	}
 	
+	/**
+	 * creates a MenuManipulator object and removes a food item to this Menu
+	 */ 
 	public void removeFood() throws ArrayException {
 		MenuManipulator mm = new MenuManipulator(this);
 		mm.removeEntry();
 	}
 	
+	/**
+	 * creates a MenuManipulator object and updates a food item to this Menu
+	 */
 	public void updateFood() throws ArrayException {
 		MenuManipulator mm = new MenuManipulator(this);
 		mm.set();
 	}
 	
+	/**
+	 * creates a MenuManipulator object and gets a food item to this Menu
+	 */
 	public Food getFood() {
 		MenuManipulator mm = new MenuManipulator(this);
 		return mm.getEntry();
 	}	
 	
+	/**
+	 * creates a DisplayMenu object and prints the food items in this Menu
+	 */
 	public void info() {
 		DisplayMenu dm = new DisplayMenu(this);
 		dm.printArray();	
