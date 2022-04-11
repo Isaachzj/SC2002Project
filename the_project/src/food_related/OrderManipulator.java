@@ -6,8 +6,8 @@ public class OrderManipulator implements AddGivenObject{
 	private Order order;
 
 	/**
-     * Returns the guest's order bill
-     * 
+     * This Constructor follows the Single Responsibility principle
+	 * Additionally, it follows the Open-Closed principle as its software entities is open for extension but closed for modifications
      * @return this is the order bill of the guest
 	*/
 	public OrderManipulator(Order order) {
