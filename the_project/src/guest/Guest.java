@@ -33,7 +33,7 @@ public class Guest {
 	 */
 	private Reservation reservationDetails;
 	
-	// Constructor 1
+	// Constructor
 	/**
 	 * Instantiation of guest details using guest name, nationality, gender, identity, credit card details, contact details and reservation details
 	 * @param name this is the name of the guest
@@ -56,6 +56,9 @@ public class Guest {
 	
 	// get methods
 	/**
+	 * We made it such that only methods returning guest's name, contact details and reservation details are public. 
+	 * This ensures better encapsulation of information that are more private.
+	 * 
 	 * Gets the guest's name
 	 * @return this is the name of the guest
 	 */
@@ -65,6 +68,11 @@ public class Guest {
 	 * @return this is the contact details of the guest
 	 */
 	public ContactDetails getContacts() {return this.contacts;}	
+	/**
+	 * Gets the guest's reservation details
+	 * @return this is the reservation details of the guest
+	 */
+	public Reservation getReservation() {return this.reservationDetails;}	
 	/**
 	 * Gets the guest's nationality
 	 * @return this is the nationality of the guest
@@ -85,11 +93,7 @@ public class Guest {
 	 * @return this is the credit card details of the guest
 	 */
 	protected CreditCardInfo getCreditCardDetails() {return this.creditCardDetails;}
-	/**
-	 * Gets the guest's reservation details
-	 * @return this is the reservation details of the guest
-	 */
-	public Reservation getReservation() {return this.reservationDetails;}
+
 	
 	//set methods
 	/**
