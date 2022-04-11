@@ -18,6 +18,14 @@ public class Reservation {
 	protected int numOfGuest;
 	protected ArrayList<Guest> guestList = new ArrayList<Guest>();
 	
+	public Reservation(Room room) { 
+		this.room = room;
+		this.numOfWeekday = 0;
+		this.numOfWeekend = 0;
+		this.numOfGuest = 0;
+		this.guestList = new ArrayList<Guest>();
+	}	
+	
 	public Room getRoom() {return this.room;}
 	public LocalDateTime getCheckInDateTime() {return this.checkInDateTime;}
 	public LocalDateTime getCheckOutDateTime() {return this.checkOutDateTime;}
@@ -33,13 +41,7 @@ public class Reservation {
 	
 	public Guest getGuest() {return this.guestList.get(0);}
 	
-	public Reservation(Room room) { 
-		this.room = room;
-		this.numOfWeekday = 0;
-		this.numOfWeekend = 0;
-		this.numOfGuest = 0;
-		this.guestList = new ArrayList<Guest>();
-	}
+
 	
 	public Reservation(Room room, LocalDateTime checkInDateTime, LocalDateTime checkOutDateTime, long numOfWeekday, long numOfWeekend, int numOfGuest) {
 		this.room = room;
