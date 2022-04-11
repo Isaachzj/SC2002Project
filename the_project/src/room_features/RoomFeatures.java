@@ -38,12 +38,8 @@ public class RoomFeatures {
 	protected int getNumFeatures() {return numOfFeatures;}
 	
 	//set methods
-	protected void setBedType(TypeOfBed bedType) {this.bedType = bedType;}
-	protected void setViewType(ViewType viewType) {this.viewType = viewType;}
-	protected void setNumOfBed(int numOfBed) {this.numOfBed = numOfBed;}
-	protected void setWifi(boolean wifi) {this.wifi = wifi;}
-	protected void setSmokeOut(boolean smokeOut) {this.smokeOut = smokeOut;}
 	protected void setNumFeatures(int numOfFeatures) {this.numOfFeatures = numOfFeatures;}
+	
 	
 	//Methods
 	public void addFeatures() throws ArrayException{

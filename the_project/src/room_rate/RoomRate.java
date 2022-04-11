@@ -5,14 +5,6 @@ public class RoomRate {
 	private double weekend;
 	private double discount;
 	
-	//Constructor
-	/*
-	public RoomRate() {
-		this.weekday = 0;
-		this.weekend = 0;
-		this.discount = 0;
-	}*/
-	
 	public RoomRate(double weekday, double weekend, double discount) {
 		this.weekday = weekday;
 		this.weekend = weekend;
@@ -24,10 +16,12 @@ public class RoomRate {
 	protected double getWeekend() {return weekend;}
 	protected double getDiscount() {return discount;}
 	
-	//set methods
-	public void setWeekday(double num) {this.weekday = num;}
-	public void setWeekend(double num) {this.weekend = num;}
-	public void setDiscount(double num) {this.discount = num;}
+	/*set methods (NOT USED)
+	protected void setWeekday(double num) {this.weekday = num;}
+	protected void setWeekend(double num) {this.weekend = num;}
+	*/
+	public void setDiscount(double num) {this.discount = num;}  //Do we want to change discount @YanKai?
+	
 	
 	//prints Room Rate info
 	public void info() {

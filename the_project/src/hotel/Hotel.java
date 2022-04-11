@@ -6,7 +6,7 @@ import reservation.*;
 import room.*;
 import list_methods.*;
 import enumeration.*;
-import food_related.CreateMenu;
+import food_related.CreateMenus;
 
 import java.util.ArrayList;
 
@@ -19,7 +19,7 @@ public class Hotel {
 	
 	public Hotel() {
 //==============================Room Menus==============================
-		ArrayList<Menu> allMenus = CreateMenu.createMenu(); // (RoomType-Index): Single-0, Double-1, Deluxe-2, VIP-3
+		ArrayList<Menu> allMenus = CreateMenus.createMenus(); // (RoomType-Index): Single-0, Double-1, Deluxe-2, VIP-3
 		this.menuList = allMenus;
 		
 //==============================Rooms==============================

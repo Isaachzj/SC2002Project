@@ -10,7 +10,7 @@ public class RSBillTabulator {
 	 */
 	public RSBillTabulator(RoomService rs) {
 		this.rs = rs;
-	}
+	}	
 	
 	/**
 	 * this adds up all food item prices into totalBill and sets totalBill as RoomServiceBill in this room service order

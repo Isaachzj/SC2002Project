@@ -12,7 +12,7 @@ public class Menu{
 	 */
 	private int numOfFood;
 	
-	//Constructor (NEED TO ADD 2 MORE TYPES OF FOOD LATER ON!
+	//Constructor 
 	/**
 	 * To add 2 more types of food at a later stage
 	 * Creates a new ArrayList of Food (Menu) and add the 5 Food items
@@ -91,44 +91,3 @@ public class Menu{
 	}
 	
 }
-
-
-
-
-
-
-/*if (roomType == TypeOfRoom.SINGLE) {
-Food food1 = new Food("Claypot rice", 10.00);
-Food food2 = new Food("Chicken rice", 6.00);
-Food food3 = new Food("Fried rice", 6.00);
-menuList.add(food1);
-menuList.add(food2);
-menuList.add(food3);
-}
-
-else if (roomType == TypeOfRoom.DOUBLE) {
-Food food1 = new Food("Claypot rice", 10.00);
-Food food2 = new Food("Chicken rice", 6.00);
-Food food3 = new Food("Fried rice", 6.00);
-menuList.add(food1);
-menuList.add(food2);
-menuList.add(food3);
-}
-
-else if (roomType == TypeOfRoom.DELUXE) {
-Food food1 = new Food("Pineapple Fried rice", 10.00);
-Food food2 = new Food("Olive Fried rice", 10.00);
-Food food3 = new Food("Tomato Fried rice", 10.00);
-menuList.add(food1);
-menuList.add(food2);
-menuList.add(food3);
-}
-
-else {
-Food food1 = new Food("T-Bone steak", 30.00);
-Food food2 = new Food("Truffle Fried Rice", 18.00);
-Food food3 = new Food("Lobster Thermidor", 40.00);
-menuList.add(food1);
-menuList.add(food2);
-menuList.add(food3);
-}*/

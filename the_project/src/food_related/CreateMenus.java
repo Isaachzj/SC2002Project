@@ -2,7 +2,7 @@ package food_related;
 
 import java.util.ArrayList;
 
-public class CreateMenu {
+public class CreateMenus {
 	/**
 	 * Return the Array list of all Menu of the Food from 'Single', 'Double', 'Deluxe' and 'VIP'
 	 * Food item also has been instantiated into the Menu of Food respectively
@@ -10,7 +10,7 @@ public class CreateMenu {
 	 * Follows the Interface Segregation principle; since Classes do not depend on interfaces that they do not use
 	 * @return the Array list of all Menu of the Food
 	 */
-	public static ArrayList<Menu> createMenu(){
+	public static ArrayList<Menu> createMenus(){
 		ArrayList<Menu> allMenus = new ArrayList<Menu>();
 		
 		String food1 = "Chicken Rice";

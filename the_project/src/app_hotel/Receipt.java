@@ -10,6 +10,8 @@ public class Receipt{
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd   |   HH:mm");
 		System.out.println("========== Receipt ==========");
 		System.out.printf("(%s) Room Number %s\n", reservation.getRoom().getRoomType(), reservation.getRoom().getRoomNum());
+		System.out.println("Room Rates:\n");
+		reservation.getRoom().getRate().info();
 		System.out.println("Check In:  " + reservation.getCheckInDateTime().format(formatter));
 		System.out.println("Check Out: " + reservation.getCheckOutDateTime().format(formatter));
 		System.out.println("Number of guests: " + reservation.getNumOfGuest());

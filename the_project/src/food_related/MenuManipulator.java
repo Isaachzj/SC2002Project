@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class MenuManipulator implements AddNew,RemoveStandard,Set, Get {
 	private Menu menu; 
 	
-	//Constructor (For SRP)
+	//Constructor
 	/**
 	 * This Constructor follows the Single Responsibility principle
 	 * Additionally, it follows the Open-Closed principle as its software entities is open for extension but closed for modifications
@@ -55,13 +55,7 @@ public class MenuManipulator implements AddNew,RemoveStandard,Set, Get {
 		menu.setNumOfFood(menu.getNumOfFood()+1);
 	}
 	
-	/*
-	//Overloaded addList method (For Room initial instantiation)
-	public void addList(Food ff) {
-		menu.getArray().add(ff);	//getArray returns reference to ArrayList object
-		menu.setNumOfFood(menu.getNumOfFood()+1);
-	}
-	*/
+	
 //============================================================================================================================================
 	//Overriding removeList method in RemoveFood interface
 	/**
