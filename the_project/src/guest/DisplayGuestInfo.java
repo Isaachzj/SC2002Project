@@ -1,6 +1,12 @@
 package guest;
 
 public class DisplayGuestInfo {
+	/**
+	 * Displays guest information; name, nationality, gender, identification type and identification number
+	 * Also displays Credit card details and customer details
+	 * If parameter for Guest object is null; to return. Else, if Guest object found will display information accordingly
+	 * @param guest this is the guest that needs to update credit card information
+	 */
 	public static void printInfo(Guest guest) {
 	
 		if (guest==null) {

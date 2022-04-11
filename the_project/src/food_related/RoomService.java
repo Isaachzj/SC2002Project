@@ -43,7 +43,8 @@ public class RoomService {
 	
 	//addOrder() method to add orders to Room Service object
 	/**
-	 * This method add the order (param) into the Room Service object
+	 * This method add the order from the parameter; into the Room Service object
+	 * Follows the Interface Segregation principle; with instead of one big interface, many small interfaces based on groups of methods
 	 * @param daOrder this is the new order to be added to the Room Service object
 	 * @throws ArrayException
 	 */

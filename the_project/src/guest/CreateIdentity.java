@@ -3,6 +3,12 @@ import enumeration.TypeOfID;
 import java.util.Scanner;
 
 public class CreateIdentity {
+	/**
+	 * Instantiation of identification for the guest
+	 * Given options of identification using driving license, NRIC or passport number
+	 * Different types of identifications enumerated accordingly
+	 * @return this is the identification number
+	 */
 	public static Identity createIdentity() {
 		Scanner sc = new Scanner(System.in);
 		TypeOfID idtype;

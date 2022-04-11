@@ -3,6 +3,11 @@ import java.util.Scanner;
 
 public class CreditCardInfoManipulator {
 	//CreditCardInfo CCinfo = new CreditCardInfo(CCNum, CCBank, ExpiryDate, BillName, BillAddress);
+	/**
+	 * Updates the credit card information of the guest; with the input of the credit card number, bank, expiry datem billing name and billing address
+	 * If parameter for Guest object is null; to return. Else, if Guest object found will update accordingly
+	 * @param guest this is the guest that needs to update credit card information
+	 */
 	public static void updateCreditCardInfo(Guest guest) {
 		// Check if guest==null
 		if (guest==null) {
