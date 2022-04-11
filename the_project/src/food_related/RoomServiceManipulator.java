@@ -7,6 +7,8 @@ public class RoomServiceManipulator implements AddGivenObject, Reset {
 	private RoomService rs;
 	/**
 	 * Displays the room service of the guests
+	 * This Constructor follows the Single Responsibility principle
+	 * Additionally, it follows the Open-Closed principle as its software entities is open for extension but closed for modifications
 	 * @param   rs this is the Room Service of the guest
 	*/
 	public RoomServiceManipulator(RoomService rs) {
