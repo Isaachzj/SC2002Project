@@ -77,6 +77,7 @@ public class Order {
 	/**
 	 * creates an OrderManipulator object and a BillTabulator object. 
 	 * sets in this OrderManipulator Object: food items list ordered, remarks, date, timestamp, bill
+	 * Follows the Interface Segregation principle; with instead of one big interface, many small interfaces based on groups of methods
 	 * @param menu Menu object
 	 */ 
 	public void makeOrder(Menu menu) throws ArrayException {
