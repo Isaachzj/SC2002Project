@@ -1,11 +1,20 @@
 package enumeration;
 
+/**
+ * enumerations for gender of Guest object;
+ * there are 2 types (MALE, FEMALE);
+ * gender of guest;
+ * @author wenlu
+ *
+ */
+
 public enum TypeOfGender {
 	/**
-	 * For the enumeration of the TypeOfGender, there are 2 types (MALE, FEMALE)
-	 * 
-	 * MALE is used to indicate when the guest's gender is Male
-	 * FEALE is used to indicate when the guest's gender is Female
+	 * gender of Guest is Male;
 	 */
-	MALE, FEMALE
+	MALE, 
+	/**
+	 * gender of Guest is Female;
+	 */
+	FEMALE
 }
