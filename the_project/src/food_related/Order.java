@@ -116,6 +116,7 @@ public class Order {
 		this.setRemarks(remarks);
 		/**
 		 * Date and time stamp
+		 * ensures that date and time when ordering food is between check in DateTime and check out DateTime
 		 */
 		LocalDateTime currentTime = DateTime.getLocalDateTime("Order");
 		while (true) {
