@@ -1,13 +1,16 @@
 package food_related;
 
 public class BillTabulator {
+	/**
+	 * order object is set to private to ensure better encapsulation
+	 */
 	private Order order;
 	/**
 	 * Returns the Guest's order bill
 	 * Follows Single Responsibility principle as it has the single responsibility of returning Guest's order bill
 	 * Also follows the Open-Close principle since software entity in this case open for extension but closed for modifications
-	 * @param this is the order bill of the Guest
-	*/
+	 * @param order this is the order bill of the Guest
+	 */
 	public BillTabulator(Order order) {
 		this.order = order;
 	}

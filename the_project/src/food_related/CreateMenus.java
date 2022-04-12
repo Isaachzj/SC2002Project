@@ -79,7 +79,9 @@ public class CreateMenus {
 		String des15 = "Not from Don Don Donki!";
 		
 
-		//Instantiating all Food
+		/**
+		 * Instantiating all Food
+		 */
 		Food f1 = new Food(food1, price1, des1);
 		Food f2 = new Food(food2, price2, des2);
 		Food f3 = new Food(food3, price3, des3);
