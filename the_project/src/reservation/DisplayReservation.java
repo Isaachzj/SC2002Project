@@ -7,7 +7,7 @@ public class DisplayReservation {
 		System.out.println("Check In: " + reservation.getCheckInDateTime());
 		System.out.println("Number of people staying: " + reservation.getNumOfGuest());
 		System.out.println();
-		System.out.println("Reservation made under:\n");
+		System.out.println("RESERVATION MADE UNDER:\n");
 		DisplayGuestInfo.printInfo(reservation.getGuestList().get(0));
 	}
 }

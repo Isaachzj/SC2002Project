@@ -19,7 +19,7 @@ public class Receipt{
 		System.out.println("Number of guests: " + reservation.getNumOfGuest());
 		System.out.println();
 		//Reserver's information
-		System.out.println("Reservation Made Under:");
+		System.out.println("RESERVATION MADE UNDER:");
 		System.out.println("--------------------------------");
 		DisplayGuestInfo.printInfo(reservation.getGuestList().get(0));
 		//Displays all Orders

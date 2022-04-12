@@ -80,7 +80,7 @@ public class RoomService {
 	 * This reset method resets RoomService object upon check out
 	 * @throws ArrayException
 	 */
-	public void reset() throws ArrayException { 
+	public void reset() { 
 		RoomServiceManipulator rsm = new RoomServiceManipulator(this);
 		rsm.resetArray();
 		this.roomServiceBill = 0.0;

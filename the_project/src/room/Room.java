@@ -46,7 +46,7 @@ public abstract class Room
 	
 	
 	//resets room upon check out (to be used by Check out function)
-	public void reset(Reservation reservation) throws ArrayException{
+	public void reset(Reservation reservation) {
 		
 		System.out.println("\n----RESETING ROOM----");
 		//Reset roomService object (essentially the array of orders and total bill of orders)

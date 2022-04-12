@@ -14,7 +14,7 @@ public class CheckOut {
 
 		Reservation reservation = hotel.getReservation();
 		if (reservation==null) {
-			System.out.println("Reservation not found! Guest does not exist! (GHOSTTTTT)");
+			System.out.println("Reservation not found! Reserver does not exist! (GHOSTTTTT)");
 			return;
 		}
 		Receipt.info(reservation);
