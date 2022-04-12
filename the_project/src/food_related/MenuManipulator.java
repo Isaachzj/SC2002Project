@@ -6,7 +6,9 @@ import java.util.Scanner;
 public class MenuManipulator implements AddStandard,RemoveStandard,Set, Get {
 	private Menu menu; 
 	
-	//Constructor
+	/**
+	 * # Constructor
+	 */
 	/**
 	 * This Constructor follows the Single Responsibility principle
 	 * Additionally, it follows the Open-Closed principle as its software entities is open for extension but closed for modifications
@@ -16,12 +18,15 @@ public class MenuManipulator implements AddStandard,RemoveStandard,Set, Get {
 		this.menu = menuList;
 	}
 //============================================================================================================================================
-	//For adding new Menu Items
 	/**
-	 * Allows new food item, its price and its description to be added into the Menu
+	 * # For adding new Menu Items
+	 */
+	/**
+	 * Instantiation of new food item details (food name, price and description) to be added into the Menu
 	 * Upon adding, checks if there are existing entries available for the new food item
 	 * If food entry is found, will check if food wants to be updated instead
-	*/
+	 * getArray returns reference to ArrayList object
+	 */
 	public void addEntry() throws ArrayException{
 		boolean found = false;
 		Scanner sc = new Scanner (System.in);
@@ -34,7 +39,9 @@ public class MenuManipulator implements AddStandard,RemoveStandard,Set, Get {
 		System.out.println("Enter description of Food:");
 		String des = sc.nextLine();
 		
-		//Check if such an entry exists!
+		/**
+		 * # Check if such an entry exists!
+		 */
 		for (int i=0; i<menu.getArray().size(); i++) {
 			Food food = menu.getArray().get(i);
 			if (food.getFoodName().compareTo(food_name) == 0) {
@@ -82,10 +89,11 @@ public class MenuManipulator implements AddStandard,RemoveStandard,Set, Get {
 //============================================================================================================================================
 	//Overridden method in the Set interface
 	/**
-	 * Allows existing food entries from the Menu to be modified
+	 * Modifications to existing food entries from the Menu
 	 * Prior to the modification of food entries, choice given to either modify the existing food price, description or both
 	 * If the new price or new description added is the same as before, i.e. no changes to the existing food in the Menu, then Exception is thrown and error message displaying that price/ description is the same.
 	 * If none of the options chosen; message displaying for valid option to be chosen
+	 * Exception would be thrown if there are any errors encountered along the way (new price the same or new description the same)
 	*/
 	public void set() throws ArrayException{
 		int choice = 0;
@@ -101,17 +109,22 @@ public class MenuManipulator implements AddStandard,RemoveStandard,Set, Get {
 			
 			switch(choice) {
 			case (1):		
-				//Finding food entry in the array
-						
+				/**
+				 * Finding food entry in the array	
+				 */
 				System.out.println("Enter the new price:");
 				double price = sc.nextDouble();
 				sc.nextLine();
 				
-				//throw exception if new price is the same as before
+				/**
+				 * throw exception if new price is the same as before
+				 */
 				if (food.getPrice() == price)
 					throw new ArrayException("Price is the same!!");
 				
-				//updating the price
+				/**
+				 * updating the price
+				 */
 				food.setPrice(price);
 				return;
 				
@@ -120,11 +133,15 @@ public class MenuManipulator implements AddStandard,RemoveStandard,Set, Get {
 				System.out.println("Enter the new description:");
 				String ss = sc.nextLine();
 				
-				//throw exception if new price is the same as before
+				/**
+				 * throw exception if description is the same as before
+				 */
 				if (ss.compareTo(food.getDescription())==0)
 					throw new ArrayException("Description is the same!!");
 				
-				//updating the price
+				/**
+				 * updating the price
+				 */
 				food.setDescription(ss);
 				return;
 
@@ -136,14 +153,20 @@ public class MenuManipulator implements AddStandard,RemoveStandard,Set, Get {
 				double pricey = sc.nextDouble();
 				sc.nextLine();
 				
-				//throw exception if new price is the same as before
+				/**
+				 * throw exception if new price is the same as before
+				 */
 				if (food.getPrice() == pricey)
 					throw new ArrayException("Price is the same!!");
-				//throw exception if new price is the same as before
+				/**
+				 * throw exception if new description is the same as before
+				 */
 				if (string.compareTo(food.getDescription())==0)
 					throw new ArrayException("Description is the same!!");
 								
-				//updating the description and price
+				/**updating the description and price
+				 * 
+				 */
 				food.setDescription(string);
 				food.setPrice(pricey);
 				return;
@@ -161,8 +184,10 @@ public class MenuManipulator implements AddStandard,RemoveStandard,Set, Get {
      * Gets the food from the Menu with respect to the item number entered
      * @return this is the food from the Menu respective to the entered item number
     */
-	public Food getEntry(){ //For Room Service
-		
+	public Food getEntry(){ 
+		/** 
+		 * for Room Service
+		 */
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the item number:");
 		int food_num = sc.nextInt();
