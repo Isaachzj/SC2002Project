@@ -21,7 +21,13 @@ public class RoomService {
 		this.roomServiceBill = 0.0;
 	}
 	
-	//get methods
+	//
+	/**
+	 * get methods
+	 * We made it such that only methods returning guest's name, contact details and reservation details are public. 
+	 * Methods returning guest's mobile number, email address, home address and country of origin are protected
+	 * this ensures better encapsulation of information while ensuring that the methods can be accessed by the same package and subclasses
+	 */
 	/**
 	 * gets bill of this room service order
 	 * @return final bill of this room service order

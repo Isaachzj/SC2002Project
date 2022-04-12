@@ -3,23 +3,23 @@ package food_related;
 public class Food {
 	
 	/**
-	 * name of food item
+	 * name of food object (private attribute)
 	 */ 
 	private String foodName;
 	
 	/**
-	 * description of food item
+	 * description of food object (private attribute)
 	 */ 
 	private String description;	
 	
 	/**
-	 * price of food item
+	 * price of food object (private attribute)
 	 */ 
 	private double price;
 
 	//Constructor
 	/**
-	 * creates a Food object with input name, price and description
+	 * Instantiation of Food object with input name, price and description
 	 * Follows the Single Dependency principle as sole responsibility is to create a Food object
 	 * Also follows the Open-Closed principle as changes in the Display does not require a change in source code of modules
 	 * @param	name name of this food item
@@ -32,21 +32,32 @@ public class Food {
 		this.description = description;
 	}
 	
-	//get methods
 	/**
+	 * get methods
+	 * All methods returned here are protected
+	 * this includes returning food name, description and price
+	 * this ensures better encapsulation of information while ensuring that the methods can be accessed by the same package and subclasses
+	 */
+	/**
+	 * gets the food item's name
 	 * @return name of this food item
 	 */ 
 	protected String getFoodName() {return this.foodName;}
 	/**
+	 * 
+	 * gets the food item's description
 	 * @return description of this food item
 	 */ 
 	protected String getDescription() {return this.description;}
 	/**
+	 * gets the food item's price
 	 * @return price of this food item
 	 */ 
 	protected double getPrice() {return this.price;}
 	
-	//set method
+	/**
+	 * set method
+	 */
 	/**
 	 * sets price of this food item
 	 * @param price price of this food item
