@@ -5,35 +5,37 @@ import reservation.*;
 
 public class Guest {
 	/**
-	 * this is the guest name
+	 * this is the guest name (private attribute)
 	 */
 	private String name;
 	/**
-	 * this is the guest nationality
+	 * this is the guest nationality (private attribute)
 	 */
 	private String nationality;
 	/**
-	 * this is the guest gender
+	 * this is the guest gender (private attribute)
 	 */
 	private TypeOfGender gender;
 	/**
-	 * this is the guest identity
+	 * this is the guest identity (private attribute)
 	 */
 	private Identity identity;
 	/**
-	 * this is the guest credit card details
+	 * this is the guest credit card details (private attribute)
 	 */
 	private CreditCardInfo creditCardDetails;
 	/**
-	 * this is the guest contact details
+	 * this is the guest contact details (private attribute)
 	 */
 	private ContactDetails contacts;
 	/**
-	 * this is the guest reservation details
+	 * this is the guest reservation details (private attribute)
 	 */
 	private Reservation reservationDetails;
 	
-	// Constructor
+	/**
+	 * # Constructor
+	 */
 	/**
 	 * Instantiation of guest details using guest name, nationality, gender, identity, credit card details, contact details and reservation details
 	 * @param name this is the name of the guest
@@ -54,7 +56,12 @@ public class Guest {
 		this.reservationDetails = reservationDetails;
 	}	
 	
-	// get methods
+	/**
+	 * get methods
+	 * We made it such that only methods returning guest's name, contact details and reservation details are public. 
+	 * Methods returning guest's mobile number, email address, home address and country of origin are protected
+	 * this ensures better encapsulation of information while ensuring that the methods can be accessed by the same package and subclasses
+	 */
 	/**
 	 * We made it such that only methods returning guest's name, contact details and reservation details are public. 
 	 * This ensures better encapsulation of information that are more private.
