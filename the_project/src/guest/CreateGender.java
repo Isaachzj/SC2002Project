@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class CreateGender {
 	/**
-	 * instantiation of guest's gender; if user input is '1', instantiated as 'MALE'; else, 'FEMALE'
+	 * instantiation of guest's gender;
+	 * If user input is '1', guest's gender instantiated as 'MALE'; else, 'FEMALE'
 	 * once the gender of guest has been instantiated, it would be returned
 	 * @return this is the gender of the guest
 	 */
