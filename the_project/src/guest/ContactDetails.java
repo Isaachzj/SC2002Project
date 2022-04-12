@@ -40,15 +40,15 @@ public class ContactDetails {
 	//get methods
 	/**
 	 * # get methods
-	 * All methods here are set to protected for better encapsulation.
-	 * Methods returning guest's mobile number, email address, home address and country of origin is protected
+	 * We made it such that only methods returning guest's mobile number is public. 
+	 * Methods returning guest's email address, home address and country of origin are protected
 	 * this ensures better encapsulation of information while ensuring that the methods can be accessed by the same package and subclasses
 	 */
 	/**
 	 * gets the guest's mobile number
 	 * @return this is the guest's mobile number
 	 */
-	protected String getMobileNumber() {return this.mobileNumber;}
+	public String getMobileNumber() {return this.mobileNumber;}
 	/**
 	 * gets the guest's email address
 	 * @return  this is the guest's email address
