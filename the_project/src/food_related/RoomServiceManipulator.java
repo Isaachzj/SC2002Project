@@ -42,12 +42,12 @@ public class RoomServiceManipulator implements AddGivenObject, Reset {
 	//To empty the Room Service Order List upon check out
 	/**
 	 * Empty the Room Service Order List whenever Guest check out from the Hotel
-	 * If the Room Service Order List is clear, it will display it accordingly
 	*/
 	public void resetArray() throws ArrayException{
 		if (rs.getArray().size()==0) 
-			throw new ArrayException("Order List is cleared!!");
+			throw new ArrayException("- Order List was already empty!");
 		
 		rs.getArray().clear();
+		System.out.println("- Order List is Cleared!");
 	}
 }

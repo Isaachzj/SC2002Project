@@ -47,6 +47,8 @@ public abstract class Room
 	
 	//resets room upon check out (to be used by Check out function)
 	public void reset(Reservation reservation) throws ArrayException{
+		
+		System.out.println("\n----RESETING ROOM----");
 		//Reset roomService object (essentially the array of orders and total bill of orders)
 		RoomServiceManipulator rsm = new RoomServiceManipulator(this.roomService);
 		rsm.resetArray();
@@ -55,12 +57,14 @@ public abstract class Room
 		if (reservation==null) {
 			this.availability = AvailStatus.VACANT;
 			this.reservation = null;
+			System.out.println("- No further reservations,\nRoom is status is set to VACANT!");
 		}
 		//if there are still existing reservations
 		else {
 			this.availability = AvailStatus.RESERVED;
 			//updates reservation object with upcoming reservation
 			this.reservation = reservation;
+			System.out.println("- Still have reservations,\nRoom status is set to RESERVED!");
 		}
 		return;
 	}

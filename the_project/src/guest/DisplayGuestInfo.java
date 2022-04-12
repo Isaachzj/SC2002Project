@@ -8,7 +8,6 @@ public class DisplayGuestInfo {
 	 * @param guest this is the guest that needs to update credit card information
 	 */
 	public static void printInfo(Guest guest) {
-		public static void updateCreditCardInfo(Guest guest) {
 		/**
 		* Check if guest==null
 		*/
