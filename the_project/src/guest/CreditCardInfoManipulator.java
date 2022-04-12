@@ -18,7 +18,7 @@ public class CreditCardInfoManipulator {
 			return;
 		}
 		/**
-		 * Updating CreditCardInfo Object
+		 * Updates CreditCardInfo Object
 		 */
 			Scanner sc = new Scanner(System.in);
 			System.out.println("--------- Enter Credit Card details --------");
