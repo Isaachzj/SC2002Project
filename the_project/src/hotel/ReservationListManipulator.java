@@ -9,15 +9,7 @@ import java.time.LocalDateTime;
 
 public class ReservationListManipulator implements AddGivenObject, RemoveGivenObject, Get {
 	private Hotel hotel;
-	/**
-	 * # Displays the reservation list from Hotel object
-	 * creates a DisplayReservationList object and add this object
-	 * The DisplayReservationList class follows the Single Responsibility principle, as has a sole responsibility of displaying the reservation list
-	 * If the reservation list is empty (i.e. reservation list size==0); prints error and returns
-	 * Else, if the reservation list is not empty; traverse the array and prints the details 
-	 * @param this is the Hotel object which stores attributes on the reservation list
-	 * this is the hotel inwhich reservation list is to be displayed from
-	 */
+	
 	public ReservationListManipulator(Hotel hotel) {
 		this.hotel = hotel;
 	}
