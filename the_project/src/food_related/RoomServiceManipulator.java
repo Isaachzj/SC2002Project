@@ -4,9 +4,13 @@ import java.util.Scanner;
 import list_methods.*;
 
 public class RoomServiceManipulator implements AddGivenObject, Reset {
-	private RoomService rs;
 	/**
-	 * Displays the room service of the guests
+	 * this is the RoomService (private attribute)
+	 */
+	private RoomService rs;
+	
+	
+	/**
 	 * This Constructor follows the Single Responsibility principle
 	 * Additionally, it follows the Open-Closed principle as its software entities is open for extension but closed for modifications
 	 * @param   rs this is the Room Service of the guest
@@ -16,6 +20,7 @@ public class RoomServiceManipulator implements AddGivenObject, Reset {
 	}
 	
 	/**
+	 * # Check prior to adding order entry
 	 * Check if object passed to this function is actually a food object and if object passed is either null or not an instance of a food object, an exception will be thrown and error message displayed
 	 * If object passed to function is a food object, will add the food object into the food list
 	 * @param   daOrder this is the food object
@@ -24,6 +29,9 @@ public class RoomServiceManipulator implements AddGivenObject, Reset {
 		Order order;
 		
 		//For this case, we will actually ensure that only a food object is passed to this function so this is actually uneeded but we kiasu :)
+		/**
+		 * Ensure that only a food object is passed to this function
+		 */
 		if (daOrder==null) {throw new ArrayException("Error!!");}
 		else if (!(daOrder instanceof Order)) { throw new ArrayException("Error!!");}
 		else {order = (Order) daOrder;} 
