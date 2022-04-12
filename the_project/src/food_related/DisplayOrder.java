@@ -14,15 +14,19 @@ public class DisplayOrder implements Print {
 	}
 	
 	/**
-	 * if no orders taken, prints error message.
-	 * if orders available, prints out name, price and quantity of food items ordered.
 	 * Overrides the printArray() method in Print
+	 * If no orders taken, i.e. order array is empty - prints error message.
+	 * Else, if orders available, prints out the details of the order (name, price and quantity of food items ordered)
 	 */ 
 	public void printArray() {
-		
+		/**
+		 * Checks if the order array is empty
+		 */
 		if (order.getArray().size()==0) 
 			System.out.println("--No orders taken!--");
-		
+		/**
+		 * Else, if order is not empty; prints out the details of the order
+		 */
 		for (int i=1; i<=order.getArray().size(); i++) {
 			Food food = order.getArray().get(i-1);
 			System.out.printf("%-12d%-10s%10.2f%10d\n", i, food.getFoodName(), food.getPrice(), order.getQuantity().get(i-1));
