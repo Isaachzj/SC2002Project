@@ -7,6 +7,7 @@ import reservation.*;
 import room.Room;
 import list_methods.*;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.*;
 
 import days_date_time.DateTime;
@@ -125,6 +126,10 @@ public class MakeReservation {
 		
 		//Print success statement
 		System.out.println("Reserved Room Successfully!!");
+		System.out.println("Reserver: " + reservation.getGuest().getName());
+		System.out.println("Room Type: " + reservation.getRoom().getRoomType());
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd   |   HH:mm");
+		System.out.println("Check In: " + reservation.getCheckInDateTime().format(formatter));
 		
 		//this returned reservation object will be used in the CheckIn class for walk-in customers
 		return reservation;
