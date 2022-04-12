@@ -161,7 +161,7 @@ public class Hotel {
 	}
 	/**
 	 * getEarliestReservation method allows the earliest reserver details to be retrieved from the Hotel class (and hence no changes to the Room AvailStatus).
-	 * The earliest reservation means the closest reservation inwhich reserver has to check in by from the given time
+	 * The earliest reservation means the closest reservation in which reserver has to check in by from the given time
 	 * Once the reservation check in has lapsed and reserver has yet to book in; the reservation would be invalid (Room AvailStatus to be marked as VACANT).
 	 * An Exception would also be thrown upon an error
 	 * @param reservationList this is the array which contains the details of the reserver (id, credit card information, contact details, gender)
