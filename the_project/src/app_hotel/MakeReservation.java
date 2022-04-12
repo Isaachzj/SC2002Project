@@ -33,7 +33,7 @@ public class MakeReservation {
 		}
 		TypeOfRoom roomType = TypeOfRoom.values()[choice-1];
 		
-	//Get vacant (Rooms with VACANT status) room and max occupancy. If no vacant room, get all rooms with specified type in an array
+	//Get vacant (Rooms with VACANT status) room of desired type and obtain max occupancy. If no vacant room, get all rooms with specified type in an array
 		room = hotel.getVacantRoom(roomType);
 		if (room!=null) {maxOccupancy = room.getMaxOccupancy();}
 		else {rooms = hotel.getSameTypeRooms(roomType); maxOccupancy = rooms.get(0).getMaxOccupancy();}
