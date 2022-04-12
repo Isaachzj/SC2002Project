@@ -16,4 +16,5 @@ public enum TypeOfGender {
 	/**
 	 * gender of Guest is Female;
 	 */
+	FEMALE
 }
