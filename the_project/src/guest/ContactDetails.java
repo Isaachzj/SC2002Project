@@ -3,27 +3,19 @@ package guest;
 public class ContactDetails {
 	/**
 	 * #
-	 * this is the guest's mobile number
-	 * private method is used to ensure that it is only accessible inside ContactDetails class
-	 * this ensures encapsulation of sensitive information; in this case the guest's mobile number
+	 * this is the guest's mobile number (private attribute)
 	 */
 	private String mobileNumber;
 	/**
-	 * this is the guest's email address
-	 * private method is used to ensure that it is only accessible inside ContactDetails class
-	 * this ensures encapsulation of sensitive information; in this case the guest's email address
+	 * this is the guest's email address (private attribute)
 	 */
 	private String emailAddress;
 	/**
-	 * this is the guest's home address
-	 * private method is used to ensure that it is only accessible inside ContactDetails class
-	 * this ensures encapsulation of sensitive information; in this case the guest's home address
+	 * this is the guest's home address (private attribute)
 	 */
 	private String homeAddress;
 	/**
-	 * this is the guest's country of origin
-	 * private method is used to ensure that it is only accessible inside ContactDetails class
-	 * this ensures encapsulation of sensitive information; in this case the guest's country of origin
+	 * this is the guest's country of origin (private attribute)
 	 */
 	private String country;
 	
@@ -32,7 +24,7 @@ public class ContactDetails {
 	 * # Constructor
 	 */
 	/**
-	 * stores the contact details of the guest from the parameter; their mobile number, email address, home address and country of origin
+	 * Instantiation of contact details of guest from the parameter; their mobile number, email address, home address and country of origin
 	 * @param MN this is the guest's mobile number
 	 * @param EA this is the guest's email address
 	 * @param HA this is the guest's home address
@@ -48,24 +40,27 @@ public class ContactDetails {
 	//get methods
 	/**
 	 * # get methods
+	 * All methods here are set to protected for better encapsulation.
+	 * Methods returning guest's mobile number, email address, home address and country of origin is protected
+	 * this ensures better encapsulation of information while ensuring that the methods can be accessed by the same package and subclasses
 	 */
 	/**
 	 * gets the guest's mobile number
 	 * @return this is the guest's mobile number
 	 */
-	public String getMobileNumber() {return this.mobileNumber;}
+	protected String getMobileNumber() {return this.mobileNumber;}
 	/**
-	 * Gets the guest's email address
+	 * gets the guest's email address
 	 * @return  this is the guest's email address
 	*/
 	protected String getEmailAddress() {return this.emailAddress;}
 	/**
-	 * Gets the guest's home address
+	 * gets the guest's home address
 	 * @return  this is the guest's home address
 	*/
 	protected String getHomeAddress() {return this.homeAddress;}
 	/**
-	 * Gets the guest's country of origin
+	 * gets the guest's country of origin
 	 * @return  this is the guest's country of origin
 	*/
 	protected String getCountry() {return this.country;}
