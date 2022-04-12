@@ -1,11 +1,11 @@
 package food_related;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+
 import java.util.Scanner;
 import days_date_time.DateTime;
+
+import room.*;
 import java.util.ArrayList;
 import java.time.LocalDateTime;
-import enumeration.*;
 import list_methods.*;
 
 public class Order {
@@ -94,7 +94,8 @@ public class Order {
 	 * Follows the Interface Segregation principle; with instead of one big interface, many small interfaces based on groups of methods
 	 * @param menu Menu object
 	 */ 
-	public void makeOrder(Menu menu) throws ArrayException {
+	public void makeOrder(Room room) throws ArrayException {
+		Menu menu = room.getMenu();
 		OrderManipulator om = new OrderManipulator(this);
 		BillTabulator bt = new BillTabulator(this);
 		Scanner sc = new Scanner(System.in);
@@ -116,8 +117,22 @@ public class Order {
 		/**
 		 * Date and time stamp
 		 */
-		DateTime.getLocalDateTime("Order");
-		this.setTimeStamp(timestamp);
+		LocalDateTime currentTime = DateTime.getLocalDateTime("Order");
+		while (true) {
+			if (currentTime.isAfter(room.getReservation().getCheckOutDateTime())) {
+				System.out.println("Are you sure? It is after the check out date and time. Enter again");
+				currentTime = DateTime.getLocalDateTime("Order");
+				continue;
+			}
+			if (currentTime.isBefore(room.getReservation().getCheckInDateTime())) {
+				System.out.println("Are you sure? It is before the check in date and time. Enter again");
+				currentTime = DateTime.getLocalDateTime("Order");
+				continue;
+			}
+			break;
+		}
+		
+		this.setTimeStamp(currentTime);
 		/**
 		 * Calculating order bill
 		 */

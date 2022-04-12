@@ -23,7 +23,7 @@ public class MakeRoomService {
 		
 		//Creating and making the order
 		Order order = new Order();
-		order.makeOrder(room.getMenu());
+		order.makeOrder(room);
 		
 		//Record history of order in Room Service object
 		roomService.addOrder(order);

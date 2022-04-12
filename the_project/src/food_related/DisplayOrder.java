@@ -37,6 +37,8 @@ public class DisplayOrder implements Print {
 		}
 		System.out.printf("Remarks: %s\n", order.getRemarks());
 		System.out.printf("Total Bill: %.2f\n", order.getBill());
+		
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd   |   HH:mm");
 		System.out.println("Date and Time: " + order.getTimeStamp().format(formatter));
 		return;
 	}
