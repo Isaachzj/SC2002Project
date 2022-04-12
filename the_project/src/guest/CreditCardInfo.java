@@ -45,8 +45,8 @@ public class CreditCardInfo {
 	//get methods
 	/**
 	 * # get methods
-	 * We made it such that only methods returning guest's credit card number, bank, expiry, address and billing name is public
-	 * this ensures better encapsulation of information that are more private
+	 * Methods returning guest's credit card number, bank, expiry, address and billing name is protected
+	 * this ensures better encapsulation of information while ensuring that the methods can be accessed by the same package and subclasses
 	 */
 	/**
 	 * All methods here are set to protected for better encapsulation.
