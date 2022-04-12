@@ -67,7 +67,7 @@ public class GuestListManipulator implements AddGivenObject, RemoveGivenObject {
 		String mobileNumber = sc.nextLine();
 		
 		/**
-		 * Compare with guest
+		 * # Compare with guest
 		 */
 		for (int i=0; i<hotel.getGuestList().size(); i++) {
 			Guest curGuest = hotel.getGuestList().get(i);
