@@ -8,14 +8,17 @@ public class Menu{
 	 */
 	private ArrayList<Food> foodList;
 	/**
-	 * number of food items in this Menu
+	 * number of food items in this Menu (private attribute)
 	 */
 	private int numOfFood;
 	
-	//Constructor 
 	/**
-	 * To add 2 more types of food at a later stage
+	 * Constructor
+	 */
+	/**
+	 * Instantiation of Menu using Food items as parameter
 	 * Creates a new ArrayList of Food (Menu) and add the 5 Food items
+	 * to add 2 more types of food at a later stage
 	 * Follows the Single Responsibility principle as sole responsibility to add Food items into the ArrayList (Menu)
 	 * Also follows the Open-Closed principle since the software entities is open for extension but closed for modifications
 	 * @param f1 this is the first food for the Menu
@@ -34,17 +37,26 @@ public class Menu{
 		this.numOfFood = 5;	
 	}
 	
-	//get method
 	/**
+	 * get method
+	 * All methods are set to protected here
+	 * this includes the food in menu and number of food
+	 * this ensures better encapsulation of information while ensuring that the methods can be accessed by the same package and subclasses
+	 */
+	/**
+	 * gets the Menu's list of food
 	 * @return list of food items available in this Menu
 	 */
 	protected ArrayList<Food> getArray() {return foodList;}	//returns reference
 	/**
+	 * gets the Menu's number of food
 	 * @return number of food items available in this Menu
 	 */
 	protected int getNumOfFood() {return numOfFood;}			//returns value
 	
-	//set method
+	/**
+	 * set method
+	 */
 	/**
 	 * sets number of food items in this Menu
 	 */
