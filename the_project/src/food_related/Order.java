@@ -16,45 +16,57 @@ public class Order {
 	 */ 
 	private ArrayList<Integer> quantity;
 	/**
-	 * final bill of this order
+	 * final bill of this order (private attribute)
 	 */ 
 	private double bill;
 	/**
-	 * specifications or special request for this order
+	 * specifications or special request for this order (private attribute)
 	 */ 
 	private String remarks;
 	/**
-	 * time of making this order by guest
+	 * time of making this order by guest (private attribute)
 	 */ 
 	private String timestamp;
-	//private OrderStatus status;
 	
 	/**
-	 * creates an Order object and sets food items ordered and quantity of food items ordered by guest
+	 * private OrderStatus status;
+	 */
+	
+	/**
+	 * Instantiation of Order object from array list of food items ordered and quantity of food items ordered by guest
 	 */ 
 	public Order() {
 		this.order= new ArrayList<Food>();
 		this.quantity = new ArrayList<Integer>();
 	}
 	
-	//get methods
 	/**
+	 * get methods
+	 * All of the methods are set to protected
+	 * this ensures better encapsulation of information while ensuring that the methods can be accessed by the same package and subclasses
+	 */
+	/**
+	 * gets the food items ordered list
 	 * @return list of food items ordered by guest in this order
 	 */ 
 	protected ArrayList<Food> getArray() {return order;}
 	/**
+	 * gets the food items ordered quantity
 	 * @return quantity of food items ordered by guest in this order
 	 */ 
 	protected ArrayList<Integer> getQuantity() {return quantity;}
 	/**
+	 * gets food items ordered final bill
 	 * @return final bill of this order
 	 */
 	protected double getBill() {return this.bill;}
 	/**
-	 * @return time of making this order by guest
+	 * gets food items ordered time stamp
+	 * @return time stamp of making this order by guest
 	 */ 
 	protected String getTimeStamp() {return this.timestamp;}
 	/**
+	 * gets food items ordered remarks
 	 * @return specifications or special request for this order
 	 */
 	protected String getRemarks() {return this.remarks;}
@@ -64,13 +76,13 @@ public class Order {
 	 */ 
 	protected void setBill(double bill) {this.bill = bill;}	
 	/**
-	 * updates time of making this order by guest
-	 * @param ts time of making this order by guest
+	 * gets the time stamp of making this order by guest
+	 * @param ts this is the time stamp of making this order by guest
 	 */
 	protected void setTimeStamp(String ts) {this.timestamp = ts;} //set at the end of order
 	/**
-	 * updates specifications or special request for this order
-	 * @param ts specifications or special request for this order
+	 * gets the specifications or special request for this order
+	 * @param ts this is the specifications or special request for this order
 	 */
 	protected void setRemarks(String remarks) {this.remarks = remarks;}
 	
@@ -92,15 +104,21 @@ public class Order {
 			choice = sc.nextInt(); sc.nextLine();
 		}while (choice==1);
 		
-		//Remarks
+		/**
+		 * Remarks
+		 */
 		System.out.println("Any additional remarks?");
 		String remarks = sc.nextLine();
 		this.setRemarks(remarks);
-		//Date timestamp
+		/**
+		 * Date timestamp
+		 */
 		SimpleDateFormat date = new SimpleDateFormat("yyyy.MM.dd.HH:mm:ss");
 		String timestamp = date.format(new Date());
 		this.setTimeStamp(timestamp);
-		//Calculating order bill
+		/**
+		 * Calculating order bill
+		 */
 		bt.calculateBill();
 		return;
 	}
