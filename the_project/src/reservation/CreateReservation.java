@@ -1,6 +1,9 @@
 package reservation;
 
 import java.util.Scanner;
+
+import days_date_time.LengthOfStay;
+
 import java.time.LocalDateTime;
 import java.time.LocalDate;
 

@@ -9,6 +9,8 @@ import list_methods.*;
 import java.time.LocalDateTime;
 import java.util.*;
 
+import days_date_time.DateTime;
+
 public class MakeReservation {
 	public static void makeReservation(Hotel hotel) throws ArrayException{
 	//Initialisation

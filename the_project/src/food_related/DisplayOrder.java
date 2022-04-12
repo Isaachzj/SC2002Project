@@ -1,5 +1,9 @@
 package food_related;
+
 import list_methods.*;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 
 public class DisplayOrder implements Print {
 	private Order order;
@@ -33,7 +37,7 @@ public class DisplayOrder implements Print {
 		}
 		System.out.printf("Remarks: %s\n", order.getRemarks());
 		System.out.printf("Total Bill: %.2f\n", order.getBill());
-		System.out.println("Date and Time: " + order.getTimeStamp());
+		System.out.println("Date and Time: " + order.getTimeStamp().format(formatter));
 		return;
 	}
 }

@@ -2,7 +2,11 @@ package food_related;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
+
+import days_date_time.DateTime;
+
 import java.util.ArrayList;
+import java.time.LocalDateTime;
 import enumeration.*;
 import list_methods.*;
 
@@ -26,7 +30,7 @@ public class Order {
 	/**
 	 * time of making this order by guest (private attribute)
 	 */ 
-	private String timestamp;
+	private LocalDateTime timestamp;
 	
 	/**
 	 * private OrderStatus status;
@@ -64,7 +68,7 @@ public class Order {
 	 * gets food items ordered time stamp
 	 * @return time stamp of making this order by guest
 	 */ 
-	protected String getTimeStamp() {return this.timestamp;}
+	protected LocalDateTime getTimeStamp() {return this.timestamp;}
 	/**
 	 * gets food items ordered remarks
 	 * @return specifications or special request for this order
@@ -79,7 +83,7 @@ public class Order {
 	 * gets the time stamp of making this order by guest
 	 * @param ts this is the time stamp of making this order by guest
 	 */
-	protected void setTimeStamp(String ts) {this.timestamp = ts;} //set at the end of order
+	protected void setTimeStamp(LocalDateTime ts) {this.timestamp = ts;} //set at the end of order
 	/**
 	 * gets the specifications or special request for this order
 	 * @param ts this is the specifications or special request for this order
@@ -112,10 +116,9 @@ public class Order {
 		String remarks = sc.nextLine();
 		this.setRemarks(remarks);
 		/**
-		 * Date timestamp
+		 * Date and time stamp
 		 */
-		SimpleDateFormat date = new SimpleDateFormat("yyyy.MM.dd.HH:mm:ss");
-		String timestamp = date.format(new Date());
+		DateTime.getLocalDateTime("Order");
 		this.setTimeStamp(timestamp);
 		/**
 		 * Calculating order bill

@@ -1,4 +1,4 @@
-package reservation;
+package days_date_time;
 import java.time.LocalDateTime;
 import java.util.Scanner;
 
