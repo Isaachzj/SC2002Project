@@ -2,6 +2,11 @@ package reservation;
 import guest.DisplayGuestInfo;
 
 public class DisplayReservation {
+	/**
+	 * info method prints out the details of the Reservation object.
+	 * This includes the room number, check-in date and time, number of guests and whose name the reservation was made under
+	 * @param reservation this is the reservation object for the Display of its details
+	 */
 	public static void info(Reservation reservation) {
 		System.out.println("Room " + reservation.getRoom().getRoomNum());
 		System.out.println("Check In: " + reservation.getCheckInDateTime());
