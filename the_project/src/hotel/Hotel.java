@@ -20,8 +20,8 @@ public class Hotel {
 	 * Creates and display menu which allows the selection of RoomType
 	 * # RoomType
 	 * The menu of RoomType is as follows {(RoomType-Index): Single-0, Double-1, Deluxe-2, VIP-3}
-	 * Code also assumes that there are a total of 18 rooms in the Hotel object;
-	 * of the 18 rooms - 6 are Single Rooms, 8 are Deluxe Rooms, and 4 are VIP Suite
+	 * Code also assumes that there are a total of 60 rooms in the Hotel object;
+	 * of the 60 rooms - 24 are Single Rooms, 24 are Double Rooms, 8 are Deluxe Rooms, and 4 are VIP Suite
 	 */
 	public Hotel() {
 //==============================Room Menus==============================
@@ -37,7 +37,8 @@ public class Hotel {
 		 */
 		this.roomList = new ArrayList<Room>();
 		/**
-		 * Single Rooms (18 rooms - first 6 rooms of levels 02-05)
+		 * Single Rooms (24 rooms - first 6 rooms of levels 02-05)
+		 * Double Rooms (24 rooms - last 6 rooms of levels 02-05)
 		 */
 		for (int i=2; i<=5; i++) {
 			for (int y=1; y<=12; y++) {
