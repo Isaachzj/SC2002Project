@@ -1,12 +1,26 @@
 package enumeration;
 
+/**
+ * enumerations for idType of an Identity object;
+ * there are 2 types (DRIVING_LICENSE, NRIC, PASSPORT)
+ * type of identification of a Room object;
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ */
+
 public enum TypeOfID {
 	/**
-	 * For the enumeration of the TypeOfID, there are 2 types (DRIVING_LICENSE, NRIC, PASSPORT)
-	 * 
-	 * DRIVING_LICENSE is used to indicate that the identification type for the guest is taken from their driver's license
-	 * NRIC is used to indicate that the identification type for the guest is taken from their NRIC (National Registration Identity Card)
-	 * PASSPORT is used to indicate that the identification type for the guest is taken from their passport
+	 * idType of Identity object is Driving License;
+	 * Driving License of guest is used as identification for checking in;
 	 */
-	DRIVING_LICENSE, NRIC, PASSPORT
+	DRIVING_LICENSE, 
+	/**
+	 * idType of Identity object is NRIC;
+	 * NRIC of guest is used as identification for checking in;
+	 */
+	NRIC, 
+	/**
+	 * idType of Identity object is Passport;
+	 * Passport of guest is used as identification for checking in;
+	 */
+	PASSPORT
 }

@@ -42,7 +42,7 @@ public class ReservationListManipulator implements AddGivenObject, RemoveGivenOb
 		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the Reserver's name:");
-		String reserverName = sc.nextLine();
+		String reserverName = sc.nextLine().toLowerCase();
 		System.out.println("Enter the Reserver's mobile number");
 		String mobileNumber = sc.nextLine();
 		
