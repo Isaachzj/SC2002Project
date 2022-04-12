@@ -4,11 +4,16 @@ import java.util.ArrayList;
 
 public class CreateMenus {
 	/**
-	 * Return the Array list of all Menu of the Food from 'Single', 'Double', 'Deluxe' and 'VIP'
+	 * Instantiation of Menu
+	 * The Array list of all Menu of the Food from 'Single', 'Double', 'Deluxe' and 'VIP'
 	 * Food item also has been instantiated into the Menu of Food respectively
-	 * The respective Menu for the different bed types has also been instantiated respectively
+	 * 
+	 * We instantiated the Menu of Food for the respective types of rooms as different room types may have different menus 
+	 * (i.e. 'Single' may have only basic menu whereas 'VIP' may have menus with more options)
+	 * 
 	 * Follows the Interface Segregation principle; since Classes do not depend on interfaces that they do not use
 	 * @return the Array list of all Menu of the Food
+	 * this includes the Array list of all Menu of the Food from 'Single', 'Double', 'Deluxe' and 'VIP'
 	 */
 	public static ArrayList<Menu> createMenus(){
 		ArrayList<Menu> allMenus = new ArrayList<Menu>();
@@ -91,7 +96,9 @@ public class CreateMenus {
 		Food f14 = new Food(food14, price14, des14);
 		Food f15 = new Food(food15, price15, des15);
 		
-		//Instantiating the 4 different Menus
+		/**
+		 * Instantiating the 4 different Menus
+		 */
 		Menu menuSingle = new Menu(f1, f2, f3, f4, f5);
 		Menu menuDouble = new Menu(f1, f2, f3, f4, f5);
 		Menu menuDeluxe = new Menu(f11, f12, f13, f14, f15);
