@@ -87,8 +87,8 @@ public class Hotel {
 	/**
 	 * addGuests method allows the guest to be added into the Hotel class (and hence Room AvailStatus to be marked as OCCUPIED)
 	 * An Exception would also be thrown upon an error
-	 * @param reservation hold the guest's essential information (id, credit card information, contact details, gender).
-	 * this is needed for the reserver to be added into the Hotel class
+	 * @param reservation hold the guests' essential information (id, credit card information, contact details, gender).
+	 * this is needed for the guests to be added into the Hotel class
 	 * @throws ArrayException occurs upon an error and error message would be printed accordingly
 	 */
 	public void addGuests(Reservation reservation) throws ArrayException {
@@ -98,8 +98,8 @@ public class Hotel {
 	/**
 	 * removeGuests method allows the guest to be removed from the Hotel class (and hence Room AvailStatus to be marked as VACANT).
 	 * An Exception would also be thrown upon an error
-	 * @param reservation hold the guest's essential information (id, credit card information, contact details, gender)
-	 * this is needed for the guest to be removed from the Hotel class
+	 * @param reservation hold the guests' essential information (id, credit card information, contact details, gender)
+	 * this is needed for the guests to be removed from the Hotel class
 	 * @throws ArrayException occurs upon an error and error message would be printed accordingly
 	 */
 	public void removeGuests(Reservation reservation) throws ArrayException {
@@ -109,8 +109,7 @@ public class Hotel {
 	/**
 	 * getGuest method allows the guest details to be retrieved from the Hotel class (and hence no changes to the Room AvailStatus).
 	 * An Exception would also be thrown upon an error
-	 * @return reservation hold the guest's essential information (id, credit card information, contact details, gender)
-	 * this is needed for the reserver details to be retrieved from the Hotel class
+	 * @return Guest with the details (id, credit card information, contact details, gender)
 	 */
 	public Guest getGuest() {
 		GuestListManipulator glm = new GuestListManipulator(this);
@@ -130,8 +129,7 @@ public class Hotel {
 	/**
 	 * addReservation method allows the reserver to be added into the Hotel class (and hence Room AvailStatus to be marked as RESERVED)
 	 * An Exception would also be thrown upon an error
-	 * @param reservation hold the reserver's essential information (id, credit card information, contact details, gender)
-	 * this is needed for the reserver to be added to the Hotel class
+	 * @param reservation is needed for the reservation to be added to the Hotel class
 	 * @throws ArrayException occurs upon an error and error message would be printed accordingly
 	 */
 	public void addReservation(Reservation reservation) throws ArrayException {
@@ -141,8 +139,7 @@ public class Hotel {
 	/**
 	 * removeReservation method allows the reserver to be removed from the Hotel class (and hence Room AvailStatus to be marked as VACANT).
 	 * An Exception would also be thrown upon an error
-	 * @param reservation hold the reserver's essential information (id, credit card information, contact details, gender)
-	 * this is needed for the reserver to be removed from the Hotel class
+	 * @param reservation is needed for the reservation to be removed from the Hotel class
 	 * @throws ArrayException occurs upon an error and error message would be printed accordingly
 	 */
 	public void removeReservation(Reservation reservation) throws ArrayException {
@@ -150,7 +147,7 @@ public class Hotel {
 		rlm.removeEntry(reservation);
 	}
 	/**
-	 * getReservation method allows the reserver details to be retrieved from the Hotel class (and hence no changes to the Room AvailStatus).
+	 * getReservation method allows the reservation to be retrieved from the Hotel class (and hence no changes to the Room AvailStatus).
 	 * An Exception would also be thrown upon an error
 	 * @return reservation hold the reserver's essential information (id, credit card information, contact details, gender)
 	 * this is needed for the reserver details to be retrieved from the Hotel class
@@ -205,7 +202,7 @@ public class Hotel {
 	/**
 	 * getVacantRoom returns the first Room that is vacant (i.e. has an AvailStatus of VACANT) for the specified roomType
 	 * when the Room is returned (i.e. VACANT room), it can be reserved
-	 * @param roomType this is the type of room underwhich to check the first Room that is vacant
+	 * @param roomType this is the type of room under which to check the first Room that is vacant
 	 * this is required so as to specify which type of room is vacancy being checked for
 	 * @return this is the Room which is VACANT for the given room type in the parameter
 	 */
