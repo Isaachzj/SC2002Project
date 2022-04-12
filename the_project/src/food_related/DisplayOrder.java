@@ -29,7 +29,7 @@ public class DisplayOrder implements Print {
 		 */
 		for (int i=1; i<=order.getArray().size(); i++) {
 			Food food = order.getArray().get(i-1);
-			System.out.printf("%-12d%-10s%10.2f%10d\n", i, food.getFoodName(), food.getPrice(), order.getQuantity().get(i-1));
+			System.out.printf("%-15d%-23s%-15.2f%-30d\n", i, food.getFoodName(), food.getPrice(), order.getQuantity().get(i-1));
 		}
 		System.out.printf("Remarks: %s\n", order.getRemarks());
 		System.out.printf("Total Bill: %.2f\n", order.getBill());
