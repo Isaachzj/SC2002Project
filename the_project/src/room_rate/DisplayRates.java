@@ -11,6 +11,5 @@ public class DisplayRates {
 		System.out.println("===========================Room Rates===========================");
 		System.out.printf("Weekday: $%.2f/day\n", rr.getWeekday());
 		System.out.printf("Weekend: $%.2f/day\n", rr.getWeekend());
-		System.out.printf("Discount: %.0f%%\n", rr.getDiscount()); //%% to escape % sign
 	}
 }

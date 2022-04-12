@@ -6,7 +6,7 @@ import food_related.*;
 import java.time.format.DateTimeFormatter;
 
 public class Receipt{
-	public static void info(Reservation reservation) {
+	public static void info(Reservation reservation, double discount) {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd   |   HH:mm");
 		System.out.println("=========================== Receipt ===========================");
 		System.out.printf("(%s) Room Number %s\n", reservation.getRoom().getRoomType(), reservation.getRoom().getRoomNum());
@@ -28,7 +28,10 @@ public class Receipt{
 		//Grand Total 
 		double grandTotal = GrandTotalTabulator.grandTotal(reservation);
 		System.out.println("++++++++++++++++++++++++++++++++++++++++++++");
-		System.out.printf("Grand Total: $%.2f\n\n", grandTotal);
+		System.out.printf("Total: $%.2f\n", grandTotal);
+		System.out.printf("Discount: %.1f%%\n", discount); //%% to escape % sign
+		System.out.println("--------------------------------------------");
+		System.out.printf("Grand Total: $%.2f\n\n", grandTotal * (100-discount)/100);
 		
 	}
 	
