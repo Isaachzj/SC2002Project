@@ -10,6 +10,7 @@ public class DisplayMenu implements Print {
 	 * Additionally; it follows the Open-Closed principle as changes in the Display does not require a change in source code of modules
 	 * (i.e. open for extensions but not modifications)
 	 * @param menuList Menu object
+	 * this is the specified Menu object which is to be displayed
 	 */ 
 	public DisplayMenu(Menu menuList) {
 		this.menu = menuList;
