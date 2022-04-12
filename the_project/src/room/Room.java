@@ -57,14 +57,14 @@ public abstract class Room
 		if (reservation==null) {
 			this.availability = AvailStatus.VACANT;
 			this.reservation = null;
-			System.out.println("- No further reservations,\nRoom is status is set to VACANT!");
+			System.out.println("- No further reservations,\n  Room status set to VACANT!");
 		}
 		//if there are still existing reservations
 		else {
 			this.availability = AvailStatus.RESERVED;
 			//updates reservation object with upcoming reservation
 			this.reservation = reservation;
-			System.out.println("- Still have reservations,\nRoom status is set to RESERVED!");
+			System.out.println("- Still have reservations,  Room status set to RESERVED!");
 		}
 		return;
 	}

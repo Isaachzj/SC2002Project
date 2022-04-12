@@ -99,6 +99,7 @@ public class Order {
 		int choice=0;
 		
 		do {
+			menu.info(); //prints the menu
 			om.addEntry(menu.getFood()); //gets the food item from the Menu and passes it to the addList method			
 			System.out.println("Would you like anything else?\n1. Yes\t2. No");
 			choice = sc.nextInt(); sc.nextLine();

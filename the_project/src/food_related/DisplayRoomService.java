@@ -29,7 +29,7 @@ public class DisplayRoomService implements Print {
 		System.out.println("=============== ROOM SERVICE ===============");
 		System.out.println("++++++++++++++++++++++++++++++++++++++++++++");
 		for (int i=0; i<rs.getArray().size(); i++) {
-			System.out.printf("=============== Order %d ===============\n", i);
+			System.out.printf("=============== Order %d ===============\n", i+1);
 			Order curOrder = rs.getArray().get(i);
 			curOrder.info();
 		}

@@ -32,6 +32,12 @@ public class CheckIn {
 			return;
 		}
 		
+		//if the guest already checked in earlier
+		else if (reservation.getRoom().getAvail()==AvailStatus.OCCUPIED) {
+			System.out.println("Already Checked in");
+			return;
+		}		
+		
 		//Compare Date Time differences
 		LocalDateTime currentDateTime = DateTime.getLocalDateTime("Current");
 		LocalDateTime checkInDateTime = reservation.getCheckInDateTime();
@@ -41,11 +47,6 @@ public class CheckIn {
 			System.out.println("Checked in successfully!");
 		}
 		else { 
-			//if the guest already checked in earlier
-			if (reservation.getRoom().getAvail()==AvailStatus.OCCUPIED) {
-				System.out.println("Already Checked in");
-				return;
-			}
 			//Remove reservation if check in is after 1 hour from indicated time
 			hotel.removeReservation(reservation);
 			System.out.println("Guests are late. Reservation terminated. DEAL WITH IT!!");
