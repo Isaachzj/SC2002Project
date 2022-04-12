@@ -12,12 +12,13 @@ import java.util.*;
 import days_date_time.DateTime;
 
 public class MakeReservation {
-	public static void makeReservation(Hotel hotel) throws ArrayException{
+	public static Reservation makeReservation(Hotel hotel) throws ArrayException{
 	//Initialisation
 		Scanner sc = new Scanner(System.in);
 		int numOfGuest=0, maxOccupancy=0, index=-1;
 		boolean overlap = false;
 		Room room, daRoom;
+		Reservation reservation;
 		ArrayList<Room> rooms = new ArrayList<Room>();
 		
 	//Ask for room type (Not hardcoded!)
@@ -32,7 +33,7 @@ public class MakeReservation {
 		}
 		TypeOfRoom roomType = TypeOfRoom.values()[choice-1];
 		
-	//Get vacant (no existing reservations too) room and max occupancy. If no vacant room, get all rooms with specified type in an array
+	//Get vacant (Rooms with VACANT status) room and max occupancy. If no vacant room, get all rooms with specified type in an array
 		room = hotel.getVacantRoom(roomType);
 		if (room!=null) {maxOccupancy = room.getMaxOccupancy();}
 		else {rooms = hotel.getSameTypeRooms(roomType); maxOccupancy = rooms.get(0).getMaxOccupancy();}
@@ -45,7 +46,7 @@ public class MakeReservation {
 			numOfGuest = sc.nextInt(); sc.nextLine();
 		}
 		//Checking if number of guests exceeds room max occupancy limit
-		if (numOfGuest>maxOccupancy) {System.out.println("You have exceeded the maximum occupancy for this room! \nProcess Terminated!"); return;}
+		if (numOfGuest>maxOccupancy) {System.out.println("You have exceeded the maximum occupancy for this room! \nProcess Terminated!"); return null;}
 		
 		
 	//Entering Check In and Check out date time details
@@ -57,7 +58,7 @@ public class MakeReservation {
 			System.out.println("You trying to be funny isit?! Cannot check out before checking in!!");
 			checkOutDateTime = DateTime.getLocalDateTime("Check Out");
 		}
-		while (checkOutDateTime == checkInDateTime) {
+		while (checkOutDateTime.isEqual(checkInDateTime)) {
 			System.out.println("You trying to be funny isit?! Cannot check in and out at the same time!!");
 			checkOutDateTime = DateTime.getLocalDateTime("Check Out");
 		}
@@ -105,24 +106,27 @@ public class MakeReservation {
 			//if no rooms of requested type can accommodate the reservation, reservation is invalid
 			if (index==-1) {
 				System.out.println("Cannot make Reservation!\nProcess Terminated!");
-				return;
+				return null;
 			}
 			
 			//if a room is found
 			Room thisRoom = rooms.get(index);
-			Reservation reservation = CreateReservation.createReservation(thisRoom, numOfGuest, checkInDateTime, checkOutDateTime);
+			reservation = CreateReservation.createReservation(thisRoom, numOfGuest, checkInDateTime, checkOutDateTime);
 			hotel.addReservation(reservation);
 		}
 		
 		//for case where there are already vacant rooms that we can assign reservations to
 		else {
 			//Creating the Reservation object.
-			Reservation reservation = CreateReservation.createReservation(room, numOfGuest, checkInDateTime, checkOutDateTime);
+			reservation = CreateReservation.createReservation(room, numOfGuest, checkInDateTime, checkOutDateTime);
 			//Add Reservation object to Hotel
 			hotel.addReservation(reservation);
 		}
 		
 		//Print success statement
 		System.out.println("Reserved Room Successfully!!");
+		
+		//this returned reservation object will be used in the CheckIn class for walk-in customers
+		return reservation;
 	}
 }

@@ -2,9 +2,7 @@ package food_related;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
-
 import days_date_time.DateTime;
-
 import java.util.ArrayList;
 import java.time.LocalDateTime;
 import enumeration.*;

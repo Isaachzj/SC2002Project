@@ -18,7 +18,7 @@ public class StayRelated {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("\n========== STAY RELATED ==========");
 		System.out.println("Choose an option (Select option)\n-Enter an alphabet to terminate-:"
-				+ "\n1. Make a Reservation\n2. Check-In a guest\n3. Check-Out a guest\n4. View all reservations");
+				+ "\n1. Make a Reservation\n2. Check-In\n3. Check-Out\n4. View all reservations");
 		int choice = sc.nextInt(); sc.nextLine();	
 		while (choice<=0 || choice>5) {
 			System.out.println("Enter a valid choice!");
