@@ -4,7 +4,7 @@ public class RoomRate {
 	private double weekday;
 	private double weekend;
 	
-	public RoomRate(double weekday, double weekend, double discount) {
+	public RoomRate(double weekday, double weekend) {
 		this.weekday = weekday;
 		this.weekend = weekend;
 	}

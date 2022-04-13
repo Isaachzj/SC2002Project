@@ -6,12 +6,9 @@ import room_features.RoomFeatures;
 import room_rate.RoomRate;
 
 public class DoubleRoom extends Room{
-	public DoubleRoom(Menu menu, int floor, int num) {
-		super(menu);		
-		
-		// Instantiating necessary objects
-		RoomFeatures ff = new RoomFeatures(TypeOfBed.SINGLE , ViewType.STANDARD, 1, true, false);
-		RoomRate rr = new RoomRate(50, 80, 0);
+	public DoubleRoom(Menu menu, int floor, int num, TypeOfBed bedType, ViewType viewType, int numOfBed, boolean wiFi, boolean smokeOut, double weekDayPrice, double weekEndPrice) {
+		//Calling superclass constructor (Room constructor)
+		super(menu, bedType, viewType, numOfBed, wiFi, smokeOut, weekDayPrice, weekEndPrice);			
 
 		//Overriding attributes of super()
 		this.roomType = TypeOfRoom.DOUBLE;
@@ -24,8 +21,6 @@ public class DoubleRoom extends Room{
 		
 		this.maxOccupancy = 2;
 		this.availability = AvailStatus.VACANT;
-		this.feature = ff;
-		this.rate = rr;
 		this.menu = menu;
 	}
 }

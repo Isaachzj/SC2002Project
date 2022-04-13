@@ -1,7 +1,9 @@
 package room;
 
 import enumeration.AvailStatus;
+import enumeration.TypeOfBed;
 import enumeration.TypeOfRoom;
+import enumeration.ViewType;
 import food_related.*;
 import room_features.*;
 import room_rate.*;
@@ -20,11 +22,16 @@ public abstract class Room
 	protected Reservation reservation;
 	protected RoomService roomService;
 	
-	//default constructor (creates the reservation and roomService object, also sets availability to VACANT by default)
-	public Room(Menu menu) {
+	public Room(Menu menu, TypeOfBed bedType, ViewType viewType, int numOfBed, boolean wiFi, boolean smokeOut, double weekDayPrice, double weekEndPrice) {
+		//instantiating RoomFeatures object
+		RoomFeatures feature = new RoomFeatures(bedType, viewType, numOfBed, wiFi, smokeOut);
+		//instantiating RoomRate object
+		RoomRate rate = new RoomRate(weekDayPrice, weekEndPrice);
 		this.availability = AvailStatus.VACANT;
 		this.roomService = new RoomService();
 		this.menu = menu;
+		this.feature = feature;
+		this.rate = rate;
 		//Rest of objects are initialized to null/zero by default
 	}
 	
