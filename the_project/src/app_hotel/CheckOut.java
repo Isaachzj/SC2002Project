@@ -1,12 +1,9 @@
 package app_hotel;
 
-import enumeration.TypeOfRoom;
 import hotel.*;
 import reservation.*;
-import room.*;
 import list_methods.*;
 import java.util.*;
-import java.time.LocalDateTime;
 
 public class CheckOut {
 	
