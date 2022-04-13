@@ -13,7 +13,7 @@ public class DisplayReservationList implements Print {
 	 * If the reservation list is empty (i.e. reservation list size==0); prints error and returns
 	 * Else, if the reservation list is not empty; travserse the array and prints the details 
 	 * @param this is the Hotel object which stores attributes on the reservation list
-	 * this is the hotel inwhich reservation list is to be displayed from
+	 * this is the hotel in which reservation list is to be displayed from
 	 */
 	public DisplayReservationList(Hotel hotel) {
 		this.hotel = hotel;
@@ -35,5 +35,4 @@ public class DisplayReservationList implements Print {
 		}
 		return;
 	}
-	
 }

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import list_methods.*;
 
-public class FeatureManipulator implements AddStandard,RemoveStandard,Set {
+public class FeatureManipulator implements AddStandard,RemoveStandard,Set, Reset {
 	private RoomFeatures rf;
 	
 	public FeatureManipulator(RoomFeatures rf) {
@@ -106,6 +106,18 @@ public class FeatureManipulator implements AddStandard,RemoveStandard,Set {
 		
 		//throw exception if feature entry not found
 		if (!found) throw new ArrayException("No such additional feature exists!");
+	}
+	
+//============================================================================================================================================		
+	public void resetArray() {
+		if (rf.getArray().size()==0) {
+			System.out.println("- No additional room features!");
+			return;
+		}
+		
+		rf.getArray().clear();
+		System.out.println("- Room Features reset to default!");
+		
 	}
 	
 }

@@ -60,6 +60,10 @@ public abstract class Room
 		RoomServiceManipulator rsm = new RoomServiceManipulator(this.roomService);
 		rsm.resetArray();
 		
+		//Reset roomFeature object
+		FeatureManipulator fm = new FeatureManipulator(this.feature);
+		fm.resetArray();
+		
 		//if no more existing reservations
 		if (reservation==null) {
 			this.availability = AvailStatus.VACANT;
