@@ -1,6 +1,7 @@
 package app_hotel;
 import reservation.*;
 import room.*;
+import room_features.*;
 import guest.*;
 import food_related.*;
 import java.time.format.DateTimeFormatter;
@@ -18,13 +19,21 @@ public class Receipt{
 		System.out.printf("Number of Weekends: %d\n", reservation.getNumOfWeekend());
 		System.out.println("Number of guests: " + reservation.getNumOfGuest());
 		System.out.println();
+		
+		//Room feature details
+		DisplayFeatures df = new DisplayFeatures(reservation.getRoom().getRoomFeatures());
+		df.printAll();
+		System.out.println();
+		
 		//Reserver's information
 		System.out.println("RESERVATION MADE UNDER:");
 		System.out.println("--------------------------------");
 		DisplayGuestInfo.printInfo(reservation.getGuestList().get(0));
+		
 		//Displays all Orders
 		DisplayRoomService drm = new DisplayRoomService(reservation.getRoom().getRoomService());
 		drm.printArray();
+	
 		//Grand Total 
 		double grandTotal = GrandTotalTabulator.grandTotal(reservation);
 		System.out.println("++++++++++++++++++++++++++++++++++++++++++++");

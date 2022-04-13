@@ -39,7 +39,8 @@ public class UpdateRoomFeatures  {
 		
 		System.out.println("Successful!");
 		//Displays the room information
-		room.getRoomFeatures().info();
+		room.getRoomFeatures().info();		
+		System.out.println();
 		return;
 	}
 }
