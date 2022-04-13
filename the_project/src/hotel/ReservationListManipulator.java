@@ -83,26 +83,6 @@ public class ReservationListManipulator implements AddGivenObject, RemoveGivenOb
 		return reservation;
 	}
 	
-	//To be called in make reservation class (OVERLOADED)
-	/**
-	 * this method is to be called in the make reservation class upon its instantiation
-	 * Method Overloading is used in this case 
-	 * @param Room object for which the arraylist of reservation can be retrieved from 
-	 * @return this is the arraylist that is retrieved
-	 */
-	public ArrayList<Reservation> getEntry(Room room) {
-		//This arraylist stores all reservations of the room
-		ArrayList<Reservation> roomReservationList = new ArrayList<Reservation>();
-		
-		for (int i=0; i<hotel.getReservationList().size(); i++) {
-			Reservation reservation = hotel.getReservationList().get(i);
-			if (reservation.getRoom() == room) {
-				roomReservationList.add(reservation);
-			}//end if
-		}//end for
-		return roomReservationList;
-	}
-	
 	//To be called in checkout class (OVERLOADED)
 	/**
 	 * this method is the opposite of the above method; it returns the Reservation Object for the given ArrayList of reservation
@@ -130,6 +110,25 @@ public class ReservationListManipulator implements AddGivenObject, RemoveGivenOb
 			}//end if
 		}//end for
 		return reservation;
+	}	
+	
+	//To be called in make reservation class 
+	/**
+	 * this method is to be called in the make reservation class upon its instantiation
+	 * @param Room object for which the arraylist of reservation can be retrieved from 
+	 * @return this is the arraylist that is retrieved
+	 */
+	public ArrayList<Reservation> getRoomReservations(Room room) {
+		//This arraylist stores all reservations of the room
+		ArrayList<Reservation> roomReservationList = new ArrayList<Reservation>();
+		
+		for (int i=0; i<hotel.getReservationList().size(); i++) {
+			Reservation reservation = hotel.getReservationList().get(i);
+			if (reservation.getRoom() == room) {
+				roomReservationList.add(reservation);
+			}//end if
+		}//end for
+		return roomReservationList;
 	}
 	
 }

@@ -11,8 +11,8 @@ public class RoomStatusReport {
  */
 private Hotel hotel;
 	
-	public RoomStatusReport(Hotel htl) {
-		this.hotel = htl;
+	public RoomStatusReport(Hotel hotel) {
+		this.hotel = hotel;
 	}
 	/**
 	 * printOccupancyReport displays a summary of the occupancy details of the rooms
@@ -29,7 +29,7 @@ private Hotel hotel;
 		ArrayList<Room> roomList = hotel.getRoomList();
 		
 		/**
-		 * # Initialise array and count and totalCount
+		 * # Initialise array and count and totalCount arrays
 		 */
 		for (int i=0; i<array.length; i++) {
 			array[i] = "\tRoom Number: ";
@@ -39,6 +39,7 @@ private Hotel hotel;
 		
 		/**
 		 * # Checking every room individually regardless of their Room Type (#Inheritance)
+		 * # Besides, this function works regardless of any changes to room types (#Open-Closed Principle - CLosed for Modification)
 		 */
 		for (int i=0; i<roomList.size(); i++) {
 			Room room = roomList.get(i);
@@ -100,7 +101,7 @@ private Hotel hotel;
 		ArrayList<Room> roomList = hotel.getRoomList();
 		
 		/**
-		 * # Initialise Array
+		 * # Initialise array and count arrays
 		 */
 		for (int i=0; i<array.length; i++) {
 			array[i] = "\tRoom Number: ";
@@ -109,6 +110,7 @@ private Hotel hotel;
 		
 		/**
 		 * # Checking every room individually regardless of their Room Type (#Inheritance)
+		 * # Besides, this function works regardless of any changes to room types (#Open-Closed Principle - CLosed for Modification)
 		 */
 		for (int i=0; i<roomList.size(); i++) {
 			Room room = roomList.get(i);

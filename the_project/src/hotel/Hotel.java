@@ -170,7 +170,7 @@ public class Hotel {
 		return rlm.getEntry(reservationList);
 	}
 	/**
-	 * getRoomReservationList method retrieves the room reservation list for that given room in the Hotel class 
+	 * getRoomReservationList method returns a list of all reservations for that given room in the Hotel class 
 	 * this 
 	 * @param room this is the room for which the method retrieves the room reservation list
 	 * this is required to find room reservation list for the room stated in the parameter
@@ -178,10 +178,10 @@ public class Hotel {
 	 */
 	public ArrayList<Reservation> getRoomReservationList(Room room) {
 		ReservationListManipulator rlm = new ReservationListManipulator(this);
-		return rlm.getEntry(room);
+		return rlm.getRoomReservations(room);
 	}
 	/**
-	 * this method retrieves the reservation information for the given reserver (id, credit card information, contact details, gender) in the Hotel class
+	 * reservationInfo prints all current reservations with the Hotel
 	 */
 	public void reservationInfo() {
 		DisplayReservationList drl = new DisplayReservationList(this);

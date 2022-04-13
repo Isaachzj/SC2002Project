@@ -34,6 +34,7 @@ public class RoomListManipulator implements Get{
 	//OVERLOADED
 	/**
 	 * this method retrieves the first Room object and its details for the given roomType indicated, that is vacant (i.e. AvailStatus = VACANT)
+	 * Method overloading is used here
 	 * room details includes the TypeOfRoom, AvailStatus, maxOccupancy and RoomRate
 	 * @param roomType this is the roomType (SINGLE, DOUBLE, DELUXE, VIP SUITE) for retrieval of first Room object
 	 * @return this is the first Room object for the indicated roomType that is VACANT
