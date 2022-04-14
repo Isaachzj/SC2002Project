@@ -27,13 +27,14 @@ public class RoomService {
 	 * We made it such that only methods returning roomServiceBill are public
 	 * this is made public as it is required to tabulate the grand total for the receipt
 	 * Methods returning food items of room service order and grand total of roomServiceBill are protected
-	 * this ensures better encapsulation of information while ensuring that the methods can be accessed by the same package and subclasses
+	 * this ensures better encapsulation of information while ensuring that the methods can be accessed by the
+	 * same package and subclasses
 	 */
 	/**
 	 * gets bill of this room service order
 	 * @return final bill of this room service order
 	 */
-	public double getRoomServiceBill() {return this.roomServiceBill;} //public as needed to tabulate grand total for receipt
+	public double getRoomServiceBill() {return this.roomServiceBill;} 
 	/**
 	 * gets the food items of this room service order
 	 * @return list of food items in this room service order
@@ -55,7 +56,8 @@ public class RoomService {
 	 */
 	/**
 	 * This method add the order from the parameter; into the Room Service object
-	 * Follows the Interface Segregation principle; with instead of one big interface, many small interfaces based on groups of methods
+	 * Follows the Interface Segregation principle; with instead of one big interface, many small interfaces 
+	 * based on groups of methods
 	 * @param daOrder this is the new order to be added to the Room Service object
 	 * @throws ArrayException
 	 */

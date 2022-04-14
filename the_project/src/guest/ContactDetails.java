@@ -24,7 +24,8 @@ public class ContactDetails {
 	 * # Constructor
 	 */
 	/**
-	 * Instantiation of contact details of guest from the parameter; their mobile number, email address, home address and country of origin
+	 * Instantiation of contact details object from the parameter; their mobile number, email address, 
+	 * home address and country of origin
 	 * @param MN this is the guest's mobile number
 	 * @param EA this is the guest's email address
 	 * @param HA this is the guest's home address
@@ -42,7 +43,8 @@ public class ContactDetails {
 	 * # get methods
 	 * We made it such that only methods returning guest's mobile number is public. 
 	 * Methods returning guest's email address, home address and country of origin are protected
-	 * this ensures better encapsulation of information while ensuring that the methods can be accessed by the same package and subclasses
+	 * this ensures better encapsulation of information while ensuring that the methods can be accessed by the
+	 * same package and subclasses
 	 */
 	/**
 	 * gets the guest's mobile number

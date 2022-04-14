@@ -12,7 +12,8 @@ public class RoomServiceManipulator implements AddGivenObject, Reset {
 	
 	/**
 	 * This Constructor follows the Single Responsibility principle
-	 * Additionally, it follows the Open-Closed principle as its software entities is open for extension but closed for modifications
+	 * Additionally, it follows the Open-Closed principle as its software entities is open for extension but 
+	 * closed for modifications
 	 * @param   rs this is the Room Service of the guest
 	*/
 	public RoomServiceManipulator(RoomService rs) {
@@ -21,7 +22,8 @@ public class RoomServiceManipulator implements AddGivenObject, Reset {
 	
 	/**
 	 * # Check prior to adding order entry
-	 * Check if object passed to this function is actually a food object and if object passed is either null or not an instance of a food object, an exception will be thrown and error message displayed
+	 * Check if object passed to this function is actually a food object and if object passed is either null 
+	 * or not an instance of a food object, an exception will be thrown and error message displayed
 	 * If object passed to function is a food object, will add the food object into the food list
 	 * @param   daOrder this is the food object
 	*/
