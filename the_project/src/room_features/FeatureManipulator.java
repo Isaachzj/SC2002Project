@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 import list_methods.*;
 
+/**
+ * Follows the Single Responsibility Principle as it has the 
+ * sole responsibility of manipulating the features of a room;
+ */
 public class FeatureManipulator implements AddStandard,RemoveStandard,Set, Reset {
 	private RoomFeatures rf;
 	

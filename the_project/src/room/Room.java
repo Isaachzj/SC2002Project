@@ -11,13 +11,20 @@ import list_methods.*;
 import reservation.*;
 
 /**
+<<<<<<< Updated upstream
  * Follows the Lisker Substitution Principle as every function created for Room can work for all its subclasses;
  *
+=======
+ * 
+ * Follows the Liskov Substitution principle as this superclass is replaceable with all its subclasses;
+ * and the programme would still has its functionality 
+>>>>>>> Stashed changes
  */
 
 public abstract class Room 
 {
 	/**
+<<<<<<< Updated upstream
 	 * this is the type of room of this room (enumerations);
 	 * consists of SINGLE, DOUBLE, DELUXE, VIPSUITE (protected attribute)
 	 */
@@ -53,10 +60,50 @@ public abstract class Room
 	protected Reservation reservation;
 	/**
 	 * this contain details of food items ordered by guest(s) occupying in given room (protected attribute)
+=======
+	 * type of this room (enumerations: SINGLE, DOUBLE, DELUXE, VIPSUITE);
+	 */
+	protected TypeOfRoom roomType;
+	/**
+	 * availability status of this room (enumerations: AVAILABLE, OCCUPIED, RESEVERED, UNDER_MAINTENANCE);
+	 */
+	protected AvailStatus availability;
+	/**
+	 * RoomFeatures object;
+	 * contains features of this room (bedType, viewType, numOfBed, wifi, smokeOut);
+	 */
+	protected RoomFeatures feature;
+	/**
+	 * number of this room
+	 */
+	protected String roomNumber;
+	/**
+	 * maximum number of guests allowed to stay in this room;
+	 */
+	protected int maxOccupancy;
+	/**
+	 * charged rate of this room;
+	 */
+	protected RoomRate rate;
+	/**
+	 * Menu object;
+	 * food list available for room service of this Room
+	 */
+	protected Menu menu;
+	/**
+	 * Reservation object;
+	 * contains reservation details of this room;
+	 */
+	protected Reservation reservation;
+	/**
+	 * RoomService object;
+	 * contains room service order details of this room;
+>>>>>>> Stashed changes
 	 */
 	protected RoomService roomService;
 	
 	/**
+<<<<<<< Updated upstream
 	 * # Constructor
 	 */
 	/**
@@ -117,15 +164,47 @@ public abstract class Room
 	/**
 	 * gets RoomFeatures object containing details of features of this room;
 	 * @return RoomFeatures object of this room;
+=======
+	 * Creates the reservation and roomService object;
+	 * roomService and menu objects initialized to null/zero by default; 
+	 * also sets availability to VACANT by default;
+	 * Menu passed in to so staff can access menu available to this room through this Room object; 
+	 * @param menu Menu object containing details of this room;
+	 */
+	public Room(Menu menu) {
+		this.availability = AvailStatus.VACANT;
+		this.roomService = new RoomService();
+		this.menu = menu;
+	}
+	
+	/**
+	 * gets type of this room (SINGLE, DOUBLE, DELUXE, VIPSUITE);
+	 * @return type of this room;
+	 */
+	public TypeOfRoom getRoomType() {return roomType;}
+	/**
+	 * gets availability status of this room (AVAILABLE, OCCUPIED, RESEVERED, UNDER_MAINTENANCE);
+	 * @return availability of this room;
+	 */
+	public AvailStatus getAvail() {return availability;}
+	/**
+	 * gets RoomFeature object of this room containing features of this room (bedType, viewType, numOfBed, wifi, smokeOut);
+	 * @return RoomFeature object of this room;
+>>>>>>> Stashed changes
 	 */
 	public RoomFeatures getRoomFeatures() {return feature;}
 	/**
 	 * gets room number of this room;
+<<<<<<< Updated upstream
 	 * @return this.roomNumber: room number of this room;
+=======
+	 * @return room number of this room;
+>>>>>>> Stashed changes
 	 */
 	public String getRoomNum() {return this.roomNumber;}	
 	/**
 	 * gets maximum number of guests allowed to stay in this room;
+<<<<<<< Updated upstream
 	 * @return this.maxOccupancy: maximum number of occupants in this room;
 	 */
 	public int getMaxOccupancy() {return this.maxOccupancy;}
@@ -147,11 +226,36 @@ public abstract class Room
 	/**
 	 * RoomService object containing details of food items ordered by guest(s) occupying this room;
 	 * @return RoomService object of this room;
+=======
+	 * @return maximum occupancy of this room;
+	 */
+	public int getMaxOccupancy() {return this.maxOccupancy;}
+	/**
+	 * gets price per day of stay of this room;
+	 * @return charged rate of this room;
+	 */
+	public RoomRate getRate() {return rate;}
+	/**
+	 * gets Menu object containing food list available for room service of this room;
+	 * @return Menu object containing menu items for this room;
+	 */
+	public Menu getMenu() {return menu;}
+	/**
+	 * gets Reservation object of this room containing reservation details of this room;
+	 * @return if reservation has been made for this room, returns Reservation object that has reservation details of this room; if not, returns null;
+	 * 
+	 */
+	public Reservation getReservation() {return reservation;}
+	/**
+	 * gets RoomService object of this room containing room service order details of this room;
+	 * @return RoomService object of this room containing room service order details of this room;
+>>>>>>> Stashed changes
 	 */
 	public RoomService getRoomService() {return roomService;}
 	
 	
 	/**
+<<<<<<< Updated upstream
 	 * # sets method
 	 */
 	/**
@@ -162,6 +266,15 @@ public abstract class Room
 	/**
 	 * sets reservation of this room using Reservation object;
 	 * @param reservation Reservation object containing reservation details of this room;
+=======
+	 * sets availability status of this room (enumerations: AVAILABLE, OCCUPIED, RESEVERED, UNDER_MAINTENANCE)
+	 * @param availability availability status of this room 
+	 */
+	public void setAvail(AvailStatus availability) {this.availability = availability;}
+	/**
+	 * sets reservation details of this room to details in Reservation object passed in;
+	 * @param reservation Reservation object; 
+>>>>>>> Stashed changes
 	 */
 	public void setReservation(Reservation reservation) {this.reservation = reservation;}
 	

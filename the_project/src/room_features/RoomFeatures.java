@@ -4,7 +4,12 @@ import enumeration.TypeOfBed;
 import enumeration.ViewType;
 import list_methods.*;
 
-//Assumes all rooms of the same type share the exact same set of features
+/**
+ * Assumes all rooms of the same type share the exact same set of features
+ * Follows the Single Responsibility Principle as it has the sole responsibility 
+ * of representing all features of a room;
+ *
+ */
 public class RoomFeatures {
 	/**
 	 * # Core Features (5)
