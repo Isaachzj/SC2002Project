@@ -13,14 +13,6 @@ public class CreditCardInfo {
 	 * this is the guest's credit card expiry (private attribute)
 	 */
 	private String creditCardExpiry;
-	/**
-	 * this is the guest's billing address (private attribute)
-	 */
-	private String billingAddress;
-	/**
-	 * this is the guest's billing name (private attribute)
-	 */
-	private String billingName;
 	
 	//Constructor
 	/**
@@ -34,12 +26,10 @@ public class CreditCardInfo {
 	 * @param BA this is the guest's billing address
 	 * @param BN this is the guest's billing name
 	 */
-	public CreditCardInfo(String CCN, String CCB, String CCE, String BA, String BN) {
+	public CreditCardInfo(String CCN, String CCB, String CCE) {
 		this.creditCardNum = CCN;
 		this.creditCardBank = CCB;
 		this.creditCardExpiry = CCE;
-		this.billingAddress = BA;
-		this.billingName = BN;
 	}
 	
 	//get methods
@@ -66,16 +56,6 @@ public class CreditCardInfo {
 	 * @return this is the guest's credit card expiry
 	 */
 	protected String getCreditCardExpiry(){return this.creditCardExpiry;}
-	/**
-	 * gets the guest's credit card billing address
-	 * @return this is the guest's credit card billing address
-	 */
-	protected String getBillingAddress(){return this.billingAddress;}
-	/**
-	 * gets the guest's credit card billing name
-	 * @return this is the guest's credit card billing name
-	 */
-	protected String getBillingName(){return this.billingName;}
 	
 	//set methods
 	/**
@@ -96,14 +76,4 @@ public class CreditCardInfo {
 	 * @param CCN this is the guest credit card expiry
 	 */
 	protected void setCreditCardExpiry(String CCE) {this.creditCardExpiry = CCE;}
-	/**
-	 * sets the credit card billing address of the guest
-	 * @param CCN this is the guest credit card billing address
-	 */
-	protected void setBillingAddress(String BA) {this.billingAddress = BA;}
-	/**
-	 * sets the credit card billing name of the guest
-	 * @param CCN this is the guest credit card billing name
-	 */
-	protected void setBillingName(String BN) {this.billingName = BN;}
 }

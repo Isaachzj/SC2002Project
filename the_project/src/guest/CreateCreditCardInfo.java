@@ -16,11 +16,7 @@ public class CreateCreditCardInfo {
 		String CCBank = sc.nextLine();
 		System.out.print("Enter your creditcard Expiry Date: ");
 		String ExpiryDate = sc.nextLine();
-		System.out.print("Enter your Billing Name: ");
-		String BillName = sc.nextLine();
-		System.out.print("Enter your Billing Address: ");
-		String BillAddress = sc.nextLine();
-		CreditCardInfo CCinfo = new CreditCardInfo(CCNum, CCBank, ExpiryDate, BillName, BillAddress);
+		CreditCardInfo CCinfo = new CreditCardInfo(CCNum, CCBank, ExpiryDate);
 		System.out.println();
 		return CCinfo;
 	}

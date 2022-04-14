@@ -26,11 +26,9 @@ public class DisplayGuestInfo {
 		System.out.println("IdentityType: " + guest.getIdentity().getIdType());
 		System.out.println("Identity Number: " + guest.getIdentity().getIdNumber());
 		
-		System.out.println("Billing Name : " + guest.getCreditCardDetails().getBillingName());
 		System.out.println("Credit Card Number: " + guest.getCreditCardDetails().getCreditCardNum());
 		System.out.println("Credit Card Bank: " + guest.getCreditCardDetails().getCreditCardBank());
 		System.out.println("Credit Card Expiry: " + guest.getCreditCardDetails().getCreditCardExpiry());
-		System.out.println("Billing Address : " + guest.getCreditCardDetails().getBillingAddress());
 		
 		System.out.println("Mobile Number: " + guest.getContacts().getMobileNumber());
 		System.out.println("Country: " + guest.getContacts().getCountry());

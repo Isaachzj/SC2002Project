@@ -28,15 +28,9 @@ public class CreditCardInfoManipulator {
 			String CCBank = sc.nextLine();
 			System.out.print("Enter your new creditcard Expiry Date: ");
 			String ExpiryDate = sc.nextLine();
-			System.out.print("Enter your new Billing Name: ");
-			String BillName = sc.nextLine();
-			System.out.print("Enter your new Billing Address: ");
-			String BillAddress = sc.nextLine();
 			guest.getCreditCardDetails().setCreditCardNum(CCNum);
 			guest.getCreditCardDetails().setCreditCardBank(CCBank);
 			guest.getCreditCardDetails().setCreditCardExpiry(ExpiryDate);
-			guest.getCreditCardDetails().setBillingName(BillName);
-			guest.getCreditCardDetails().setBillingAddress(BillAddress);
 			System.out.println("Credit Card Info updated successfully!");
 			return;
 	}
