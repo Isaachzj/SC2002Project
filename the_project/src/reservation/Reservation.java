@@ -132,4 +132,11 @@ public class Reservation {
 		ReservationGuestListManipulator rglm = new ReservationGuestListManipulator(this);
 		rglm.addEntry();
 	}
+	
+	/**
+	 * info() displays the reservation
+	 */
+	public void info() {
+		DisplayReservation.info(this);
+	}
 }

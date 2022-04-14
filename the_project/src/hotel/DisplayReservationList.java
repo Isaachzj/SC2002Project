@@ -30,7 +30,7 @@ public class DisplayReservationList implements Print {
 		for (int i=0; i<hotel.getReservationList().size(); i++) {
 			System.out.printf("--Reservation %d --\n", i+1);
 			Reservation reservation = hotel.getReservationList().get(i);
-			DisplayReservation.info(reservation);
+			reservation.info();
 			System.out.println("\n\n");
 		}
 		return;
