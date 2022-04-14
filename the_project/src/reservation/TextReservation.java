@@ -9,6 +9,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.StringTokenizer;
+
+import enumeration.AvailStatus;
+
 import java.time.format.DateTimeFormatter;
 
 import room.Room;
@@ -20,7 +23,7 @@ public class TextReservation {
 	public static final String SEPARATOR = "~";
 
     // READING
-	public static ArrayList readReservations(String filename, Room room, ArrayList<Guest> guestList) throws IOException {
+	public static ArrayList readReservations(String filename, ArrayList<Room> room, ArrayList<ArrayList<Guest>> guestList) throws IOException {
 		// read String from text file
 		ArrayList stringArray = (ArrayList)read(filename);
 		ArrayList alr = new ArrayList() ;// to store Guests data
@@ -40,12 +43,24 @@ public class TextReservation {
 				int numOfGuest = Integer.parseInt(star.nextToken().trim()); //string to Integer
 						
 				
-				// create Guest object from file data (Reservation attribute set to null first
-				Reservation reservation = new Reservation(room, checkInDateTime, checkOutDateTime, numOfWeekday, numOfWeekend, numOfGuest);
-				reservation.setGuestList(guestList);
+				// create Guest object from file data
+				Reservation reservation = new Reservation(room.get(i), checkInDateTime, checkOutDateTime, numOfWeekday, numOfWeekend, numOfGuest);
+				
+				//set guest list in reservation
+				reservation.setGuestList(guestList.get(i));
+				
+				//setting the reservationDetails attribute of each guest
+				for (int y=0; y<guestList.get(i).size(); y++) {
+					Guest curGuest = guestList.get(i).get(y);
+					curGuest.setReservation(reservation);
+				}
+				
+				//add reservation to Room and change avail status
+				room.get(i).setReservation(reservation);		
+				room.get(i).setAvail(AvailStatus.RESERVED);
 				
 				// add to reservation list
-				alr.add(reservation) ;
+				alr.add(reservation);
 			}
 			return alr ;
 	}
@@ -90,7 +105,9 @@ public class TextReservation {
 					st.append(reservation.getCheckOutDateTime().format(formatter).trim()); //LocalDateTime to string
 					st.append(SEPARATOR);
 					st.append(Long.toString(reservation.getNumOfWeekday()).trim()); 
-					st.append(Long.toString(reservation.getNumOfWeekend()).trim()); //This may cause error
+					st.append(SEPARATOR);
+					st.append(Long.toString(reservation.getNumOfWeekend()).trim());
+					st.append(SEPARATOR);
 					st.append(reservation.getNumOfGuest()); //int type don't need to trim
 					alw.add(st.toString()) ;
 					
@@ -112,33 +129,10 @@ public class TextReservation {
 	    }
 	  }
 
-
-
-	  
-	  
-	  
-	  
-	  
-	  
-	public static void main(String[] aArgs)  {
-	    	GuestText gt = new GuestText();
-	    	String filename = "C:\\Users\\sharo\\eclipse-workspace\\Serializer and Deserializer\\src\\codes\\professor.txt" ;
-			try {
-				// read file containing Professor records.
-				ArrayList al = gt.readGuests(filename) ;
-				for (int i = 0 ; i < al.size() ; i++) {
-						Professor prof = (Professor)al.get(i);
-						System.out.println("Name " + prof.getName() );
-						System.out.println("Contact " + prof.getContact() );
-				}
-				Professor p1 = new Professor("Joseph","jos@ntu.edu.sg",67909999);
-				// al is an array list containing Professor objs
-				al.add(p1);
-				// write Professor record/s to file.
-				TextDB.saveProfessors(filename, al);
-			}
-			catch (IOException e) {
-				System.out.println("IOException > " + e.getMessage());
-			}
-	}
 }
+
+	  
+	  
+	  
+	  
+	  

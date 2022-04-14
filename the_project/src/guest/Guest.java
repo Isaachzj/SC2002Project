@@ -100,5 +100,11 @@ public class Guest {
 	 * @return this is the credit card details of the guest
 	 */
 	protected CreditCardInfo getCreditCardDetails() {return this.creditCardDetails;}
+	
+	/**
+	 * This method is solely used in the deserialization process
+	 * @param reservation is the reservation made by the particular guest object that called this function
+	 */
+	public void setReservation(Reservation reservation) {this.reservationDetails = reservation;}
 
 }

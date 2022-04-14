@@ -229,6 +229,17 @@ public class Hotel {
 		RoomListManipulator rlm = new RoomListManipulator(this);
 		return rlm.getSameTypeRooms(roomType);	
 	}
+	
+	/**
+	 * This method is solely used in the deserialization process
+	 * @param roomNum is the required room number
+	 * @return returns desired room or null if room don't exist
+	 */
+	public Room getSpecificRoom(String roomNum) {
+		RoomListManipulator rlm = new RoomListManipulator(this);
+		return rlm.getEntry(roomNum);	
+	}
+	
 	/**
 	 * this method is set to protected for better encapsulation.
 	 * this ensures better encapsulation of information while ensuring that the methods can be accessed by the same package and subclasses

@@ -37,6 +37,6 @@ public class Identity {
 	 * gets the id number of the guest
 	 * @return this is the guest's id number
 	 */
-	protected String getIdNumber() {return this.idNumber;}
+	public String getIdNumber() {return this.idNumber;}
 	
 }

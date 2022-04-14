@@ -15,10 +15,10 @@ public class TextIdentity {
 	public static final String SEPARATOR = "~";
 	
 	// READING
-		public static ArrayList readIDs(String filename) throws IOException {
+		public static ArrayList<Identity> readIDs(String filename) throws IOException {
 			// read String from text file
 			ArrayList stringArray = (ArrayList)read(filename);
-			ArrayList alr = new ArrayList() ;// to store Guests data
+			ArrayList<Identity> alr = new ArrayList<Identity>() ;// to store ID data
 
 	        for (int i = 0 ; i < stringArray.size() ; i++) {
 					String st = (String)stringArray.get(i);
@@ -90,36 +90,6 @@ public class TextIdentity {
 		      out.close();
 		    }
 		  }
-
-
-
-		  
-		  
-		  
-		  
-		  
-		  
-		public static void main(String[] aArgs)  {
-		    	GuestText gt = new GuestText();
-		    	String filename = "C:\\Users\\sharo\\eclipse-workspace\\Serializer and Deserializer\\src\\codes\\professor.txt" ;
-				try {
-					// read file containing Professor records.
-					ArrayList al = gt.readGuests(filename) ;
-					for (int i = 0 ; i < al.size() ; i++) {
-							Professor prof = (Professor)al.get(i);
-							System.out.println("Name " + prof.getName() );
-							System.out.println("Contact " + prof.getContact() );
-					}
-					Professor p1 = new Professor("Joseph","jos@ntu.edu.sg",67909999);
-					// al is an array list containing Professor objs
-					al.add(p1);
-					// write Professor record/s to file.
-					TextDB.saveProfessors(filename, al);
-				}
-				catch (IOException e) {
-					System.out.println("IOException > " + e.getMessage());
-				}
-		}
 
 }
 

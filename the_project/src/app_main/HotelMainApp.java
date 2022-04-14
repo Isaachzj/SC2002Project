@@ -6,12 +6,14 @@ import app_hotel.StayRelated;
 import app_room.RoomRelated;
 import hotel.*;
 import list_methods.*;
+import serialize_deserialize.main_deserialize;
 
 public class HotelMainApp {
 	
 	public static void main (String[] args ) {
 		Scanner sc = new Scanner(System.in);
 		Hotel hotel = new Hotel();
+		main_deserialize.deserialization(hotel);
 		int choice = 0;
 		
 		do {

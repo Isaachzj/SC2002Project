@@ -17,7 +17,7 @@ public class TextGuest {
 	public static final String SEPARATOR = "~";
 
     // READING
-	public static ArrayList readGuests(String filename, Identity ID, CreditCardInfo CCD, ContactDetails CD, Reservation reservation) throws IOException {
+	public static ArrayList readGuests(String filename, ArrayList<Identity> ID, ArrayList<CreditCardInfo> CCD, ArrayList<ContactDetails> CD) throws IOException {
 		// read String from text file
 		ArrayList stringArray = (ArrayList)read(filename);
 		ArrayList alr = new ArrayList() ;// to store Guests data
@@ -33,8 +33,8 @@ public class TextGuest {
 				TypeOfGender  gender = TypeOfGender.values()[Integer.parseInt(star.nextToken().trim())]; //string to int to enum	
 				
 				// create Guest object from file data 
-				Guest guest = new Guest(name, nationality, gender, ID, CCD, CD, reservation);
-				// add to Professors list
+				Guest guest = new Guest(name, nationality, gender, ID.get(i), CCD.get(i), CD.get(i), null);
+				// add to Guest list
 				alr.add(guest) ;
 			}
 			return alr ;
