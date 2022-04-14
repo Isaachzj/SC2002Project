@@ -84,7 +84,7 @@ public class Guest {
 	 * Gets the guest's nationality
 	 * @return this is the nationality of the guest
 	 */
-	protected String getNationality() {return this.nationality;}
+	public String getNationality() {return this.nationality;}
 	/**
 	 * Gets the guest's gender
 	 * @return this is the gender of the guest
