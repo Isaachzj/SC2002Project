@@ -10,7 +10,6 @@ import room_rate.RoomRate;
  */
 
 public class DoubleRoom extends Room{
-<<<<<<< Updated upstream
 	
 	/**
 	 * # Constructor
@@ -24,7 +23,7 @@ public class DoubleRoom extends Room{
 	 * Menu object containing food items available to this Double room for room service;
 	 * @param floor	this is the room floor, which is required for the instantiation of the DoubleRoom object
 	 * @param num this is the room number, which is required for the instantiation of the DoubleRoom object
-=======
+
 	/**
 	 * Instantiation of DoubleRoom object with input menu object, floor number and room number;
 	 * Follows the Single Dependency principle as sole responsibility is to create a DoubleRoom object;
@@ -32,23 +31,12 @@ public class DoubleRoom extends Room{
 	 * @param menu Menu object that has food list available for room service of this room
 	 * @param floor floor number of this room
 	 * @param num room number of this room
->>>>>>> Stashed changes
+
 	 */
 	public DoubleRoom(Menu menu, int floor, int num) {
 		
-<<<<<<< Updated upstream
 		super(menu, TypeOfBed.SINGLE, ViewType.STANDARD, 2, true, false, 80, 100);			
-=======
-		// Instantiating necessary objects
-		/** 
-		 * Instantiation of RoomFeatures object with input bed type, view type, number of beds, wifi availability and smokeout availability;
-		 * Follows the Single Dependency principle as sole responsibility is to create a Food object
-		 * Also follows the Open-Closed principle as changes in the Display does not require a change in source code of modules
-		 */
-		RoomFeatures ff = new RoomFeatures(TypeOfBed.SINGLE , ViewType.STANDARD, 1, true, false);
-		RoomRate rr = new RoomRate(50, 80, 0);
->>>>>>> Stashed changes
-
+		
 		/**
 		 * # Overriding attributes of super()
 		 */

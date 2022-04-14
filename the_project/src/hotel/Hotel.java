@@ -14,7 +14,7 @@ public class Hotel {
 
 	private ArrayList<Room> roomList;
 	private ArrayList<Reservation> reservationList;
-	private ArrayList<Guest> guestList; // hotel test - davis
+	private ArrayList<Guest> guestList; 
 	private ArrayList<Menu> menuList; 
 	/**
 	 * Creates and display menu which allows the selection of RoomType
