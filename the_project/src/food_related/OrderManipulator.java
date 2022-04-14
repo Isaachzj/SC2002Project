@@ -24,7 +24,6 @@ public class OrderManipulator implements AddGivenObject{
 	 * displayed to inform user that the object passed to this function is not a food object
 	 * Else, object passed to function is a food object, quantity of food to be included. System also ensures 
 	 * that quantity of food entered is a positive number
-	 * 
 	 * @param   daFood this is the food ordered by the guest
 	*/
 	public void addEntry(Object daFood) throws ArrayException{

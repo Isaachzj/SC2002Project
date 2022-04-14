@@ -19,7 +19,8 @@ public class CreditCardInfo {
 	 * # Constructor
 	 */
 	/**
-	 * Instantiation of credit card information using the credit card number, bank, card expiry, billing address and billing name
+	 * Instantiation of credit card information using the credit card number, bank, card expiry, billing 
+	 * address and billing name
 	 * @param CCN this is the guest's credit card number
 	 * @param CCB this is the guest's credit card bank
 	 * @param CCE this is the guest's credit card expiry

@@ -4,7 +4,8 @@ public class DisplayGuestInfo {
 	/**
 	 * Displays guest information; name, nationality, gender, identification type and identification number
 	 * Also displays Credit card details and customer details
-	 * If parameter for Guest object is null; to return. Else, if Guest object found will display information accordingly
+	 * If parameter for Guest object is null; to return. Else, if Guest object found will display information 
+	 * accordingly
 	 * @param guest this is the guest that needs to update credit card information
 	 */
 	public static void printInfo(Guest guest) {
@@ -17,7 +18,8 @@ public class DisplayGuestInfo {
 		}
 		/**
 		 * Displays guest details
-		 * guest details include (name, nationality, gender, identification type and identification number, Credit card details and customer details)
+		 * guest details include (name, nationality, gender, identification type and identification number, 
+		 * Credit card details and customer details)
 		 */
 		System.out.println("----------Guest Details---------");
 		System.out.println("Name: "+ guest.getName());

@@ -37,7 +37,8 @@ public class Guest {
 	 * # Constructor
 	 */
 	/**
-	 * Instantiation of guest details using guest name, nationality, gender, identity, credit card details, contact details and reservation details
+	 * Instantiation of guest details using guest name, nationality, gender, identity, credit card details, 
+	 * contact details and reservation details
 	 * @param name this is the name of the guest
 	 * @param nationality this is the nationality of the guest
 	 * @param gender this is the gender of the guest
@@ -58,12 +59,16 @@ public class Guest {
 	
 	/**
 	 * get methods
-	 * We made it such that only methods returning guest's name, contact details and reservation details are public. 
-	 * Methods returning guest's mobile number, email address, home address and country of origin are protected
-	 * this ensures better encapsulation of information while ensuring that the methods can be accessed by the same package and subclasses
+	 * We made it such that only methods returning guest's name, contact details and reservation details are 
+	 * public. 
+	 * Methods returning guest's mobile number, email address, home address and country of origin are 
+	 * protected
+	 * this ensures better encapsulation of information while ensuring that the methods can be accessed by 
+	 * the same package and subclasses
 	 */
 	/**
-	 * We made it such that only methods returning guest's name, contact details and reservation details are public. 
+	 * We made it such that only methods returning guest's name, contact details and reservation details are 
+	 * public. 
 	 * This ensures better encapsulation of information that are more private.
 	 * 
 	 * Gets the guest's name
