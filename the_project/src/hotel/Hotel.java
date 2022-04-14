@@ -55,16 +55,16 @@ public class Hotel {
 		}
 			
 		/**
-		 * Deluxe Rooms (6 rooms)
+		 * Deluxe Rooms (5 rooms)
 		 */
-		for (int i=1; i<=6; i++) {
+		for (int i=1; i<=5; i++) {
 			DeluxeRoom room = new DeluxeRoom(allMenus.get(2),6,i);
 			roomList.add(room);
 		}		
 		/**
-		 * VIPSuite (2 rooms)
+		 * VIPSuite (3 rooms)
 		 */
-		for (int i=1; i<=2; i++) {
+		for (int i=1; i<=3; i++) {
 			VIPSuite room = new VIPSuite(allMenus.get(3),7,i);
 			roomList.add(room);		
 		}

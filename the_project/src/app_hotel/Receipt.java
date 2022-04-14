@@ -35,7 +35,7 @@ public class Receipt{
 		drm.printArray();
 	
 		//Grand Total 
-		double grandTotal = GrandTotalTabulator.grandTotal(reservation);
+		double grandTotal = reservation.calcGrandTotal();
 		System.out.println("++++++++++++++++++++++++++++++++++++++++++++");
 		System.out.printf("Total: $%.2f\n", grandTotal);
 		System.out.printf("Discount: %.1f%%\n", discount); //%% to escape % sign

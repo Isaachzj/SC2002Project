@@ -63,7 +63,7 @@ public class Reservation {
 	}
 	
 	/**
-	 * method returning the Room object is public
+	 * getRoom() returning the Room object is public
 	 * @return this is the room with the details.
 	 * Details includes type of room, availability, feature, room number, occupancy and room rate
 	 */
@@ -75,7 +75,7 @@ public class Reservation {
 	 */
 	public LocalDateTime getCheckInDateTime() {return this.checkInDateTime;}
 	/**
-	 * method returning the Check-out date and time is public
+	 * getCheckInDateTime() returning the Check-out date and time is public
 	 * @return this is the check out date
 	 * The check in date will always be before the check out date.
 	 */
@@ -109,19 +109,19 @@ public class Reservation {
 	public Guest getGuest() {return this.guestList.get(0);}	
 	
 	/**
-	 * setCheckInDateTime checks if the check in date and time is the same
+	 * setCheckInDateTime() sets the checkInDateTime attribute of the reservation object that called it
 	 */
 	public void setCheckInDateTime(LocalDateTime checkInDateTime) {this.checkInDateTime = checkInDateTime;}
 	/**
-	 * setCheckOutDateTime checks if the check out date and time is the same
+	 * setCheckOutDateTime sets the checkOutDateTime attribute of the reservation object that called it
 	 */
 	public void setCheckOutDateTime(LocalDateTime checkOutDateTime) {this.checkOutDateTime = checkOutDateTime;}
 	/**
-	 * setNumOfWeekday checks if the number of weekday is the same
+	 * setNumOfWeekday() sets the numOfWeekday attribute of the reservation object that called it
 	 */
 	public void setNumOfWeekday(long numOfWeekday) {this.numOfWeekday = numOfWeekday;}
 	/**
-	 * setNumOfWeekday checks if the number of weekend is the same
+	 * setNumOfWeekend() sets the numOfWeekend attribute of the reservation object that called it
 	 */
 	public void setNumOfWeekend(long numOfWeekend) {this.numOfWeekend = numOfWeekend;}
 	
@@ -138,5 +138,12 @@ public class Reservation {
 	 */
 	public void info() {
 		DisplayReservation.info(this);
+	}
+	
+	/**
+	 * calcGrandTotal() calculates and returns the finalized bill for the reservation object that called it. 
+	 */
+	public double calcGrandTotal() {
+		return GrandTotalTabulator.grandTotal(this);
 	}
 }
