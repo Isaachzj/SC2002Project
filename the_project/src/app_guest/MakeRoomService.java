@@ -14,7 +14,8 @@ import list_methods.*;
  * Allows the user to request for room service (which would be redirected to from GuestRelated boundary class
  * upon the selection of choice '3')
  * 
- * do-while loop is used to ensure that the guest enters a valid choice (1 - 3)
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
  */
 public class MakeRoomService {
 	public static void makeRoomService(Guest guest) throws ArrayException {
