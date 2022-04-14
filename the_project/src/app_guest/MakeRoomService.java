@@ -9,6 +9,13 @@ import java.util.concurrent.TimeUnit;
 import food_related.*;
 import list_methods.*;
 
+/**
+ * This is a Boundary Class; as it is used as a user interface;
+ * Allows the user to request for room service (which would be redirected to from GuestRelated boundary class
+ * upon the selection of choice '3')
+ * 
+ * do-while loop is used to ensure that the guest enters a valid choice (1 - 3)
+ */
 public class MakeRoomService {
 	public static void makeRoomService(Guest guest) throws ArrayException {
 		
@@ -17,18 +24,26 @@ public class MakeRoomService {
 			return;
 		}
 		
-		//Getting the room service object of the guest's room
+		/**
+		 * # Getting the room service object of the guest's room
+		 */
 		Room room = guest.getReservation().getRoom();
 		RoomService roomService = room.getRoomService();
 		
-		//Creating and making the order
+		/**
+		 * # Creating and making the order
+		 */
 		Order order = new Order();
 		order.makeOrder(room);
 		
-		//Record history of order in Room Service object
+		/**
+		 * # Record history of order in Room Service object
+		 */
 		roomService.addOrder(order);
 		
-		//Print the order out
+		/**
+		 * # Print the order out
+		 */
 		System.out.println("Order Confirmed! \nHere are the details:");
 		order.info();
 		
