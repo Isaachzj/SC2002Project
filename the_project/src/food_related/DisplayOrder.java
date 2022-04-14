@@ -9,7 +9,9 @@ public class DisplayOrder implements Print {
 	private Order order;
 	/**
 	 * # Displays details of orders from order object
-	 * creates a DisplayOrder object and adds this menu into this DisplayOrder 
+	 */
+	/**
+	 * Instantiates a DisplayOrder object and adds this menu into this DisplayOrder 
 	 * The DisplayOrder class follows the Single Responsibility principle, as has a sole responsibility of displaying the Order 
 	 * @param	order this is the order of the customer
 	 */ 
