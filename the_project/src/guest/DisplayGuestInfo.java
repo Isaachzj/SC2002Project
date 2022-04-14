@@ -3,7 +3,7 @@ package guest;
 public class DisplayGuestInfo {
 	/**
 	 * Displays guest information; name, nationality, gender, identification type and identification number
-	 * Also displays Credit card details and customer details
+	 * Also displays Credit card details and contact details
 	 * If parameter for Guest object is null; to return. Else, if Guest object found will display information 
 	 * accordingly
 	 * @param guest this is the guest that needs to update credit card information
@@ -19,7 +19,7 @@ public class DisplayGuestInfo {
 		/**
 		 * Displays guest details
 		 * guest details include (name, nationality, gender, identification type and identification number, 
-		 * Credit card details and customer details)
+		 * Credit card details and contact details)
 		 */
 		System.out.println("----------Guest Details---------");
 		System.out.println("Name: "+ guest.getName());

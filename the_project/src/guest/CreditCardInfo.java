@@ -53,8 +53,8 @@ public class CreditCardInfo {
 	 */
 	protected String getCreditCardBank(){return this.creditCardBank;}
 	/**
-	 * gets the guest's credit card expiry
-	 * @return this is the guest's credit card expiry
+	 * gets the guest's credit card expiry date
+	 * @return this is the guest's credit card expiry date
 	 */
 	protected String getCreditCardExpiry(){return this.creditCardExpiry;}
 	
@@ -69,12 +69,12 @@ public class CreditCardInfo {
 	protected void setCreditCardNum(String CCN) {this.creditCardNum = CCN;}
 	/**
 	 * sets the credit card bank of the guest
-	 * @param CCN this is the guest credit card bank
+	 * @param CCB this is the guest credit card bank
 	 */
 	protected void setCreditCardBank(String CCB) {this.creditCardBank = CCB;}
 	/**
-	 * sets the credit card expiry of the guest
-	 * @param CCN this is the guest credit card expiry
+	 * sets the credit card expiry date of the guest
+	 * @param CCE this is the guest credit card expiry date
 	 */
 	protected void setCreditCardExpiry(String CCE) {this.creditCardExpiry = CCE;}
 }
