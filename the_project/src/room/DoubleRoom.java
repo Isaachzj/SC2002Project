@@ -23,11 +23,20 @@ public class DoubleRoom extends Room{
 	 * Menu object containing food items available to this Double room for room service;
 	 * @param floor	this is the room floor, which is required for the instantiation of the DoubleRoom object
 	 * @param num this is the room number, which is required for the instantiation of the DoubleRoom object
+
+	/**
+	 * Instantiation of DoubleRoom object with input menu object, floor number and room number;
+	 * Follows the Single Dependency principle as sole responsibility is to create a DoubleRoom object;
+	 * Follows the Liskov Substitution principle 
+	 * @param menu Menu object that has food list available for room service of this room
+	 * @param floor floor number of this room
+	 * @param num room number of this room
+
 	 */
 	public DoubleRoom(Menu menu, int floor, int num) {
 		
 		super(menu, TypeOfBed.SINGLE, ViewType.STANDARD, 2, true, false, 80, 100);			
-
+		
 		/**
 		 * # Overriding attributes of super()
 		 */

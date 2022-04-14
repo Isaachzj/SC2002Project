@@ -1,6 +1,7 @@
 package room;
 
 import enumeration.AvailStatus;
+
 import enumeration.TypeOfBed;
 import enumeration.TypeOfRoom;
 import enumeration.ViewType;
@@ -9,10 +10,11 @@ import room_features.*;
 import room_rate.*;
 import list_methods.*;
 import reservation.*;
-
 /**
- * Follows the Lisker Substitution Principle as every function created for Room can work for all its subclasses;
- *
+ * 
+ * Follows the Liskov Substitution principle as this superclass is replaceable with all its subclasses;
+ * and the programme would still has its functionality 
+>>>>>>> Stashed changes
  */
 
 public abstract class Room 
@@ -51,8 +53,10 @@ public abstract class Room
 	 * this contains  the reservation details of this room by a guest (protected attribute)
 	 */
 	protected Reservation reservation;
+	
 	/**
-	 * this contain details of food items ordered by guest(s) occupying in given room (protected attribute)
+	 * RoomService object;
+	 * contains room service order details of this room;
 	 */
 	protected RoomService roomService;
 	
@@ -103,57 +107,60 @@ public abstract class Room
 		 */
 	}
 	
+	
+	
 	//get methods
 	/**
 	 * gets type of room of this room;
 	 * @return type of this room: SINGLE, DOUBLE, DELUXE or VIPSUITE;
 	 */
 	public TypeOfRoom getRoomType() {return roomType;}
+	
 	/**
 	 * gets availability status of this room;
 	 * @return availability status of this room: VACANT, OCCUPIED, RESERVED, UNDER_MAINTENANCE;
 	 */
 	public AvailStatus getAvail() {return availability;}
+	
 	/**
-	 * gets RoomFeatures object containing details of features of this room;
-	 * @return RoomFeatures object of this room;
+	 * gets RoomFeature object of this room containing features of this room (bedType, viewType, numOfBed, wifi, smokeOut);
+	 * @return RoomFeature object of this room;
 	 */
 	public RoomFeatures getRoomFeatures() {return feature;}
 	/**
 	 * gets room number of this room;
 	 * @return this.roomNumber: room number of this room;
 	 */
-	public String getRoomNum() {return this.roomNumber;}	
+	public String getRoomNum() {return this.roomNumber;}
+	
 	/**
 	 * gets maximum number of guests allowed to stay in this room;
 	 * @return this.maxOccupancy: maximum number of occupants in this room;
 	 */
 	public int getMaxOccupancy() {return this.maxOccupancy;}
+
 	/**
-	 * gets Rate object containing charged price per day of this room;
-	 * @return Rate object of this room;
+	 * gets price per day of stay of this room;
+	 * @return charged rate of this room;
 	 */
 	public RoomRate getRate() {return rate;}
 	/**
-	 * gets Menu object containing food items available to this room for room service;
-	 * @return Menu object of this room;
+	 * gets Menu object containing food list available for room service of this room;
+	 * @return Menu object containing menu items for this room;
 	 */
 	public Menu getMenu() {return menu;}
 	/**
-	 * Reservation object containing details of reservation of this room by a guest;
-	 * @return Reservation object of this room;
+	 * gets Reservation object of this room containing reservation details of this room;
+	 * @return if reservation has been made for this room, returns Reservation object that has reservation details of this room; if not, returns null;
 	 */
 	public Reservation getReservation() {return reservation;}
+	
 	/**
-	 * RoomService object containing details of food items ordered by guest(s) occupying this room;
-	 * @return RoomService object of this room;
+	 * gets RoomService object of this room containing room service order details of this room;
+	 * @return RoomService object of this room containing room service order details of this room;
 	 */
 	public RoomService getRoomService() {return roomService;}
-	
-	
-	/**
-	 * # sets method
-	 */
+		
 	/**
 	 * sets availability status of this room;
 	 * @param availability availability status of this room: VACANT, OCCUPIED, RESERVED, UNDER_MAINTENANCE;
@@ -163,9 +170,9 @@ public abstract class Room
 	 * sets reservation of this room using Reservation object;
 	 * @param reservation Reservation object containing reservation details of this room;
 	 */
+
 	public void setReservation(Reservation reservation) {this.reservation = reservation;}
-	
-	
+		
 	/**
 	 * resets room upon check out (to be used by Check out function)
 	 */
