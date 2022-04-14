@@ -84,10 +84,10 @@ public class MakeReservation {
 				//Getting all reservations of daRoom
 				ArrayList<Reservation> daRoomReservations = hotel.getRoomReservationList(daRoom);
 				
+				if (daRoom.getAvail() == AvailStatus.UNDER_MAINTENANCE) {continue;}
 				/*Checking if current reservation timing overlaps with existing reservations
 				 * -	once overlap is found, check existing reservations of another room (break inner for loop)
 				 */
-				if (daRoom.getAvail()!=AvailStatus.UNDER_MAINTENANCE) {
 					for (int y=0; y<daRoomReservations.size(); y++) {
 						Reservation curReservation = daRoomReservations.get(y);
 						// if checkInDateTime of reservation to be made is in between current reservation checkInDateTime and checkOutDateTime, there is an overlap
@@ -103,7 +103,6 @@ public class MakeReservation {
 						// if check out time is the same as that of an existing reservation, there is also an overlap
 						else if (curReservation.getCheckOutDateTime() == checkOutDateTime) {overlap=true; break;}
 					}//end inner for loop
-				}
 				
 				if (overlap) {overlap=false; continue;} //checking reservations of next room if have
 				else {index = i; break;} //already found a room		
