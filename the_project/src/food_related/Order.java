@@ -45,7 +45,8 @@ public class Order {
 	/**
 	 * get methods
 	 * All of the methods are set to protected
-	 * this ensures better encapsulation of information while ensuring that the methods can be accessed by the same package and subclasses
+	 * this ensures better encapsulation of information
+	 * while ensuring that the methods can be accessed by the same package and subclasses
 	 */
 	/**
 	 * gets the food items ordered list
@@ -91,7 +92,8 @@ public class Order {
 	/**
 	 * creates an OrderManipulator object and a BillTabulator object. 
 	 * sets in this OrderManipulator Object: food items list ordered, remarks, date, timestamp, bill
-	 * Follows the Interface Segregation principle; with instead of one big interface, many small interfaces based on groups of methods
+	 * Follows the Interface Segregation principle; with instead of one big interface,
+	 * many small interfaces based on groups of methods
 	 * @param menu Menu object
 	 */ 
 	public void makeOrder(Room room) throws ArrayException {

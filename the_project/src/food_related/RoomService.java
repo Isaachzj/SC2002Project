@@ -68,7 +68,9 @@ public class RoomService {
 		rbt.calculateRoomServiceBill();
 	}	
 	
-	// info method prints all orders taken
+	/**
+	 * # info method prints all orders taken
+	 */
 	/**
 	 * info method prints all of the orders take
 	 */
@@ -77,7 +79,9 @@ public class RoomService {
 		drs.printArray();
 	}
 	
-	//reset method resets RoomService object upon check out
+	/**
+	 * # reset method resets RoomService object upon check out
+	 */
 	/**
 	 * This reset method resets RoomService object upon check out
 	 * @throws ArrayException
