@@ -37,12 +37,13 @@ public class Hotel {
 		 */
 		this.roomList = new ArrayList<Room>();
 		/**
-		 * Single Rooms (24 rooms - first 6 rooms of levels 02-05)
-		 * Double Rooms (24 rooms - last 6 rooms of levels 02-05)
+		 * Each floor from levels 02-05 will have 10 rooms each
+		 * Single Rooms (20 rooms - first 5 rooms of levels 02-05)
+		 * Double Rooms (20 rooms - last 5 rooms of levels 02-05)
 		 */
 		for (int i=2; i<=5; i++) {
-			for (int y=1; y<=12; y++) {
-				if (y<=6){
+			for (int y=1; y<=10; y++) {
+				if (y<=5){
 					SingleRoom room = new SingleRoom(allMenus.get(0),i,y);
 					roomList.add(room);							
 				}
@@ -54,16 +55,16 @@ public class Hotel {
 		}
 			
 		/**
-		 * Deluxe Rooms (8 rooms)
+		 * Deluxe Rooms (6 rooms)
 		 */
-		for (int i=1; i<=8; i++) {
+		for (int i=1; i<=6; i++) {
 			DeluxeRoom room = new DeluxeRoom(allMenus.get(2),6,i);
 			roomList.add(room);
 		}		
 		/**
-		 * VIPSuite (4 rooms)
+		 * VIPSuite (2 rooms)
 		 */
-		for (int i=1; i<=4; i++) {
+		for (int i=1; i<=2; i++) {
 			VIPSuite room = new VIPSuite(allMenus.get(3),7,i);
 			roomList.add(room);		
 		}
