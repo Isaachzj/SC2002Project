@@ -43,11 +43,11 @@ public class Hotel {
 		for (int i=2; i<=5; i++) {
 			for (int y=1; y<=12; y++) {
 				if (y<=6){
-					SingleRoom room = new SingleRoom(allMenus.get(0),i,y,TypeOfBed.SINGLE, ViewType.STANDARD, 1, true, false, 50, 80);
+					SingleRoom room = new SingleRoom(allMenus.get(0),i,y);
 					roomList.add(room);							
 				}
 				else{
-					DoubleRoom room = new DoubleRoom(allMenus.get(1),i,y,TypeOfBed.SINGLE, ViewType.STANDARD, 2, true, false, 80, 100);
+					DoubleRoom room = new DoubleRoom(allMenus.get(1),i,y);
 					roomList.add(room);	
 				}
 			} 
@@ -57,14 +57,14 @@ public class Hotel {
 		 * Deluxe Rooms (8 rooms)
 		 */
 		for (int i=1; i<=8; i++) {
-			DeluxeRoom room = new DeluxeRoom(allMenus.get(2),6,i,TypeOfBed.QUEEN , ViewType.CITY, 1, true, false, 120, 150);
+			DeluxeRoom room = new DeluxeRoom(allMenus.get(2),6,i);
 			roomList.add(room);
 		}		
 		/**
 		 * VIPSuite (4 rooms)
 		 */
 		for (int i=1; i<=4; i++) {
-			VIPSuite room = new VIPSuite(allMenus.get(3),7,i,TypeOfBed.KING , ViewType.OCEAN, 1, true, false, 250, 350);
+			VIPSuite room = new VIPSuite(allMenus.get(3),7,i);
 			roomList.add(room);		
 		}
 				

@@ -25,9 +25,9 @@ public class VIPSuite extends Room {
 	 * @param weekDayPrice charged price of staying in this VIP Suite room on a weekday for guest(s), used to initialize RoomRate;
 	 * @param weekEndPrice charged price of staying in this VIP Suite room on a weekend for guest(s), used to initialize RoomRate;
 	 */
-	public VIPSuite(Menu menu, int floor, int num, TypeOfBed bedType, ViewType viewType, int numOfBed, boolean wiFi, boolean smokeOut, double weekDayPrice, double weekEndPrice) {
+	public VIPSuite(Menu menu, int floor, int num) {
 		//Calling superclass constructor (Room constructor)
-		super(menu, bedType, viewType, numOfBed, wiFi, smokeOut, weekDayPrice, weekEndPrice);	
+		super(menu, TypeOfBed.KING , ViewType.OCEAN, 1, true, false, 250, 350);	
 		
 		//Overriding attributes of super()
 		this.roomType = TypeOfRoom.VIPSUITE;

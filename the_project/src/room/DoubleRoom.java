@@ -20,17 +20,12 @@ public class DoubleRoom extends Room{
 	 * sets availability of this Double room to VACANT and menu of this Double room to Menu object passed in;
 	 * 
 	 * @param menu Menu object containing food items available to this Double room for room service;
-	 * @param bedType type of bed in this Double room, used to initialize RoomFeatures;
-	 * @param viewType type of view of this Double room, used to initialize RoomFeatures;
-	 * @param numOfBed number of beds in this Double room, used to initialize RoomFeatures;
-	 * @param wiFi availability of wifi in this Double room, used to initialize RoomFeatures;
-	 * @param smokeOut presence of a smokeout in this Double room, used to initialize RoomFeatures;
-	 * @param weekDayPrice charged price of staying in this Double room on a weekday for guest(s), used to initialize RoomRate;
-	 * @param weekEndPrice charged price of staying in this Double room on a weekend for guest(s), used to initialize RoomRate;
+	 * @param floor of type int here refers to the floor number of the room, used to initialize roomNumber;
+	 * @param num of type int here refers to the second number of the room, used to initialize roomNumber;
 	 */
-	public DoubleRoom(Menu menu, int floor, int num, TypeOfBed bedType, ViewType viewType, int numOfBed, boolean wiFi, boolean smokeOut, double weekDayPrice, double weekEndPrice) {
+	public DoubleRoom(Menu menu, int floor, int num) {
 		
-		super(menu, bedType, viewType, numOfBed, wiFi, smokeOut, weekDayPrice, weekEndPrice);			
+		super(menu, TypeOfBed.SINGLE, ViewType.STANDARD, 2, true, false, 80, 100);			
 
 		//Overriding attributes of super()
 		this.roomType = TypeOfRoom.DOUBLE;
