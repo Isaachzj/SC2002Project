@@ -33,13 +33,6 @@ public class Reservation {
 	
 	protected ArrayList<Guest> guestList = new ArrayList<Guest>();
 	
-	/*public Reservation(Room room) {  (CAN DELETE SINCE NOT USING)
-		this.room = room;
-		this.numOfWeekday = 0;
-		this.numOfWeekend = 0;
-		this.numOfGuest = 0;
-		this.guestList = new ArrayList<Guest>();
-	}	*/
 		
 		/**
 		 * Instantiation of Reservation object
