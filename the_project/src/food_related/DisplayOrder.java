@@ -15,7 +15,7 @@ public class DisplayOrder implements Print {
 	 * The DisplayOrder class follows the Single Responsibility principle, as has a sole responsibility of displaying the Order 
 	 * @param	order this is the order of the customer
 	 */ 
-	public void DisplayOrder(Order order) {
+	public DisplayOrder(Order order) {
 		this.order = order;
 	}
 	
