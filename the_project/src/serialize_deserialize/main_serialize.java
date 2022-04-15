@@ -18,8 +18,20 @@ public class main_serialize {
 			ArrayList<CreditCardInfo> cciList = new ArrayList<CreditCardInfo>();
 			ArrayList<ContactDetails> cdList = new ArrayList<ContactDetails>();
 			
-			Reservation r1 = MakeReservation.makeReservation(hotel, true); //same check-in time 
-			//Reservation r2 = MakeReservation.makeReservation(hotel);
+			
+			
+			//Creating 2 of every reservation objects
+			Reservation single1 = MakeReservation.makeReservation(hotel, true); //same check-in time 
+			Reservation single2 = MakeReservation.makeReservation(hotel, true);
+			
+			Reservation double1 = MakeReservation.makeReservation(hotel, true);
+			Reservation double2 =MakeReservation.makeReservation(hotel, true);
+			
+			Reservation deluxe1 = MakeReservation.makeReservation(hotel, true);
+			Reservation deluxe2 = MakeReservation.makeReservation(hotel, true);
+			
+			Reservation vip1 = MakeReservation.makeReservation(hotel, true);
+			Reservation vip2 = MakeReservation.makeReservation(hotel, true);
 			
 			rList.add(r1);
 			//rList.add(r2);
