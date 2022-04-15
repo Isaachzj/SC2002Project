@@ -16,7 +16,7 @@ public class CreateIdentity {
 		System.out.println("Select 1 for IDTYPE Driving License");
 		System.out.println("Select 2 for IDTYPE NRIC");
 		System.out.println("Select ANY OTHER NUMBER for IDTYPE Passport");
-		int choice = sc.nextInt();
+		int choice = sc.nextInt(); sc.nextLine();
 		sc.nextLine();
 		System.out.print("Enter your Identification Number: ");
 		String IDnumber = sc.nextLine();

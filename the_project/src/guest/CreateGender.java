@@ -14,7 +14,7 @@ public class CreateGender {
 		System.out.println("-------- Enter your Gender --------");
 		System.out.println("Enter 1 for Male");
 		System.out.println("Enter ANY OTHER NUMBER for Female");
-		int genderchoice = sc.nextInt();
+		int genderchoice = sc.nextInt(); sc.nextLine();
 		TypeOfGender gender;
 		switch (genderchoice) {
 			case 1: 
