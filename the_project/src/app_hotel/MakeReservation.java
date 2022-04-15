@@ -53,9 +53,13 @@ public class MakeReservation {
 		
 	//Entering Check In and Check out date time details
 		LocalDateTime checkInDateTime = DateTime.getLocalDateTime("Check In");
+		LocalDateTime currentTime = LocalDateTime.now();
+		while (checkInDateTime.isAfter(currentTime)) {
+			System.out.println("Are you sure? It is already after the intended check in date and time!");
+			checkInDateTime = DateTime.getLocalDateTime("Check In");
+		}
 		System.out.println("----------------------------------------------");
 		LocalDateTime checkOutDateTime = DateTime.getLocalDateTime("Check Out");
-		//Checking if check out is before check in
 		while (checkOutDateTime.isBefore(checkInDateTime)) {
 			System.out.println("You trying to be funny isit?! Cannot check out before checking in!!");
 			checkOutDateTime = DateTime.getLocalDateTime("Check Out");
