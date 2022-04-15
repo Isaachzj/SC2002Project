@@ -3,6 +3,7 @@ package serialize_deserialize;
 import java.util.ArrayList;
 
 import app_hotel.MakeReservation;
+import enumeration.AvailStatus;
 import guest.*;
 import hotel.Hotel;
 import room.*;
@@ -17,6 +18,7 @@ public class main_deserialize {
 				//Getting all room objects and adding them to arraylist
 				Room s1 = hotel.getSpecificRoom("0201");
 				Room s2 = hotel.getSpecificRoom("0202");
+				Room s3 = hotel.getSpecificRoom("0203");
 				
 				Room d1 = hotel.getSpecificRoom("0206");
 				Room d2 = hotel.getSpecificRoom("0207");
@@ -25,19 +27,44 @@ public class main_deserialize {
 				Room de2 = hotel.getSpecificRoom("0602");
 				
 				Room v1 = hotel.getSpecificRoom("0701");
-				Room v2 = hotel.getSpecificRoom("0702");
-
 				
 				//You add the rooms to this array in sequential order of reserving them (index should match their reservation index
 				ArrayList<Room> roomListy = new ArrayList<Room>();
+				roomListy.add(v1);
 				roomListy.add(s1);
 				roomListy.add(s2);
 				roomListy.add(d1);
-				roomListy.add(d2);
 				roomListy.add(de1);
-				roomListy.add(de2);
-				roomListy.add(v1);
-				roomListy.add(v2);
+				roomListy.add(s3);
+				roomListy.add(d2);
+				roomListy.add(de2);				
+				
+				
+				//Getting all rooms to be set to UNDER_MAINTENANCE
+				Room s4 = hotel.getSpecificRoom("0501");
+				Room s5 = hotel.getSpecificRoom("0502");
+				
+				Room d3 = hotel.getSpecificRoom("0506");
+				Room d4 = hotel.getSpecificRoom("0507");
+				
+				Room de3 = hotel.getSpecificRoom("0604");
+				Room de4 = hotel.getSpecificRoom("0605");
+				
+				Room v2 = hotel.getSpecificRoom("0702");
+				Room v3 = hotel.getSpecificRoom("0703");
+				
+				//Setting the above room to under_maintenance
+				s4.setAvail(AvailStatus.UNDER_MAINTENANCE);
+				s5.setAvail(AvailStatus.UNDER_MAINTENANCE);
+				
+				d3.setAvail(AvailStatus.UNDER_MAINTENANCE);
+				d4.setAvail(AvailStatus.UNDER_MAINTENANCE);
+				
+				de3.setAvail(AvailStatus.UNDER_MAINTENANCE);
+				de4.setAvail(AvailStatus.UNDER_MAINTENANCE);
+				
+				v2.setAvail(AvailStatus.UNDER_MAINTENANCE);
+				v3.setAvail(AvailStatus.UNDER_MAINTENANCE);
 				
 				
 
