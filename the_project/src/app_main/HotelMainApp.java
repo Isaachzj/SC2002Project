@@ -8,7 +8,10 @@ import hotel.*;
 import list_methods.*;
 import serialize_deserialize.main_deserialize;
 
-public class HotelMainApp {
+/**
+ * This is a Boundary Class; as it is used as a user interface;
+ * Allows the user to access all 
+ */
 	
 	public static void main (String[] args ) {
 		Scanner sc = new Scanner(System.in);
