@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
+import days_date_time.LengthOfStay;
 import enumeration.AvailStatus;
 
 import java.time.format.DateTimeFormatter;
@@ -36,13 +37,14 @@ public class TextReservation {
 				
 				//tokens
 				DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd   |   HH:mm"); //create formatter
-				LocalDateTime  checkInDateTime = LocalDateTime.parse(star.nextToken().trim(), formatter); //string to LocalDateTime
-				LocalDateTime  checkOutDateTime = LocalDateTime.parse(star.nextToken().trim(), formatter); //string to LocalDateTime
-				long numOfWeekday = Long.parseLong(star.nextToken().trim()); //string to Long	
-				long numOfWeekend = Long.parseLong(star.nextToken().trim()); //string to Long
+				LocalDateTime  checkInDateTime = LocalDateTime.now(); //string to LocalDateTime
+				LocalDateTime  checkOutDateTime = checkInDateTime.plusDays(5); //string to LocalDateTime
+				long numOfWeekday = LengthOfStay.calcWeekDays(checkInDateTime.toLocalDate(), checkOutDateTime.toLocalDate()); //string to Long	
+				long numOfWeekend = LengthOfStay.calcWeekEnds(checkInDateTime.toLocalDate(), checkOutDateTime.toLocalDate()); //string to Long
 				int numOfGuest = Integer.parseInt(star.nextToken().trim()); //string to Integer
 						
-				
+				//LocalDateTime.parse(star.nextToken().trim(), formatter)
+				//Long.parseLong(star.nextToken().trim())
 				// create Guest object from file data
 				Reservation reservation = new Reservation(room.get(i), checkInDateTime, checkOutDateTime, numOfWeekday, numOfWeekend, numOfGuest);
 				
@@ -100,14 +102,6 @@ public class TextReservation {
 	        		
 	        		Reservation reservation = (Reservation)al.get(i);
 					StringBuilder st =  new StringBuilder() ;
-					st.append(reservation.getCheckInDateTime().format(formatter).trim()); //LocalDateTime to string
-					st.append(SEPARATOR);
-					st.append(reservation.getCheckOutDateTime().format(formatter).trim()); //LocalDateTime to string
-					st.append(SEPARATOR);
-					st.append(Long.toString(reservation.getNumOfWeekday()).trim()); 
-					st.append(SEPARATOR);
-					st.append(Long.toString(reservation.getNumOfWeekend()).trim());
-					st.append(SEPARATOR);
 					st.append(reservation.getNumOfGuest()); //int type don't need to trim
 					alw.add(st.toString()) ;
 					
