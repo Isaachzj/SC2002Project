@@ -14,7 +14,7 @@ public class Hotel {
 
 	private ArrayList<Room> roomList;
 	private ArrayList<Reservation> reservationList;
-	private ArrayList<Guest> guestList; // hotel test - davis
+	private ArrayList<Guest> guestList; 
 	private ArrayList<Menu> menuList; 
 	/**
 	 * Creates and display menu which allows the selection of RoomType
@@ -229,12 +229,24 @@ public class Hotel {
 		RoomListManipulator rlm = new RoomListManipulator(this);
 		return rlm.getSameTypeRooms(roomType);	
 	}
+	
+	/**
+	 * This method is solely used in the deserialization process
+	 * @param roomNum is the required room number
+	 * @return returns desired room or null if room don't exist
+	 */
+	public Room getSpecificRoom(String roomNum) {
+		RoomListManipulator rlm = new RoomListManipulator(this);
+		return rlm.getEntry(roomNum);	
+	}
+	
 	/**
 	 * this method is set to protected for better encapsulation.
 	 * this ensures better encapsulation of information while ensuring that the methods can be accessed by the same package and subclasses
 	 * @return this is the retrieved roomList
 	 */
 	protected ArrayList<Room> getRoomList() {return this.roomList;}	
+	
 	
 	/**
 	 * Menu Related
@@ -246,6 +258,14 @@ public class Hotel {
 	 */
 	public Menu getMenu(int choice) {
 		return menuList.get(choice-1);
+	}
+	
+	/** 
+	 * Refreshing related
+	 */
+	
+	public void refreshHotel() throws ArrayException{
+		Refresher.refresh(this);
 	}
 
 }

@@ -12,22 +12,29 @@ public class VIPSuite extends Room {
 	 * # Constructor
 	 */
 	/**
-	 * Calls the Room constructor;
-	 * Sets this roomType to VIPSUITE, sets this roomNumber, sets maxOccupancy of this Double room to 4, 
-	 * sets availability of this VIP Suite room to VACANT and menu of this VIP Suite to Menu object passed in;
+	 * Instantiation of the VIPSuite object
+	 * this includes details such as the menu available to the room, room floor and room number
+	 * for the instantiation of the VIPSuite object, we have set the max occupancy to 1 (i.e. maximum of 4 guests that can stay in a give Double Room)
 	 * 
-	 * @param menu Menu object containing food items available to this VIP Suite room for room service;
-	 * @param floor of type int here refers to the floor number of the room, used to initialize roomNumber;
-	 * @param num of type int here refers to the second number of the room, used to initialize roomNumber;
+	 * @param menu	this is the Menu object containing Food available for the VIP Suite room
+	 * Menu object containing food items available to this VIP Suite room for room service;
+	 * @param floor	this is the room floor, which is required for the instantiation of the VIPSuite object
+	 * @param num this is the room number, which is required for the instantiation of the VIPSuite object
 	 */
 	public VIPSuite(Menu menu, int floor, int num) {
-		//Calling superclass constructor (Room constructor)
+		/**
+		 * # Calling superclass constructor (Room constructor)
+		 */
 		super(menu, TypeOfBed.KING , ViewType.OCEAN, 1, true, false, 250, 350);	
 		
-		//Overriding attributes of super()
+		/**
+		 * # Overriding attributes of super()
+		 */
 		this.roomType = TypeOfRoom.VIPSUITE;
 		
-		//Getting the correct form for room number
+		/**
+		 * # Getting the correct form for room number
+		 */
 		if (num<10)
 			this.roomNumber = '0'+String.valueOf(floor)+'0'+String.valueOf(num);
 		else

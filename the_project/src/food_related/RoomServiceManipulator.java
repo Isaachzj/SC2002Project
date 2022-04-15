@@ -1,9 +1,13 @@
 package food_related;
+
+import food_related.*;
+import java.time.LocalDateTime;
 import java.util.Scanner;
 
+import enumeration.PreparationStatus;
 import list_methods.*;
 
-public class RoomServiceManipulator implements AddGivenObject, Reset {
+public class RoomServiceManipulator implements AddGivenObject, Reset, Set {
 	/**
 	 * this is the RoomService (private attribute)
 	 */
@@ -30,7 +34,10 @@ public class RoomServiceManipulator implements AddGivenObject, Reset {
 	public void addEntry(Object daOrder) throws ArrayException {
 		Order order;
 		
-		//For this case, we will actually ensure that only a food object is passed to this function so this is actually uneeded but we kiasu :)
+		/**
+		 * For this case, we will actually ensure that only a food objectis passed to this function
+		 * so this is actually uneeded but we kiasu :)
+		 */
 		/**
 		 * Ensure that only a food object is passed to this function
 		 */
@@ -41,7 +48,9 @@ public class RoomServiceManipulator implements AddGivenObject, Reset {
 		rs.getArray().add(order);	
 	}
 	
-	//To empty the Room Service Order List upon check out
+	/**
+	 * # To empty the Room Service Order List upon check out
+	 */
 	/**
 	 * Empty the Room Service Order List whenever Guest check out from the Hotel
 	*/
@@ -51,5 +60,22 @@ public class RoomServiceManipulator implements AddGivenObject, Reset {
 		
 		rs.getArray().clear();
 		System.out.println("- Order List is Cleared!");
+	}
+	
+	/**
+	 * This method sets the order statuses according to current time
+	 */
+	public void set() {
+		//Traversing the array of orders
+		for (int i=0; i<rs.getArray().size(); i++) {
+			Order order = rs.getArray().get(i);
+			LocalDateTime currentTime = LocalDateTime.now();
+			//If order completion time has passed in real-time, update order status
+			if (order.getTimeCompleted().isBefore(currentTime) && order.getOrderStatus()==PreparationStatus.PREPARING) {
+				order.setPreparationStauts(PreparationStatus.COMPLETED);
+			}	
+		}
+		
+		return;
 	}
 }

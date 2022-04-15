@@ -52,6 +52,23 @@ public class RoomListManipulator implements Get{
 	}
 	
 	/**
+	 * this method is only used in the deserialization process to obtain the correct room.
+	 * @param roomNum this is the requested roomNum of the room
+	 * @return this method returns the requested room object or null when no such room with given roomNum exists
+	 */
+	public Room getEntry(String roomNum) {
+		for (int i=0; i<hotel.getRoomList().size(); i++) {
+			Room room = hotel.getRoomList().get(i);
+			if (room.getRoomNum().compareTo(roomNum)==0) {
+				return room;
+			}//end if
+		}//end for
+		
+		//if no rooms are vacant
+		return null;
+	}
+	
+	/**
 	 * this method returns an array list containing all Room object for the roomType indicated in the parameter
 	 * @param roomType this is the roomType (SINGLE, DOUBLE, DELUXE, VIP SUITE) for retrieval of arraylist of Room object
 	 * @return this is an arraylist of Room object 

@@ -26,8 +26,7 @@ public class Identity {
 	 * get methods
 	 * All methods here are set to protected for better encapsulation.
 	 * Methods returning guest's id type and id number is protected
-	 * this ensures better encapsulation of information while ensuring that the methods can be accessed by 
-	 * the same package and subclasses
+	 * this ensures better encapsulation of information while ensuring that the methods can be accessed by the same package and subclasses
 	 */
 	/**
 	 * gets the id type of the guest

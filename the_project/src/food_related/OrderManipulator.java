@@ -24,6 +24,7 @@ public class OrderManipulator implements AddGivenObject{
 	 * displayed to inform user that the object passed to this function is not a food object
 	 * Else, object passed to function is a food object, quantity of food to be included. System also ensures 
 	 * that quantity of food entered is a positive number
+	 * 
 	 * @param   daFood this is the food ordered by the guest
 	*/
 	public void addEntry(Object daFood) throws ArrayException{
@@ -71,6 +72,7 @@ public class OrderManipulator implements AddGivenObject{
 			order.getQuantity().set(index, order.getQuantity().get(index) + quantity);
 			System.out.println("Order Added successfully!");
 		}
+		
 		/**
 		 * Add new food entry and quantity if not ordered before
 		 */
@@ -80,5 +82,10 @@ public class OrderManipulator implements AddGivenObject{
 			System.out.println("Order Added successfully!");
 		}
 		
+		/**
+		 * Adds the preparation time for each food to overall order completion time
+		 */
+		order.setTimeToPrep(order.getTimeToPrep() + food.getPrepDuration()*quantity);
 	}
+
 }

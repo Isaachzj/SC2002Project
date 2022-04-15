@@ -16,6 +16,11 @@ public class Food {
 	 * price of food object (private attribute)
 	 */ 
 	private double price;
+	
+	/**
+	 * preparation duration of food
+	 */
+	private int prepDuration;
 
 	//Constructor
 	/**
@@ -26,10 +31,11 @@ public class Food {
 	 * @param	price price of this food item
 	 * @param	description description of this food item
 	 */ 
-	public Food(String name, double price, String description) {
+	public Food(String name, double price, String description, int duration) {
 		this.foodName = name;
 		this.price = price;
 		this.description = description;
+		this.prepDuration = duration;
 	}
 	
 	/**
@@ -56,8 +62,11 @@ public class Food {
 	protected double getPrice() {return this.price;}
 	
 	/**
-	 * set method
+	 * gets the duration needed to prepare this food
+	 * @return the duration needed
 	 */
+	protected int getPrepDuration() {return this.prepDuration;}
+	
 	/**
 	 * sets price of this food item
 	 * @param price price of this food item

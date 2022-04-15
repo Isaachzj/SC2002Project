@@ -3,7 +3,9 @@ package app_hotel;
 import hotel.*;
 import reservation.*;
 import list_methods.*;
+import days_date_time.*;
 import java.util.*;
+import java.time.*;
 
 public class CheckOut {
 	
@@ -33,8 +35,14 @@ public class CheckOut {
 			}
 			break;
 		}
+		//set checkOutDateTime to actual current time now and re-update numOfWeekday and numOfWeekend
+		LocalDateTime actualCheckOut = LocalDateTime.now();
+		if (LocalDateTime.now().isAfter(reservation.getCheckOutDateTime())) {
+			reservation.setNumOfWeekday(LengthOfStay.calcWeekDays(reservation.getCheckInDateTime().toLocalDate(), actualCheckOut.toLocalDate()));
+			reservation.setNumOfWeekend(LengthOfStay.calcWeekEnds(reservation.getCheckInDateTime().toLocalDate(), actualCheckOut.toLocalDate()));
+		}
 		
-		Receipt.info(reservation, discount);
+		Receipt.info(reservation, discount, actualCheckOut);
 	//remove guests
 		hotel.removeGuests(reservation);
 	//remove reservation

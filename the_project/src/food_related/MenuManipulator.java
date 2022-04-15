@@ -11,7 +11,8 @@ public class MenuManipulator implements AddStandard,RemoveStandard,Set, Get {
 	 */
 	/**
 	 * This Constructor follows the Single Responsibility principle
-	 * Additionally, it follows the Open-Closed principle as its software entities is open for extension but closed for modifications
+	 * Additionally, it follows the Open-Closed principle
+	 * as its software entities is open for extension but closed for modifications
 	 * @param menuList this is the menu list
 	 */
 	public MenuManipulator(Menu menuList) {
@@ -38,6 +39,8 @@ public class MenuManipulator implements AddStandard,RemoveStandard,Set, Get {
 		sc.nextLine();
 		System.out.println("Enter description of Food:");
 		String des = sc.nextLine();
+		System.out.println("Enter the prepartion duration");
+		int duration = sc.nextInt(); sc.nextLine();
 		
 		/**
 		 * # Check if such an entry exists!
@@ -57,7 +60,7 @@ public class MenuManipulator implements AddStandard,RemoveStandard,Set, Get {
 		 * @param   price this is the price of the new food
 		 * @param   des this is the description of the new food
 		*/
-		Food new_food = new Food(food_name, price, des);
+		Food new_food = new Food(food_name, price, des, duration);
 		menu.getArray().add(new_food);	//getArray returns reference to ArrayList object
 		menu.setNumOfFood(menu.getNumOfFood()+1);
 	}
@@ -68,7 +71,8 @@ public class MenuManipulator implements AddStandard,RemoveStandard,Set, Get {
 	/**
 	 * Allows existing food entry from the Menu to be removed
 	 * Upon removal, check if the item number exist in the Menu
-	 * If the item number requested for removal falls outside the Menu, i.e. it does not exist in the Menu, then exception is throw and error message displaying that food entry does not exist
+	 * If the item number requested for removal falls outside the Menu,
+	 * i.e. it does not exist in the Menu, then exception is throw and error message displaying that food entry does not exist
 	*/
 	public void removeEntry() throws ArrayException{
 		
@@ -91,7 +95,8 @@ public class MenuManipulator implements AddStandard,RemoveStandard,Set, Get {
 	/**
 	 * Modifications to existing food entries from the Menu
 	 * Prior to the modification of food entries, choice given to either modify the existing food price, description or both
-	 * If the new price or new description added is the same as before, i.e. no changes to the existing food in the Menu, then Exception is thrown and error message displaying that price/ description is the same.
+	 * If the new price or new description added is the same as before,
+	 * i.e. no changes to the existing food in the Menu, then Exception is thrown and error message displaying that price/ description is the same.
 	 * If none of the options chosen; message displaying for valid option to be chosen
 	 * Exception would be thrown if there are any errors encountered along the way (new price the same or new description the same)
 	*/

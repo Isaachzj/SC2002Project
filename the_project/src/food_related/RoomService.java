@@ -39,7 +39,7 @@ public class RoomService {
 	 * gets the food items of this room service order
 	 * @return list of food items in this room service order
 	 */
-	protected ArrayList<Order> getArray() {return this.orderList;}
+	public ArrayList<Order> getArray() {return this.orderList;}
 	
 	/**
 	 * set method
@@ -68,7 +68,9 @@ public class RoomService {
 		rbt.calculateRoomServiceBill();
 	}	
 	
-	// info method prints all orders taken
+	/**
+	 * # info method prints all orders taken
+	 */
 	/**
 	 * info method prints all of the orders take
 	 */
@@ -77,7 +79,9 @@ public class RoomService {
 		drs.printArray();
 	}
 	
-	//reset method resets RoomService object upon check out
+	/**
+	 * # reset method resets RoomService object upon check out
+	 */
 	/**
 	 * This reset method resets RoomService object upon check out
 	 * @throws ArrayException
@@ -87,4 +91,9 @@ public class RoomService {
 		rsm.resetArray();
 		this.roomServiceBill = 0.0;
 	}	
+	
+	public void refreshOrderStatuses() {
+		RoomServiceManipulator rsm = new RoomServiceManipulator(this);
+		rsm.set();
+	}
 }

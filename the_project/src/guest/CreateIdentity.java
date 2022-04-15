@@ -6,8 +6,7 @@ public class CreateIdentity {
 	/**
 	 * Instantiation of identification for the guest
 	 * Given options of identification using driving license, NRIC or passport number
-	 * Different types of identifications enumerated accordingly (Type: driving license, NRIC or passport 
-	 * number)
+	 * Different types of identifications enumerated accordingly (Type: driving license, NRIC or passport number)
 	 * @return this is the identification number of the guest
 	 */
 	public static Identity createIdentity() {
