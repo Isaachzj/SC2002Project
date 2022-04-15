@@ -41,8 +41,7 @@ public class Menu{
 	 * get method
 	 * All methods are set to protected here
 	 * this includes the food in menu and number of food
-	 * this ensures better encapsulation of information while ensuring that
-	 * the methods can be accessed by the same package and subclasses
+	 * this ensures better encapsulation of information while ensuring that the methods can be accessed by the same package and subclasses
 	 */
 	/**
 	 * gets the Menu's list of food

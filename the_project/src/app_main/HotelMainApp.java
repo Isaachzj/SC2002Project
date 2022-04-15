@@ -6,18 +6,12 @@ import app_hotel.StayRelated;
 import app_room.RoomRelated;
 import hotel.*;
 import list_methods.*;
-import serialize_deserialize.main_deserialize;
 
-/**
- * This is a Boundary Class; as it is used as a user interface;
- * Allows the user to access all 
- */
 public class HotelMainApp {
 	
 	public static void main (String[] args ) {
 		Scanner sc = new Scanner(System.in);
 		Hotel hotel = new Hotel();
-		//main_deserialize.deserialization(hotel);
 		int choice = 0;
 		
 		do {
@@ -32,24 +26,20 @@ public class HotelMainApp {
 				System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 				System.out.println("Enter your choice:");
 				choice = sc.nextInt(); sc.nextLine();
-				
 				switch (choice) {
 					case 1: {
-						hotel.refreshHotel();
 						StayRelated.stayRelated(hotel);
 						break;
 					}
 					case 2: {
-						hotel.refreshHotel();
 						GuestRelated.guestRelated(hotel);
 						break;
 					}
 					case 3: {
-						hotel.refreshHotel();
 						RoomRelated.roomRelated(hotel);
 						break;
 					}
-
+					
 					case 4: {
 						System.out.println("Don't be late for work tomorrow!");
 						break;

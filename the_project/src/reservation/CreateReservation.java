@@ -17,7 +17,6 @@ public class CreateReservation {
 	/**
 	 * Instantiation of the Reservation object
 	 * this includes details such as the room, number of guest, check-in date-time and also check-out date-time
-	 * When reset method in room called; will auto assign upcoming reservation to reservation attribute in room after guests checkout
 	 * 
 	 * @param room this is the Room object of the reservation
 	 * @param numOfGuest this is the number of guest that would be staying in the hotel for the reservation

@@ -7,12 +7,10 @@ public class BillTabulator {
 	private Order order;
 	/**
 	 * # Guest's order bill
-	 */
-	/**
-	 * Follows Single Responsibility principle as it has the single responsibility of
-	 * returning Guest's order bill
-	 * Also follows the Open-Close principle since software entity in this case open
-	 * for extension but closed for modifications
+	 * Follows Single Responsibility principle as it has the single responsibility of returning Guest's order 
+	 * bill
+	 * Also follows the Open-Close principle since software entity in this case open for extension but closed 
+	 * for modifications
 	 * @param order this is the order bill of the Guest
 	 */
 	public BillTabulator(Order order) {

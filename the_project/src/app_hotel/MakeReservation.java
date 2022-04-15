@@ -1,7 +1,6 @@
 package app_hotel;
 
 
-import enumeration.AvailStatus;
 import enumeration.TypeOfRoom;
 import hotel.Hotel;
 import reservation.*;
@@ -14,7 +13,7 @@ import java.util.*;
 import days_date_time.DateTime;
 
 public class MakeReservation {
-	public static Reservation makeReservation(Hotel hotel, boolean walkIn) throws ArrayException{
+	public static Reservation makeReservation(Hotel hotel) throws ArrayException{
 	//Initialisation
 		Scanner sc = new Scanner(System.in);
 		int numOfGuest=0, maxOccupancy=0, index=-1;
@@ -22,7 +21,6 @@ public class MakeReservation {
 		Room room, daRoom;
 		Reservation reservation;
 		ArrayList<Room> rooms = new ArrayList<Room>();
-		LocalDateTime checkInDateTime, checkOutDateTime;
 		
 	//Ask for room type (Not hardcoded!)
 		System.out.println("Choose Room Type (Select Number):");
@@ -52,17 +50,11 @@ public class MakeReservation {
 		if (numOfGuest>maxOccupancy) {System.out.println("You have exceeded the maximum occupancy for this room! \nProcess Terminated!"); return null;}
 		
 		
-	//Entering Check In and Check out date time details (CheckOut only if walking in)
-		if (walkIn) {checkInDateTime = LocalDateTime.now();}
-		else {checkInDateTime = DateTime.getLocalDateTime("Check In");}
-		
-		LocalDateTime currentTime = LocalDateTime.now();
-		while (checkInDateTime.isBefore(currentTime)) {
-			System.out.println("Are you sure? It is already after the intended check in date and time!");
-			checkInDateTime = DateTime.getLocalDateTime("Check In");
-		}
+	//Entering Check In and Check out date time details
+		LocalDateTime checkInDateTime = DateTime.getLocalDateTime("Check In");
 		System.out.println("----------------------------------------------");
-		checkOutDateTime = DateTime.getLocalDateTime("Check Out");
+		LocalDateTime checkOutDateTime = DateTime.getLocalDateTime("Check Out");
+		//Checking if check out is before check in
 		while (checkOutDateTime.isBefore(checkInDateTime)) {
 			System.out.println("You trying to be funny isit?! Cannot check out before checking in!!");
 			checkOutDateTime = DateTime.getLocalDateTime("Check Out");
@@ -91,25 +83,22 @@ public class MakeReservation {
 				//Getting all reservations of daRoom
 				ArrayList<Reservation> daRoomReservations = hotel.getRoomReservationList(daRoom);
 				
-				if (daRoom.getAvail() == AvailStatus.UNDER_MAINTENANCE) {continue;}
 				/*Checking if current reservation timing overlaps with existing reservations
 				 * -	once overlap is found, check existing reservations of another room (break inner for loop)
 				 */
-					for (int y=0; y<daRoomReservations.size(); y++) {
-						Reservation curReservation = daRoomReservations.get(y);
-						// if checkInDateTime of reservation to be made is in between current reservation checkInDateTime and checkOutDateTime, there is an overlap
-						if (checkInDateTime.isAfter(curReservation.getCheckInDateTime()) && checkInDateTime.isBefore(curReservation.getCheckOutDateTime())) {overlap=true; break;}
-						// if checkOutDateTime of reservation to be made is in between current reservation checkInDateTime and checkOutDateTime, there is an overlap
-						else if (checkOutDateTime.isAfter(curReservation.getCheckInDateTime()) && checkOutDateTime.isBefore(curReservation.getCheckOutDateTime())) {overlap=true; break;}
-						// if checkInDateTime of reservation to be made is before current reservation checkInDateTime and checkOutDateTime of reservation to be made is after current reservation checkOutDateTime, there is also an overlap
-						else if (checkInDateTime.isBefore(curReservation.getCheckInDateTime()) && checkOutDateTime.isAfter(curReservation.getCheckOutDateTime())) {overlap=true; break;}
-						if (curReservation.getCheckInDateTime().isBefore(checkOutDateTime)) {overlap=true; break;}
-					
-						// if check in time is the same as that of an existing reservation, there is also an overlap
-						else if (curReservation.getCheckInDateTime() == checkInDateTime) {overlap=true; break;}
-						// if check out time is the same as that of an existing reservation, there is also an overlap
-						else if (curReservation.getCheckOutDateTime() == checkOutDateTime) {overlap=true; break;}
-					}//end inner for loop
+				for (int y=0; y<daRoomReservations.size(); y++) {
+					Reservation curReservation = daRoomReservations.get(y);
+					// if requested check in time is between check in and check out time of existing reservation, there is overlap 
+					if (curReservation.getCheckInDateTime().isBefore(checkInDateTime)) {
+						if (curReservation.getCheckOutDateTime().isAfter(checkInDateTime)) {overlap=true; break;} 
+					}
+					// if check in time of existing reservation is between check in and check out timing requested, there is overlap too
+					else if (curReservation.getCheckInDateTime().isAfter(checkInDateTime)) {
+						if (checkOutDateTime.isAfter(curReservation.getCheckInDateTime())) {overlap=true; break;} 
+					}
+					// if check in time is the same as that of an existing reservation, there is also an overlap
+					else if (curReservation.getCheckInDateTime() == checkInDateTime) {overlap=true; break;}
+				}//end inner for loop
 				
 				if (overlap) {overlap=false; continue;} //checking reservations of next room if have
 				else {index = i; break;} //already found a room		

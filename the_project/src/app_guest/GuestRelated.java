@@ -7,15 +7,6 @@ import java.util.Scanner;
 import guest.CreditCardInfoManipulator;
 import guest.DisplayGuestInfo;
 
-/**
- * This is a Boundary Class; as it is used as a user interface;
- * Allows the user to choose if they want to update their credit card information (choice '1'),
- * Retrieve the Guest information (choice '2'), or access the room service (choice '3')
- * do-while loop is used to ensure that the guest enters a valid choice (1 - 3)
- * 
- * 
- * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
- */
 public class GuestRelated {
 		/* Contains switch statement that
 		 	1. Updates credit card info of guest

@@ -6,10 +6,8 @@ public class DisplayMenu implements Print {
 	/**
 	 * # Displays menu from Menu object
 	 * creates a DisplayMenu object and adds this menu into this DisplayMenu
-	 * The DisplayMenu class follows the Single Responsibility principle,
-	 * as has a sole responsibility of displaying the Menu 
-	 * Additionally; it follows the Open-Closed principle,
-	 * as changes in the Display does not require a change in source code of modules
+	 * The DisplayMenu class follows the Single Responsibility principle, as has a sole responsibility of displaying the Menu 
+	 * Additionally; it follows the Open-Closed principle as changes in the Display does not require a change in source code of modules
 	 * (i.e. open for extensions but not modifications)
 	 * @param menuList Menu object
 	 * this is the specified Menu object which is to be displayed

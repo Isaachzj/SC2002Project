@@ -126,13 +126,6 @@ public class Reservation {
 	public void setNumOfWeekend(long numOfWeekend) {this.numOfWeekend = numOfWeekend;}
 	
 	/**
-	 * setGuestList() sets the guestList attribute of reservation. 
-	 * This function is solely used in the deserialization process.
-	 * @param guestList is the inputed array
-	 */
-	public void setGuestList(ArrayList<Guest> guestList) {this.guestList = guestList;}
-	
-	/**
 	 * addGuest() method allows the Guest object to be added to the entry
 	 */
 	public void addGuest() {

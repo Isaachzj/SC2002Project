@@ -4,20 +4,17 @@ import room.*;
 import room_features.*;
 import guest.*;
 import food_related.*;
-
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Receipt{
-	public static void info(Reservation reservation, double discount, LocalDateTime actualCheckOut) {
+	public static void info(Reservation reservation, double discount) {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd   |   HH:mm");
 		System.out.println("=========================== Receipt ===========================");
 		System.out.printf("(%s) Room Number %s\n", reservation.getRoom().getRoomType(), reservation.getRoom().getRoomNum());
 		//Room Rates and stay details
 		reservation.getRoom().getRate().info();
 		System.out.println("Check In:  " + reservation.getCheckInDateTime().format(formatter));
-		System.out.println("Intended Check Out: " + reservation.getCheckOutDateTime().format(formatter));
-		System.out.println("Actual Check Out: " + actualCheckOut.format(formatter));
+		System.out.println("Check Out: " + reservation.getCheckOutDateTime().format(formatter));
 		System.out.printf("Number of Weekdays: %d\n", reservation.getNumOfWeekday());
 		System.out.printf("Number of Weekends: %d\n", reservation.getNumOfWeekend());
 		System.out.println("Number of guests: " + reservation.getNumOfGuest());

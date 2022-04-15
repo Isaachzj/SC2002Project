@@ -37,7 +37,8 @@ public class Guest {
 	 * # Constructor
 	 */
 	/**
-	 * Instantiation of guest details using guest name, nationality, gender, identity, credit card details, contact details and reservation details
+	 * Instantiation of guest details using guest name, nationality, gender, identity, credit card details, 
+	 * contact details and reservation details
 	 * @param name this is the name of the guest
 	 * @param nationality this is the nationality of the guest
 	 * @param gender this is the gender of the guest
@@ -58,12 +59,16 @@ public class Guest {
 	
 	/**
 	 * get methods
-	 * We made it such that only methods returning guest's name, contact details and reservation details are public. 
-	 * Methods returning guest's mobile number, email address, home address and country of origin are protected
-	 * this ensures better encapsulation of information while ensuring that the methods can be accessed by the same package and subclasses
+	 * We made it such that only methods returning guest's name, contact details and reservation details are 
+	 * public. 
+	 * Methods returning guest's mobile number, email address, home address and country of origin are 
+	 * protected
+	 * this ensures better encapsulation of information while ensuring that the methods can be accessed by 
+	 * the same package and subclasses
 	 */
 	/**
-	 * We made it such that only methods returning guest's name, contact details and reservation details are public. 
+	 * We made it such that only methods returning guest's name, contact details and reservation details are 
+	 * public. 
 	 * This ensures better encapsulation of information that are more private.
 	 * 
 	 * Gets the guest's name
@@ -84,7 +89,7 @@ public class Guest {
 	 * Gets the guest's nationality
 	 * @return this is the nationality of the guest
 	 */
-	public String getNationality() {return this.nationality;}
+	protected String getNationality() {return this.nationality;}
 	/**
 	 * Gets the guest's gender
 	 * @return this is the gender of the guest
@@ -100,11 +105,5 @@ public class Guest {
 	 * @return this is the credit card details of the guest
 	 */
 	protected CreditCardInfo getCreditCardDetails() {return this.creditCardDetails;}
-	
-	/**
-	 * This method is solely used in the deserialization process
-	 * @param reservation is the reservation made by the particular guest object that called this function
-	 */
-	public void setReservation(Reservation reservation) {this.reservationDetails = reservation;}
 
 }

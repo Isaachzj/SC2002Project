@@ -31,7 +31,7 @@ public class ContactDetails {
 	 * @param HA this is the guest's home address
 	 * @param country this is the guest's country of origin
 	 */
-	public ContactDetails(String MN, String EA, String HA, String country) {
+	public ContactDetails(String MN, String EA, String HA, String country ) {
 		this.mobileNumber = MN;
 		this.emailAddress = EA;
 		this.homeAddress = HA;

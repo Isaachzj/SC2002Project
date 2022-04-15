@@ -5,18 +5,9 @@ import room.*;
 import list_methods.*;
 import java.util.*;
 
-/**
- * Allows the user to choose if they want to update room status (choice 1),
- * Update room menu (choice 2), update room features, (choice 3),
- * Check room availability (choice 4), write and submit a room report (choice 5);
- * do-while loop is used to ensure that the guest enters a valid choice (1 - 5)
- *
- */
-
 public class RoomRelated {
 	public static void roomRelated(Hotel hotel) throws ArrayException {
-		/**
-		 * # Contains switch statement that:
+		/*Contains switch statement that:
 			1. Updates room status
 			2. Updates menu
 			3. Updates room features

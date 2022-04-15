@@ -1,30 +1,14 @@
 package room_features;
 import list_methods.*;
 
-/**
- * Follows the Single Responsibility Principle as it has the 
- * sole responsibility of displaying features of a room;
- */
 public class DisplayFeatures implements Print{
-	/**
-	 * RoomFeatures object containing details of features in this room;
-	 */
 	private RoomFeatures rf;
 	
-	/**
-	 * # Constructor
-	 */
-	/**
-	 * Instantiates this DisplayFeatures object using argument RoomFeatures object;
-	 * @param rf RoomFeatures object;
-	 */
 	public DisplayFeatures(RoomFeatures rf) {
 		this.rf = rf;
 	}
 	
-	/**
-	 * Only prints the additional features in this feature list;
-	 */
+	//print only additional features
 	public void printArray() { //no need to check for empty array here as its checked in printAll()
 		int size = rf.getNumFeatures() - 5;
 		
@@ -35,9 +19,7 @@ public class DisplayFeatures implements Print{
 	}
 	
 	
-	/**
-	 * Only prints the core features in this feature list;
-	 */
+	//print only core features
 	public void printCore() {
 		System.out.println("===========================Room Features===========================");
 		System.out.println("Index-----------------Feature name-----------------Quantity/Status");
@@ -50,10 +32,7 @@ public class DisplayFeatures implements Print{
 		System.out.printf("%-12d%-20s%20b\n", 5, "Smoking", rf.getSmokeOut());
 	}
 	
-	/**
-	 * Prints all core and additional features of this room;
-	 * Exception Propagation here (calling function handles both ClassException and ArrayException);	
-	 */
+	//Exception Propagation here (calling function handles both ClassException and ArrayException)	
 	public void printAll() {
 		if (rf.getNumFeatures()==5) {
 			this.printCore();

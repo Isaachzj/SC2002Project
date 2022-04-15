@@ -6,14 +6,7 @@ import room_features.RoomFeatures;
 import room_rate.RoomRate;
 
 /**
-<<<<<<< Updated upstream
  * DeluxeRoom as a subclass of Room class, Deluxe room as a type of room with attributes specific to Deluxe rooms;
-=======
- * 
- * 
- * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
- *
->>>>>>> Stashed changes
  */
 
 public class DeluxeRoom extends Room{
@@ -21,19 +14,16 @@ public class DeluxeRoom extends Room{
 	 * # Constructor
 	 */
 	/**
-	 * Instantiation of the DeluxeRoom object
-	 * this includes details such as the menu available to the room, room floor and room number
-	 * for the instantiation of the DeluxeRoom object, we have set the max occupancy to 3 (i.e. maximum of 3 guests that can stay in a give Deluxe Room)
+	 * Calls the Room constructor;
+	 * Sets this roomType to DELUXE, sets this roomNumber, sets maxOccupancy of this Deluxe room to 3, 
+	 * sets availability of this Deluxe room to VACANT and menu of this Deluxe room to Menu object passed in;
 	 * 
-	 * @param menu	this is the Menu object containing Food available for the Deluxe room
-	 * Menu object containing food items available to this Deluxe room for room service;
-	 * @param floor	this is the room floor, which is required for the instantiation of the DeluxeRoom object
-	 * @param num this is the room number, which is required for the instantiation of the DeluxeRoom object
+	 * @param menu Menu object containing food items available to this Deluxe room for room service;
+	 * @param floor of type int here refers to the floor number of the room, used to initialize roomNumber;
+	 * @param num of type int here refers to the second number of the room, used to initialize roomNumber;
 	 */
 	public DeluxeRoom(Menu menu, int floor, int num) {
-		/**
-		 * # Calling superclass constructor (Room constructor)
-		 */
+		//Calling superclass constructor (Room constructor)
 		super(menu, TypeOfBed.QUEEN , ViewType.CITY, 1, true, false, 120, 150);		
 		
 		/**
