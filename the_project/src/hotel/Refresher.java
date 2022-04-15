@@ -9,16 +9,30 @@ import enumeration.AvailStatus;
 
 public class Refresher {
 
+	/**
+	 * Updates availability status and room service order status 
+	 * of reserved or occupied rooms automatically;
+	 * @param hotel Hotel object containing information about all reservations, guests and rooms;
+	 * @throws ArrayException
+	 */
 	public static void refresh(Hotel hotel) throws ArrayException {
 		
-		//Getting local date time
+		/**
+		 * # Getting local date time
+		 */
 		LocalDateTime currentDateTime = LocalDateTime.now();
-		//Updating reservation list
+		/**
+		 * # Updating reservation list
+		 */
 		for (int i=0; i<hotel.getReservationList().size(); i++) {
-			//Get reservation object
+			/**
+			 * # Get reservation object
+			 */
 			Reservation reservation = hotel.getReservationList().get(i);
 			
-			//Removing reservation if guests did not check in within 1 hour of stipulated time
+			/**
+			 * # Removing reservation if guests did not check in within 1 hour of stipulated time
+			 */
 			if (reservation.getRoom().getAvail() == AvailStatus.RESERVED) {
 				LocalDateTime checkInDateTime = reservation.getCheckInDateTime();
 				//Remove 
@@ -28,10 +42,14 @@ public class Refresher {
 				}	
 			}
 			
-			//Updating order status of occupants if they have orders
+			/**
+			 * # Updating order status of occupants if they have orders
+			 */
 			else if (reservation.getRoom().getAvail() == AvailStatus.OCCUPIED) {
 				RoomService roomService = reservation.getRoom().getRoomService();
-				//Refreshing roomService object (update orders to completed if really so)
+				/**
+				 * # Refreshing roomService object (update orders to completed if really so)
+				 */
 				roomService.refreshOrderStatuses();
 			}
 		

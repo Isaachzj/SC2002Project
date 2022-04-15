@@ -36,24 +36,39 @@ public class RoomRelated {
 		do {
 			switch(choice) {
 			case(1):
+				/**
+				 * # Updates room availability status using a UpdateRoomStatus object to UNDER_MAINTENANCE or VACANT;
+				 */
 				UpdateRoomStatus.updateRoomStatus(hotel);
 				break;
 
 			case(2):
+				/**
+				 * # Updates room menu by adding, removing or updating food items on it;
+				 */
 				UpdateRoomMenu.updateRoomMenu(hotel);
 				break;
 				
 			case(3):
+				/**
+				 * # Updates room features using a FeatureManipulator object;
+				 */
 				UpdateRoomFeatures.updateRoomFeatures(hotel);
 				break;
 				
 			case(4):
+				/**
+				 * # If room exists, gets and prints room availability;
+				 */
 				Room room = hotel.getRoom();
 				if (room==null) {System.out.println("No such room exists!!"); break;}
 				System.out.printf("Room is %s\n", room.getAvail());
 				break;
 				
 			case(5):
+				/**
+				 * # Allows user to write and submit either a Occupancy or Status report of a room;
+				 */
 				Report.info(hotel);
 				break;
 				

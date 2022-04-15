@@ -19,7 +19,7 @@ public class StayRelated {
 	/**
 	 * Allows user to access functions which are related to guests staying in a hotel room;
 	 * @param hotel Hotel object containing all room, guests, room service orders and reservations details;
-	 * @throws ArrayException
+	 * @throws ArrayException 
 	 */
 	public static void stayRelated(Hotel hotel) throws ArrayException {
 		/**
@@ -41,18 +41,34 @@ public class StayRelated {
 		do {
 			switch(choice) {
 			case(1):
+				/**
+				 * # Makes a reservation for a guest that is not a walk-in;
+				 */
 				MakeReservation.makeReservation(hotel, false);
 				break;
 
 			case(2):
+				/**
+				 * # Checks in customers depending on prior reservation or walk-in, 
+				 * # availability of reserved room, adds guests to list of guests staying in reserved room,
+				 * # and removes reservations if guests are late;
+				 */
 				CheckIn.checkIn(hotel);
 				break;
 				
 			case(3):
+				/**
+				 * # Checks out customers and removes reservation, guests and resets room;
+				 * # Applies and prints discount (if any) for this reservation, 
+				 * # checks for discount values over 100 and under 0;
+				 */
 				CheckOut.checkOut(hotel);
 				break;
 				
 			case(4):
+				/**
+				 * # Prints out all reservation information;
+				 */
 				hotel.reservationInfo();
 				break;
 				
