@@ -36,11 +36,13 @@ public class CheckOut {
 			break;
 		}
 		//set checkOutDateTime to actual current time now and re-update numOfWeekday and numOfWeekend
-		reservation.setCheckOutDateTime(LocalDateTime.now());
-		reservation.setNumOfWeekday(LengthOfStay.calcWeekDays(reservation.getCheckInDateTime().toLocalDate(), reservation.getCheckOutDateTime().toLocalDate()));
-		reservation.setNumOfWeekend(LengthOfStay.calcWeekEnds(reservation.getCheckInDateTime().toLocalDate(), reservation.getCheckOutDateTime().toLocalDate()));
+		LocalDateTime actualCheckOut = LocalDateTime.now();
+		if (LocalDateTime.now().isAfter(reservation.getCheckOutDateTime())) {
+			reservation.setNumOfWeekday(LengthOfStay.calcWeekDays(reservation.getCheckInDateTime().toLocalDate(), actualCheckOut.toLocalDate()));
+			reservation.setNumOfWeekend(LengthOfStay.calcWeekEnds(reservation.getCheckInDateTime().toLocalDate(), actualCheckOut.toLocalDate()));
+		}
 		
-		Receipt.info(reservation, discount);
+		Receipt.info(reservation, discount, actualCheckOut);
 	//remove guests
 		hotel.removeGuests(reservation);
 	//remove reservation
