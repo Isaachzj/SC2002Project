@@ -33,6 +33,10 @@ public class CheckOut {
 			}
 			break;
 		}
+		//set checkOutDateTime to actual current time now and re-update numOfWeekday and numOfWeekend
+		reservation.setCheckOutDateTime(LocalDateTime.now());
+		reservation.setNumOfWeekday(LengthOfStay.calcWeekDays(checkInDateTime.toLocalDate(), checkOutDateTime.toLocalDate()));
+		reservation.setNumOfWeekend(LengthOfStay.calcWeekEnds(checkInDateTime.toLocalDate(), checkOutDateTime.toLocalDate()));
 		
 		Receipt.info(reservation, discount);
 	//remove guests

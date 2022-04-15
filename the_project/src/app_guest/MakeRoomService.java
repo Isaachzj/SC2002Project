@@ -53,10 +53,13 @@ public class MakeRoomService {
 		
 		System.out.println("Order is being prepared!:");
 		
+<<<<<<< Updated upstream
 		try {Thread.sleep(1500);}
 		catch(InterruptedException e) {System.out.println(e.getLocalizedMessage());}
 		
 		System.out.println("Order has been completed and delivered to room successfully!");*/
 		
+=======
+>>>>>>> Stashed changes
 	}
 }

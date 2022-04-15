@@ -74,7 +74,7 @@ public class CheckIn {
 			/**
 			 * # Compare Date Time differences to see if reservation is valid
 			 */
-			LocalDateTime currentDateTime = DateTime.getLocalDateTime("Current");
+			LocalDateTime currentDateTime = LocalDateTime.now();
 			LocalDateTime checkInDateTime = reservation.getCheckInDateTime();
 			/**
 			 * # Check if check in is not 1 hour after indicated check in time
