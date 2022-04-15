@@ -192,7 +192,7 @@ public class Hotel {
 	 * this method retrieves the reservation list in the Hotel class
 	 * @return this is the reservation list
 	 */
-	protected ArrayList<Reservation> getReservationList() {return this.reservationList;}
+	public ArrayList<Reservation> getReservationList() {return this.reservationList;}
 	
 	
 	

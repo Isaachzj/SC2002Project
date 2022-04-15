@@ -17,7 +17,12 @@ public class HotelMainApp {
 	public static void main (String[] args ) {
 		Scanner sc = new Scanner(System.in);
 		Hotel hotel = new Hotel();
-		//main_deserialize.deserialization(hotel);
+		
+		/**
+		 * Before running the program, please go to main_deserialize class in serialize_deserialize package to amend the file directory paths as necessary.
+		 */
+		main_deserialize.deserialization(hotel);
+		
 		int choice = 0;
 		
 		do {
@@ -35,7 +40,7 @@ public class HotelMainApp {
 				
 				switch (choice) {
 					case 1: {
-						hotel.refreshHotel();
+						hotel.refreshHotel(); //updates Reservation and Orders in each Reservation if have
 						StayRelated.stayRelated(hotel);
 						break;
 					}
