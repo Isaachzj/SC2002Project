@@ -8,7 +8,16 @@ import food_related.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+
 public class Receipt{
+	/**
+	 * Prints out information of reservation of this room, 
+	 * including room, room feature, reservation and guest information,
+	 * and grand total bill
+	 * @param reservation this is the reservation object of this/these guest(s) of this room;
+	 * @param discount discount given to this reservation, used in calculating grand total bill of this reservation;
+	 * @param actualCheckOut LocalDateTime object containing information about time of check-out of this/these guest(s);
+	 */
 	public static void info(Reservation reservation, double discount, LocalDateTime actualCheckOut) {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd   |   HH:mm");
 		System.out.println("=========================== Receipt ===========================");
@@ -23,21 +32,31 @@ public class Receipt{
 		System.out.println("Number of guests: " + reservation.getNumOfGuest());
 		System.out.println();
 		
-		//Room feature details
+		/**
+		 * Creates and initializes a new DisplayFeatures object;
+		 * printAl() in DisplayFeatures object is used to print room features information;
+		 */
 		DisplayFeatures df = new DisplayFeatures(reservation.getRoom().getRoomFeatures());
 		df.printAll();
 		System.out.println();
 		
-		//Reserver's information
+		/**
+		 * Prints reserver's information;
+		 */
 		System.out.println("RESERVATION MADE UNDER:");
 		System.out.println("--------------------------------");
 		DisplayGuestInfo.printInfo(reservation.getGuestList().get(0));
 		
-		//Displays all Orders
+		/**
+		 * Creates and initializes a new DisplayRoomService object;
+		 * df.Displays in DisplayRoomService object prints all Orders;
+		 */
 		DisplayRoomService drm = new DisplayRoomService(reservation.getRoom().getRoomService());
 		drm.printArray();
 	
-		//Grand Total 
+		/**
+		 * # Calculates and prints Grand Total before discount, discount and Grand Total after discount;
+		 */
 		double grandTotal = reservation.calcGrandTotal();
 		System.out.println("++++++++++++++++++++++++++++++++++++++++++++");
 		System.out.printf("Total: $%.2f\n", grandTotal);
