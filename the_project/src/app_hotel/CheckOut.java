@@ -30,7 +30,7 @@ public class CheckOut {
 		double discount = sc.nextDouble();
 		while (true) {
 			if (discount>=100) {
-				System.out.println("100% DISCOUNT? WHO PAY? YOU PAY?");
+				System.out.println("FREE? WHO PAY? YOU PAY?");
 				System.out.println("Enter discount. E.g. Enter 20 for 20% discount");
 				discount = sc.nextDouble();
 				continue;
