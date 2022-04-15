@@ -11,7 +11,9 @@ import java.util.StringTokenizer;
 
 public class TextContactDetails {
 	public static final String SEPARATOR = "~";
-
+	/**
+	 * This class is used for the purposes of serialization and deserialization
+	 */
     // READING
 	public static ArrayList<ContactDetails> readCDs(String filename) throws IOException {
 		// read String from text file

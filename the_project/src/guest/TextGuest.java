@@ -15,7 +15,9 @@ import reservation.Reservation;
 
 public class TextGuest {
 	public static final String SEPARATOR = "~";
-
+	/**
+	 * This class is used for the purposes of serialization and deserialization
+	 */
     // READING
 	public static ArrayList<Guest> readGuests(String filename, ArrayList<Identity> ID, ArrayList<CreditCardInfo> CCD, ArrayList<ContactDetails> CD) throws IOException {
 		// read String from text file

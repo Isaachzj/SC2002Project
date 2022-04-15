@@ -13,7 +13,9 @@ import enumeration.*;
 
 public class TextIdentity {
 	public static final String SEPARATOR = "~";
-	
+	/**
+	 * This class is used for the purposes of serialization and deserialization
+	 */
 	// READING
 		public static ArrayList<Identity> readIDs(String filename) throws IOException {
 			// read String from text file

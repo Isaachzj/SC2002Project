@@ -13,7 +13,12 @@ import reservation.*;
 
 public class main_deserialize {
 	public static void deserialization(Hotel hotel)  {
-			
+		/*
+		 * Please change the path if needed.
+		 * BUT DO NOT PUSH YOUR CHANGES INTO GITHUB!!!	
+		 */
+		
+		
 			try {
 				//Getting all room objects and adding them to arraylist
 				Room s1 = hotel.getSpecificRoom("0201");

@@ -10,6 +10,11 @@ import app_hotel.MakeReservation;
 
 public class main_serialize {
 	public static void main(String[] aArgs)  {
+		/*
+		 * DO NOT RUN THIS CODE!!!
+		 * Please refer to the .txt files provided in serialize_deserialize package!
+		 */
+
 		
 		try {
 			Hotel hotel = new Hotel();
@@ -33,6 +38,7 @@ public class main_serialize {
 			
 			
 			
+			
 			Reservation single2 = MakeReservation.makeReservation(hotel, true);
 			ArrayList<Guest> singleList2 = single2.getGuestList();			
 			//singleList2
@@ -45,6 +51,7 @@ public class main_serialize {
 			
 			
 			
+			
 			Reservation double1 = MakeReservation.makeReservation(hotel, true);
 			ArrayList<Guest> doubleList1 = double1.getGuestList();
 						//doubleList1
@@ -54,7 +61,6 @@ public class main_serialize {
 			TextIdentity.saveIDs("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\id3.txt", doubleList1);
 			TextCreditCardInfo.saveCCIs("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\cci3.txt", doubleList1);
 			TextContactDetails.saveCDs("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\cd3.txt", doubleList1);
-			
 			
 			
 			
