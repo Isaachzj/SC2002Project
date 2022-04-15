@@ -60,7 +60,7 @@ public class MakeReservation {
 	 * # Entering number of guests
 	 */
 		System.out.println("Enter number of guests:");
-		numOfGuest = sc.nextInt();
+		numOfGuest = sc.nextInt(); sc.nextLine();
 		while (numOfGuest<=0) {
 			System.out.println("Enter a valid number!");
 			numOfGuest = sc.nextInt(); sc.nextLine();

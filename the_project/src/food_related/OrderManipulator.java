@@ -43,7 +43,7 @@ public class OrderManipulator implements AddGivenObject{
 		Scanner sc = new Scanner (System.in);	
 
 		System.out.println("Enter quantity:");
-		int quantity = sc.nextInt();
+		int quantity = sc.nextInt(); sc.nextLine();
 		sc.nextLine();
 		
 		/**

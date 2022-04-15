@@ -78,7 +78,7 @@ public class MenuManipulator implements AddStandard,RemoveStandard,Set, Get {
 		
 		Scanner sc = new Scanner (System.in);
 		System.out.println("Enter the item number:");
-		int food_num = sc.nextInt();
+		int food_num = sc.nextInt(); sc.nextLine();
 		sc.nextLine();
 		
 		if (food_num<=0 || food_num>menu.getArray().size()) 
@@ -109,7 +109,7 @@ public class MenuManipulator implements AddStandard,RemoveStandard,Set, Get {
 		do {
 			System.out.println("Choose the following options:");
 			System.out.println("1. Price only\n2. Description only\n3. Both Price and Description");
-			choice = sc.nextInt();
+			choice = sc.nextInt(); sc.nextLine();
 			sc.nextLine();
 			
 			switch(choice) {
@@ -195,7 +195,7 @@ public class MenuManipulator implements AddStandard,RemoveStandard,Set, Get {
 		 */
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter the item number:");
-		int food_num = sc.nextInt();
+		int food_num = sc.nextInt(); sc.nextLine();
 		sc.nextLine();
 		
 		while (food_num<=0 || food_num>menu.getArray().size()) 
