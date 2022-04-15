@@ -103,7 +103,6 @@ public class MakeReservation {
 						else if (checkOutDateTime.isAfter(curReservation.getCheckInDateTime()) && checkOutDateTime.isBefore(curReservation.getCheckOutDateTime())) {overlap=true; break;}
 						// if checkInDateTime of reservation to be made is before current reservation checkInDateTime and checkOutDateTime of reservation to be made is after current reservation checkOutDateTime, there is also an overlap
 						else if (checkInDateTime.isBefore(curReservation.getCheckInDateTime()) && checkOutDateTime.isAfter(curReservation.getCheckOutDateTime())) {overlap=true; break;}
-						if (curReservation.getCheckInDateTime().isBefore(checkOutDateTime)) {overlap=true; break;}
 					
 						// if check in time is the same as that of an existing reservation, there is also an overlap
 						else if (curReservation.getCheckInDateTime() == checkInDateTime) {overlap=true; break;}
