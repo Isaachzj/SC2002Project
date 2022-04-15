@@ -41,7 +41,7 @@ public class StayRelated {
 		do {
 			switch(choice) {
 			case(1):
-				MakeReservation.makeReservation(hotel);
+				MakeReservation.makeReservation(hotel, false);
 				break;
 
 			case(2):

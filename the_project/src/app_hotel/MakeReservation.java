@@ -14,7 +14,7 @@ import java.util.*;
 import days_date_time.DateTime;
 
 public class MakeReservation {
-	public static Reservation makeReservation(Hotel hotel) throws ArrayException{
+	public static Reservation makeReservation(Hotel hotel, boolean walkIn) throws ArrayException{
 	//Initialisation
 		Scanner sc = new Scanner(System.in);
 		int numOfGuest=0, maxOccupancy=0, index=-1;
@@ -22,6 +22,7 @@ public class MakeReservation {
 		Room room, daRoom;
 		Reservation reservation;
 		ArrayList<Room> rooms = new ArrayList<Room>();
+		LocalDateTime checkInDateTime, checkOutDateTime;
 		
 	//Ask for room type (Not hardcoded!)
 		System.out.println("Choose Room Type (Select Number):");
@@ -51,15 +52,17 @@ public class MakeReservation {
 		if (numOfGuest>maxOccupancy) {System.out.println("You have exceeded the maximum occupancy for this room! \nProcess Terminated!"); return null;}
 		
 		
-	//Entering Check In and Check out date time details
-		LocalDateTime checkInDateTime = DateTime.getLocalDateTime("Check In");
+	//Entering Check In and Check out date time details (CheckOut only if walking in)
+		if (walkIn) {checkInDateTime = LocalDateTime.now();}
+		else {checkInDateTime = DateTime.getLocalDateTime("Check In");}
+		
 		LocalDateTime currentTime = LocalDateTime.now();
 		while (checkInDateTime.isBefore(currentTime)) {
 			System.out.println("Are you sure? It is already after the intended check in date and time!");
 			checkInDateTime = DateTime.getLocalDateTime("Check In");
 		}
 		System.out.println("----------------------------------------------");
-		LocalDateTime checkOutDateTime = DateTime.getLocalDateTime("Check Out");
+		checkOutDateTime = DateTime.getLocalDateTime("Check Out");
 		while (checkOutDateTime.isBefore(checkInDateTime)) {
 			System.out.println("You trying to be funny isit?! Cannot check out before checking in!!");
 			checkOutDateTime = DateTime.getLocalDateTime("Check Out");

@@ -39,7 +39,7 @@ public class CheckIn {
 		 * # If walking in, make the reservation for the person then proceed as per normal
 		 */
 		if (choice==1) {
-			reservation = MakeReservation.makeReservation(hotel);
+			reservation = MakeReservation.makeReservation(hotel, true);
 			/**
 			 * # Setting room status to OCCUPIED
 			 */

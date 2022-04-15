@@ -18,7 +18,7 @@ public class main_serialize {
 			ArrayList<CreditCardInfo> cciList = new ArrayList<CreditCardInfo>();
 			ArrayList<ContactDetails> cdList = new ArrayList<ContactDetails>();
 			
-			Reservation r1 = MakeReservation.makeReservation(hotel);
+			Reservation r1 = MakeReservation.makeReservation(hotel, true); //same check-in time 
 			//Reservation r2 = MakeReservation.makeReservation(hotel);
 			
 			rList.add(r1);
