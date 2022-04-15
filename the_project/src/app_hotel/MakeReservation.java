@@ -168,7 +168,7 @@ public class MakeReservation {
 		}
 		
 		/**
-		 * for case where there are already vacant rooms that we can assign reservations to
+		 * # for case where there are already vacant rooms that we can assign reservations to
 		 */
 		else {
 			/**
