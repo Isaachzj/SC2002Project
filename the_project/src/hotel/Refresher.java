@@ -22,7 +22,7 @@ public class Refresher {
 			if (reservation.getRoom().getAvail() == AvailStatus.RESERVED) {
 				LocalDateTime checkInDateTime = reservation.getCheckInDateTime();
 				//Remove 
-				if (currentDateTime.isBefore(checkInDateTime.plusHours(1))){
+				if (currentDateTime.isAfter(checkInDateTime.plusHours(1))){
 					hotel.removeReservation(reservation);
 					continue;
 				}	
