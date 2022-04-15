@@ -72,6 +72,7 @@ public class OrderManipulator implements AddGivenObject{
 			order.getQuantity().set(index, order.getQuantity().get(index) + quantity);
 			System.out.println("Order Added successfully!");
 		}
+		
 		/**
 		 * Add new food entry and quantity if not ordered before
 		 */
@@ -81,5 +82,9 @@ public class OrderManipulator implements AddGivenObject{
 			System.out.println("Order Added successfully!");
 		}
 		
+		/**
+		 * Adds the preparation time for each food to overall order completion time
+		 */
+		order.setTimeToPrep(order.getTimeToPrep() + food.getPrepDuration()*quantity);
 	}
 }

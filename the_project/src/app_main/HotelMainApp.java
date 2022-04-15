@@ -22,8 +22,7 @@ public class HotelMainApp {
 			System.out.println("1: Stay Related Functions");
 			System.out.println("2: Guest Related Functions");
 			System.out.println("3: Room Related Functions");
-			System.out.println("4. Change System DateTime");
-			System.out.println("5. Terminate system");
+			System.out.println("4. Terminate system");
 			
 			try {
 				System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -42,13 +41,8 @@ public class HotelMainApp {
 						RoomRelated.roomRelated(hotel);
 						break;
 					}
-					
-					case 4: {
-						
-						break;
-					}
 
-					case 5: {
+					case 4: {
 						System.out.println("Don't be late for work tomorrow!");
 						break;
 					}

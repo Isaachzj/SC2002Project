@@ -39,6 +39,8 @@ public class MenuManipulator implements AddStandard,RemoveStandard,Set, Get {
 		sc.nextLine();
 		System.out.println("Enter description of Food:");
 		String des = sc.nextLine();
+		System.out.println("Enter the prepartion duration");
+		int duration = sc.nextInt(); sc.nextLine();
 		
 		/**
 		 * # Check if such an entry exists!
@@ -58,7 +60,7 @@ public class MenuManipulator implements AddStandard,RemoveStandard,Set, Get {
 		 * @param   price this is the price of the new food
 		 * @param   des this is the description of the new food
 		*/
-		Food new_food = new Food(food_name, price, des);
+		Food new_food = new Food(food_name, price, des, duration);
 		menu.getArray().add(new_food);	//getArray returns reference to ArrayList object
 		menu.setNumOfFood(menu.getNumOfFood()+1);
 	}

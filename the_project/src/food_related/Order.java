@@ -2,10 +2,10 @@ package food_related;
 
 import java.util.Scanner;
 import days_date_time.DateTime;
-
+import enumeration.*;
 import room.*;
 import java.util.ArrayList;
-import java.time.LocalDateTime;
+import java.time.*;
 import list_methods.*;
 
 public class Order {
@@ -33,6 +33,17 @@ public class Order {
 	/**
 	 * private OrderStatus status;
 	 */
+	private PreparationStatus status;
+	
+	/**
+	 * time needed to prepare order
+	 */
+	private int timeToPrep;
+	
+	/**
+	 * completion time of order
+	 */
+	private LocalDateTime timeCompleted;
 	
 	/**
 	 * Instantiation of Order object from array list of food items ordered and quantity of food items ordered by guest
@@ -44,10 +55,30 @@ public class Order {
 	
 	/**
 	 * get methods
-	 * All of the methods are set to protected
+	 * Most of the methods are set to protected
 	 * this ensures better encapsulation of information
 	 * while ensuring that the methods can be accessed by the same package and subclasses
 	 */
+	
+	/**
+	 * This gets the preparation status of the order
+	 * @return status of order
+	 */
+	public PreparationStatus getOrderStatus() {return this.status;}
+	
+	/**
+	 * Returns the date time of completion
+	 * @return the date and time when the order is completed
+	 */
+	
+	protected LocalDateTime getTimeCompleted() {return this.timeCompleted;}
+	
+	/**
+	 * This gets the time needed to prepare the order
+	 * @return is the time taken to prepare the order
+	 */
+	protected int getTimeToPrep() {return this.timeToPrep;}
+	
 	/**
 	 * gets the food items ordered list
 	 * @return list of food items ordered by guest in this order
@@ -83,6 +114,19 @@ public class Order {
 	 * @param ts this is the time stamp of making this order by guest
 	 */
 	protected void setTimeStamp(LocalDateTime ts) {this.timestamp = ts;} //set at the end of order
+	
+	/**
+	 * sets the time needed to prepare order
+	 * @param minutes is the inputed time
+	 */
+	protected void setTimeToPrep(int minutes) {this.timeToPrep = minutes;}
+	
+	/**
+	 * sets the date and time when order would be completed
+	 * @param dateTime is the inputed date time object
+	 */
+	protected void setTimeCompleted(LocalDateTime dateTime) {this.timeCompleted = dateTime;}	
+	
 	/**
 	 * gets the specifications or special request for this order
 	 * @param ts this is the specifications or special request for this order
@@ -120,8 +164,10 @@ public class Order {
 		 * Date and time stamp
 		 * ensures that date and time when ordering food is between check in DateTime and check out DateTime
 		 */
-		LocalDateTime currentTime = DateTime.getLocalDateTime("Order");
-		while (true) {
+		
+		LocalDateTime currentTime = LocalDateTime.now();
+		//LocalDateTime currentTime = DateTime.getLocalDateTime("Order");	
+		/*while (true) {
 			if (currentTime.isAfter(room.getReservation().getCheckOutDateTime())) {
 				System.out.println("Are you sure? It is after the check out date and time. Enter again");
 				currentTime = DateTime.getLocalDateTime("Order");
@@ -133,13 +179,28 @@ public class Order {
 				continue;
 			}
 			break;
-		}
+		}*/
 		
+		/**
+		 * Sets the time the order was placed
+		 */
 		this.setTimeStamp(currentTime);
+		
+		/**
+		 * Creating LocalDateTime object based on order preparation time and time order was placed and assigning it to timeCompleted attribute
+		 */		
+		this.timeCompleted = LocalDateTime.now().plusMinutes(this.timeToPrep);
+		
+		/**
+		 * Setting OrderStatus 
+		 */
+		this.status = PreparationStatus.PREPARING;
+		
 		/**
 		 * Calculating order bill
 		 */
 		bt.calculateBill();
+
 		return;
 	}
 	

@@ -48,7 +48,7 @@ public class MakeRoomService {
 		System.out.println("Order Confirmed! \nHere are the details:");
 		order.info();
 		
-		try {Thread.sleep(1500);}
+		/*try {Thread.sleep(1500);}
 		catch(InterruptedException e) {System.out.println(e.getLocalizedMessage());}
 		
 		System.out.println("Order is being prepared!:");
@@ -56,7 +56,7 @@ public class MakeRoomService {
 		try {Thread.sleep(1500);}
 		catch(InterruptedException e) {System.out.println(e.getLocalizedMessage());}
 		
-		System.out.println("Order has been completed and delivered to room successfully!");
+		System.out.println("Order has been completed and delivered to room successfully!");*/
 		
 	}
 }

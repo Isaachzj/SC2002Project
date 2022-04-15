@@ -33,6 +33,8 @@ public class DisplayOrder implements Print {
 		/**
 		 * Else, if order is not empty; prints out the details of the order
 		 */
+
+		
 		for (int i=1; i<=order.getArray().size(); i++) {
 			Food food = order.getArray().get(i-1);
 			System.out.printf("%-15d%-23s%-15.2f%-30d\n", i, food.getFoodName(), food.getPrice(), order.getQuantity().get(i-1));
@@ -41,7 +43,9 @@ public class DisplayOrder implements Print {
 		System.out.printf("Total Bill: %.2f\n", order.getBill());
 		
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd   |   HH:mm");
-		System.out.println("Date and Time: " + order.getTimeStamp().format(formatter));
+		System.out.println("Order Date and Time: " + order.getTimeStamp().format(formatter));
+		System.out.println("Order Completion Date and Time: "+ order.getTimeCompleted().format(formatter));
+		System.out.println("Order status: " + order.getOrderStatus());
 		return;
 	}
 }
