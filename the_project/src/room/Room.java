@@ -12,7 +12,7 @@ import reservation.*;
 
 /**
  * Follows the Lisker Substitution Principle as every function created for Room can work for all its subclasses;
- *
+ * Follows the Open-Closed Principle as Room class is open for extension but closed for modification;
  */
 
 public abstract class Room 

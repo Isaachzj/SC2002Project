@@ -10,7 +10,7 @@ public class CreditCardInfo {
 	 */
 	private String creditCardBank;
 	/**
-	 * this is the guest's credit card expiry (private attribute)
+	 * this is the guest's credit card expiry datde (private attribute)
 	 */
 	private String creditCardExpiry;
 	
