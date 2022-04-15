@@ -64,10 +64,11 @@ public class CheckIn {
 			}
 			
 			/**
-			 * # if the guest already checked in earlier
+			 * # if the previous guest did not check out before the next guest is trying to check in
 			 */
+			
 			if (reservation.getRoom().getAvail()==AvailStatus.OCCUPIED) {
-				System.out.println("Already Checked in");
+				System.out.println("Hold on for a moment, the previous guest has not checked out yet.");
 				return;
 			}		
 		
