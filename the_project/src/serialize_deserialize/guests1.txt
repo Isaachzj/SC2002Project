@@ -1,1 +1,2 @@
-1~1~0
+John Smith~Singaporean~0
+Sam Smith~Singaporean~0

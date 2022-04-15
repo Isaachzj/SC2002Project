@@ -57,9 +57,16 @@ public class TextReservation {
 					curGuest.setReservation(reservation);
 				}
 				
-				//add reservation to Room and change avail status to OCCUPIED
-				room.get(i).setReservation(reservation);		
-				room.get(i).setAvail(AvailStatus.OCCUPIED);
+				//Assign reservation object to room
+				room.get(i).setReservation(reservation);
+				
+				if(i<5) { //Last 3 reservations are only reserved (not checked in)
+					//change avail status to OCCUPIED for those checked in
+					room.get(i).setAvail(AvailStatus.OCCUPIED);
+				}
+				else {//Rest of rooms will be reserved since not checked in
+					room.get(i).setAvail(AvailStatus.RESERVED);
+				}
 				
 				// add to reservation list
 				alr.add(reservation);
