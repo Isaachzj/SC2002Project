@@ -13,7 +13,7 @@ public class TextContactDetails {
 	public static final String SEPARATOR = "~";
 
     // READING
-	public static ArrayList readCDs(String filename) throws IOException {
+	public static ArrayList<ContactDetails> readCDs(String filename) throws IOException {
 		// read String from text file
 		ArrayList stringArray = (ArrayList)read(filename);
 		ArrayList alr = new ArrayList() ;// to store Guests data

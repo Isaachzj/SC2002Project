@@ -13,7 +13,7 @@ public class TextCreditCardInfo {
 	public static final String SEPARATOR = "~";
 
     // READING
-	public static ArrayList readCCIs(String filename) throws IOException {
+	public static ArrayList<CreditCardInfo> readCCIs(String filename) throws IOException {
 		// read String from text file
 		ArrayList stringArray = (ArrayList)read(filename);
 		ArrayList alr = new ArrayList() ;// to store CCI data

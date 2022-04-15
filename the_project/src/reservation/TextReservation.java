@@ -24,7 +24,7 @@ public class TextReservation {
 	public static final String SEPARATOR = "~";
 
     // READING
-	public static ArrayList readReservations(String filename, ArrayList<Room> room, ArrayList<ArrayList<Guest>> guestList) throws IOException {
+	public static ArrayList<Reservation> readReservations(String filename, ArrayList<Room> room, ArrayList<ArrayList<Guest>> guestList) throws IOException {
 		// read String from text file
 		ArrayList stringArray = (ArrayList)read(filename);
 		ArrayList alr = new ArrayList() ;// to store Guests data
