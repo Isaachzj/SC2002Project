@@ -39,7 +39,7 @@ public class DateTime {
 				datetime = LocalDateTime.of(year, month, day, hour, minute);
 				break;
 			}
-			catch (Exception e) {System.out.println("Enter a valid day:");continue;}
+			catch (java.time.DateTimeException e) {System.out.println("Enter a valid day:");continue;}
 		}
 		return datetime;
 	}

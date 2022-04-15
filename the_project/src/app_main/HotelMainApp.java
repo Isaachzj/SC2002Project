@@ -6,8 +6,11 @@ import app_hotel.StayRelated;
 import app_room.RoomRelated;
 import hotel.*;
 import list_methods.*;
+import serialize_deserialize.main_deserialize;
 
 /**
+ * This is a Boundary Class; as it is used as a user interface;
+ * Allows the user to access all 
  * displays menu options that contains sets of functions that each serve a single responsibility;
  * user is able to access guest stay-related, guest related and room-related functions;
  */
@@ -17,11 +20,16 @@ public class HotelMainApp {
 	public static void main (String[] args ) {
 		Scanner sc = new Scanner(System.in);
 		Hotel hotel = new Hotel();
-		int choice = 0;
+		
+		/**
+		 * Before running the program, please go to main_deserialize class in serialize_deserialize package to amend the file directory paths as necessary.
+		 */
+		main_deserialize.deserialization(hotel);
 		
 		/**
 		 * menu options displayed to allow for user to choose what set of functions to access;
 		 */
+		int choice = 0;
 		
 		do {
 			System.out.println("\nWelcome to the Hotel App System!");
@@ -29,13 +37,14 @@ public class HotelMainApp {
 			System.out.println("1: Stay Related Functions");
 			System.out.println("2: Guest Related Functions");
 			System.out.println("3: Room Related Functions");
-			System.out.println("4. Change System DateTime");
-			System.out.println("5. Terminate system");
+			System.out.println("4. Terminate system");
 			
 			try {
 				System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 				System.out.println("Enter your choice:");
 				choice = sc.nextInt(); sc.nextLine();
+				hotel.refreshHotel();
+				
 				switch (choice) {
 					case 1: {
 						/**
@@ -66,20 +75,15 @@ public class HotelMainApp {
 						RoomRelated.roomRelated(hotel);
 						break;
 					}
-					
-					case 4: {
-						
-						break;
-					}
 
-					case 5: {
+					case 4: {
 						System.out.println("Don't be late for work tomorrow!");
 						break;
 					}
 
 					default:
 						/**
-						 * error message for when user enters input other than int 1 to 5;
+						 * error message for when user enters input other than int 1 to 4;
 						 */
 						System.out.println("Enter a valid choice");
 						break;
