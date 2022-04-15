@@ -9,3 +9,7 @@
 /DisplayGuestInfo.class
 /Guest.class
 /Identity.class
+/TextContactDetails.class
+/TextCreditCardInfo.class
+/TextGuest.class
+/TextIdentity.class

@@ -50,12 +50,12 @@ public class main_serialize {
 		//Adding guests from each reservation to an arraylist
 			ArrayList<Guest> singleList1 = single1.getGuestList();
 			ArrayList<Guest> singleList2 = single2.getGuestList();
-			ArrayList<Guest> doubleList1 = single1.getGuestList();
-			ArrayList<Guest> doubleList2 = single2.getGuestList();
-			ArrayList<Guest> deluxeList1 = single1.getGuestList();
-			ArrayList<Guest> deluxeList2 = single2.getGuestList();
-			ArrayList<Guest> vipList1 = single1.getGuestList();
-			ArrayList<Guest> vipList2 = single2.getGuestList();
+			ArrayList<Guest> doubleList1 = double1.getGuestList();
+			ArrayList<Guest> doubleList2 = double2.getGuestList();
+			ArrayList<Guest> deluxeList1 = deluxe1.getGuestList();
+			ArrayList<Guest> deluxeList2 = deluxe2.getGuestList();
+			ArrayList<Guest> vipList1 = vip1.getGuestList();
+			ArrayList<Guest> vipList2 = vip2.getGuestList();
 			
 			
 			//singleList1
