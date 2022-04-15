@@ -124,15 +124,6 @@ public class main_serialize {
 		
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		}
 		catch (ArrayException e) {System.out.println(e.getMessage());}
 		catch (Exception ee) {
