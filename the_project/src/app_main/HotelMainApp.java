@@ -35,14 +35,17 @@ public class HotelMainApp {
 				// LOOP THROUGH RESERVATION AND ORDERES HEREEEEEEEEEEEEEEEEEEE
 				switch (choice) {
 					case 1: {
+						hotel.refreshHotel();
 						StayRelated.stayRelated(hotel);
 						break;
 					}
 					case 2: {
+						hotel.refreshHotel();
 						GuestRelated.guestRelated(hotel);
 						break;
 					}
 					case 3: {
+						hotel.refreshHotel();
 						RoomRelated.roomRelated(hotel);
 						break;
 					}

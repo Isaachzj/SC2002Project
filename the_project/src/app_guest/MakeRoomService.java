@@ -47,11 +47,6 @@ public class MakeRoomService {
 		 */
 		System.out.println("Order Confirmed! \nHere are the details:");
 		order.info();
-		
-		try {Thread.sleep(1500);}
-		catch(InterruptedException e) {System.out.println(e.getLocalizedMessage());}
-		
-		System.out.println("Order is being prepared!:");
-		
+	
 	}
 }
