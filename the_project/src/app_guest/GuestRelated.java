@@ -17,11 +17,11 @@ import guest.DisplayGuestInfo;
  * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
  */
 public class GuestRelated {
-		/* Contains switch statement that
-		 	1. Updates credit card info of guest
-		 	2. Retrieve (print) specified guest info
-		 	3. Room service on behalf of guest 
-		 */
+	/** Contains switch statement that:
+		 (1) Updates credit card info of guest,
+		 (2) Retrieve (print) specified guest info,
+		 (3) Room service on behalf of guest 
+	*/
 	public static void guestRelated(Hotel hotel) throws ArrayException {
 		Scanner sc = new Scanner(System.in);
 		
