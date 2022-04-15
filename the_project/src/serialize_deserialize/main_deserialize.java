@@ -124,16 +124,19 @@ public class main_deserialize {
 				
 				ArrayList<Reservation> reservationList = TextReservation.readReservations("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\reservations.txt", roomListy, guestListy);
 				
-				
+				System.out.println("==================================================DESERIALIZATION==================================================");
+
 				//Assigning reservation and guest List to the hotel (Completing check in process)
 				for (int i=0; i<reservationList.size(); i++) {
 					hotel.addReservation(reservationList.get(i)); //add reservation
+					System.out.println("Initializing " + reservationList.get(i).getGuest().getName() + " details");
+				
 					
 					if (i<5) { //only first 5 reservations have checked in
 						hotel.addGuests(reservationList.get(i)); //add guests in each reservation
 					}
 				}
-				
+				System.out.println("===================================================================================================================");
 	
 			}
 			catch (ArrayException e) {System.out.println(e.getMessage());}
