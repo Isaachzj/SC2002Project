@@ -13,7 +13,6 @@ public class Refresher {
 		
 		//Getting local date time
 		LocalDateTime currentDateTime = LocalDateTime.now();
-		System.out.println("Hey");
 		//Updating reservation list
 		for (int i=0; i<hotel.getReservationList().size(); i++) {
 			//Get reservation object
@@ -32,7 +31,6 @@ public class Refresher {
 			//Updating order status of occupants if they have orders
 			else if (reservation.getRoom().getAvail() == AvailStatus.OCCUPIED) {
 				RoomService roomService = reservation.getRoom().getRoomService();
-				System.out.println("HIIII");
 				//Refreshing roomService object (update orders to completed if really so)
 				roomService.refreshOrderStatuses();
 			}

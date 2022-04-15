@@ -32,7 +32,7 @@ public class HotelMainApp {
 				System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 				System.out.println("Enter your choice:");
 				choice = sc.nextInt(); sc.nextLine();
-				// LOOP THROUGH RESERVATION AND ORDERES HEREEEEEEEEEEEEEEEEEEE
+				
 				switch (choice) {
 					case 1: {
 						hotel.refreshHotel();

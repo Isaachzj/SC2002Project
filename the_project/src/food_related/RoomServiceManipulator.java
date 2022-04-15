@@ -72,7 +72,6 @@ public class RoomServiceManipulator implements AddGivenObject, Reset, Set {
 			LocalDateTime currentTime = LocalDateTime.now();
 			//If order completion time has passed in real-time, update order status
 			if (order.getTimeCompleted().isBefore(currentTime) && order.getOrderStatus()==PreparationStatus.PREPARING) {
-				System.out.println("Inside here");
 				order.setPreparationStauts(PreparationStatus.COMPLETED);
 			}	
 		}
