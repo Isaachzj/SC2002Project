@@ -136,6 +136,13 @@ public class Order {
 	protected void setRemarks(String remarks) {this.remarks = remarks;}
 	
 	/**
+	 * This sets the preparation status of the order to the inputted one.
+	 * This is used to refresh order status periodically as time progresses
+	 * @param prepStatus is the new status of order object
+	 */
+	protected void setPreparationStauts (PreparationStatus prepStatus) {this.status = prepStatus;}
+	
+	/**
 	 * creates an OrderManipulator object and a BillTabulator object. 
 	 * sets in this OrderManipulator Object: food items list ordered, remarks, date, timestamp, bill
 	 * Follows the Interface Segregation principle; with instead of one big interface,

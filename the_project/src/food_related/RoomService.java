@@ -91,4 +91,9 @@ public class RoomService {
 		rsm.resetArray();
 		this.roomServiceBill = 0.0;
 	}	
+	
+	public void refreshOrderStatuses() {
+		RoomServiceManipulator rsm = new RoomServiceManipulator(this);
+		rsm.set();
+	}
 }

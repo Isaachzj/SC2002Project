@@ -2,13 +2,14 @@ package hotel;
 
 import reservation.*;
 import food_related.*;
+import list_methods.ArrayException;
 import java.time.*;
 
 import enumeration.AvailStatus;
 
 public class Refresher {
 
-	public static void refresh(Hotel hotel) {
+	public static void refresh(Hotel hotel) throws ArrayException {
 		
 		//Getting local date time
 		LocalDateTime currentDateTime = LocalDateTime.now();
@@ -31,15 +32,13 @@ public class Refresher {
 			//Updating order status of occupants if they have orders
 			else if (reservation.getRoom().getAvail() == AvailStatus.OCCUPIED) {
 				RoomService roomService = reservation.getRoom().getRoomService();
+				
+				//Refreshing roomService object (update orders to completed if really so)
+				roomService.refreshOrderStatuses();
 			}
-		}
 		
-			//for each reservation, update order
+		}//end for
 		
-		
-		
-		
-		
-		
+		return;
 	}
 }

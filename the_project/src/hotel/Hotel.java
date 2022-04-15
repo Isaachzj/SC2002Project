@@ -247,6 +247,7 @@ public class Hotel {
 	 */
 	protected ArrayList<Room> getRoomList() {return this.roomList;}	
 	
+	
 	/**
 	 * Menu Related
 	 */
@@ -257,6 +258,14 @@ public class Hotel {
 	 */
 	public Menu getMenu(int choice) {
 		return menuList.get(choice-1);
+	}
+	
+	/** 
+	 * Refreshing related
+	 */
+	
+	public void refreshHotel() throws ArrayException{
+		Refresher.refresh(this);
 	}
 
 }
