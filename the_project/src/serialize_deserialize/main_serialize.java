@@ -31,7 +31,7 @@ public class main_serialize {
 			Reservation deluxe2 = MakeReservation.makeReservation(hotel, true);
 			
 			Reservation vip1 = MakeReservation.makeReservation(hotel, true);
-			Reservation vip2 = MakeReservation.makeReservation(hotel, true);
+			Reservation vip2 = MakeReservation.makeReservation(hotel, true); 
 			
 			
 		//Adding reservation objects to array list
@@ -73,7 +73,7 @@ public class main_serialize {
 			TextIdentity.saveIDs("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\id2.txt", singleList2);
 			TextCreditCardInfo.saveCCIs("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\cci2.txt", singleList2);
 			TextContactDetails.saveCDs("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\cd2.txt", singleList2);
-
+//
 			//doubleList1
 			TextGuest.saveGuests("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\guests3.txt", doubleList1);		
 			//each file correspond to guests of each reservation
@@ -127,7 +127,7 @@ public class main_serialize {
 		}
 		catch (ArrayException e) {System.out.println(e.getMessage());}
 		catch (Exception ee) {
-			System.out.println("Process terminated\n"); 
+			ee.printStackTrace(); 
 			}	
 	}
 }
