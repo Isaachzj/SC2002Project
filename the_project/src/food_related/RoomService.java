@@ -39,7 +39,7 @@ public class RoomService {
 	 * gets the food items of this room service order
 	 * @return list of food items in this room service order
 	 */
-	protected ArrayList<Order> getArray() {return this.orderList;}
+	public ArrayList<Order> getArray() {return this.orderList;}
 	
 	/**
 	 * set method
