@@ -31,6 +31,11 @@ public class Order {
 	private LocalDateTime timestamp;
 	
 	/**
+	 * completion time of order
+	 */	
+	private LocalDateTime timeCompleted;
+	
+	/**
 	 * private OrderStatus status;
 	 */
 	private PreparationStatus status;
@@ -40,10 +45,7 @@ public class Order {
 	 */
 	private int timeToPrep;
 	
-	/**
-	 * completion time of order
-	 */
-	private LocalDateTime timeCompleted;
+
 	
 	/**
 	 * Instantiation of Order object from array list of food items ordered and quantity of food items ordered by guest

@@ -12,6 +12,7 @@ import serialize_deserialize.main_deserialize;
  * This is a Boundary Class; as it is used as a user interface;
  * Allows the user to access all 
  */
+public class HotelMainApp {
 	
 	public static void main (String[] args ) {
 		Scanner sc = new Scanner(System.in);
