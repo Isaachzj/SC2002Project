@@ -55,9 +55,9 @@ public class TextReservation {
 					curGuest.setReservation(reservation);
 				}
 				
-				//add reservation to Room and change avail status
+				//add reservation to Room and change avail status to OCCUPIED
 				room.get(i).setReservation(reservation);		
-				room.get(i).setAvail(AvailStatus.RESERVED);
+				room.get(i).setAvail(AvailStatus.OCCUPIED);
 				
 				// add to reservation list
 				alr.add(reservation);

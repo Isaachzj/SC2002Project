@@ -265,6 +265,7 @@ public class Hotel {
 	 */
 	
 	public void refreshHotel() throws ArrayException{
+		System.out.println("TOp");
 		Refresher.refresh(this);
 	}
 
