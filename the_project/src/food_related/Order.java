@@ -38,7 +38,7 @@ public class Order {
 	/**
 	 * private OrderStatus status;
 	 */
-	private PreparationStatus status;
+	private OrderStatus status;
 	
 	/**
 	 * time needed to prepare order
@@ -66,7 +66,7 @@ public class Order {
 	 * This gets the preparation status of the order
 	 * @return status of order
 	 */
-	public PreparationStatus getOrderStatus() {return this.status;}
+	public OrderStatus getOrderStatus() {return this.status;}
 	
 	/**
 	 * Returns the date time of completion
@@ -140,7 +140,7 @@ public class Order {
 	 * This is used to refresh order status periodically as time progresses
 	 * @param prepStatus is the new status of order object
 	 */
-	protected void setPreparationStauts (PreparationStatus prepStatus) {this.status = prepStatus;}
+	protected void setPreparationStauts (OrderStatus prepStatus) {this.status = prepStatus;}
 	
 	/**
 	 * creates an OrderManipulator object and a BillTabulator object. 
@@ -203,7 +203,7 @@ public class Order {
 		/**
 		 * Setting OrderStatus 
 		 */
-		this.status = PreparationStatus.PREPARING;
+		this.status = OrderStatus.PREPARING;
 		
 		/**
 		 * Calculating order bill

@@ -4,7 +4,7 @@ import food_related.*;
 import java.time.LocalDateTime;
 import java.util.Scanner;
 
-import enumeration.PreparationStatus;
+import enumeration.OrderStatus;
 import list_methods.*;
 
 public class RoomServiceManipulator implements AddGivenObject, Reset, Set {
@@ -71,8 +71,8 @@ public class RoomServiceManipulator implements AddGivenObject, Reset, Set {
 			Order order = rs.getArray().get(i);
 			LocalDateTime currentTime = LocalDateTime.now();
 			//If order completion time has passed in real-time, update order status
-			if (order.getTimeCompleted().isBefore(currentTime) && order.getOrderStatus()==PreparationStatus.PREPARING) {
-				order.setPreparationStauts(PreparationStatus.COMPLETED);
+			if (order.getTimeCompleted().isBefore(currentTime) && order.getOrderStatus()==OrderStatus.PREPARING) {
+				order.setPreparationStauts(OrderStatus.COMPLETED);
 			}	
 		}
 		

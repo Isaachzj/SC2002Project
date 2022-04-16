@@ -41,8 +41,12 @@ public class TextReservation {
 				
 				//tokens
 				DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd   |   HH:mm"); //create formatter
-				LocalDateTime  checkInDateTime = LocalDateTime.now(); //string to LocalDateTime
-				LocalDateTime  checkOutDateTime = checkInDateTime.plusDays(5); //string to LocalDateTime
+				
+				LocalDateTime checkInDateTime;
+				if (i<5) {checkInDateTime = LocalDateTime.now();} //Those reservations that have checked in will check in upon running program
+				else {checkInDateTime = LocalDateTime.now().plusDays(7);}//reservations not checked in will check in a week later from running program
+				
+				LocalDateTime  checkOutDateTime = checkInDateTime.plusDays(5); 
 				long numOfWeekday = LengthOfStay.calcWeekDays(checkInDateTime.toLocalDate(), checkOutDateTime.toLocalDate()); //string to Long	
 				long numOfWeekend = LengthOfStay.calcWeekEnds(checkInDateTime.toLocalDate(), checkOutDateTime.toLocalDate()); //string to Long
 				int numOfGuest = Integer.parseInt(star.nextToken().trim()); //string to Integer
