@@ -4,7 +4,15 @@ import guest.CreateGuest;
 import guest.Guest;
 import list_methods.*;
 import java.util.Scanner;
-
+/**
+ * Allows the reserver's details and guest's details to be added upon
+ * its instantiation for the given Reservation object
+ * 
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class ReservationGuestListManipulator implements AddStandard{
 	private Reservation reservation;
 	/**
