@@ -1,12 +1,20 @@
 package enumeration;
-
+/**
+ * Created enumeration for the order status. 
+ * For the enumeration of the OrderStatus, there are 2 types (CONFIRMED, PREPARING);
+ * 
+ * PREPARING is used to indicate when the order for the Food object. 
+ * CONFIRMED is used to indicate when the order for the Food object has been received.
+ * 
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public enum OrderStatus {
 	/**
 	 * enumerations for order status of a Room object;
-	 * For the enumeration of the OrderStatus, there are 3 types (CONFIRMED, PREPARING, DELIVERED);
-	 * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
-	 *
-	 */
+	 * 
 	
 	/**
 	 * PREPARING is used to indicate when the order for the Food object
