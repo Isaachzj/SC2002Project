@@ -5,6 +5,16 @@ import room.*;
 import list_methods.*;
 import java.util.*;
 
+/**
+ * Retrieves the first Room object and its details for the
+ * given roomType indicated, that is vacant (i.e. AvailStatus = VACANT)
+ * Method overloading is used here
+ * room details includes the TypeOfRoom, AvailStatus, maxOccupancy and RoomRate
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class RoomListManipulator implements Get{
 	/**
 	 * this is a Hotel object (private attribute)
