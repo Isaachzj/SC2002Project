@@ -3,7 +3,20 @@ package guest;
 import reservation.*;
 import enumeration.TypeOfGender;
 import java.util.*;
-
+/**
+ * Instantiation of the reserver (Guest object who made reservation).
+ * Includes all details required for the reservation.
+ * Additionally, use of method to instantiate Guest object who 
+ * did not make the reservation but is staying in the room
+ * Similarly, this instantiates a regular occupant
+ * (Guest object who did not make the reservation but is staying in the room)
+ * Unlike before, this guest object does not have any credit card details
+ * 
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class CreateGuest {
 	/**
 	 * instantiation of the reserver (Guest object who made reservation)
