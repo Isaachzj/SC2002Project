@@ -11,6 +11,7 @@ import java.time.format.DateTimeFormatter;
 
 public class Receipt{
 	/**
+	 * This is a Boundary Class; as it is used as a user interface;
 	 * Prints out reservation details of this room.
 	 * Details includes room, room feature, reservation and guest information,
 	 * and grand total bill
@@ -37,7 +38,7 @@ public class Receipt{
 		
 		/**
 		 * Creates and initializes a new DisplayFeatures object;
-		 * printAl() in DisplayFeatures object is used to print room features information;
+		 * printAll() in DisplayFeatures object is used to print room features information;
 		 */
 		DisplayFeatures df = new DisplayFeatures(reservation.getRoom().getRoomFeatures());
 		df.printAll();

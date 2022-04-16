@@ -9,10 +9,17 @@ import hotel.Hotel;
 import list_methods.ArrayException;
 
 /**
- * This class allows the user to make access functions which are related to guests staying in a hotel room 
- * through a switch statement and input choice;
+ * This is a Boundary Class; as it is used as a user interface;
+ * Interface which allows the user to access funcions related to guest's stay in the hotel
+ * Guests given an option to: make a reservation (option 1),
+ * check-in (option 2) and check out(option 3).
+ * 
+ * When guests makes reservation (option 1), will get MakeReservation interface.
+ * When guests checks-in (option 2) or checks-out (option 3), will call checkIn() method
+ * or checkOut() method accordingly
  * A do-while loop is used to ensure that the guest enters a valid choice (1 - 3)
- * Functions include making a reservation (option 1), checking in a guest (option 2) and checking out a guest (option 3);
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
  */
 public class StayRelated { 
 	
@@ -24,9 +31,9 @@ public class StayRelated {
 	public static void stayRelated(Hotel hotel) throws ArrayException {
 		/**
 		 * # Contains switch statement that:
-			1. Make a Reservation
-			2. Check-In a guest
-			3. Check-Out a guest
+		 * (1) Make a reservation,
+		 * (2) Check-In a guest,
+		 * (3) Check-Out a guest.
 		*/
 		Scanner sc = new Scanner(System.in);
 		System.out.println("\n========== STAY RELATED ==========");
@@ -58,9 +65,9 @@ public class StayRelated {
 				
 			case(3):
 				/**
-				 * # Checks out customers and removes reservation, guests and resets room;
-				 * # Applies and prints discount (if any) for this reservation, 
-				 * # checks for discount values over 100 and under 0;
+				 * # Checks out customers and removes reservation, guests and resets room.
+				 * Applies and prints discount (if any) for this reservation, 
+				 * checks for discount values over 100 and under 0;
 				 */
 				CheckOut.checkOut(hotel);
 				break;
