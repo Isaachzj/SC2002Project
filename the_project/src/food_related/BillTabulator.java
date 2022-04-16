@@ -1,5 +1,20 @@
 package food_related;
 
+/**
+ * Follows Single Responsibility principle as it has the single responsibility of
+ * returning Guest's order bill. 
+ * Also follows the Open-Close principle since software entity in this case open
+ * for extension but closed for modifications. 
+ * 
+ * The BillTabulator calculates the total bill of guest by tabulating the prices of food ordered by the respective guest
+ * calls addEntry method which allows object to be added given no exception thrown
+ * (i.e. given no errors)
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ *
+ */
 public class BillTabulator {
 	/**
 	 * order object is set to private to ensure better encapsulation
