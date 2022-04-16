@@ -35,7 +35,9 @@ public class UpdateRoomMenu {
 	 * remove a food item (option 2), 
 	 * and, update the quantity of a food item(option 3)
 	 * Notably, this allows the user to make changes to either the name
-	 * of the food, its prices or both).
+	 * of the food, its prices or both)
+	 * @param this is the Hotel object required for the update of its menu
+	 * @throws An exception would be thrown with its message upon any error encountered
 	 */
 	public static void updateRoomMenu(Hotel hotel) throws ArrayException {
 		Scanner sc = new Scanner(System.in);

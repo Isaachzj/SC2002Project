@@ -5,7 +5,27 @@ import room.Room;
 import hotel.Hotel;
 import java.util.Scanner;
 
+/**
+ * This is a Boundary Class; as it is used as a user interface;
+ * 
+ * Interface which allows the user to access functions related
+ * to the availability status of a room. 
+ * If the room does not exist, an error message is displayed;
+ * user is allowed to update the room availability to either
+ * UNDER_MAINTENANCE (option 1) or VACANT (option 2), 
+ * depending on the current room availability status;
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class UpdateRoomStatus {
+	/**
+	 * Ths allows the update of room availability to either
+	 * UNDER_MAINTENANCE (option 1) or VACANT (option 2)
+	 * @param this is the Hotel object required for the update of the room availability
+	 * the room availability can be updated to UNDER_MAINTENANCE or VACANT
+	 */
 	public static void updateRoomStatus(Hotel hotel) {
 		Scanner sc = new Scanner(System.in);
 		Room room1 = hotel.getRoom();
