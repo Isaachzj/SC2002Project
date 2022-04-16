@@ -10,7 +10,18 @@ import room.*;
 import list_methods.ArrayException;
 import reservation.*;
 
-
+/**
+ * Deserialization is the reverse process of serialization, where it
+ * reverse process where the byte stream is used to recreate the actual Java object in memory.
+ * In this case, we are using the deserialization after serialization for the .txt file input 
+ * into the byte stream, so that user input would not have to be keyed in multiple time upon 
+ * the exploration of our test cases.
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ *
+ */
 public class main_deserialize {
 	public static void deserialization(Hotel hotel, String path)  {
 		/*
