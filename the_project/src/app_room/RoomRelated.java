@@ -6,11 +6,19 @@ import list_methods.*;
 import java.util.*;
 
 /**
- * Allows the user to choose if they want to update room status (choice 1),
- * Update room menu (choice 2), update room features, (choice 3),
+ * This is a Boundary Class; as it is used as a user interface;
+ * 
+ * Allows the update of room status (choice 1;
+ * status can be VACANT, OCCUPIED, RESERVED, UNDER_MAINTENANCE;
+ * however, the room availability status mainly updates using UpdateRoomStatus to
+ * UNDER_MAINTENANCE or VACANT),
+ * Update room menu (choice 2; id est adding, removing or updating the food object in the menu),
+ * update room features (choice 3; calls the FeatureManipulator object),
  * Check room availability (choice 4), write and submit a room report (choice 5);
  * do-while loop is used to ensure that the guest enters a valid choice (1 - 5)
- *
+ * 
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
  */
 
 public class RoomRelated {
