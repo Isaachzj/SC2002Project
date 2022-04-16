@@ -15,6 +15,8 @@ import guest.DisplayGuestInfo;
  * 
  * 
  * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
  */
 public class GuestRelated {
 	/** Contains switch statement that:

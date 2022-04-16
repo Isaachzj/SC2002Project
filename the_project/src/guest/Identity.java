@@ -1,6 +1,19 @@
 package guest;
 import enumeration.TypeOfID;
 
+/**
+ * Instantiates the guest identity from the id number and id type. 
+ * Includes Method Encapsulation
+ * All methods here are set to protected for better encapsulation.
+ * Methods returning guest's id type and id number is protected
+ * this ensures better encapsulation of information while ensuring
+ * that the methods can be accessed by the same package and subclasses
+ * 
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class Identity {
 	/**
 	 * this is the guest's id number (private attribute)
