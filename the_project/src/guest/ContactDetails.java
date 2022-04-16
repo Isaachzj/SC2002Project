@@ -1,5 +1,18 @@
 package guest;
-
+/**
+ * Instantiation of contact details object from the parameter;
+ * their mobile number, email address, 
+ * home address and country of origin. 
+ * Also the use of information encapsulation;
+ * Methods returning guest's email address, home address and country of origin are protected
+ * this ensures better encapsulation of information while ensuring
+ * that the methods can be accessed by the
+ * same package and subclasses
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class ContactDetails {
 	/**
 	 * #

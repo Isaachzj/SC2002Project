@@ -3,10 +3,10 @@ package room_rate;
 import room.*;
 
 /**
- * Follows the Single Responsibility Principle as it sole responsibility is to calculate the bill 
+ * Follows the Single Responsibility Principle
+ * as it sole responsibility is to calculate the bill 
  * for only the room and not the room service order;
  */
-
 public class RoomBillTabulator {
 	/**
 	 * # Constructor
