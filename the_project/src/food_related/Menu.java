@@ -2,6 +2,19 @@ package food_related;
 import java.util.ArrayList;
 import list_methods.*;
 
+/**
+ * Instantiation of Menu using Food items as parameter
+ * Creates a new ArrayList of Food (Menu) and add the 5 Food items
+ * to add 2 more types of food at a later stage. 
+ * Follows the Single Responsibility principle as sole responsibility to 
+ * add Food items into the ArrayList (Menu). 
+ * Also follows the Open-Closed principle since the software entities is 
+ * open for extension but closed for modifications.
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class Menu{
 	/**
 	 * list of food items in this Menu
@@ -19,8 +32,10 @@ public class Menu{
 	 * Instantiation of Menu using Food items as parameter
 	 * Creates a new ArrayList of Food (Menu) and add the 5 Food items
 	 * to add 2 more types of food at a later stage
-	 * Follows the Single Responsibility principle as sole responsibility to add Food items into the ArrayList (Menu)
-	 * Also follows the Open-Closed principle since the software entities is open for extension but closed for modifications
+	 * Follows the Single Responsibility principle as sole responsibility to 
+	 * add Food items into the ArrayList (Menu)
+	 * Also follows the Open-Closed principle since the software entities is 
+	 * open for extension but closed for modifications
 	 * @param f1 this is the first food for the Menu
 	 * @param f2 this is the second food for the Menu
 	 * @param f3 this is the third food for the Menu
