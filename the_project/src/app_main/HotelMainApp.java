@@ -29,8 +29,9 @@ public class HotelMainApp {
 		
 		/**
 		 * Before running the program, please amend the path (below) to the folder that contains the .txt files as necessary.
+		 * if absolute path does not work, enter the path starting from the project folder or src
 		 */
-		String path = "C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\";
+		String path = "src\\serialize_deserialize\\";
 		main_deserialize.deserialization(hotel, path);
 		
 		/**

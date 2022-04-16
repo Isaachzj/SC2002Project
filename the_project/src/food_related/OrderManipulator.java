@@ -44,7 +44,6 @@ public class OrderManipulator implements AddGivenObject{
 
 		System.out.println("Enter quantity:");
 		int quantity = sc.nextInt(); sc.nextLine();
-		sc.nextLine();
 		
 		/**
 		 * Ensure quantity is greater than 0
