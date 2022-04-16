@@ -1,5 +1,15 @@
 package guest;
-
+/**
+ * Displays guest information; name, nationality, gender,
+ * identification type and identification number
+ * Also displays Credit card details and customer details
+ * If parameter for Guest object is null; to return.
+ * Else, if Guest object found will display information accordingly
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class DisplayGuestInfo {
 	/**
 	 * Displays guest information; name, nationality, gender,

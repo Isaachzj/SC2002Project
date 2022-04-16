@@ -3,7 +3,16 @@ import list_methods.*;
 
 /**
  * Follows the Single Responsibility Principle as it has the 
- * sole responsibility of displaying features of a room;
+ * sole responsibility of displaying features of a room. 
+ * Instantiates this DisplayFeatures object using argument RoomFeatures object, and prints
+ * the details such as the core and additional features. 
+ * Exception Propagation here 
+ * (calling function handles both ClassException and ArrayException);	
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ *
  */
 public class DisplayFeatures implements Print{
 	/**

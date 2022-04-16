@@ -6,12 +6,13 @@ import room_features.RoomFeatures;
 import room_rate.RoomRate;
 
 /**
+ * Instatiation of DeluxeRoom object. 
  * DeluxeRoom as a subclass of Room class, Deluxe room as a type of room
  * with attributes specific to Deluxe rooms;
  * 
- * 
  * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
- *
+ * @version 7.0
+ * @since 2022-03-15
  */
 
 public class DeluxeRoom extends Room{
