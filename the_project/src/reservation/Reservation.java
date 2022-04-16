@@ -36,7 +36,8 @@ public class Reservation {
 		
 		/**
 		 * Instantiation of Reservation object
-		 * this includes details such as the room, check-in date-time, check-out date-time, number of weekday and weekend of stay, number of guest
+		 * this includes details such as the room, check-in date-time,
+		 * check-out date-time, number of weekday and weekend of stay, number of guest
 		 * @param room room this is the Room object of the reservation
 		 * @param checkInDateTime this is the check in date of the reservation.
 		 * The check in date will always be before the check out date.
@@ -44,7 +45,8 @@ public class Reservation {
 		 * The check out date will always be after the check in date.
 		 * @param numOfWeekday this is the number of weekdays for the stay
 		 * @param numOfWeekend this is the number of weekends for the stay
-		 * @param numOfGuest this is the number of guest that would be staying in the hotel for the reservation
+		 * @param numOfGuest this is the number of guest that would be staying
+		 * in the hotel for the reservation
 		 */
 		public Reservation(Room room, LocalDateTime checkInDateTime, LocalDateTime checkOutDateTime, long numOfWeekday, long numOfWeekend, int numOfGuest) {
 		this.room = room;
@@ -58,7 +60,8 @@ public class Reservation {
 	/**
 	 * getRoom() returning the Room object is public
 	 * @return this is the room with the details.
-	 * Details includes type of room, availability, feature, room number, occupancy and room rate
+	 * Details includes type of room, availability, feature,
+	 * room number, occupancy and room rate
 	 */
 	public Room getRoom() {return this.room;}
 	/**
@@ -102,19 +105,23 @@ public class Reservation {
 	public Guest getGuest() {return this.guestList.get(0);}	
 	
 	/**
-	 * setCheckInDateTime() sets the checkInDateTime attribute of the reservation object that called it
+	 * setCheckInDateTime() sets the checkInDateTime attribute of
+	 * the reservation object that called it
 	 */
 	public void setCheckInDateTime(LocalDateTime checkInDateTime) {this.checkInDateTime = checkInDateTime;}
 	/**
-	 * setCheckOutDateTime sets the checkOutDateTime attribute of the reservation object that called it
+	 * setCheckOutDateTime sets the checkOutDateTime attribute of
+	 * the reservation object that called it
 	 */
 	public void setCheckOutDateTime(LocalDateTime checkOutDateTime) {this.checkOutDateTime = checkOutDateTime;}
 	/**
-	 * setNumOfWeekday() sets the numOfWeekday attribute of the reservation object that called it
+	 * setNumOfWeekday() sets the numOfWeekday attribute of
+	 * the reservation object that called it
 	 */
 	public void setNumOfWeekday(long numOfWeekday) {this.numOfWeekday = numOfWeekday;}
 	/**
-	 * setNumOfWeekend() sets the numOfWeekend attribute of the reservation object that called it
+	 * setNumOfWeekend() sets the numOfWeekend attribute of
+	 * the reservation object that called it
 	 */
 	public void setNumOfWeekend(long numOfWeekend) {this.numOfWeekend = numOfWeekend;}
 	
@@ -141,7 +148,8 @@ public class Reservation {
 	}
 	
 	/**
-	 * calcGrandTotal() calculates and returns the finalized bill for the reservation object that called it. 
+	 * calcGrandTotal() calculates and returns the finalized bill for the
+	 * reservation object that called it. 
 	 */
 	public double calcGrandTotal() {
 		return GrandTotalTabulator.grandTotal(this);

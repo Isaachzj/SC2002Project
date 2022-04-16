@@ -52,7 +52,8 @@ public class DisplayFeatures implements Print{
 	
 	/**
 	 * Prints all core and additional features of this room;
-	 * Exception Propagation here (calling function handles both ClassException and ArrayException);	
+	 * Exception Propagation here
+	 * (calling function handles both ClassException and ArrayException);	
 	 */
 	public void printAll() {
 		if (rf.getNumFeatures()==5) {

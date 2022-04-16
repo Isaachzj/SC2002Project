@@ -9,7 +9,8 @@ public enum OrderStatus {
 	 */
 	
 	/**
-	 * PREPARING is used to indicate when the order for the Food object is under preparation or admist delivery;
+	 * PREPARING is used to indicate when the order for the Food object
+	 * is under preparation or admist delivery;
 	 */
 	PREPARING, 
 	

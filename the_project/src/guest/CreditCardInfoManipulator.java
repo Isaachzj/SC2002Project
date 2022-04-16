@@ -4,9 +4,12 @@ import java.util.Scanner;
 public class CreditCardInfoManipulator {
 	//CreditCardInfo CCinfo = new CreditCardInfo(CCNum, CCBank, ExpiryDate, BillName, BillAddress);
 	/**
-	 * Updates the credit card information of the guest; with the input of the guest's credit details (card number, bank, expiry datem billing name and billing address)
+	 * Updates the credit card information of the guest;
+	 * with the input of the guest's credit details
+	 * (card number, bank, expiry datem billing name and billing address)
 	 * If parameter for Guest object is null; the method would be returned.
-	 * Else, if Guest object found; its credit card information (CreditCardInfo Object) would be updated accordingly
+	 * Else, if Guest object found; its credit card information (CreditCardInfo Object)
+	 * would be updated accordingly
 	 * @param guest this is the guest that needs to update credit card information
 	 */
 	public static void updateCreditCardInfo(Guest guest) {
@@ -18,7 +21,7 @@ public class CreditCardInfoManipulator {
 			return;
 		}
 		/**
-		 * Updates CreditCardInfo Object
+		 * # Updates CreditCardInfo Object
 		 */
 			Scanner sc = new Scanner(System.in);
 			System.out.println("--------- Enter Credit Card details --------");

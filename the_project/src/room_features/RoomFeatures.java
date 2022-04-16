@@ -51,12 +51,19 @@ public class RoomFeatures {
 	 * # Constructor
 	 */
 	/**
-	 * Instantiates 
-	 * @param bedType
-	 * @param viewType
-	 * @param numOfBed
-	 * @param wifi
-	 * @param smokeOut
+	 * Instantiates the RoomFeatures object
+	 * This includes the bedType (enumerated as; SINGLE, QUEEN, KING), viewType
+	 * (enumerated as STANDARD, OCEAN, CITY), numOfBed(which is the number of
+	 * bed for that given Room object), wifi (indicated as true if wifi is present, and
+	 * false if no wifi for the given Room object), smokeOut (similarly, indicated as true if smoking
+	 * allowed in the rooom and false if smoking not allowed for that room)
+	 * @param bedType this is the type of bed for the instantiated RoomFeatures object
+	 * @param viewType this is the view type for the instantiated RoomFeatures object
+	 * @param numOfBed this is the number of bed for the instantiated RoomFeatures object
+	 * @param wifi this is if wifi is present for the instantiated RoomFeatures object
+	 * (indicated as true if wifi is present, and false if no wifi for the given Room object)
+	 * @param smokeOut this is if smoking is allowed for the instantiated RoomFeatures object
+	 * (similarly, indicated as true if smoking allowed in the rooom and false if smoking not allowed for that room)
 	 */
 	public RoomFeatures(TypeOfBed bedType, ViewType viewType, int numOfBed, boolean wifi, boolean smokeOut) {
 		this.featureList = new ArrayList<Feature>();

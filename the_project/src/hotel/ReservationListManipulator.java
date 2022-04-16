@@ -85,9 +85,11 @@ public class ReservationListManipulator implements AddGivenObject, RemoveGivenOb
 	
 	//To be called in checkout class (OVERLOADED)
 	/**
-	 * this method is the opposite of the above method; it returns the Reservation Object for the given ArrayList of reservation
+	 * this method is the opposite of the above method; it returns
+	 * the Reservation Object for the given ArrayList of reservation
 	 * Method Overloading is used in this case
-	 * @param reservationList this is the ArrayList of reservation for the Reservation object to be retrieved from
+	 * @param reservationList this is the ArrayList of reservation for
+	 * the Reservation object to be retrieved from
 	 * @return this is the Reservation object that is retrieved
 	 */
 	public Reservation getEntry(ArrayList<Reservation> reservationList) {

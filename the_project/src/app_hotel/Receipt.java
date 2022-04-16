@@ -16,8 +16,10 @@ public class Receipt{
 	 * Details includes room, room feature, reservation and guest information,
 	 * and grand total bill
 	 * @param reservation this is the reservation object of this/these guest(s) of this room;
-	 * @param discount discount given to this reservation, used in calculating grand total bill of this reservation;
-	 * @param actualCheckOut LocalDateTime object containing information about time of check-out of this/these guest(s);
+	 * @param discount discount given to this reservation,
+	 * used in calculating grand total bill of this reservation;
+	 * @param actualCheckOut LocalDateTime object containing information about
+	 * time of check-out of this/these guest(s);
 	 * 
 	 * 
 	 * @author Isaac, Yan kai, Davis, Wenlu, Tomoki

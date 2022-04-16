@@ -11,7 +11,8 @@ import list_methods.*;
 
 /**
  * This is a Boundary Class; as it is used as a user interface;
- * Allows the user to request for room service (which would be redirected to from GuestRelated boundary class
+ * Allows the user to request for room service
+ * (which would be redirected to from GuestRelated boundary class
  * upon the selection of choice '3')
  * 
  * 

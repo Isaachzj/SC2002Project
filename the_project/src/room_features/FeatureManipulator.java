@@ -24,10 +24,14 @@ public class FeatureManipulator implements AddStandard,RemoveStandard,Set, Reset
 	
 //============================================================================================================================================	
 	/**
-	 * Adds a new feature to this room by taking in input feature name and status/quantity from the user (hotel staff member);
+	 * Adds a new feature to this room by taking in input feature name
+	 * and status/quantity from the user (hotel staff member);
 	 * Searches for existing features which matches input;
-	 * If match is found, feature already exists in this room and error message asking if user wants to update feature quantity comes up;
-	 * If match is not found, feature does not exist in this room and new feature object is created and instantiated, and number of features increments by 1;
+	 * If match is found, feature already exists in this room
+	 * and error message asking if user wants to update feature quantity comes up;
+	 * If match is not found, feature does not exist in this room
+	 * and new feature object is created and instantiated,
+	 * and number of features increments by 1;
 	 */
 	
 	
@@ -61,7 +65,8 @@ public class FeatureManipulator implements AddStandard,RemoveStandard,Set, Reset
 	 * Removes existing feature that is not a core feature;
 	 * Searches for existing features which matches input feature_name;
 	 * If found and feature_name is a core feature, error message is displayed;
-	 * If found and feature_name is not a core feature, feature_name index is used to remove feature;
+	 * If found and feature_name is not a core feature,
+	 * feature_name index is used to remove feature;
 	 * If not found, error message is displayed;  
 	 */
 	
@@ -94,7 +99,8 @@ public class FeatureManipulator implements AddStandard,RemoveStandard,Set, Reset
 		}//end for
 		
 		/**
-		 * # Throw exception if no such feature exists (Catch outside function and continue to reiterate while loop)
+		 * # Throw exception if no such feature exists
+		 * (Catch outside function and continue to reiterate while loop)
 		 */
 		if (!found) throw new ArrayException("No such additional feature exists!!");
 		
@@ -162,7 +168,8 @@ public class FeatureManipulator implements AddStandard,RemoveStandard,Set, Reset
 	
 //============================================================================================================================================		
 	/**
-	 * Resets array list containing room features that are not core features to default (cleared);
+	 * Resets array list containing room features that
+	 * are not core features to default (cleared);
 	 * If array list is empty, error message is displayed;
 	 * If array list is not empty, array list is cleared;
 	 */

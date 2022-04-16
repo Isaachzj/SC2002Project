@@ -7,27 +7,38 @@ import java.util.*;
 public class CreateGuest {
 	/**
 	 * instantiation of the reserver (Guest object who made reservation)
-	 * @param reservationDetails holds the reserver's essential information ( id, credit card information, contact details, gender); 
+	 * @param reservationDetails holds the reserver's essential information
+	 * (esential information includes: id, credit card information, contact details, gender); 
 	 * needed for the instantiation
 	 * @return this is the guest details instantiated
 	 */
 	public static Guest createReserver(Reservation reservationDetails) {
 		Scanner sc = new Scanner(System.in);
 		
-		// Creating Identity Object
+		/**
+		 * # Creating Identity Object
+		 */
 		Identity id = CreateIdentity.createIdentity();
 		
-		// Creating CreditCardInfo Object
+		/**
+		 * # Creating CreditCardInfo Object
+		 */
 		CreditCardInfo CCinfo = CreateCreditCardInfo.createCCI();
 		
-		//Creating ContactDetails Object
+		/**
+		 * # Creating ContactDetails Object
+		 */
 		ContactDetails CDetails = CreateContactDetails.createContactDetails();
 		
-		//Gender Type
+		/**
+		 * # Gender Type
+		 */
 		TypeOfGender gender = CreateGender.createGender();
 				
 		
-		//Creating Guest Object
+		/**
+		 * # Creating Guest Object
+		 */
 		System.out.println("--------- Enter Name and Nationality --------");
 		System.out.print("Enter your Name: ");
 		String name = sc.nextLine();
@@ -54,16 +65,25 @@ public class CreateGuest {
 	 */
 	public static Guest createGuest(Reservation reservationDetails) {
 		Scanner sc = new Scanner(System.in);
-		// Creating Identity Object
+		
+		/**
+		 * # Creating Identity Object
+		 */
 		Identity id = CreateIdentity.createIdentity();
 		
-		//Creating ContactDetails Object
+		/**
+		 * # Creating ContactDetails Object
+		 */
 		ContactDetails CDetails = CreateContactDetails.createContactDetails();
 		
-		//Gender type
+		/**
+		 * # Gender type
+		 */
 		TypeOfGender gender = CreateGender.createGender();
 		
-		//Creating Guest Object
+		/**
+		 * # Creating Guest Object
+		 */
 		System.out.println("--------- Enter Name and Nationality --------");
 		System.out.print("Enter your Name: ");
 		String name = sc.nextLine();

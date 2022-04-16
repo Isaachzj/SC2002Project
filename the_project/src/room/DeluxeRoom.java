@@ -7,7 +7,8 @@ import room_rate.RoomRate;
 
 /**
 <<<<<<< Updated upstream
- * DeluxeRoom as a subclass of Room class, Deluxe room as a type of room with attributes specific to Deluxe rooms;
+ * DeluxeRoom as a subclass of Room class, Deluxe room as a type of room
+ * with attributes specific to Deluxe rooms;
 =======
  * 
  * 
@@ -23,12 +24,16 @@ public class DeluxeRoom extends Room{
 	/**
 	 * Instantiation of the DeluxeRoom object
 	 * this includes details such as the menu available to the room, room floor and room number
-	 * for the instantiation of the DeluxeRoom object, we have set the max occupancy to 3 (i.e. maximum of 3 guests that can stay in a give Deluxe Room)
+	 * for the instantiation of the DeluxeRoom object,
+	 * we have set the max occupancy to 3
+	 * (i.e. maximum of 3 guests that can stay in a give Deluxe Room)
 	 * 
 	 * @param menu	this is the Menu object containing Food available for the Deluxe room
 	 * Menu object containing food items available to this Deluxe room for room service;
-	 * @param floor	this is the room floor, which is required for the instantiation of the DeluxeRoom object
-	 * @param num this is the room number, which is required for the instantiation of the DeluxeRoom object
+	 * @param floor	this is the room floor, which is required for
+	 * the instantiation of the DeluxeRoom object
+	 * @param num this is the room number, which is required for
+	 * the instantiation of the DeluxeRoom object
 	 */
 	public DeluxeRoom(Menu menu, int floor, int num) {
 		/**

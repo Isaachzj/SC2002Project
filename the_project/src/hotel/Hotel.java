@@ -21,7 +21,8 @@ public class Hotel {
 	 * # RoomType
 	 * The menu of RoomType is as follows {(RoomType-Index): Single-0, Double-1, Deluxe-2, VIP-3}
 	 * Code also assumes that there are a total of 60 rooms in the Hotel object;
-	 * of the 60 rooms - 24 are Single Rooms, 24 are Double Rooms, 8 are Deluxe Rooms, and 4 are VIP Suite
+	 * of the 60 rooms - 24 are Single Rooms, 24 are Double Rooms,
+	 * 8 are Deluxe Rooms, and 4 are VIP Suite
 	 */
 	public Hotel() {
 //==============================Room Menus==============================
@@ -86,9 +87,11 @@ public class Hotel {
 	 * # Guest Related 
 	 */
 	/**
-	 * addGuests method allows the guest to be added into the Hotel class (and hence Room AvailStatus to be marked as OCCUPIED)
+	 * addGuests method allows the guest to be added into the Hotel class
+	 * (and hence Room AvailStatus to be marked as OCCUPIED)
 	 * An Exception would also be thrown upon an error
-	 * @param reservation hold the guests' essential information (id, credit card information, contact details, gender).
+	 * @param reservation hold the guests' essential information
+	 * (id, credit card information, contact details, gender).
 	 * this is needed for the guests to be added into the Hotel class
 	 * @throws ArrayException occurs upon an error and error message would be printed accordingly
 	 */
@@ -97,9 +100,11 @@ public class Hotel {
 		glm.addEntry(reservation);
 	}
 	/**
-	 * removeGuests method allows the guest to be removed from the Hotel class (and hence Room AvailStatus to be marked as VACANT).
+	 * removeGuests method allows the guest to be removed from the Hotel class
+	 * (and hence Room AvailStatus to be marked as VACANT).
 	 * An Exception would also be thrown upon an error
-	 * @param reservation hold the guests' essential information (id, credit card information, contact details, gender)
+	 * @param reservation hold the guests' essential information
+	 * (id, credit card information, contact details, gender)
 	 * this is needed for the guests to be removed from the Hotel class
 	 * @throws ArrayException occurs upon an error and error message would be printed accordingly
 	 */
@@ -108,7 +113,8 @@ public class Hotel {
 		glm.removeEntry(reservation);
 	}
 	/**
-	 * getGuest method allows the guest details to be retrieved from the Hotel class (and hence no changes to the Room AvailStatus).
+	 * getGuest method allows the guest details to be retrieved from the Hotel class
+	 * (and hence no changes to the Room AvailStatus).
 	 * An Exception would also be thrown upon an error
 	 * @return Guest with the details (id, credit card information, contact details, gender)
 	 */
@@ -117,8 +123,10 @@ public class Hotel {
 		return glm.getEntry();
 	}
 	/**
-	 * getGuestList method returns the Guest with its details stored in the array (id, credit card information, contact details, gender).
-	 * @return this is the array of Guest and their details (id, credit card information, contact details, gender)
+	 * getGuestList method returns the Guest with its details stored in the array
+	 * (id, credit card information, contact details, gender).
+	 * @return this is the array of Guest and their details
+	 * (id, credit card information, contact details, gender)
 	 */
 	protected ArrayList<Guest> getGuestList() {return this.guestList;}
 	
@@ -128,7 +136,8 @@ public class Hotel {
 	 * # Reservation Related 
 	 */
 	/**
-	 * addReservation method allows the reserver to be added into the Hotel class (and hence Room AvailStatus to be marked as RESERVED)
+	 * addReservation method allows the reserver to be added
+	 * into the Hotel class (and hence Room AvailStatus to be marked as RESERVED)
 	 * An Exception would also be thrown upon an error
 	 * @param reservation is needed for the reservation to be added to the Hotel class
 	 * @throws ArrayException occurs upon an error and error message would be printed accordingly
@@ -138,7 +147,8 @@ public class Hotel {
 		rlm.addEntry(reservation);
 	}
 	/**
-	 * removeReservation method allows the reserver to be removed from the Hotel class (and hence Room AvailStatus to be marked as VACANT).
+	 * removeReservation method allows the reserver to be removed from the Hotel class
+	 * (and hence Room AvailStatus to be marked as VACANT).
 	 * An Exception would also be thrown upon an error
 	 * @param reservation is needed for the reservation to be removed from the Hotel class
 	 * @throws ArrayException occurs upon an error and error message would be printed accordingly
@@ -148,9 +158,11 @@ public class Hotel {
 		rlm.removeEntry(reservation);
 	}
 	/**
-	 * getReservation method allows the reservation to be retrieved from the Hotel class (and hence no changes to the Room AvailStatus).
+	 * getReservation method allows the reservation to be retrieved from the Hotel class
+	 * (and hence no changes to the Room AvailStatus).
 	 * An Exception would also be thrown upon an error
-	 * @return reservation hold the reserver's essential information (id, credit card information, contact details, gender)
+	 * @return reservation hold the reserver's essential information
+	 * (id, credit card information, contact details, gender)
 	 * this is needed for the reserver details to be retrieved from the Hotel class
 	 */
 	public Reservation getReservation() {
@@ -158,21 +170,27 @@ public class Hotel {
 		return rlm.getEntry();
 	}
 	/**
-	 * getEarliestReservation method allows the earliest reserver details to be retrieved from the Hotel class (and hence no changes to the Room AvailStatus).
-	 * The earliest reservation means the closest reservation in which reserver has to check in by from the given time
-	 * Once the reservation check in has lapsed and reserver has yet to book in; the reservation would be invalid (Room AvailStatus to be marked as VACANT).
+	 * getEarliestReservation method allows the earliest reserver details to be retrieved
+	 * from the Hotel class (and hence no changes to the Room AvailStatus).
+	 * The earliest reservation means the closest reservation in which reserver has
+	 * to check in by from the given time
+	 * Once the reservation check in has lapsed and reserver has yet to book in;
+	 * the reservation would be invalid (Room AvailStatus to be marked as VACANT).
 	 * An Exception would also be thrown upon an error
-	 * @param reservationList this is the array which contains the details of the reserver (id, credit card information, contact details, gender)
+	 * @param reservationList this is the array which contains the details of the reserver
+	 * (id, credit card information, contact details, gender)
 	 * this is required to find the earliest reservation by array traversal
-	 * @return returns the reserver and its details that has the earliest reservation by array traversal
+	 * @return returns the reserver and its details that has the earliest reservation
+	 * by array traversal
 	 */
 	public Reservation getEarliestReservation(ArrayList<Reservation> reservationList) {
 		ReservationListManipulator rlm = new ReservationListManipulator(this);
 		return rlm.getEntry(reservationList);
 	}
 	/**
-	 * getRoomReservationList method returns a list of all reservations for that given room in the Hotel class 
-	 * this 
+	 * getRoomReservationList method returns a list of all reservations for
+	 * that given room in the Hotel class 
+	 * 
 	 * @param room this is the room for which the method retrieves the room reservation list
 	 * this is required to find room reservation list for the room stated in the parameter
 	 * @return this is room reservation list
@@ -201,7 +219,8 @@ public class Hotel {
 	 * # Room Related
 	 */
 	/**
-	 * getVacantRoom returns the first Room that is vacant (i.e. has an AvailStatus of VACANT) for the specified roomType
+	 * getVacantRoom returns the first Room that is vacant
+	 * (i.e. has an AvailStatus of VACANT) for the specified roomType
 	 * when the Room is returned (i.e. VACANT room), it can be reserved
 	 * @param roomType this is the type of room under which to check the first Room that is vacant
 	 * this is required so as to specify which type of room is vacancy being checked for
@@ -221,7 +240,8 @@ public class Hotel {
 		return rlm.getEntry();	
 	}
 	/**
-	 * this returns the array of Room object and its details under the given roomType (SINGLE, DOUBLE, DELUXE, VIPSUITE)
+	 * this returns the array of Room object and its details under
+	 * the given roomType (SINGLE, DOUBLE, DELUXE, VIPSUITE)
 	 * @param roomType this is the room type of the array of room object to be retrieved (SINGLE, DOUBLE, DELUXE, VIPSUITE)
 	 * @return this is the array of room object retrieved
 	 */
@@ -242,7 +262,8 @@ public class Hotel {
 	
 	/**
 	 * this method is set to protected for better encapsulation.
-	 * this ensures better encapsulation of information while ensuring that the methods can be accessed by the same package and subclasses
+	 * this ensures better encapsulation of information while ensuring
+	 * that the methods can be accessed by the same package and subclasses
 	 * @return this is the retrieved roomList
 	 */
 	protected ArrayList<Room> getRoomList() {return this.roomList;}	

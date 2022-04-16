@@ -28,7 +28,8 @@ public class HotelMainApp {
 		Hotel hotel = new Hotel();
 		
 		/**
-		 * Before running the program, please amend the path (below) to the folder that contains the .txt files as necessary.
+		 * Before running the program, please amend the path (below)
+		 * to the folder that contains the .txt files as necessary.
 		 * if absolute path does not work, enter the path starting from the project folder or src
 		 */
 		String path = "src\\serialize_deserialize\\";
@@ -64,7 +65,8 @@ public class HotelMainApp {
 					}
 					case 2: {
 						/**
-						 * functions within the GuestRelated class allow for manipulating guest personal and room information 
+						 * functions within the GuestRelated class allow for
+						 * manipulating guest personal and room information 
 						 * and retrieving guest information;
 						 * the functions include updating guest credit card information,
 						 * retrieve guest information and access room service;
@@ -74,7 +76,8 @@ public class HotelMainApp {
 					}
 					case 3: {
 						/**
-						 * functions within the RoomRelated class allow for manipulating room availability, 
+						 * functions within the RoomRelated class allow for
+						 * manipulating room availability, 
 						 * menu and submitting room reports;
 						 * the functions include allowing for updating room status,
 						 * update room menu, update room features, check room availability, 

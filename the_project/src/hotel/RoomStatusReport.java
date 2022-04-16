@@ -17,7 +17,8 @@ private Hotel hotel;
 	/**
 	 * printOccupancyReport displays a summary of the occupancy details of the rooms
 	 * method holds the list of vacant rooms for each Room Type
-	 * method also counts the number of room added to each array element and total number of each type of room available
+	 * method also counts the number of room added to each array element
+	 * and total number of each type of room available
 	 */
 	public void printOccupancyReport() {
 		int enum_index=0;
@@ -39,7 +40,8 @@ private Hotel hotel;
 		
 		/**
 		 * # Checking every room individually regardless of their Room Type (#Inheritance)
-		 * # Besides, this function works regardless of any changes to room types (#Open-Closed Principle - CLosed for Modification)
+		 * # Besides, this function works regardless of any changes to room types
+		 * (#Open-Closed Principle - CLosed for Modification)
 		 */
 		for (int i=0; i<roomList.size(); i++) {
 			Room room = roomList.get(i);
@@ -110,7 +112,8 @@ private Hotel hotel;
 		
 		/**
 		 * # Checking every room individually regardless of their Room Type (#Inheritance)
-		 * # Besides, this function works regardless of any changes to room types (#Open-Closed Principle - CLosed for Modification)
+		 * # Besides, this function works regardless of any changes to room types
+		 * (#Open-Closed Principle - CLosed for Modification)
 		 */
 		for (int i=0; i<roomList.size(); i++) {
 			Room room = roomList.get(i);

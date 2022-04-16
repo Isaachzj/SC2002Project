@@ -15,7 +15,8 @@ public class RoomListManipulator implements Get{
 		this.hotel = hotel;
 	}
 	/**
-	 * this methods retrieves the Room object and its details for the room number keyed into the system
+	 * this methods retrieves the Room object and its details
+	 * for the room number keyed into the system
 	 * room details includes the TypeOfRoom, AvailStatus, maxOccupancy and RoomRate
 	 */
 	public Room getEntry() {
@@ -33,10 +34,12 @@ public class RoomListManipulator implements Get{
 	
 	//OVERLOADED
 	/**
-	 * this method retrieves the first Room object and its details for the given roomType indicated, that is vacant (i.e. AvailStatus = VACANT)
+	 * this method retrieves the first Room object and its details for the
+	 * given roomType indicated, that is vacant (i.e. AvailStatus = VACANT)
 	 * Method overloading is used here
 	 * room details includes the TypeOfRoom, AvailStatus, maxOccupancy and RoomRate
-	 * @param roomType this is the roomType (SINGLE, DOUBLE, DELUXE, VIP SUITE) for retrieval of first Room object
+	 * @param roomType this is the roomType (SINGLE, DOUBLE, DELUXE, VIP SUITE)
+	 * for retrieval of first Room object
 	 * @return this is the first Room object for the indicated roomType that is VACANT
 	 */
 	public Room getEntry(TypeOfRoom roomType) {
@@ -54,7 +57,8 @@ public class RoomListManipulator implements Get{
 	/**
 	 * this method is only used in the deserialization process to obtain the correct room.
 	 * @param roomNum this is the requested roomNum of the room
-	 * @return this method returns the requested room object or null when no such room with given roomNum exists
+	 * @return this method returns the requested room object or null when
+	 * no such room with given roomNum exists
 	 */
 	public Room getEntry(String roomNum) {
 		for (int i=0; i<hotel.getRoomList().size(); i++) {
@@ -69,8 +73,10 @@ public class RoomListManipulator implements Get{
 	}
 	
 	/**
-	 * this method returns an array list containing all Room object for the roomType indicated in the parameter
-	 * @param roomType this is the roomType (SINGLE, DOUBLE, DELUXE, VIP SUITE) for retrieval of arraylist of Room object
+	 * this method returns an array list containing all Room object
+	 * for the roomType indicated in the parameter
+	 * @param roomType this is the roomType (SINGLE, DOUBLE, DELUXE, VIP SUITE)
+	 * for retrieval of arraylist of Room object
 	 * @return this is an arraylist of Room object 
 	 */
 	public ArrayList<Room> getSameTypeRooms(TypeOfRoom roomType){

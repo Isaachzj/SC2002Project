@@ -56,7 +56,8 @@ public class GuestListManipulator implements AddGivenObject, RemoveGivenObject {
 	/**
 	 * Retrieves Guest object using mobile number and name
 	 * Asks for guest name and mobile number and retrieves Guest object accordingly
-	 * @return the Guest object would be returned using the getEntry() method - if it is found in the guest list;
+	 * @return the Guest object would be returned using the getEntry() method;
+	 * if it is found in the guest list;
 	 * else, null would be returned if the Guest object is not found in the guest list
 	 */
 	public Guest getEntry() {

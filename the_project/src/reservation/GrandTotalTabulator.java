@@ -7,8 +7,10 @@ public class GrandTotalTabulator {
 	/**
 	 * grandTotal method calculates the total bill incurred under the Reservation object.
 	 * The total bill incurred includes the roomBill and roomServiceBill
-	 * roomBill consist of the bills incurred during the guest's stay; such as Food items ordered from the Menu
-	 * roomServiceBill consist of the bill incurred given the room booked and number of weekdays and weekends stayed
+	 * roomBill consist of the bills incurred during the guest's stay;
+	 * such as Food items ordered from the Menu
+	 * roomServiceBill consist of the bill incurred given the room booked and
+	 * number of weekdays and weekends stayed
 	 * @param reservation this is the Reservation object for the tabulation of the total bill incurred
 	 * @return this is the total bill incurred through the stay in the Hotel
 	 */

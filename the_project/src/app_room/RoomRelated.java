@@ -46,7 +46,8 @@ public class RoomRelated {
 			switch(choice) {
 			case(1):
 				/**
-				 * # Updates room availability status using a UpdateRoomStatus object to UNDER_MAINTENANCE or VACANT;
+				 * # Updates room availability status using a UpdateRoomStatus object
+				 * to UNDER_MAINTENANCE or VACANT;
 				 */
 				UpdateRoomStatus.updateRoomStatus(hotel);
 				break;

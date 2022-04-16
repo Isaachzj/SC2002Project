@@ -6,7 +6,8 @@ import room_features.RoomFeatures;
 import room_rate.RoomRate;
 
 /**
- * SingleRoom as a subclass of Room class, Single room as a type of room with attributes specific to Single rooms;
+ * SingleRoom as a subclass of Room class, Single room as
+ * a type of room with attributes specific to Single rooms;
  */
 
 public class SingleRoom extends Room{
@@ -21,8 +22,10 @@ public class SingleRoom extends Room{
 	 * 
 	 * @param menu	this is the Menu object containing Food available for the Single room
 	 * Menu object containing food items available to this Double room for room service;
-	 * @param floor	this is the room floor, which is required for the instantiation of the SingleRoom object
-	 * @param num this is the room number, which is required for the instantiation of the SingleRoom object
+	 * @param floor	this is the room floor, which is required
+	 * for the instantiation of the SingleRoom object
+	 * @param num this is the room number, which is required
+	 * for the instantiation of the SingleRoom object
 	 */
 	public SingleRoom(Menu menu, int floor, int num) {
 		/**

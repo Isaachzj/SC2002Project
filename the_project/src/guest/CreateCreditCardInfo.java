@@ -3,7 +3,8 @@ import java.util.Scanner;
 
 public class CreateCreditCardInfo {
 	/**
-	 * instantiation of guest credit card details; using their user input credit card number, bank, expiry date, name and billing address
+	 * instantiation of guest credit card details; using their user input
+	 * credit card number, bank, expiry date, name and billing address
 	 * once the credit card details of guest has been instantiated, it would be returned
 	 * @return this is the credit card details of the guest
 	 */

@@ -12,7 +12,8 @@ import list_methods.*;
 import reservation.*;
 /**
  * 
- * Follows the Liskov Substitution principle as this superclass is replaceable with all its subclasses;
+ * Follows the Liskov Substitution principle as this superclass
+ * is replaceable with all its subclasses;
  * and the programme would still has its functionality 
 >>>>>>> Stashed changes
  */
@@ -46,7 +47,8 @@ public abstract class Room
 	 */
 	protected RoomRate rate;
 	/**
-	 * this is the Menu object containing details of food items available to this room (protected attribute)
+	 * this is the Menu object containing details of food items
+	 * available to this room (protected attribute)
 	 */
 	protected Menu menu;
 	/**
@@ -65,18 +67,23 @@ public abstract class Room
 	 */
 	/**
 	 * Instantiation of the Room object
-	 * This includes details such as the menu type of bed, view type, number of bed, whether if there are wifi, whether if smoking is allowed,
+	 * This includes details such as the menu type of bed, view type,
+	 * number of bed, whether if there are wifi, whether if smoking is allowed,
 	 * the price of room for each weekday booked and the price of room for each weekend booked
 	 * Room's availability status is set as VACANT upon instantiation
-	 * a newly created RoomService object as this room's room service order, Feature object as this room's features,
-	 * Rate object as this room's charged rate and initializes these objects to null/zero by default;
+	 * a newly created RoomService object as this room's room service order,
+	 * Feature object as this room's features,
+	 * Rate object as this room's charged rate and initializes
+	 * these objects to null/zero by default;
 	 * Instantiates RoomFeatures object and RoomRate object;
-	 * Follows the Single Responsibility principle as sole responsibility to instantiate a Room object;
+	 * Follows the Single Responsibility principle as sole responsibility
+	 * to instantiate a Room object;
 	 * 
 	 * @param menu this contains the food items available to this room
 	 * @param this is the type of bed in this room.
 	 * The enumeration for the bedType are SINGLE, QUEEN and KING
-	 * @param this is the type of view that a Room object has, that the guest is able to view from his room
+	 * @param this is the type of view that a Room object has,
+	 * that the guest is able to view from his room
 	 * The enumeration for the viewType are STANDARD, OCEAN, CITY
 	 * @param this is the number of beds in this room, used to initialize RoomFeatures;
 	 * @param this is the availability of wifi in this room.
@@ -85,8 +92,10 @@ public abstract class Room
 	 * @param this is the ability to smoke in this room.
 	 * smokeOut; if indicated as 'true' means that smoking is allowed.
 	 * else if there is smoking is not allowed, it would be indicated as 'false'
-	 * @param weekDayPrice this is the bill incurred for the booking for each weekday under the instantiated room
-	 * @param weekEndPrice this is the bill incurred for the booking for each weekend under the instantiated room
+	 * @param weekDayPrice this is the bill incurred for the booking
+	 * for each weekday under the instantiated room
+	 * @param weekEndPrice this is the bill incurred for the booking
+	 * for each weekend under the instantiated room
 	 */
 	public Room(Menu menu, TypeOfBed bedType, ViewType viewType, int numOfBed, boolean wiFi, boolean smokeOut, double weekDayPrice, double weekEndPrice) {
 		/**
@@ -123,7 +132,8 @@ public abstract class Room
 	public AvailStatus getAvail() {return availability;}
 	
 	/**
-	 * gets RoomFeature object of this room containing features of this room (bedType, viewType, numOfBed, wifi, smokeOut);
+	 * gets RoomFeature object of this room containing features of this room
+	 * (bedType, viewType, numOfBed, wifi, smokeOut);
 	 * @return RoomFeature object of this room;
 	 */
 	public RoomFeatures getRoomFeatures() {return feature;}
@@ -151,7 +161,8 @@ public abstract class Room
 	public Menu getMenu() {return menu;}
 	/**
 	 * gets Reservation object of this room containing reservation details of this room;
-	 * @return if reservation has been made for this room, returns Reservation object that has reservation details of this room; if not, returns null;
+	 * @return if reservation has been made for this room,
+	 * returns Reservation object that has reservation details of this room; if not, returns null;
 	 */
 	public Reservation getReservation() {return reservation;}
 	
@@ -163,7 +174,8 @@ public abstract class Room
 		
 	/**
 	 * sets availability status of this room;
-	 * @param availability availability status of this room: VACANT, OCCUPIED, RESERVED, UNDER_MAINTENANCE;
+	 * @param availability availability status of this room:
+	 * VACANT, OCCUPIED, RESERVED, UNDER_MAINTENANCE;
 	 */
 	public void setAvail(AvailStatus availability) {this.availability = availability;}
 	/**
@@ -180,7 +192,8 @@ public abstract class Room
 	 * Resets this room upon check out by guest(s) previously staying in this room by 
 	 * resetting roomService object (essentially the array of orders and total bill of orders) 
 	 * and roomFeature object of this room;
-	 * Availability status of this room is set to VACANT if no more existing reservations after current
+	 * Availability status of this room is set to
+	 * VACANT if no more existing reservations after current
 	 * and set to RESERVED if there are still more reservations;
 	 * Used by Check out function; 
 	 * Follows the Single Responsibility principle as sole responsibility to reset this Room object;

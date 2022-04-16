@@ -10,7 +10,8 @@ import java.util.*;
  * 
  * printOccupancyReport (option 1) displays a summary of the occupancy details of the rooms - 
  * holds the list of vacant rooms for each Room Type
- * and counts the number of room added to each array element and total number of each type of room available
+ * and counts the number of room added to each array element and
+ * total number of each type of room available
  * printStatusReport (option 2) displays a summary of the status of rooms -
  * holds the list of rooms of each availability type
  * and counts the number of room added to each array element

@@ -26,7 +26,8 @@ public class StayRelated {
 	
 	/**
 	 * Allows user to access functions which are related to guests staying in a hotel room;
-	 * @param hotel Hotel object containing all room, guests, room service orders and reservations details;
+	 * @param hotel Hotel object containing all room, guests,
+	 * room service orders and reservations details;
 	 * @throws ArrayException 
 	 */
 	public static void stayRelated(Hotel hotel) throws ArrayException {
@@ -58,7 +59,8 @@ public class StayRelated {
 			case(2):
 				/**
 				 * # Checks in customers depending on prior reservation or walk-in, 
-				 * # availability of reserved room, adds guests to list of guests staying in reserved room,
+				 * # availability of reserved room, adds guests to
+				 * list of guests staying in reserved room,
 				 * # and removes reservations if guests are late;
 				 */
 				CheckIn.checkIn(hotel);

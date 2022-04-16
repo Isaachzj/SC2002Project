@@ -19,7 +19,8 @@ public class CreditCardInfo {
 	 * # Constructor
 	 */
 	/**
-	 * Instantiation of credit card information using the credit card number, bank, card expiry, billing address and billing name
+	 * Instantiation of credit card information using the
+	 * credit card number, bank, card expiry, billing address and billing name
 	 * @param CCN this is the guest's credit card number
 	 * @param CCB this is the guest's credit card bank
 	 * @param CCE this is the guest's credit card expiry
@@ -35,12 +36,15 @@ public class CreditCardInfo {
 	//get methods
 	/**
 	 * # get methods
-	 * Methods returning guest's credit card number, bank, expiry, address and billing name is protected
-	 * this ensures better encapsulation of information while ensuring that the methods can be accessed by the same package and subclasses
+	 * Methods returning guest's credit card number, bank,
+	 * expiry, address and billing name is protected
+	 * this ensures better encapsulation of information while ensuring
+	 * that the methods can be accessed by the same package and subclasses
 	 */
 	/**
 	 * All methods here are set to protected for better encapsulation.
-	 * Credit Card Info is only being retrieved and printed in the DisplayGuestInfo class within the same class.
+	 * Credit Card Info is only being retrieved and printed in the
+	 * DisplayGuestInfo class within the same class.
 	 * 
 	 * gets the guest's credit card number
 	 * @return this is the guest's credit card number

@@ -43,7 +43,8 @@ public class ContactDetails {
 	 * # get methods
 	 * We made it such that only methods returning guest's mobile number is public. 
 	 * Methods returning guest's email address, home address and country of origin are protected
-	 * this ensures better encapsulation of information while ensuring that the methods can be accessed by the
+	 * this ensures better encapsulation of information while ensuring
+	 * that the methods can be accessed by the
 	 * same package and subclasses
 	 */
 	/**

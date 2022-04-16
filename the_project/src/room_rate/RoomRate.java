@@ -24,7 +24,9 @@ public class RoomRate {
 		this.weekend = weekend;
 	}
 	
-	//get methods
+	/**
+	 * # get methods
+	 */
 	/**
 	 * gets weekday price per day for this room;
 	 * @return weekday price per day for this room
@@ -36,13 +38,16 @@ public class RoomRate {
 	 */
 	protected double getWeekend() {return weekend;}
 	
-	/*set methods (NOT USED)
-	protected void setWeekday(double num) {this.weekday = num;}
-	protected void setWeekend(double num) {this.weekend = num;}
-	*/
+	/*
+	 * Set methods (NOT USED)
+	 * protected void setWeekday(double num) {this.weekday = num;}
+	 * protected void setWeekend(double num) {this.weekend = num;}
+	 */
 	
 	
-	//prints Room Rate info
+	/**
+	 * # prints Room Rate info
+	 */
 	/**
 	 * creates a DisplayRates object and prints room rate details;
 	 */

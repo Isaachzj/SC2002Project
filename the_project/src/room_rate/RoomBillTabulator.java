@@ -12,10 +12,14 @@ public class RoomBillTabulator {
 	 * # Constructor
 	 */
 	/**
-	 * calculates the room bill according to the number and type of days this room is reserved for;
-	 * @param room Room object;
-	 * @param numOfWeekdays number of weekdays guest has reserved this room for;
-	 * @param numOfWeekends number of weekend days guest has reserved this room for;
+	 * calculates the total room bill incurred according to the number and
+	 * type of days this room is reserved for;
+	 * @param room this is the Room object
+	 * this is required as the room rate varies depending on the different types of room object
+	 * @param numOfWeekdays number of weekdays guest has reserved this room for
+	 * this is required as it is used to calculate bills incurred over the total number of weekdays stay
+	 * @param numOfWeekends number of weekend days guest has reserved this room for
+	 * this is required as it is used to calculate bills incurred over the total number of weekends stay
 	 * @return total cost of reserving the room;
 	 */
 	public static double calculateRoomBill(Room room, long numOfWeekdays, long numOfWeekends) {
