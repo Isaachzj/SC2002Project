@@ -1,12 +1,30 @@
 package food_related;
 import list_methods.Print;
-
+/**
+ * Displays Room service details from RoomService object
+ * The DisplayRoomService class follows the Single Responsibility principle,
+ * as has a sole responsibility of displaying the Room Service 
+ * Additionally; it follows the Open-Closed principle as changes in the Display
+ * does not require a change in source code of modules
+ * 
+ * Overrides the printArray() method in Print
+ * Prints out the details of orders and the total bill for room service
+ * will also display the total bill for the room service
+ * If no roomservice taken, i.e. roomservice array is empty - prints error message.
+ * Else, if roomservice taken, prints out the details and total bill
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class DisplayRoomService implements Print {
 	private RoomService rs;
 	/**
 	 * # Displays Room service details from RoomService object
-	 * The DisplayRoomService class follows the Single Responsibility principle, as has a sole responsibility of displaying the Room Service 
-	 * Additionally; it follows the Open-Closed principle as changes in the Display does not require a change in source code of modules
+	 * The DisplayRoomService class follows the Single Responsibility principle,
+	 * as has a sole responsibility of displaying the Room Service 
+	 * Additionally; it follows the Open-Closed principle as changes in the Display
+	 * does not require a change in source code of modules
 	 * @param    rs this is the Room service of the guests
 	*/
 	public DisplayRoomService(RoomService rs) {
