@@ -2,7 +2,25 @@ package guest;
 
 import enumeration.TypeOfGender;
 import reservation.*;
-
+/**
+ * Instantiation of guest details using guest name,
+ * nationality, gender, identity, credit card details, contact details and reservation details. 
+ * 
+ * Method Encapsulation;
+ * We made it such that only methods returning guest's name,
+ * contact details and reservation details are public. 
+ * Methods returning guest's mobile number, email address,
+ * home address and country of origin are protected
+ * this ensures better encapsulation of information while
+ * ensuring that the methods can be accessed by the same package and subclasses. 
+ * Additionally, we made it such that only methods returning guest's name,
+ * contact details and reservation details are public. 
+ * This ensures better encapsulation of information that are more private.
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class Guest {
 	/**
 	 * this is the guest name (private attribute)
