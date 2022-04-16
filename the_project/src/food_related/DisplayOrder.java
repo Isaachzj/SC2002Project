@@ -4,7 +4,21 @@ import list_methods.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-
+/**
+ * Displays details of orders from order object
+ * Instantiates a DisplayOrder object and adds this menu into this DisplayOrder 
+ * The DisplayOrder class follows the Single Responsibility principle,
+ * as has a sole responsibility of displaying the Order 
+ * 
+ * Overrides the printArray() method in Print
+ * If no orders taken, i.e. order array is empty - prints error message.
+ * Else, if orders available, prints out the details of the order
+ * (name, price and quantity of food items ordered)
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class DisplayOrder implements Print {
 	private Order order;
 	/**
@@ -12,7 +26,6 @@ public class DisplayOrder implements Print {
 	 */
 	/**
 	 * Instantiates a DisplayOrder object and adds this menu into this DisplayOrder 
-	 * The DisplayOrder class follows the Single Responsibility principle, as has a sole responsibility of displaying the Order 
 	 * @param	order this is the order of the customer
 	 */ 
 	public DisplayOrder(Order order) {
@@ -22,7 +35,8 @@ public class DisplayOrder implements Print {
 	/**
 	 * Overrides the printArray() method in Print
 	 * If no orders taken, i.e. order array is empty - prints error message.
-	 * Else, if orders available, prints out the details of the order (name, price and quantity of food items ordered)
+	 * Else, if orders available, prints out the details of the order
+	 *  (name, price and quantity of food items ordered)
 	 */ 
 	public void printArray() {
 		/**
