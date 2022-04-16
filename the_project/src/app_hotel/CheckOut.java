@@ -4,6 +4,8 @@ import hotel.*;
 import reservation.*;
 import list_methods.*;
 import days_date_time.*;
+import enumeration.AvailStatus;
+
 import java.util.*;
 import java.time.*;
 /**
@@ -19,10 +21,20 @@ public class CheckOut {
 	
 	public static void checkOut(Hotel hotel) throws ArrayException {
 		Scanner sc = new Scanner(System.in);
-
+		/**
+		 * This retrieves the reservation from the hotel's reservation list
+		 * If reservation does not exist, the function will exit.
+		 */
 		Reservation reservation = hotel.getReservation();
 		if (reservation==null) {
 			System.out.println("Reservation not found! Reserver does not exist! (GHOSTTTTT)");
+			return;
+		}
+		/**
+		 * This ensures that the guest(s) who made the reservation are already checked-in and staying in the hotel.
+		 */
+		if (reservation.getRoom().getAvail() != AvailStatus.OCCUPIED){
+			System.out.println("Guest not even checked in, who you wanna check out?");
 			return;
 		}
 		System.out.println("Does the customer have any discount?");
