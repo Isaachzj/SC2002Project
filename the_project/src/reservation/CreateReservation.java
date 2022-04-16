@@ -12,7 +12,23 @@ import guest.*;
 import list_methods.ArrayException;
 import room.*;
 import enumeration.AvailStatus;
-
+/**
+ * Instantiation of the Reservation object
+ * this includes details such as the room, number of guest,
+ * check-in date-time and also check-out date-time
+ * When reset method in room called; will auto assign upcoming reservation
+ * to reservation attribute in room after guests checkout. 
+ * 
+ * Create Reservation Object, add guest to reservation guest list, creates 
+ * guests and add guests to reservation guest list, then passes Reservation 
+ * object to the room if the room was originally vacant (no existing reservations)
+ * 
+ * Returns Reservation object to add to reservation list in Hotel object
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class CreateReservation {
 	/**
 	 * Instantiation of the Reservation object

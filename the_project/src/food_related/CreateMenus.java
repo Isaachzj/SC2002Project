@@ -1,19 +1,36 @@
 package food_related;
 
 import java.util.ArrayList;
-
+/**
+ * Instantiation of Menu
+ * The Array list of all Menu of the Food from 'Single', 'Double', 'Deluxe' and 'VIP'
+ * Food item also has been instantiated into the Menu of Food respectively
+ * 
+ * We instantiated the Menu of Food for the respective types of rooms as different 
+ * room types may have different menus 
+ * (i.e. 'Single' may have only basic menu whereas 'VIP' may have menus with more options)
+ * 
+ * Follows the Interface Segregation principle; since Classes do not depend on interfaces 
+ * that they do not use
+ * 
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class CreateMenus {
 	/**
 	 * Instantiation of Menu
 	 * The Array list of all Menu of the Food from 'Single', 'Double', 'Deluxe' and 'VIP'
 	 * Food item also has been instantiated into the Menu of Food respectively
 	 * 
-	 * We instantiated the Menu of Food for the respective types of rooms as different room types may have different menus 
+	 * We instantiated the Menu of Food for the respective types of rooms as 
+	 * different room types may have different menus 
 	 * (i.e. 'Single' may have only basic menu whereas 'VIP' may have menus with more options)
 	 * 
-	 * Follows the Interface Segregation principle; since Classes do not depend on interfaces that they do not use
 	 * @return the Array list of all Menu of the Food
-	 * this includes the Array list of all Menu of the Food from 'Single', 'Double', 'Deluxe' and 'VIP'
+	 * this includes the Array list of all Menu of the Food 
+	 * from 'Single', 'Double', 'Deluxe' and 'VIP'
 	 */
 	public static ArrayList<Menu> createMenus(){
 		ArrayList<Menu> allMenus = new ArrayList<Menu>();
