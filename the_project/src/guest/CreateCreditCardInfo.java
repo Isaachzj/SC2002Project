@@ -1,6 +1,14 @@
 package guest;
 import java.util.Scanner;
-
+/**
+ * Instantiation of guest credit card details; using their user input
+ * credit card number, bank, expiry date, name and billing address
+ * once the credit card details of guest has been instantiated, it would be returned
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class CreateCreditCardInfo {
 	/**
 	 * instantiation of guest credit card details; using their user input
