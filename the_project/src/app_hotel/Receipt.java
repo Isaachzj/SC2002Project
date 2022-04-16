@@ -8,7 +8,17 @@ import food_related.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-
+/**
+ * This is a Boundary Class; as it is used as a user interface;
+ * Prints out reservation details of this room.
+ * Details includes room, room feature, reservation and guest information,
+ * and grand total bill
+ * 
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class Receipt{
 	/**
 	 * This is a Boundary Class; as it is used as a user interface;
@@ -20,9 +30,6 @@ public class Receipt{
 	 * used in calculating grand total bill of this reservation;
 	 * @param actualCheckOut LocalDateTime object containing information about
 	 * time of check-out of this/these guest(s);
-	 * 
-	 * 
-	 * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
 	 */
 	public static void info(Reservation reservation, double discount, LocalDateTime actualCheckOut) {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd   |   HH:mm");

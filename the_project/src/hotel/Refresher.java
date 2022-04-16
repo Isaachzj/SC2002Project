@@ -7,6 +7,16 @@ import java.time.*;
 
 import enumeration.AvailStatus;
 
+/**
+ * Updates availability status and room service order status 
+ * of reserved or occupied rooms automatically;
+ * @param hotel Hotel object containing information about all reservations, guests and rooms;
+ * 
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class Refresher {
 
 	/**
