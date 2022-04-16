@@ -1,8 +1,25 @@
 package days_date_time;
 import java.time.LocalDateTime;
 import java.util.Scanner;
-
+/**
+ * This is a Boundary Class; as it is used as a user interface;
+ * 
+ * Interface which allows the user to user input to record
+ * date and time of either guest check-in or check-out. 
+ * 
+ * While loop used to ensure that the input entered is correct
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class DateTime {
+	 /**
+	  * Accepts user input to record date and time of either guest check-in or check-out;
+	  * @param text user inputs either "check-in" or "check-out" 
+	  * to indicate type of datetime recorded;
+	  * @return one summarised line of check-in/check-out date and time
+	  */
 	public static LocalDateTime getLocalDateTime(String text) {
 		Scanner sc = new Scanner(System.in);
 		System.out.printf("=====Enter %s Date Details=====\n",text);
