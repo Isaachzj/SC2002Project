@@ -1,12 +1,24 @@
 package guest;
 import java.util.Scanner;
-
+/**
+ * This class allows the modification to the existing credit card information
+ * of the guests stored in the system. 
+ * credit details that can be updated included (card number, bank, expiry date 
+ * billing name and billing address)
+ * If parameter for Guest object is null; the method would be returned.
+ * Else, if Guest object found; its credit card information (CreditCardInfo Object)
+ * would be updated accordingly
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class CreditCardInfoManipulator {
 	//CreditCardInfo CCinfo = new CreditCardInfo(CCNum, CCBank, ExpiryDate, BillName, BillAddress);
 	/**
 	 * Updates the credit card information of the guest;
 	 * with the input of the guest's credit details
-	 * (card number, bank, expiry datem billing name and billing address)
+	 * (card number, bank, expiry date billing name and billing address)
 	 * If parameter for Guest object is null; the method would be returned.
 	 * Else, if Guest object found; its credit card information (CreditCardInfo Object)
 	 * would be updated accordingly
