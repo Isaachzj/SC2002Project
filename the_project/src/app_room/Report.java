@@ -19,7 +19,10 @@ import java.util.*;
  * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
  */
 public class Report {
-	
+	/**
+	 * this method allows the printing of occupancy report (option 1) or the printing of
+	 * status report (option 2)
+	 */
 	public static void info(Hotel hotel) {
 		Scanner sc = new Scanner(System.in);
 		RoomStatusReport rsr = new RoomStatusReport(hotel);
@@ -32,10 +35,18 @@ public class Report {
 			choice = sc.nextInt(); sc.nextLine();
 		}
 		while (true) {
+			/**
+		     * printOccupancyReport displays a summary
+		     * of the occupancy details of the rooms;
+		     */
 			if (choice==1) {
 				rsr.printOccupancyReport();
 				return;
 			}
+			/**
+		     * printStatusReport displays a summary
+		     * of the status of rooms;
+		     */
 			else if (choice==2){
 				rsr.printStatusReport();
 				return;
