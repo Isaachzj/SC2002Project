@@ -2,6 +2,21 @@ package food_related;
 import java.util.Scanner;
 import list_methods.*;
 
+/**
+ * Adds the ordered food into the order food list
+ * Exception would be thrown if ordered food is either null or not an instance of 
+ * Food class, with an Error
+ * displayed to inform user that the object passed to this function is not a food object
+ * Else, object passed to function is a food object, quantity of food to be included. 
+ * System also ensures that quantity of food entered is a positive number
+ * This Constructor follows the Single Responsibility principle
+ * Additionally, it follows the Open-Closed principle as its software entities 
+ * is open for extension but closed for modifications
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class OrderManipulator implements AddGivenObject{
 	private Order order;
 	
@@ -10,8 +25,8 @@ public class OrderManipulator implements AddGivenObject{
 	 */
 	/**
      * This Constructor follows the Single Responsibility principle
-	 * Additionally, it follows the Open-Closed principle as its software entities is open for extension but 
-	 * closed for modifications
+	 * Additionally, it follows the Open-Closed principle as its software entities 
+	 * is open for extension but closed for modifications
      * @return this is the order bill of the guest
 	*/
 	public OrderManipulator(Order order) {
