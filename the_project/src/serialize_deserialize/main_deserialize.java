@@ -12,12 +12,11 @@ import reservation.*;
 
 
 public class main_deserialize {
-	public static void deserialization(Hotel hotel)  {
+	public static void deserialization(Hotel hotel, String path)  {
 		/*
 		 * Please change the path if needed.
 		 * BUT DO NOT PUSH YOUR CHANGES INTO GITHUB!!!	
 		 */
-		
 		
 			try {
 				//Getting all room objects and adding them to arraylist
@@ -74,45 +73,45 @@ public class main_deserialize {
 				
 
 				//the number at the back corresponds to the reservation number
-				ArrayList<Identity> idList1 = (ArrayList<Identity>)TextIdentity.readIDs("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\id1.txt");
-				ArrayList<CreditCardInfo> cciList1 = (ArrayList<CreditCardInfo>)TextCreditCardInfo.readCCIs("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\cci1.txt");
-				ArrayList<ContactDetails> cdList1 = (ArrayList<ContactDetails>)TextContactDetails.readCDs("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\cd1.txt");
-				ArrayList<Guest> gList1 = (ArrayList<Guest>)TextGuest.readGuests("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\guests1.txt", idList1, cciList1, cdList1);
+				ArrayList<Identity> idList1 = (ArrayList<Identity>)TextIdentity.readIDs(path+"id1.txt");
+				ArrayList<CreditCardInfo> cciList1 = (ArrayList<CreditCardInfo>)TextCreditCardInfo.readCCIs(path+"cci1.txt");
+				ArrayList<ContactDetails> cdList1 = (ArrayList<ContactDetails>)TextContactDetails.readCDs(path+"cd1.txt");
+				ArrayList<Guest> gList1 = (ArrayList<Guest>)TextGuest.readGuests(path+"guests1.txt", idList1, cciList1, cdList1);
 				
-				ArrayList<Identity> idList2 = (ArrayList<Identity>)TextIdentity.readIDs("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\id2.txt");
-				ArrayList<CreditCardInfo> cciList2 = (ArrayList<CreditCardInfo>)TextCreditCardInfo.readCCIs("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\cci2.txt");
-				ArrayList<ContactDetails> cdList2 = (ArrayList<ContactDetails>)TextContactDetails.readCDs("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\cd2.txt");
-				ArrayList<Guest> gList2 = (ArrayList<Guest>)TextGuest.readGuests("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\guests2.txt", idList2, cciList2, cdList2);
+				ArrayList<Identity> idList2 = (ArrayList<Identity>)TextIdentity.readIDs(path+"id2.txt");
+				ArrayList<CreditCardInfo> cciList2 = (ArrayList<CreditCardInfo>)TextCreditCardInfo.readCCIs(path+"cci2.txt");
+				ArrayList<ContactDetails> cdList2 = (ArrayList<ContactDetails>)TextContactDetails.readCDs(path+"cd2.txt");
+				ArrayList<Guest> gList2 = (ArrayList<Guest>)TextGuest.readGuests(path+"guests2.txt", idList2, cciList2, cdList2);
 				
-				ArrayList<Identity> idList3 = (ArrayList<Identity>)TextIdentity.readIDs("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\id3.txt");
-				ArrayList<CreditCardInfo> cciList3 = (ArrayList<CreditCardInfo>)TextCreditCardInfo.readCCIs("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\cci3.txt");
-				ArrayList<ContactDetails> cdList3 = (ArrayList<ContactDetails>)TextContactDetails.readCDs("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\cd3.txt");
-				ArrayList<Guest> gList3 = (ArrayList<Guest>)TextGuest.readGuests("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\guests3.txt", idList3, cciList3, cdList3);
+				ArrayList<Identity> idList3 = (ArrayList<Identity>)TextIdentity.readIDs(path+"id3.txt");
+				ArrayList<CreditCardInfo> cciList3 = (ArrayList<CreditCardInfo>)TextCreditCardInfo.readCCIs(path+"cci3.txt");
+				ArrayList<ContactDetails> cdList3 = (ArrayList<ContactDetails>)TextContactDetails.readCDs(path+"cd3.txt");
+				ArrayList<Guest> gList3 = (ArrayList<Guest>)TextGuest.readGuests(path+"guests3.txt", idList3, cciList3, cdList3);
 				
-				ArrayList<Identity> idList4 = (ArrayList<Identity>)TextIdentity.readIDs("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\id4.txt");
-				ArrayList<CreditCardInfo> cciList4 = (ArrayList<CreditCardInfo>)TextCreditCardInfo.readCCIs("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\cci4.txt");
-				ArrayList<ContactDetails> cdList4 = (ArrayList<ContactDetails>)TextContactDetails.readCDs("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\cd4.txt");
-				ArrayList<Guest> gList4 = (ArrayList<Guest>)TextGuest.readGuests("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\guests4.txt", idList4, cciList4, cdList4);
+				ArrayList<Identity> idList4 = (ArrayList<Identity>)TextIdentity.readIDs(path+"id4.txt");
+				ArrayList<CreditCardInfo> cciList4 = (ArrayList<CreditCardInfo>)TextCreditCardInfo.readCCIs(path+"cci4.txt");
+				ArrayList<ContactDetails> cdList4 = (ArrayList<ContactDetails>)TextContactDetails.readCDs(path+"cd4.txt");
+				ArrayList<Guest> gList4 = (ArrayList<Guest>)TextGuest.readGuests(path+"guests4.txt", idList4, cciList4, cdList4);
 				
-				ArrayList<Identity> idList5 = (ArrayList<Identity>)TextIdentity.readIDs("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\id5.txt");
-				ArrayList<CreditCardInfo> cciList5 = (ArrayList<CreditCardInfo>)TextCreditCardInfo.readCCIs("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\cci5.txt");
-				ArrayList<ContactDetails> cdList5 = (ArrayList<ContactDetails>)TextContactDetails.readCDs("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\cd5.txt");
-				ArrayList<Guest> gList5 = (ArrayList<Guest>)TextGuest.readGuests("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\guests5.txt", idList5, cciList5, cdList5);
+				ArrayList<Identity> idList5 = (ArrayList<Identity>)TextIdentity.readIDs(path+"id5.txt");
+				ArrayList<CreditCardInfo> cciList5 = (ArrayList<CreditCardInfo>)TextCreditCardInfo.readCCIs(path+"cci5.txt");
+				ArrayList<ContactDetails> cdList5 = (ArrayList<ContactDetails>)TextContactDetails.readCDs(path+"cd5.txt");
+				ArrayList<Guest> gList5 = (ArrayList<Guest>)TextGuest.readGuests(path+"guests5.txt", idList5, cciList5, cdList5);
 				
-				ArrayList<Identity> idList6 = (ArrayList<Identity>)TextIdentity.readIDs("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\id6.txt");
-				ArrayList<CreditCardInfo> cciList6 = (ArrayList<CreditCardInfo>)TextCreditCardInfo.readCCIs("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\cci6.txt");
-				ArrayList<ContactDetails> cdList6 = (ArrayList<ContactDetails>)TextContactDetails.readCDs("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\cd6.txt");
-				ArrayList<Guest> gList6 = (ArrayList<Guest>)TextGuest.readGuests("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\guests6.txt", idList6, cciList6, cdList6);
+				ArrayList<Identity> idList6 = (ArrayList<Identity>)TextIdentity.readIDs(path+"id6.txt");
+				ArrayList<CreditCardInfo> cciList6 = (ArrayList<CreditCardInfo>)TextCreditCardInfo.readCCIs(path+"cci6.txt");
+				ArrayList<ContactDetails> cdList6 = (ArrayList<ContactDetails>)TextContactDetails.readCDs(path+"cd6.txt");
+				ArrayList<Guest> gList6 = (ArrayList<Guest>)TextGuest.readGuests(path+"guests6.txt", idList6, cciList6, cdList6);
 				
-				ArrayList<Identity> idList7 = (ArrayList<Identity>)TextIdentity.readIDs("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\id7.txt");
-				ArrayList<CreditCardInfo> cciList7 = (ArrayList<CreditCardInfo>)TextCreditCardInfo.readCCIs("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\cci7.txt");
-				ArrayList<ContactDetails> cdList7 = (ArrayList<ContactDetails>)TextContactDetails.readCDs("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\cd7.txt");
-				ArrayList<Guest> gList7 = (ArrayList<Guest>)TextGuest.readGuests("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\guests7.txt", idList7, cciList7, cdList7);
+				ArrayList<Identity> idList7 = (ArrayList<Identity>)TextIdentity.readIDs(path+"id7.txt");
+				ArrayList<CreditCardInfo> cciList7 = (ArrayList<CreditCardInfo>)TextCreditCardInfo.readCCIs(path+"cci7.txt");
+				ArrayList<ContactDetails> cdList7 = (ArrayList<ContactDetails>)TextContactDetails.readCDs(path+"cd7.txt");
+				ArrayList<Guest> gList7 = (ArrayList<Guest>)TextGuest.readGuests(path+"guests7.txt", idList7, cciList7, cdList7);
 				
-				ArrayList<Identity> idList8 = (ArrayList<Identity>)TextIdentity.readIDs("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\id8.txt");
-				ArrayList<CreditCardInfo> cciList8 = (ArrayList<CreditCardInfo>)TextCreditCardInfo.readCCIs("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\cci8.txt");
-				ArrayList<ContactDetails> cdList8 = (ArrayList<ContactDetails>)TextContactDetails.readCDs("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\cd8.txt");
-				ArrayList<Guest> gList8 = (ArrayList<Guest>)TextGuest.readGuests("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\guests8.txt", idList8, cciList8, cdList8);
+				ArrayList<Identity> idList8 = (ArrayList<Identity>)TextIdentity.readIDs(path+"id8.txt");
+				ArrayList<CreditCardInfo> cciList8 = (ArrayList<CreditCardInfo>)TextCreditCardInfo.readCCIs(path+"cci8.txt");
+				ArrayList<ContactDetails> cdList8 = (ArrayList<ContactDetails>)TextContactDetails.readCDs(path+"cd8.txt");
+				ArrayList<Guest> gList8 = (ArrayList<Guest>)TextGuest.readGuests(path+"guests8.txt", idList8, cciList8, cdList8);
 				
 				
 				
@@ -127,7 +126,7 @@ public class main_deserialize {
 				guestListy.add(gList7);
 				guestListy.add(gList8);
 				
-				ArrayList<Reservation> reservationList = TextReservation.readReservations("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\reservations.txt", roomListy, guestListy);
+				ArrayList<Reservation> reservationList = TextReservation.readReservations(path+"reservations.txt", roomListy, guestListy);
 				
 				System.out.println("==================================================DESERIALIZATION==================================================");
 

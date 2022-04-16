@@ -22,9 +22,10 @@ public class HotelMainApp {
 		Hotel hotel = new Hotel();
 		
 		/**
-		 * Before running the program, please go to main_deserialize class in serialize_deserialize package to amend the file directory paths as necessary.
+		 * Before running the program, please amend the path below to the folder that contains the .txt files as necessary.
 		 */
-		main_deserialize.deserialization(hotel);
+		String path = "C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\";
+		main_deserialize.deserialization(hotel, path);
 		
 		/**
 		 * menu options displayed to allow for user to choose what set of functions to access;
