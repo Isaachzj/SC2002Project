@@ -27,17 +27,17 @@ public class TextReservation {
 	 * This class is used for the purposes of serialization and deserialization
 	 */
 
-    // READING
+	// READING
 	public static ArrayList<Reservation> readReservations(String filename, ArrayList<Room> room, ArrayList<ArrayList<Guest>> guestList) throws IOException {
 		// read String from text file
 		ArrayList stringArray = (ArrayList)read(filename);
 		ArrayList alr = new ArrayList() ;// to store Guests data
-
-        for (int i = 0 ; i < stringArray.size() ; i++) {
+	
+	    for (int i = 0 ; i < stringArray.size() ; i++) {
 				String st = (String)stringArray.get(i);
 				// get individual 'fields' of the string separated by SEPARATOR
 				StringTokenizer star = new StringTokenizer(st , SEPARATOR);	// pass in the string to the string tokenizer using delimiter ","
-
+	
 				
 				//tokens
 				DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd   |   HH:mm"); //create formatter
@@ -97,32 +97,25 @@ public class TextReservation {
 	    return data;
 	  }	
 	
-	
-	
-	
-	
 
-	
-	
-	
 	  // SAVING
 	public static void saveReservations(String reservationFileName, List al) throws IOException { //List is the list of guest objects (Hotel guest list)
-			List alw = new ArrayList() ;// to store Guest data
-			//String file1 = "C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\guests";
-			//String file2 = "C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\guests1";
-			//String[] stringray = {file1, file2};
-			
-	        for (int i = 0 ; i < al.size() ; i++) {
-	        		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd   |   HH:mm"); //create formatter
-	        		
-	        		Reservation reservation = (Reservation)al.get(i);
-					StringBuilder st =  new StringBuilder() ;
-					st.append(reservation.getNumOfGuest()); //int type don't need to trim
-					alw.add(st.toString()) ;
-					
-				}
-				write(reservationFileName,alw);
-		}
+		List alw = new ArrayList() ;// to store Guest data
+		//String file1 = "C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\guests";
+		//String file2 = "C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\guests1";
+		//String[] stringray = {file1, file2};
+		
+	    for (int i = 0 ; i < al.size() ; i++) {
+	    		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd   |   HH:mm"); //create formatter
+	    		
+	    		Reservation reservation = (Reservation)al.get(i);
+				StringBuilder st =  new StringBuilder() ;
+				st.append(reservation.getNumOfGuest()); //int type don't need to trim
+				alw.add(st.toString()) ;
+				
+			}
+			write(reservationFileName,alw);
+	}
 
 	  /** Write fixed content to the given file. */
 	  public static void write(String fileName, List data) throws IOException  {

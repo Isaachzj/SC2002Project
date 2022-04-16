@@ -14,17 +14,17 @@ public class TextContactDetails {
 	/**
 	 * This class is used for the purposes of serialization and deserialization
 	 */
-    // READING
+	// READING
 	public static ArrayList<ContactDetails> readCDs(String filename) throws IOException {
 		// read String from text file
 		ArrayList stringArray = (ArrayList)read(filename);
 		ArrayList alr = new ArrayList() ;// to store Guests data
-
-        for (int i = 0 ; i < stringArray.size() ; i++) {
+	
+	    for (int i = 0 ; i < stringArray.size() ; i++) {
 				String st = (String)stringArray.get(i);
 				// get individual 'fields' of the string separated by SEPARATOR
 				StringTokenizer star = new StringTokenizer(st , SEPARATOR);	// pass in the string to the string tokenizer using delimiter ","
-
+	
 				//tokens
 				String  MN = star.nextToken().trim();	
 				String  EA = star.nextToken().trim();	
@@ -38,7 +38,7 @@ public class TextContactDetails {
 			}
 			return alr ;
 	}
-
+	
 	  /** Read the contents of the given file. */
 	  public static List read(String fileName) throws IOException {
 		List data = new ArrayList() ;
@@ -53,14 +53,6 @@ public class TextContactDetails {
 	    }
 	    return data;
 	  }	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	  // SAVING
 	public static void saveCDs(String cdFilename, List al) throws IOException { //List is the list of guest objects (Hotel guest list)
@@ -81,7 +73,7 @@ public class TextContactDetails {
 				}
 				write(cdFilename,alw);
 		}
-
+	
 	  /** Write fixed content to the given file. */
 	  public static void write(String fileName, List data) throws IOException  {
 	    PrintWriter out = new PrintWriter(new FileWriter(fileName));

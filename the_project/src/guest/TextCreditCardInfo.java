@@ -14,17 +14,17 @@ public class TextCreditCardInfo {
 	/**
 	 * This class is used for the purposes of serialization and deserialization
 	 */
-    // READING
+	// READING
 	public static ArrayList<CreditCardInfo> readCCIs(String filename) throws IOException {
 		// read String from text file
 		ArrayList stringArray = (ArrayList)read(filename);
 		ArrayList alr = new ArrayList() ;// to store CCI data
-
-        for (int i = 0 ; i < stringArray.size() ; i++) {
+	
+	    for (int i = 0 ; i < stringArray.size() ; i++) {
 				String st = (String)stringArray.get(i);
 				// get individual 'fields' of the string separated by SEPARATOR
 				StringTokenizer star = new StringTokenizer(st , SEPARATOR);	// pass in the string to the string tokenizer using delimiter ","
-
+	
 				//tokens
 				String  CCN = star.nextToken().trim();	
 				String  CCB = star.nextToken().trim();	
@@ -37,7 +37,7 @@ public class TextCreditCardInfo {
 			}
 			return alr ;
 	}
-
+	
 	  /** Read the contents of the given file. */
 	  public static List read(String fileName) throws IOException {
 		List data = new ArrayList() ;
@@ -53,36 +53,28 @@ public class TextCreditCardInfo {
 	    return data;
 	  }	
 	
-	
-	
-	
-	
-	
-	
-	
-	
 	  // SAVING
 	public static void saveCCIs(String cciFileName, List al) throws IOException { //List is the list of guest objects (Hotel guest list)
-			List alw = new ArrayList() ;// to store CCI data
+		List alw = new ArrayList() ;// to store CCI data
 	
-	        for (int i = 0 ; i < al.size() ; i++) {
-	        		CreditCardInfo cci = ((Guest)al.get(i)).getCreditCardDetails();
-					StringBuilder st =  new StringBuilder() ;
-					
-					if (cci!=null) {
-						st.append(cci.getCreditCardNum().trim());	
-						st.append(SEPARATOR);
-						st.append(cci.getCreditCardBank().trim());
-						st.append(SEPARATOR);
-						st.append(cci.getCreditCardExpiry().trim()); 
-					}
-					
-					else { //For guests
-						st.append("nil");
-						st.append(SEPARATOR);
-						st.append("nil");
-						st.append(SEPARATOR);
-						st.append("nil");	
+	    for (int i = 0 ; i < al.size() ; i++) {
+	    		CreditCardInfo cci = ((Guest)al.get(i)).getCreditCardDetails();
+				StringBuilder st =  new StringBuilder() ;
+				
+				if (cci!=null) {
+					st.append(cci.getCreditCardNum().trim());	
+					st.append(SEPARATOR);
+					st.append(cci.getCreditCardBank().trim());
+					st.append(SEPARATOR);
+					st.append(cci.getCreditCardExpiry().trim()); 
+				}
+				
+				else { //For guests
+					st.append("nil");
+					st.append(SEPARATOR);
+					st.append("nil");
+					st.append(SEPARATOR);
+					st.append("nil");	
 					}
 			
 					alw.add(st.toString()) ;
@@ -90,17 +82,17 @@ public class TextCreditCardInfo {
 	        
 				write(cciFileName,alw);
 		}
-
+	
 	  /** Write fixed content to the given file. */
 	  public static void write(String fileName, List data) throws IOException  {
 	    PrintWriter out = new PrintWriter(new FileWriter(fileName));
 	
 	    try {
 	    	//System.out.println("hi");
-			for (int i =0; i < data.size() ; i++) {
-	      		out.println((String)data.get(i));
-	      		//System.out.println((String)data.get(i));
-	      		//System.out.println("hi2");
+		for (int i =0; i < data.size() ; i++) {
+	  		out.println((String)data.get(i));
+	  		//System.out.println((String)data.get(i));
+	  		//System.out.println("hi2");
 			}
 	    }
 	    finally {

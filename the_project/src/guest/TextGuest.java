@@ -18,17 +18,17 @@ public class TextGuest {
 	/**
 	 * This class is used for the purposes of serialization and deserialization
 	 */
-    // READING
+	// READING
 	public static ArrayList<Guest> readGuests(String filename, ArrayList<Identity> ID, ArrayList<CreditCardInfo> CCD, ArrayList<ContactDetails> CD) throws IOException {
 		// read String from text file
 		ArrayList stringArray = (ArrayList)read(filename);
 		ArrayList alr = new ArrayList() ;// to store Guests data
-
-        for (int i = 0 ; i < stringArray.size() ; i++) {
+	
+	    for (int i = 0 ; i < stringArray.size() ; i++) {
 				String st = (String)stringArray.get(i);
 				// get individual 'fields' of the string separated by SEPARATOR
 				StringTokenizer star = new StringTokenizer(st , SEPARATOR);	// pass in the string to the string tokenizer using delimiter ","
-
+	
 				//tokens
 				String  name = star.nextToken().trim();	
 				String  nationality = star.nextToken().trim();	
@@ -41,7 +41,7 @@ public class TextGuest {
 			}
 			return alr ;
 	}
-
+	
 	  /** Read the contents of the given file. */
 	  public static List read(String fileName) throws IOException {
 		List data = new ArrayList() ;
@@ -57,33 +57,25 @@ public class TextGuest {
 	    return data;
 	  }	
 	
-	
-	
-	
-	
-	
-	
-	
-	
 	  // SAVING
 	public static void saveGuests(String guestFilename, List al) throws IOException { //List is the list of guest objects (Hotel guest list)
-			List alw = new ArrayList() ;// to store Guest data
+		List alw = new ArrayList() ;// to store Guest data
 	
-	        for (int i = 0 ; i < al.size() ; i++) {
-					Guest guest = (Guest)al.get(i);
-					StringBuilder st =  new StringBuilder() ;
-					st.append(guest.getName().trim());
-					st.append(SEPARATOR);
-					st.append(guest.getNationality().trim());
-					st.append(SEPARATOR);
-					st.append(Integer.toString(guest.getGender().ordinal()).trim()); //convert enum index (int) to string then trim
-					
-					//save identity, creditCardInfo, ContactDetails too			
+	    for (int i = 0 ; i < al.size() ; i++) {
+				Guest guest = (Guest)al.get(i);
+				StringBuilder st =  new StringBuilder() ;
+				st.append(guest.getName().trim());
+				st.append(SEPARATOR);
+				st.append(guest.getNationality().trim());
+				st.append(SEPARATOR);
+				st.append(Integer.toString(guest.getGender().ordinal()).trim()); //convert enum index (int) to string then trim
+				
+				//save identity, creditCardInfo, ContactDetails too			
 					alw.add(st.toString()) ;
 				}
 				write(guestFilename,alw);
 		}
-
+	
 	  /** Write fixed content to the given file. */
 	  public static void write(String fileName, List data) throws IOException  {
 	    PrintWriter out = new PrintWriter(new FileWriter(fileName));
