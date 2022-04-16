@@ -2,7 +2,33 @@ package food_related;
 import list_methods.*;
 import java.util.Scanner;
 
-
+/**
+ * Instantiation of new food item details (food name, price and description) to 
+ * be added into the Menu
+ * Upon adding, checks if there are existing entries available for the new food item
+ * If food entry is found, will check if food wants to be updated instead
+ * getArray returns reference to ArrayList object
+ * 
+ * Allows existing food entry from the Menu to be removed
+ * Upon removal, check if the item number exist in the Menu
+ * If the item number requested for removal falls outside the Menu,
+ * i.e. it does not exist in the Menu, then exception is throw and error message 
+ * displaying that food entry does not exist
+ * 
+ * Modifications to existing food entries from the Menu
+ * Prior to the modification of food entries, choice given to either modify 
+ * the existing food price, description or both
+ * If the new price or new description added is the same as before,
+ * i.e. no changes to the existing food in the Menu, then Exception is thrown 
+ * and error message displaying that price/ description is the same.
+ * If none of the options chosen; message displaying for valid option to be chosen
+ * Exception would be thrown if there are any errors encountered along the way 
+ * (new price the same or new description the same)
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class MenuManipulator implements AddStandard,RemoveStandard,Set, Get {
 	private Menu menu; 
 	
@@ -23,7 +49,8 @@ public class MenuManipulator implements AddStandard,RemoveStandard,Set, Get {
 	 * # For adding new Menu Items
 	 */
 	/**
-	 * Instantiation of new food item details (food name, price and description) to be added into the Menu
+	 * Instantiation of new food item details (food name, price and description) to 
+	 * be added into the Menu
 	 * Upon adding, checks if there are existing entries available for the new food item
 	 * If food entry is found, will check if food wants to be updated instead
 	 * getArray returns reference to ArrayList object
@@ -72,7 +99,8 @@ public class MenuManipulator implements AddStandard,RemoveStandard,Set, Get {
 	 * Allows existing food entry from the Menu to be removed
 	 * Upon removal, check if the item number exist in the Menu
 	 * If the item number requested for removal falls outside the Menu,
-	 * i.e. it does not exist in the Menu, then exception is throw and error message displaying that food entry does not exist
+	 * i.e. it does not exist in the Menu, then exception is throw and error message 
+	 * displaying that food entry does not exist
 	*/
 	public void removeEntry() throws ArrayException{
 		
@@ -93,11 +121,14 @@ public class MenuManipulator implements AddStandard,RemoveStandard,Set, Get {
 	//Overridden method in the Set interface
 	/**
 	 * Modifications to existing food entries from the Menu
-	 * Prior to the modification of food entries, choice given to either modify the existing food price, description or both
+	 * Prior to the modification of food entries, choice given to either modify 
+	 * the existing food price, description or both
 	 * If the new price or new description added is the same as before,
-	 * i.e. no changes to the existing food in the Menu, then Exception is thrown and error message displaying that price/ description is the same.
+	 * i.e. no changes to the existing food in the Menu, then Exception is thrown 
+	 * and error message displaying that price/ description is the same.
 	 * If none of the options chosen; message displaying for valid option to be chosen
-	 * Exception would be thrown if there are any errors encountered along the way (new price the same or new description the same)
+	 * Exception would be thrown if there are any errors encountered along the way 
+	 * (new price the same or new description the same)
 	*/
 	public void set() throws ArrayException{
 		int choice = 0;
