@@ -5,6 +5,24 @@ import room.*;
 
 import java.util.*;
 
+/**
+ * printOccupancyReport displays a summary of the occupancy details of the rooms
+ * method holds the list of vacant rooms for each Room Type
+ * method also counts the number of room added to each array element
+ * and total number of each type of room available.
+ * 
+ * printStatusReport displays a summary of the status of rooms
+ * method holds the list of rooms of each availability type
+ * method also counts the number of room added to each array element
+ * Checking every room individually regardless of their Room Type (#Inheritance).
+ * 
+ * Besides, this function works regardless of any changes to room types
+ * (#Open-Closed Principle - CLosed for Modification)
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ *
+ */
 public class RoomStatusReport {
 /**
  * this is a Hotel object (private attribute)
