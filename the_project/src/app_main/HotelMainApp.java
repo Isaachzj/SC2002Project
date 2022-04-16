@@ -29,12 +29,13 @@ public class HotelMainApp {
 		Hotel hotel = new Hotel();
 		
 		/**
-		 * Before running the program, please amend the path (below) if needed
-		 * to the folder that contains the .txt files as necessary.
-		 * if absolute path does not work, enter the path starting from the project folder or src
+		 * Please run the program and see if you are able to deserialize the objects.
+		 * If you can't, please look at the path being printed out (Make sure it leads to the serialize_deserialize package)
+		 * If not, please amend 'remainder' as needed.
 		 */
-		String path = new File("").getAbsolutePath()+ "\\src\\serialize_deserialize\\";
-		System.out.println(path);
+		String remainder = "\\src\\serialize_deserialize\\";
+		String path = new File("").getAbsolutePath()+ remainder;
+		System.out.println("Current path: "+path);
 		main_deserialize.deserialization(hotel, path);
 		
 		/**
