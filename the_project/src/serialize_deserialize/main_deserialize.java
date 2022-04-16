@@ -24,13 +24,11 @@ import reservation.*;
  */
 public class main_deserialize {
 	public static void deserialization(Hotel hotel, String path)  {
-		/*
-		 * Please change the path if needed.
-		 * BUT DO NOT PUSH YOUR CHANGES INTO GITHUB!!!	
-		 */
 		
 			try {
-				//Getting all room objects and adding them to arraylist
+				/**
+				 * Getting all room objects and adding them to an array
+				 */
 				Room s1 = hotel.getSpecificRoom("0201");
 				Room s2 = hotel.getSpecificRoom("0202");
 				Room s3 = hotel.getSpecificRoom("0203");
@@ -43,7 +41,9 @@ public class main_deserialize {
 				
 				Room v1 = hotel.getSpecificRoom("0701");
 				
-				//You add the rooms to this array in sequential order of reserving them (index should match their reservation index
+				/**
+				 * Adding the rooms to this array in sequential order of reserving them (index should match their reservation index)
+				 */
 				ArrayList<Room> roomListy = new ArrayList<Room>();
 				roomListy.add(v1);
 				roomListy.add(s1);
@@ -55,7 +55,9 @@ public class main_deserialize {
 				roomListy.add(de2);				
 				
 				
-				//Getting all rooms to be set to UNDER_MAINTENANCE
+				/**
+				 * Getting all rooms to be set to UNDER_MAINTENANCE 
+				 */
 				Room s4 = hotel.getSpecificRoom("0501");
 				Room s5 = hotel.getSpecificRoom("0502");
 				
@@ -83,7 +85,9 @@ public class main_deserialize {
 				
 				
 
-				//the number at the back corresponds to the reservation number
+				/**
+				 * Creating a list of guests for each of the reservations
+				 */
 				ArrayList<Identity> idList1 = (ArrayList<Identity>)TextIdentity.readIDs(path+"id1.txt");
 				ArrayList<CreditCardInfo> cciList1 = (ArrayList<CreditCardInfo>)TextCreditCardInfo.readCCIs(path+"cci1.txt");
 				ArrayList<ContactDetails> cdList1 = (ArrayList<ContactDetails>)TextContactDetails.readCDs(path+"cd1.txt");
@@ -126,7 +130,9 @@ public class main_deserialize {
 				
 				
 				
-				//As you create more guest arrays corresponding to the reservation, you add on to this array.
+				/**
+				 * Creating an array of guest lists
+				 */
 				ArrayList<ArrayList<Guest>> guestListy = new ArrayList<ArrayList<Guest>>();
 				guestListy.add(gList1);
 				guestListy.add(gList2);
@@ -137,16 +143,23 @@ public class main_deserialize {
 				guestListy.add(gList7);
 				guestListy.add(gList8);
 				
+				/**
+				 * Creating an array of reservations
+				 */
 				ArrayList<Reservation> reservationList = TextReservation.readReservations(path+"reservations.txt", roomListy, guestListy);
 				
 				System.out.println("==================================================DESERIALIZATION==================================================");
 
-				//Assigning reservation and guest List to the hotel (Completing check in process)
+				/**
+				 * Assigning reservation and guest List to the hotel (Completing check in process)
+				 */
 				for (int i=0; i<reservationList.size(); i++) {
 					hotel.addReservation(reservationList.get(i)); //add reservation
 					System.out.println("Initializing " + reservationList.get(i).getGuest().getName() + " details");
 				
-					
+					/**
+					 * Adding the guest of the first 5 reservations as they are the ones who have already checked in
+					 */
 					if (i<5) { //only first 5 reservations have checked in
 						hotel.addGuests(reservationList.get(i)); //add guests in each reservation
 					}
