@@ -159,7 +159,6 @@ public class Hotel {
 	}
 	/**
 	 * getReservation method allows the reservation to be retrieved from the Hotel class
-	 * (and hence no changes to the Room AvailStatus).
 	 * An Exception would also be thrown upon an error
 	 * @return reservation hold the reserver's essential information
 	 * (id, credit card information, contact details, gender)
