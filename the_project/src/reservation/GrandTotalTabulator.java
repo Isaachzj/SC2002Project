@@ -2,7 +2,21 @@ package reservation;
 
 import room.*;
 import room_rate.*;
-
+/**
+ * Calculates the total bill incurred under the Reservation object. 
+ * The total bill incurred includes the roomBill and roomServiceBill. 
+ * 
+ * roomBill consist of the bills incurred during the guest's stay 
+ * such as Food items ordered from the Menu.
+ * 
+ * roomServiceBill consist of the bill incurred given the room booked and
+ * number of weekdays and weekends stayed
+ * 
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class GrandTotalTabulator {
 	/**
 	 * grandTotal method calculates the total bill incurred under the Reservation object.
