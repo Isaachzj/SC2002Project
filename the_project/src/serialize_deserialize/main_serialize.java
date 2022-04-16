@@ -39,7 +39,7 @@ public class main_serialize {
 			 */
 			Reservation single1 = MakeReservation.makeReservation(hotel, true); //same check-in time 
 			ArrayList<Guest> singleList1 = single1.getGuestList();
-						//singleList1
+			//singleList1
 			TextGuest.saveGuests("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\guests1.txt", singleList1);		
 			//each file correspond to guests of each reservation
 			//each index equal each guest
@@ -61,7 +61,7 @@ public class main_serialize {
 
 			Reservation double1 = MakeReservation.makeReservation(hotel, true);
 			ArrayList<Guest> doubleList1 = double1.getGuestList();
-						//doubleList1
+			//doubleList1
 			TextGuest.saveGuests("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\guests3.txt", doubleList1);		
 			//each file correspond to guests of each reservation
 			//each index equal each guest
@@ -72,7 +72,7 @@ public class main_serialize {
 
 			Reservation double2 =MakeReservation.makeReservation(hotel, true);
 			ArrayList<Guest> doubleList2 = double2.getGuestList();
-						//doubleList2
+			//doubleList2
 			TextGuest.saveGuests("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\guests4.txt", doubleList2);		
 			//each file correspond to guests of each reservation
 			//each index equal each guest
@@ -94,7 +94,7 @@ public class main_serialize {
 
 			Reservation deluxe2 = MakeReservation.makeReservation(hotel, true);
 			ArrayList<Guest> deluxeList2 = deluxe2.getGuestList();
-						//deluxeList2
+			//deluxeList2
 			TextGuest.saveGuests("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\guests6.txt", deluxeList2);		
 			//each file correspond to guests of each reservation
 			//each index equal each guest
@@ -116,7 +116,7 @@ public class main_serialize {
 
 			Reservation vip2 = MakeReservation.makeReservation(hotel, true); 
 			ArrayList<Guest> vipList2 = vip2.getGuestList();
-						//vipList2
+			//vipList2
 			TextGuest.saveGuests("C:\\Users\\sharo\\OneDrive - Nanyang Technological University\\Documents\\GitHub\\SC2002Project\\the_project\\src\\serialize_deserialize\\guests8.txt", vipList2);		
 			//each file correspond to guests of each reservation
 			//each index equal each guest
