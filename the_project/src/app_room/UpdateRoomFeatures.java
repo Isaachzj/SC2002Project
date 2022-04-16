@@ -23,7 +23,16 @@ import hotel.Hotel;
 import room.Room;
 import list_methods.*;
 import java.util.Scanner;
-
+/**
+ * Gives user 2 options for functions to access. 
+ * the functions include add feature (choice 1),
+ * remove feature (choice 2) and update feature (choice 3), or
+ * terminate this process (choice 4)
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class UpdateRoomFeatures  {
 	public static void updateRoomFeatures(Hotel hotel) throws ArrayException {
 		Scanner sc = new Scanner(System.in);
