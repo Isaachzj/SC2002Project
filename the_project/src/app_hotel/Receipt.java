@@ -11,8 +11,8 @@ import java.time.format.DateTimeFormatter;
 
 public class Receipt{
 	/**
-	 * Prints out information of reservation of this room, 
-	 * including room, room feature, reservation and guest information,
+	 * Prints out reservation details of this room.
+	 * Details includes room, room feature, reservation and guest information,
 	 * and grand total bill
 	 * @param reservation this is the reservation object of this/these guest(s) of this room;
 	 * @param discount discount given to this reservation, used in calculating grand total bill of this reservation;
