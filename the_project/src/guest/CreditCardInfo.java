@@ -1,5 +1,17 @@
 package guest;
-
+/**
+ * Instantiation of credit card information using the
+ * credit card number, bank, card expiry, billing address and billing name. 
+ * Method encapsulation is also used here;
+ * Methods returning guest's credit card number, bank,
+ * expiry, address and billing name is protected
+ * this ensures better encapsulation of information while ensuring
+ * that the methods can be accessed by the same package and subclasses
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class CreditCardInfo {
 	/**
 	 * this is the guest's credit card number (private attribute)

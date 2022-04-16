@@ -1,6 +1,13 @@
 package guest;
 import java.util.Scanner;
-
+/**
+ * Instantiation of guest contact details;
+ * using their user input mobile number, email address, home address and country of origin
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class CreateContactDetails {
 	/**
 	 * instantiation of guest contact details;

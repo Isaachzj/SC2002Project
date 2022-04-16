@@ -1,7 +1,15 @@
 package guest;
 import enumeration.TypeOfGender;
 import java.util.Scanner;
-
+/**
+ * We have made an enumeration of the guest's gender
+ * If user input is '1', guest's gender instantiated as 'MALE'; else, 'FEMALE'
+ * once the gender of guest has been instantiated, it would be returned
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class CreateGender {
 	/**
 	 * instantiation of guest's gender;
