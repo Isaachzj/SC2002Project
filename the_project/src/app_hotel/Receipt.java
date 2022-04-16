@@ -11,12 +11,16 @@ import java.time.format.DateTimeFormatter;
 
 public class Receipt{
 	/**
-	 * Prints out information of reservation of this room, 
-	 * including room, room feature, reservation and guest information,
+	 * This is a Boundary Class; as it is used as a user interface;
+	 * Prints out reservation details of this room.
+	 * Details includes room, room feature, reservation and guest information,
 	 * and grand total bill
 	 * @param reservation this is the reservation object of this/these guest(s) of this room;
 	 * @param discount discount given to this reservation, used in calculating grand total bill of this reservation;
 	 * @param actualCheckOut LocalDateTime object containing information about time of check-out of this/these guest(s);
+	 * 
+	 * 
+	 * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
 	 */
 	public static void info(Reservation reservation, double discount, LocalDateTime actualCheckOut) {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd   |   HH:mm");
@@ -34,7 +38,7 @@ public class Receipt{
 		
 		/**
 		 * Creates and initializes a new DisplayFeatures object;
-		 * printAl() in DisplayFeatures object is used to print room features information;
+		 * printAll() in DisplayFeatures object is used to print room features information;
 		 */
 		DisplayFeatures df = new DisplayFeatures(reservation.getRoom().getRoomFeatures());
 		df.printAll();
