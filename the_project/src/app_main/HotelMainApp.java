@@ -1,5 +1,6 @@
 package app_main;
 import java.util.Scanner;
+import java.io.File;
 
 import app_guest.GuestRelated;
 import app_hotel.StayRelated;
@@ -28,11 +29,12 @@ public class HotelMainApp {
 		Hotel hotel = new Hotel();
 		
 		/**
-		 * Before running the program, please amend the path (below)
+		 * Before running the program, please amend the path (below) if needed
 		 * to the folder that contains the .txt files as necessary.
 		 * if absolute path does not work, enter the path starting from the project folder or src
 		 */
-		String path = "src\\serialize_deserialize\\";
+		String path = new File("").getAbsolutePath()+ "\\src\\serialize_deserialize\\";
+		System.out.println(path);
 		main_deserialize.deserialization(hotel, path);
 		
 		/**
