@@ -8,6 +8,19 @@ import java.util.ArrayList;
 import java.time.*;
 import list_methods.*;
 
+/**
+ * Instantiation of Order object from array list of food items ordered and 
+ * quantity of food items ordered by guest
+ * 
+ * Information Encapsulation;
+ * Most of the methods are set to protected
+ * this ensures better encapsulation of information
+ * while ensuring that the methods can be accessed by the same package and subclasses
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class Order {
 	/**
 	 * list of food items in this order
@@ -48,7 +61,8 @@ public class Order {
 
 	
 	/**
-	 * Instantiation of Order object from array list of food items ordered and quantity of food items ordered by guest
+	 * Instantiation of Order object from array list of food items ordered and 
+	 * quantity of food items ordered by guest
 	 */ 
 	public Order() {
 		this.order= new ArrayList<Food>();
