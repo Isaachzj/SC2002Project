@@ -10,7 +10,8 @@ import list_methods.ArrayException;
 
 /**
  * This is a Boundary Class; as it is used as a user interface;
- * Interface which allows the user to access funcions related to guest's stay in the hotel
+ * Interface which allows the user to access funcions related to guest's
+ * booking and period of stay in the hotel.
  * Guests given an option to: make a reservation (option 1),
  * check-in (option 2) and check out(option 3).
  * 

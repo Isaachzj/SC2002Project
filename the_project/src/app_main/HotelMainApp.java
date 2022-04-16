@@ -10,9 +10,15 @@ import serialize_deserialize.main_deserialize;
 
 /**
  * This is a Boundary Class; as it is used as a user interface;
- * Allows the user to access all 
- * displays menu options that contains sets of functions that each serve a single responsibility;
- * user is able to access guest stay-related, guest related and room-related functions;
+ * 
+ * Allows the user to access menu options related to the guest's
+ * stay in the hotel as a whole.
+ * Guests given an option to: access stay related function (option 1;
+ * which redirects them to the StayRelated interface), check-in (option 2;
+ * which redirects them to the GuestRelated interface), and check out(option 3;
+ * which redirects them to the RoomRelated interface)
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
  */
 
 public class HotelMainApp {
@@ -92,7 +98,7 @@ public class HotelMainApp {
 			}
 			catch (ArrayException e) {System.out.println(e.getMessage()); continue;}
 			/**
-			 * Exception ee other than ArrayException occurs when user inputs an alphabet to terminate;
+			 * Exception ee occurs when user inputs an alphabet to terminate;
 			 */
 			catch (Exception ee) {
 				System.out.println("Process terminated\n"); 
