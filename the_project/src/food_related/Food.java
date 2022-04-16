@@ -1,5 +1,20 @@
 package food_related;
-
+/**
+ * Instantiation of Menu
+ * The Array list of all Menu of the Food from 'Single', 'Double', 'Deluxe' and 'VIP'
+ * Food item also has been instantiated into the Menu of Food respectively
+ * 
+ * Information encapsulation
+ * All methods returned here are protected
+ * this includes returning food name, description and price
+ * this ensures better encapsulation of information while ensuring that the 
+ * methods can be accessed by the same package and subclasses
+ * 
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class Food {
 	
 	/**
@@ -22,7 +37,9 @@ public class Food {
 	 */
 	private int prepDuration;
 
-	//Constructor
+	/**
+	 * # Constructor
+	 */
 	/**
 	 * Instantiation of Food object with input name, price and description
 	 * Follows the Single Dependency principle as sole responsibility is to create a Food object
@@ -42,7 +59,8 @@ public class Food {
 	 * get methods
 	 * All methods returned here are protected
 	 * this includes returning food name, description and price
-	 * this ensures better encapsulation of information while ensuring that the methods can be accessed by the same package and subclasses
+	 * this ensures better encapsulation of information while ensuring that the
+	 * methods can be accessed by the same package and subclasses
 	 */
 	/**
 	 * gets the food item's name
