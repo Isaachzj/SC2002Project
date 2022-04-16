@@ -4,7 +4,18 @@ import guest.*;
 import reservation.*;
 import list_methods.*;
 import java.util.*;
-
+/**
+ * Allows changes to be made to the Reservation object
+ * Adds the specified entry from the parameter into the Reservation, followed by 
+ * traversing array of guest in reservation and adding them to Hotel Guest List.
+ * Checkout function will pass all guest object stored in reservation to this to remove, and 
+ * retrieves Guest object using mobile number and name
+ * 
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class GuestListManipulator implements AddGivenObject, RemoveGivenObject {
 	/**
 	 * this is the Hotel object (private attribute)
