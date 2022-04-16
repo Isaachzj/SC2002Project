@@ -10,6 +10,19 @@ import food_related.CreateMenus;
 
 import java.util.ArrayList;
 
+/**
+ * Creates and display menu which allows the selection of RoomType
+ * # RoomType
+ * The menu of RoomType is as follows {(RoomType-Index): Single-0, Double-1, Deluxe-2, VIP-3}. 
+ * Code also assumes that there are a total of 60 rooms in the Hotel object;
+ * of the 60 rooms - 24 are Single Rooms, 24 are Double Rooms,
+ * 8 are Deluxe Rooms, and 4 are VIP Suite
+ * 
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class Hotel {
 
 	private ArrayList<Room> roomList;
