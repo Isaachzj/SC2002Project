@@ -8,6 +8,16 @@ import list_methods.ArrayException;
 import java.util.*;
 import app_hotel.MakeReservation;
 
+/**
+ * Serialization is a mechanism of converting the state of an object into a byte stream.
+ * In this case, we are using the serialization for the .txt file input into the byte stream, 
+ * so that user input would not have to be keyed in multiple time upon the exploration of our
+ * test cases.
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class main_serialize {
 	public static void main(String[] aArgs)  {
 		/*
