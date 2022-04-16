@@ -5,7 +5,16 @@ import room.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.time.LocalDateTime;
-
+/**
+ * Instantiation of Reservation object
+ * this includes details such as the room, check-in date-time,
+ * check-out date-time, number of weekday and weekend of stay, number of guest 
+ * 
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class Reservation {
 	Scanner sc = new Scanner(System.in);
 	protected Room room;
