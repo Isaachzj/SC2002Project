@@ -1,7 +1,17 @@
 package guest;
 import enumeration.TypeOfID;
 import java.util.Scanner;
-
+/**
+ * Instantiation of identification for the guest
+ * Given options of identification using driving license, NRIC or passport number
+ * Different types of identifications enumerated accordingly
+ * (Type: driving license, NRIC or passport number)
+ * 
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class CreateIdentity {
 	/**
 	 * Instantiation of identification for the guest
