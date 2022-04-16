@@ -17,6 +17,8 @@ import java.util.*;
  * and counts the number of room added to each array element
  * 
  * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
  */
 public class Report {
 	/**
