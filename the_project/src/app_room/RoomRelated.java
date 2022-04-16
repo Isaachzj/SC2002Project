@@ -14,7 +14,8 @@ import java.util.*;
  * UNDER_MAINTENANCE or VACANT),
  * Update room menu (choice 2; id est adding, removing or updating the food object in the menu),
  * update room features (choice 3; calls the FeatureManipulator object),
- * Check room availability (choice 4), write and submit a room report (choice 5);
+ * Check room availability (choice 4; will indicate if room does not exists, else gets the room details),
+ * or write and submit report (choice 5; report consist of either a Occupancy or Status report);
  * do-while loop is used to ensure that the guest enters a valid choice (1 - 5)
  * 
  * 
