@@ -1,5 +1,14 @@
 package room_rate;
 
+/**
+ * Initiates weekday price and weekend price for this room using passed in arguments;
+ * price set differently for weekend and weekday due to higher demand for bookings
+ * in weekend compared to weekday.
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class RoomRate {
 	
 	/**
