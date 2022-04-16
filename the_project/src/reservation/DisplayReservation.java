@@ -2,7 +2,15 @@ package reservation;
 import java.time.format.DateTimeFormatter;
 
 import guest.DisplayGuestInfo;
-
+/**
+ * Displays the the details of the Reservation object.
+ * This includes the room number, check-in/out date and time,
+ * number of guests and whose name the reservation was made under
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class DisplayReservation {
 	/**
 	 * info method prints out the details of the Reservation object.
