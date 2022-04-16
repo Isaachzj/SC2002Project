@@ -6,7 +6,15 @@ import reservation.*;
 import list_methods.*;
 import java.util.*;
 import java.time.LocalDateTime;
-
+/**
+ * Allows changes to be made to the Reservation object by the use of addEntry method
+ * and removeEntry method, as well as getEntry method.
+ * Includes method overloading
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class ReservationListManipulator implements AddGivenObject, RemoveGivenObject, Get {
 	private Hotel hotel;
 	
