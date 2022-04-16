@@ -17,6 +17,9 @@ public class Receipt{
 	 * @param reservation this is the reservation object of this/these guest(s) of this room;
 	 * @param discount discount given to this reservation, used in calculating grand total bill of this reservation;
 	 * @param actualCheckOut LocalDateTime object containing information about time of check-out of this/these guest(s);
+	 * 
+	 * 
+	 * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
 	 */
 	public static void info(Reservation reservation, double discount, LocalDateTime actualCheckOut) {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd   |   HH:mm");
