@@ -1,11 +1,13 @@
 package enumeration;
 /**
- * enumerations for availability status (AvailStatus) of a Room object;
+ * Created enumeration for the room availability status. 
+ * Enumerations for availability status (AvailStatus) of a Room object;
  * there are 4 types available (VACANT, OCCUPIED, RESERVED, UNDER_MAINTENANCE)
+ * 
  * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
- *
+ * @version 7.0
+ * @since 2022-03-15
  */
-
 public enum AvailStatus {
 	/**
 	 * Room object availability status is Vacant; Available for reservation;
