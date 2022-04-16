@@ -2,7 +2,21 @@ package food_related;
 import java.util.ArrayList;
 import list_methods.ArrayException;
 
-
+/**
+ * Follows the Interface Segregation principle; with instead of one big interface, many small interfaces 
+ * based on groups of methods.
+ * Includes methods required to RoomService such as get methods and set methods as well as adding orders. 
+ * Method Encapsulation; 
+ * We made it such that only methods returning roomServiceBill are public
+ * this is made public as it is required to tabulate the grand total for the receipt
+ * Methods returning food items of room service order and grand total of roomServiceBill are protected
+ * this ensures better encapsulation of information while ensuring that the methods can be accessed by the
+ * same package and subclasses
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ */
 public class RoomService {
 	/**
 	 * list of food items guest in this room service order

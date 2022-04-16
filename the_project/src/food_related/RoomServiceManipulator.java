@@ -7,6 +7,18 @@ import java.util.Scanner;
 import enumeration.OrderStatus;
 import list_methods.*;
 
+/**
+ * Allows the changes to the the Room Service
+ * Follows the Single Responsibility principle
+ * Additionally, it follows the Open-Closed principle as its software entities 
+ * is open for extension but 
+ * closed for modifications
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ *
+ */
 public class RoomServiceManipulator implements AddGivenObject, Reset, Set {
 	/**
 	 * this is the RoomService (private attribute)
@@ -16,7 +28,8 @@ public class RoomServiceManipulator implements AddGivenObject, Reset, Set {
 	
 	/**
 	 * This Constructor follows the Single Responsibility principle
-	 * Additionally, it follows the Open-Closed principle as its software entities is open for extension but 
+	 * Additionally, it follows the Open-Closed principle as its software entities is 
+	 * open for extension but 
 	 * closed for modifications
 	 * @param   rs this is the Room Service of the guest
 	*/

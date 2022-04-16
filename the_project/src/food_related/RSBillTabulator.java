@@ -1,5 +1,16 @@
 package food_related;
 
+/**
+ * Adds RoomService bills to calculate the total bill tabulated
+ * Follows the Single Responsibility principle due to sole responsibility
+ * It also follows the Open-Closed principle due to its software entities open for extension but closed 
+ * for modifications
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
+ *
+ */
 public class RSBillTabulator {
 	private RoomService rs;
 	
