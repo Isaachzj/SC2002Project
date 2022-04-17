@@ -23,6 +23,12 @@ import reservation.*;
  *
  */
 public class main_deserialize {
+	
+	/**
+	 * This is the method to deserialise the relevant objects from the text files in serialize_deserialize package
+	 * @param hotel is the instantiated Hotel object upon running the program
+	 * @param path is the address to serialize_deserialize package that contain the text files
+	 */
 	public static void deserialization(Hotel hotel, String path)  {
 		
 			try {
