@@ -34,6 +34,15 @@ import java.util.Scanner;
  * @since 2022-03-15
  */
 public class UpdateRoomFeatures  {
+	/**
+	 * Gives user 2 options for functions to access. 
+	 * the functions include add feature (choice 1),
+	 * remove feature (choice 2) and update feature (choice 3), or
+	 * terminate this process (choice 4)
+	 * 
+	 * @param hotel this is the Hotel object
+	 * @throws ArrayException occurs upon an error, calls array exception and throws a custom exception
+	 */
 	public static void updateRoomFeatures(Hotel hotel) throws ArrayException {
 		Scanner sc = new Scanner(System.in);
 		
