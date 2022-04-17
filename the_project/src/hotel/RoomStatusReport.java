@@ -31,6 +31,7 @@ public class RoomStatusReport {
 private Hotel hotel;
 	/**
 	 * this is the Room Status report of the Hotel object
+	 * @param hotel Hotel object assigned to RoomStatusReport so that RoomStatusReport can print this hotel's room status report
 	 */
 	public RoomStatusReport(Hotel hotel) {
 		this.hotel = hotel;

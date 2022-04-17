@@ -23,6 +23,7 @@ public class main_serialize {
 	/**
 	 * PLEASE DO NOT RUN THIS! 
 	 * This is main the method to serialise the relevant objects to the text files in serialize_deserialize package
+	 * @param args an array of command line arguments
 	 */
 	public static void main(String[] aArgs)  {
 

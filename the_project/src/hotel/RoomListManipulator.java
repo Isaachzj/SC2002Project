@@ -23,6 +23,7 @@ public class RoomListManipulator implements Get{
 	
 	/**
 	 * This is the Room List Manipulator
+	 * @param hotel assigns Hotel object to RoomListManipulator so that the RoomListManipulator can manipulate this hotel
 	 */
 	public RoomListManipulator(Hotel hotel) {
 		this.hotel = hotel;
