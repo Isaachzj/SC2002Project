@@ -30,6 +30,7 @@ public class HotelMainApp {
 	 * which redirects them to the StayRelated interface), check-in (option 2;
 	 * which redirects them to the GuestRelated interface), and check out(option 3;
 	 * which redirects them to the RoomRelated interface)  
+	 * @param args an array of command line arguments
 	 */
 	public static void main (String[] args ) {
 		Scanner sc = new Scanner(System.in);

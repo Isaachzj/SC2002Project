@@ -19,6 +19,11 @@ import list_methods.*;
  * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
  */
 public class MakeRoomService {
+	/**
+	 * orders room service for a guest
+	 * @param guest to know which guest is ordering room service so that the order can be added to the correct reservation
+	 * @throws ArrayException a custom Exception
+	 */
 	public static void makeRoomService(Guest guest) throws ArrayException {
 		
 		if (guest==null) {
