@@ -32,7 +32,7 @@ public class TextGuest {
 	 * @param ID is the array of Identity objects belonging to the Guests in this reservation
 	 * @param CCD is the array containing all CreditCardInfo objects belonging to the Guests in this reservation
 	 * @param CD is the array containing all ContactDetails objects belonging to the Guests in this reservation
-	 * @returns alr which is the array of Guest objects in a particular reservation
+	 * @return alr which is the array of Guest objects in a particular reservation
 	 * @throws IOException which is a checked exception
 	 */
 	public static ArrayList<Guest> readGuests(String fileName, ArrayList<Identity> ID, ArrayList<CreditCardInfo> CCD, ArrayList<ContactDetails> CD) throws IOException {
@@ -55,7 +55,7 @@ public class TextGuest {
 				// add to Guest list
 				alr.add(guest) ;
 			}
-			return alr ;
+			return alr;
 	}
 	
 	  /** 
