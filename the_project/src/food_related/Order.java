@@ -161,7 +161,8 @@ public class Order {
 	 * sets in this OrderManipulator Object: food items list ordered, remarks, date, timestamp, bill
 	 * Follows the Interface Segregation principle; with instead of one big interface,
 	 * many small interfaces based on groups of methods
-	 * @param menu Menu object
+	 * @param room This is the room object
+	 * @throws ArrayException occurs upon an error, calls array exception and throws a custom exception
 	 */ 
 	public void makeOrder(Room room) throws ArrayException {
 		Menu menu = room.getMenu();
