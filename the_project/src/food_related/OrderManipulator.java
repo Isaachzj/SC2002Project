@@ -27,7 +27,7 @@ public class OrderManipulator implements AddGivenObject{
      * This Constructor follows the Single Responsibility principle
 	 * Additionally, it follows the Open-Closed principle as its software entities 
 	 * is open for extension but closed for modifications
-     * @param order this is the order bill of the guest
+     * @return this is the order bill of the guest
 	*/
 	public OrderManipulator(Order order) {
 		this.order = order;
