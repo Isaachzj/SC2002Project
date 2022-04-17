@@ -70,10 +70,12 @@ public class RoomService {
 	 */
 	/**
 	 * This method add the order from the parameter; into the Room Service object
-	 * Follows the Interface Segregation principle; with instead of one big interface, many small interfaces 
+	 * Follows the Interface Segregation principle; with instead of one big interface, 
+	 * many small interfaces 
 	 * based on groups of methods
 	 * @param daOrder this is the new order to be added to the Room Service object
-	 * @throws ArrayException
+	 * @throws ArrayException occurs upon an error, calls array exception and 
+	 * throws a custom exception
 	 */
 	public void addOrder(Order daOrder) throws ArrayException{
 		RoomServiceManipulator rsm = new RoomServiceManipulator(this);
@@ -98,7 +100,6 @@ public class RoomService {
 	 */
 	/**
 	 * This reset method resets RoomService object upon check out
-	 * @throws ArrayException
 	 */
 	public void reset() { 
 		RoomServiceManipulator rsm = new RoomServiceManipulator(this);
@@ -106,6 +107,9 @@ public class RoomService {
 		this.roomServiceBill = 0.0;
 	}	
 	
+	/**
+	 * This method refreshes the Order Status upon calling it
+	 */
 	public void refreshOrderStatuses() {
 		RoomServiceManipulator rsm = new RoomServiceManipulator(this);
 		rsm.set();

@@ -18,6 +18,7 @@ import java.util.*;
  * 
  * Besides, this function works regardless of any changes to room types
  * (#Open-Closed Principle - CLosed for Modification)
+ * 
  * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
  * @version 7.0
  * @since 2022-03-15
@@ -28,7 +29,9 @@ public class RoomStatusReport {
  * this is a Hotel object (private attribute)
  */
 private Hotel hotel;
-	
+	/**
+	 * this is the Room Status report of the Hotel object
+	 */
 	public RoomStatusReport(Hotel hotel) {
 		this.hotel = hotel;
 	}

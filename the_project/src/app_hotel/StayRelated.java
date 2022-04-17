@@ -21,6 +21,8 @@ import list_methods.ArrayException;
  * A do-while loop is used to ensure that the guest enters a valid choice (1 - 3)
  * 
  * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
  */
 public class StayRelated { 
 	
@@ -28,7 +30,8 @@ public class StayRelated {
 	 * Allows user to access functions which are related to guests staying in a hotel room;
 	 * @param hotel Hotel object containing all room, guests,
 	 * room service orders and reservations details;
-	 * @throws ArrayException 
+	 * @throws ArrayException occurs upon an error, calls array exception 
+	 * and throws a custom exception
 	 */
 	public static void stayRelated(Hotel hotel) throws ArrayException {
 		/**

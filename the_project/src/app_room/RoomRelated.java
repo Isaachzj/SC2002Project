@@ -20,18 +20,25 @@ import java.util.*;
  * 
  * 
  * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
  */
 
 public class RoomRelated {
+	/**
+	 * This is the roomRelated which; 
+	 * Contains switch statement that:
+	 * 1. Updates room status
+	 * 2. Updates menu
+	 * 3. Updates room features
+	 * 4. Check room status (availability)
+	 * 5. Room reports
+	 * @param this is the Hotel object
+	 * @throws ArrayException which is a custom exception that 
+	 * would be thrown with its message upon any error encountered
+	 */
 	public static void roomRelated(Hotel hotel) throws ArrayException {
-		/**
-		 * # Contains switch statement that:
-			1. Updates room status
-			2. Updates menu
-			3. Updates room features
-			4. Check room status (availability)
-			5. Room reports
-		*/
+		
 		Scanner sc = new Scanner(System.in);
 		System.out.println("\n========== ROOM RELATED ==========");
 		System.out.println("Choose an option (Select option)\n- Enter an alphabet to terminate -:"
