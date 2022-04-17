@@ -82,12 +82,12 @@ public class CreditCardInfo {
 	protected void setCreditCardNum(String CCN) {this.creditCardNum = CCN;}
 	/**
 	 * sets the credit card bank of the guest
-	 * @param CCN this is the guest credit card bank
+	 * @param CCB this is the guest credit card bank
 	 */
 	protected void setCreditCardBank(String CCB) {this.creditCardBank = CCB;}
 	/**
 	 * sets the credit card expiry of the guest
-	 * @param CCN this is the guest credit card expiry
+	 * @param CCE this is the guest credit card expiry
 	 */
 	protected void setCreditCardExpiry(String CCE) {this.creditCardExpiry = CCE;}
 }

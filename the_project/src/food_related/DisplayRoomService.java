@@ -18,6 +18,9 @@ import list_methods.Print;
  * @since 2022-03-15
  */
 public class DisplayRoomService implements Print {
+	/**
+	 * Stores the RoomService object to know which RoomService to display
+	 */
 	private RoomService rs;
 	/**
 	 * # Displays Room service details from RoomService object

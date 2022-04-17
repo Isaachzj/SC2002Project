@@ -14,6 +14,9 @@ import list_methods.*;
  * @since 2022-03-15
  */
 public class DisplayMenu implements Print {
+	/**
+	 * attribute Menu menu
+	 */
 	private Menu menu;
 	/**
 	 * # Displays menu from Menu object

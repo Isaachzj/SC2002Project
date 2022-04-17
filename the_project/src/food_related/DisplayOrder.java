@@ -20,6 +20,9 @@ import java.time.format.DateTimeFormatter;
  * @since 2022-03-15
  */
 public class DisplayOrder implements Print {
+	/**
+	 * Stores the Order object to know which order to display
+	 */
 	private Order order;
 	/**
 	 * # Displays details of orders from order object
