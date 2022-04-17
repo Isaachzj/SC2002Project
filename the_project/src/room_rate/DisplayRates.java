@@ -5,6 +5,9 @@ package room_rate;
  */
 
 public class DisplayRates {
+	/**
+	 * Stores the RoomRate object to know which RoomRate to display
+	 */
 	private RoomRate rr;
 	
 	/**

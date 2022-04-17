@@ -17,6 +17,9 @@ import reservation.DisplayReservation;
  * @since 2022-03-15
  */
 public class DisplayReservationList implements Print {
+	/**
+	 * Stores the Hotel object to know which hotel to display its reservation list
+	 */
 	private Hotel hotel;
 	/**
 	 * # Displays the reservation list from Hotel object
