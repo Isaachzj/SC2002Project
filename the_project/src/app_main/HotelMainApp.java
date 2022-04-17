@@ -116,7 +116,7 @@ public class HotelMainApp {
 			 * Exception ee occurs when user inputs an alphabet to terminate;
 			 */
 			catch (Exception ee) {
-				System.out.println("Process terminated\n"); 
+				System.out.println("Process Terminated\n"); 
 				/**
 				 * # To clear multi line input in buffer
 				 */
