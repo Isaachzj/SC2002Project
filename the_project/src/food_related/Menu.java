@@ -53,7 +53,9 @@ public class Menu{
 	}
 	
 	/**
-	 * get method
+	 * # get methods
+	 */
+	/**
 	 * All methods are set to protected here
 	 * this includes the food in menu and number of food
 	 * this ensures better encapsulation of information while ensuring that
@@ -71,10 +73,11 @@ public class Menu{
 	protected int getNumOfFood() {return numOfFood;}			//returns value
 	
 	/**
-	 * set method
+	 * # set methods
 	 */
 	/**
 	 * sets number of food items in this Menu
+	 * @param num refers to the new number of Food items in the menu
 	 */
 	protected void setNumOfFood(int num) {this.numOfFood = num;}	
 

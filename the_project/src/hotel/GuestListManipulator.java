@@ -17,6 +17,7 @@ import java.util.*;
  * @since 2022-03-15
  */
 public class GuestListManipulator implements AddGivenObject, RemoveGivenObject {
+	
 	/**
 	 * this is the Hotel object (private attribute)
 	 */

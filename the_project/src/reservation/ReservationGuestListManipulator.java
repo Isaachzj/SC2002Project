@@ -14,7 +14,12 @@ import java.util.Scanner;
  * @since 2022-03-15
  */
 public class ReservationGuestListManipulator implements AddStandard{
+	
+	/**
+	 * This is the reservation object being manipulated
+	 */
 	private Reservation reservation;
+	
 	/**
 	 * gets the Reservation object
 	 * @param reservation this is the Reservation object

@@ -37,7 +37,7 @@ public class RoomService {
 	
 	//
 	/**
-	 * get methods
+	 * # get methods
 	 * We made it such that only methods returning roomServiceBill are public
 	 * this is made public as it is required to tabulate the grand total for the receipt
 	 * Methods returning food items of room service order and grand total of roomServiceBill are protected
@@ -56,12 +56,11 @@ public class RoomService {
 	public ArrayList<Order> getArray() {return this.orderList;}
 	
 	/**
-	 * set method
+	 * # set method
 	 */
 	/**
 	 * sets bill of this room service order
-	 * @param total final bill of this room service order
-	 * @return updated total final bill of this room service order
+	 * @param total is the final bill of this room service order
 	 */
 	protected void setRoomServiceBill(double total) {this.roomServiceBill = total;}
 	

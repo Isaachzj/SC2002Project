@@ -12,6 +12,10 @@ package food_related;
  *
  */
 public class RSBillTabulator {
+	
+	/**
+	 * This is the roomService object whose bill is to be calculated
+	 */
 	private RoomService rs;
 	
 	/**

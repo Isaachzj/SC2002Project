@@ -30,6 +30,10 @@ import java.util.Scanner;
  * @since 2022-03-15
  */
 public class MenuManipulator implements AddStandard,RemoveStandard,Set, Get {
+	
+	/**
+	 * This is the menu object to be manipulated
+	 */
 	private Menu menu; 
 	
 	/**

@@ -16,6 +16,10 @@ import java.time.LocalDateTime;
  * @since 2022-03-15
  */
 public class ReservationListManipulator implements AddGivenObject, RemoveGivenObject, Get {
+	
+	/**
+	 * This is the Hotel object who has the reservation list that is to be manipulated
+	 */
 	private Hotel hotel;
 	/**
 	 * This is the Reservation List Manipulator

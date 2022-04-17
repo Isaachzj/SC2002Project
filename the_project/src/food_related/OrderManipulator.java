@@ -18,6 +18,10 @@ import list_methods.*;
  * @since 2022-03-15
  */
 public class OrderManipulator implements AddGivenObject{
+	
+	/**
+	 * This is the order object to be manipulated
+	 */
 	private Order order;
 	
 	/**

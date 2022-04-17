@@ -3,7 +3,6 @@ import guest.*;
 import room.*;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 import java.time.LocalDateTime;
 /**
  * Instantiation of Reservation object
@@ -16,7 +15,10 @@ import java.time.LocalDateTime;
  * @since 2022-03-15
  */
 public class Reservation {
-	Scanner sc = new Scanner(System.in);
+	
+	/**
+	 * this is the room that is being reserved
+	 */
 	protected Room room;
 	
 	/**
@@ -40,6 +42,9 @@ public class Reservation {
 	 */
 	protected int numOfGuest;
 	
+	/**
+	 * this is the list of guests who will be staying in the reserved room
+	 */
 	protected ArrayList<Guest> guestList = new ArrayList<Guest>();
 	
 		

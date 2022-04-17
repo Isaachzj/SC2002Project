@@ -122,7 +122,7 @@ public class Order {
 	protected String getRemarks() {return this.remarks;}
 	/**
 	 * updates total final bill of this room service order
-	 * @param total final bill of this room service order
+	 * @param bill refers to the final bill of this room service order
 	 */ 
 	protected void setBill(double bill) {this.bill = bill;}	
 	/**
@@ -145,7 +145,7 @@ public class Order {
 	
 	/**
 	 * gets the specifications or special request for this order
-	 * @param ts this is the specifications or special request for this order
+	 * @param remarks is the remarks or special request for this order
 	 */
 	protected void setRemarks(String remarks) {this.remarks = remarks;}
 	

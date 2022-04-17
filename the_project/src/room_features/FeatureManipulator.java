@@ -9,6 +9,9 @@ import list_methods.*;
  * sole responsibility of manipulating the features of a room;
  */
 public class FeatureManipulator implements AddStandard,RemoveStandard,Set, Reset {
+	/**
+	 * rf is the RoomFeatures object to be manipulated
+	 */
 	private RoomFeatures rf;
 	
 	/**

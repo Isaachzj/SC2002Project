@@ -24,11 +24,27 @@ import java.util.ArrayList;
  * @since 2022-03-15
  */
 public class Hotel {
-
+	
+	/**
+	 * This is the list of rooms in the Hotel
+	 */
 	private ArrayList<Room> roomList;
+	
+	/**
+	 * This is the list of reservations in the Hotel
+	 */
 	private ArrayList<Reservation> reservationList;
+	
+	/**
+	 * This is the list of guests in the Hotel
+	 */
 	private ArrayList<Guest> guestList; 
+	
+	/**
+	 * This is the list of menus available in the Hotel
+	 */
 	private ArrayList<Menu> menuList; 
+	
 	/**
 	 * Creates and display menu which allows the selection of RoomType
 	 * # RoomType
