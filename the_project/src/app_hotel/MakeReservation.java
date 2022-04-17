@@ -80,14 +80,13 @@ public class MakeReservation {
 		if (numOfGuest>maxOccupancy) {System.out.println("You have exceeded the maximum occupancy for this room! \nProcess Terminated!"); return null;}
 		
 		
-		LocalDateTime currentTime = LocalDateTime.now();
-		
 		/**
 		 * # Entering Check In and Check out date time details (CheckOut only if walking in)
 		 */
-		if (walkIn) {checkInDateTime = LocalDateTime.now().minusMinutes(1);}
+		if (walkIn) {checkInDateTime = LocalDateTime.now().plusMinutes(1);}
 		else {checkInDateTime = DateTime.getLocalDateTime("Check In");}
 		
+		LocalDateTime currentTime = LocalDateTime.now();
 		while (checkInDateTime.isBefore(currentTime)) {
 			System.out.println("Are you sure? It is already after the intended check in date and time!");
 			checkInDateTime = DateTime.getLocalDateTime("Check In");
