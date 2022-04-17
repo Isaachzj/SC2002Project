@@ -18,7 +18,11 @@ import java.time.*;
  *
  */
 public class CheckOut {
-	
+	/**
+	 * 
+	 * @param hotel this is to know which hotel is calling the checkOut function
+	 * @throws ArrayException this throws a custom Exception called ArrayException
+	 */
 	public static void checkOut(Hotel hotel) throws ArrayException {
 		Scanner sc = new Scanner(System.in);
 		/**

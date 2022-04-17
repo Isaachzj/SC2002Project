@@ -22,7 +22,11 @@ import java.time.Duration;
  *
  */
 public class CheckIn {
-	
+	/**
+	 * 
+	 * @param hotel to know which hotel is calling this check-in function
+	 * @throws ArrayException this throws a custom Exception called ArrayException
+	 */
 	public static void checkIn(Hotel hotel) throws ArrayException{
 		Scanner sc = new Scanner(System.in);
 		Reservation reservation;

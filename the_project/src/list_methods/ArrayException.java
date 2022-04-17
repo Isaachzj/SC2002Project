@@ -25,6 +25,7 @@ public class ArrayException extends Exception {
 	 *  Exception Handling
 	 * If ArrayException contains a message in its parameter;
 	 * throw the given error message upon exception
+	 * @param message is the message to be thrown
 	 */
 	public ArrayException(String message) {
 		super(message);
