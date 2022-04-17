@@ -10,6 +10,8 @@ package hotel;
 public class TestHotel {
 	/**
 	 * This is used to print the Room Status report and Occupancy report
+	 * @param args this is the argument required to print the reports
+	 *
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

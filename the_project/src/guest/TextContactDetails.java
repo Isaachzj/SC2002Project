@@ -29,9 +29,9 @@ public class TextContactDetails {
 	 * @return alr is the array containing all ContactDetails objects belonging to the Guests in a particular reservation
 	 * @throws IOException which is a checked exception
 	 */
-	public static ArrayList<ContactDetails> readCDs(String filename) throws IOException {
+	public static ArrayList<ContactDetails> readCDs(String fileName) throws IOException {
 		// read String from text file
-		ArrayList stringArray = (ArrayList)read(filename);
+		ArrayList stringArray = (ArrayList)read(fileName);
 		ArrayList alr = new ArrayList() ;// to store Guests data
 	
 	    for (int i = 0 ; i < stringArray.size() ; i++) {
@@ -55,7 +55,7 @@ public class TextContactDetails {
 	
 	  /** 
 	   * Read the contents of the given file. 
-	   * @param fileName is the file that contains the information for the ContactDetails object
+	   * @param fileName is the file that contains the information for the ContactDetails objects
 	   * @return data is the data from the text file in an ArrayList
 	   * @throws IOException which is a checked exception
 	   * */
@@ -73,13 +73,14 @@ public class TextContactDetails {
 	    return data;
 	  }	
 	
-	  // SAVING
+	   // SAVING
 	   /**
 	    *  This method is used to save the serialize the objects into a text file
-	    *  @param fileName is the file that will contain the information for the Identity object
+	    *  @param fileName is the file that will contain the information for the ContactDetails objects
 	    *  @param al is the array of ContactDetails objects being passed in
+	    *  @throws IOException which is a checked exception
 	    */
-		public static void saveCDs(String cdFilename, List al) throws IOException { //List is the list of guest objects (Hotel guest list)
+		public static void saveCDs(String fileName, List al) throws IOException { //List is the list of guest objects (Hotel guest list)
 				List alw = new ArrayList() ;// to store Guest data
 		
 		        for (int i = 0 ; i < al.size() ; i++) {
@@ -95,13 +96,14 @@ public class TextContactDetails {
 				
 						alw.add(st.toString()) ;
 					}
-					write(cdFilename,alw);
+					write(fileName,alw);
 			}
 		
 		  /** 
 		   * Write fixed content to the given file. 
 		   * @param data is the list containing the ContactDetails objects data in String format
-		   * @param fileName is the file that will contain the information for the ContactDetails object
+		   * @param fileName is the file that will contain the information for the ContactDetails objects
+		   * @throws IOException which is a checked exception
 		   * */
 		  public static void write(String fileName, List data) throws IOException  {
 		    PrintWriter out = new PrintWriter(new FileWriter(fileName));

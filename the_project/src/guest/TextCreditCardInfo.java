@@ -29,9 +29,9 @@ public class TextCreditCardInfo {
 	 * @throws IOException which is a checked exception
 	 */
 	// READING
-	public static ArrayList<CreditCardInfo> readCCIs(String filename) throws IOException {
+	public static ArrayList<CreditCardInfo> readCCIs(String fileName) throws IOException {
 		// read String from text file
-		ArrayList stringArray = (ArrayList)read(filename);
+		ArrayList stringArray = (ArrayList)read(fileName);
 		ArrayList alr = new ArrayList() ;// to store CCI data
 	
 	    for (int i = 0 ; i < stringArray.size() ; i++) {
@@ -54,7 +54,7 @@ public class TextCreditCardInfo {
 	
 	  /** 
 	   * Read the contents of the given file. 
-	   * @param fileName is the file that contains the information for the CreditCardInfo object
+	   * @param fileName is the file that contains the information for the CreditCardInfo objects
 	   * @return data is the data from the text file in an ArrayList
 	   * @throws IOException which is a checked exception
 	   * */
@@ -75,10 +75,11 @@ public class TextCreditCardInfo {
 	  // SAVING
 	   /**
 	    *  This method is used to save the serialize the objects into a text file
-	    *  @param fileName is the file that will contain the information for the CreditCardInfo object
+	    *  @param fileName is the file that will contain the information for the CreditCardInfo objects
 	    *  @param al is the array of CreditCardInfo objects being passed in
+	    *  @throws IOException which is a checked exception
 	    */
-		public static void saveCCIs(String cciFileName, List al) throws IOException { 
+		public static void saveCCIs(String fileName, List al) throws IOException { 
 			List alw = new ArrayList() ;// to store CCI data
 		
 		    for (int i = 0 ; i < al.size() ; i++) {
@@ -104,13 +105,14 @@ public class TextCreditCardInfo {
 						alw.add(st.toString()) ;
 					}
 		        
-					write(cciFileName,alw);
+					write(fileName,alw);
 			}
 		
 		  /** 
 		   * Write fixed content to the given file. 
 		   * @param data is the list containing the CreditCardInfo objects data in String format
-		   * @param fileName is the file that will contain the information for the CreditCardInfo object
+		   * @param fileName is the file that will contain the information for the CreditCardInfo objects
+		   * @throws IOException which is a checked exception
 		   * */
 		  public static void write(String fileName, List data) throws IOException  {
 		    PrintWriter out = new PrintWriter(new FileWriter(fileName));
