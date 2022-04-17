@@ -23,7 +23,7 @@ public class UpdateRoomStatus {
 	/**
 	 * Ths allows the update of room availability to either
 	 * UNDER_MAINTENANCE (option 1) or VACANT (option 2)
-	 * @param this is the Hotel object required for the update of the room availability
+	 * @param hotel is the Hotel object required for the update of the room availability
 	 * the room availability can be updated to UNDER_MAINTENANCE or VACANT
 	 */
 	public static void updateRoomStatus(Hotel hotel) {
