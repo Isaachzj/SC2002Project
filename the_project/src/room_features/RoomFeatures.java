@@ -130,9 +130,10 @@ public class RoomFeatures {
 	/**
 	 * Adds new non-currently existing feature to this feature list;
 	 * Creates a new FeatureManipulator object and instantiates it using argument RoomFeatures object;
-	 * New Feature object is created and added into this feature list, number of features is incremented by 1;
+	 * New Feature object is created and added into this feature list, number of features is 
+	 * incremented by 1;
 	 * If feature already exists, error message is displayed.
-	 * @throws ArrayException
+	 * @throws ArrayException occurs upon an error, calls array exception and throws a custom exception
 	 */
 	public void addFeatures() throws ArrayException{
 		FeatureManipulator fm = new FeatureManipulator(this);
@@ -144,7 +145,7 @@ public class RoomFeatures {
 	 * Creates a new FeatureManipulator object and instantiates it using argument RoomFeatures object;
 	 * Feature object is removed from this feature list, number of features is incremented by 1;
 	 * If feature does not exist or is a core feature, error message is displayed;
-	 * @throws ArrayException
+	 * @throws ArrayException occurs upon an error, calls array exception and throws a custom exception
 	 */
 	public void removeFeatures() throws ArrayException{
 		FeatureManipulator fm = new FeatureManipulator(this);
@@ -157,7 +158,7 @@ public class RoomFeatures {
 	 * error message is displayed;
 	 * If found and feature_name is not a core feature, a message displayed queues the user 
 	 * for new status input for this feature;
-	 * @throws ArrayException
+	 * @throws ArrayException occurs upon an error, calls array exception and throws a custom exception
 	 */
 	public void updateFeatures() throws ArrayException{
 		FeatureManipulator fm = new FeatureManipulator(this);

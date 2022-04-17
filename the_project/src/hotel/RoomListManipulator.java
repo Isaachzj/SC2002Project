@@ -21,6 +21,9 @@ public class RoomListManipulator implements Get{
 	 */
 	private Hotel hotel;
 	
+	/**
+	 * This is the Room List Manipulator
+	 */
 	public RoomListManipulator(Hotel hotel) {
 		this.hotel = hotel;
 	}

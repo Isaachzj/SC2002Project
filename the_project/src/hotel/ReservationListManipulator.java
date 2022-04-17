@@ -17,7 +17,9 @@ import java.time.LocalDateTime;
  */
 public class ReservationListManipulator implements AddGivenObject, RemoveGivenObject, Get {
 	private Hotel hotel;
-	
+	/**
+	 * This is the Reservation List Manipulator
+	 */
 	public ReservationListManipulator(Hotel hotel) {
 		this.hotel = hotel;
 	}
@@ -125,7 +127,8 @@ public class ReservationListManipulator implements AddGivenObject, RemoveGivenOb
 	//To be called in make reservation class 
 	/**
 	 * this method is to be called in the make reservation class upon its instantiation
-	 * @param Room object for which the arraylist of reservation can be retrieved from 
+	 * @param room this is the Room object for which the arraylist of 
+	 * reservation can be retrieved from 
 	 * @return this is the arraylist that is retrieved
 	 */
 	public ArrayList<Reservation> getRoomReservations(Room room) {
