@@ -21,7 +21,7 @@ public class Refresher {
 	/**
 	 * Updates availability status and room service order status 
 	 * of reserved or occupied rooms automatically;
-	 * @param hotel Hotel object containing information about all reservations, guests and rooms;
+	 * @param hotel is the Hotel object containing information about all reservations, guests and rooms;
 	 * @throws ArrayException this throws a custom Exception called ArrayException
 	 */
 	public static void refresh(Hotel hotel) throws ArrayException {
