@@ -52,11 +52,11 @@ public class DisplayFeatures implements Print{
 		System.out.println("Index-----------------Feature name-----------------Quantity/Status");
 		
 		//Standard Features
-		System.out.printf("%-12d%-20s%20s\n", 1, "Bed", rf.getBedType()); //enumeration returns as string
-		System.out.printf("%-12d%-20s%20s\n", 2, "View", rf.getViewType());
-		System.out.printf("%-12d%-20s%20d\n", 3, "Number of Beds", rf.getNumOfBed());
-		System.out.printf("%-12d%-20s%20b\n", 4, "Wifi", rf.getWifi());
-		System.out.printf("%-12d%-20s%20b\n", 5, "Smoking", rf.getSmokeOut());
+		System.out.printf("%-22d%-15s%24s\n", 1, "Bed", rf.getBedType()); //enumeration returns as string
+		System.out.printf("%-22d%-15s%24s\n", 2, "View", rf.getViewType());
+		System.out.printf("%-22d%-15s%24s\n", 3, "Number of Beds", rf.getNumOfBed());
+		System.out.printf("%-22d%-15s%24s\n", 4, "Wifi", rf.getWifi());
+		System.out.printf("%-22d%-15s%24s\n", 5, "Smoking", rf.getSmokeOut());
 	}
 	
 	/**
