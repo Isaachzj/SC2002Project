@@ -1,6 +1,7 @@
 package guest;
 
 import java.io.FileInputStream;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -11,12 +12,26 @@ import java.util.StringTokenizer;
 
 import enumeration.*;
 
-public class TextIdentity {
-public static final String SEPARATOR = "~";
 /**
- * This class is used for the purposes of serialization and deserialization
+ * This class is used for the purpose of serialization and deserialization
+ * 
+ * @author Isaac, YanKai, Tomoki, Davis, WenLu
+ *
  */
-// READING
+public class TextIdentity {
+	
+/** 
+ * This is the separator that will be used to separate text information of the various object attributes in the serialization process
+ */	
+public static final String SEPARATOR = "~";
+
+	// READING
+	/**
+	 * This method is used to return an array of Identity objects and used in the deserialisation process
+	 * @param fileName is the file that contains the information for the Identity objects
+	 * @return alr is the array containing all Identity objects belonging to the Guests in a particular reservation
+	 * @throws IOException which is a checked exception
+	 */
 	public static ArrayList<Identity> readIDs(String filename) throws IOException {
 		// read String from text file
 		ArrayList stringArray = (ArrayList)read(filename);
@@ -39,7 +54,12 @@ public static final String SEPARATOR = "~";
 			return alr ;
 	}
 	
-	  /** Read the contents of the given file. */
+	  /** 
+	   * Read the contents of the given file. 
+	   * @param fileName is the file that contains the information for the Identity object
+	   * @return data is the data from the text file in an ArrayList
+	   * @throws IOException which is a checked exception
+	   * */
 	  public static List read(String fileName) throws IOException {
 		List data = new ArrayList() ;
 	    Scanner scanner = new Scanner(new FileInputStream(fileName));
@@ -55,36 +75,45 @@ public static final String SEPARATOR = "~";
 	  }	
 		
 	  // SAVING
-	public static void saveIDs(String idFilename, List al) throws IOException { //List is the list of guest objects (Hotel guest list)
-		List alw = new ArrayList() ;// to store Guest data
-	
-	    for (int i = 0 ; i < al.size() ; i++) {
-				Identity id = ((Guest)al.get(i)).getIdentity();
-				StringBuilder st =  new StringBuilder() ;
-				st.append(id.getIdNumber().trim());
-				
-				st.append(SEPARATOR);
-				
-				st.append(Integer.toString(id.getIdType().ordinal()).trim()); //convert enum index (int) to string then trim						
-					alw.add(st.toString()) ;
-				}
-				write(idFilename,alw);
-		}
-	
-	  /** Write fixed content to the given file. */
-	  public static void write(String fileName, List data) throws IOException  {
-	    PrintWriter out = new PrintWriter(new FileWriter(fileName));
-	
-	    try {
-			for (int i =0; i < data.size() ; i++) {
-	      		out.println((String)data.get(i));
+	   /**
+	    *  This method is used to save the serialize the objects into a text file
+	    *  @param fileName is the file that will contain the information for the Identity object
+	    *  @param al is the array of Identity objects being passed in
+	    */
+		public static void saveIDs(String idFilename, List al) throws IOException { //List is the list of guest objects (Hotel guest list)
+			List alw = new ArrayList() ;// to store Guest data
+		
+		    for (int i = 0 ; i < al.size() ; i++) {
+					Identity id = ((Guest)al.get(i)).getIdentity();
+					StringBuilder st =  new StringBuilder() ;
+					st.append(id.getIdNumber().trim());
+					
+					st.append(SEPARATOR);
+					
+					st.append(Integer.toString(id.getIdType().ordinal()).trim()); //convert enum index (int) to string then trim						
+						alw.add(st.toString()) ;
+					}
+					write(idFilename,alw);
 			}
-	    }
-	    finally {
-	      out.close();
-	    }
-	  }
-
-}
+		
+		  /** 
+		   * Write fixed content to the given file. 
+		   * @param data is the list containing the Identity objects data in String format
+		   * @param fileName is the file that will contain the information for the Identity object
+		   * */
+		  public static void write(String fileName, List data) throws IOException  {
+		    PrintWriter out = new PrintWriter(new FileWriter(fileName));
+		
+		    try {
+				for (int i =0; i < data.size() ; i++) {
+		      		out.println((String)data.get(i));
+				}
+		    }
+		    finally {
+		      out.close();
+		    }
+		  }
+	
+	}
 
 

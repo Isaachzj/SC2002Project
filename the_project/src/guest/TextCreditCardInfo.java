@@ -11,15 +11,20 @@ import java.util.StringTokenizer;
 
 /**
  * This class is used for the purpose of serialization and deserialization
+ * 
  * @author Isaac, YanKai, Tomoki, Davis, WenLu
  *
  */
 
 public class TextCreditCardInfo {
+	/** 
+	 * This is the separator that will be used to separate text information of the various object attributes in the serialization process
+	 */
 	public static final String SEPARATOR = "~";
+	
 	/**
 	 * This method is used to return an array of CreditCardInfo objects and used in the deserialisation process
-	 * @param fileName is the file that contains the information for the CreditCardInfo object
+	 * @param fileName is the file that contains the information for the CreditCardInfo objects
 	 * @return alr is the array containing all CreditCardInfo objects belonging to the Guests in a particular reservation
 	 * @throws IOException which is a checked exception
 	 */
@@ -69,7 +74,7 @@ public class TextCreditCardInfo {
 	
 	  // SAVING
 	   /**
-	    *  This method is used to save the serialize the object into a text file
+	    *  This method is used to save the serialize the objects into a text file
 	    *  @param fileName is the file that will contain the information for the CreditCardInfo object
 	    *  @param al is the array of CreditCardInfo objects being passed in
 	    */
