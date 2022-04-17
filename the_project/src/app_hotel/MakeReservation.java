@@ -22,6 +22,15 @@ import days_date_time.DateTime;
  *
  */
 public class MakeReservation {
+	/**
+	 * Method will make a reservation for the guest, an Exception would be thrown when error encountered
+	 * Method will also check if the customer has any discounts, will ensure discounts (in percentage),
+	 * will return a positive value less than 100 [i.e. discounts from 0% to 100% (non-inclusive)]
+	 * @param hotel this is the Hotel object
+	 * @param walkIn this checks if guest has prior reservation or is walking in to book hotel
+	 * @return this is the makeReservation object
+	 * @throws ArrayException occurs upon an error, calls array exception and throws a custom exception
+	 */
 	public static Reservation makeReservation(Hotel hotel, boolean walkIn) throws ArrayException{
 	/**
 	 * # Initialisation

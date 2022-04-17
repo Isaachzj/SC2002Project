@@ -20,9 +20,12 @@ import guest.DisplayGuestInfo;
  */
 public class GuestRelated {
 	/** Contains switch statement that:
-		 (1) Updates credit card info of guest,
-		 (2) Retrieve (print) specified guest info,
-		 (3) Room service on behalf of guest 
+	 * (1) Updates credit card info of guest,
+	 * (2) Retrieve (print) specified guest info,
+	 * (3) Room service on behalf of guest
+	 * 
+	 * @param hotel this is the Hotel object
+	 * @throws ArrayException occurs upon an error, calls array exception and throws a custom exception
 	*/
 	public static void guestRelated(Hotel hotel) throws ArrayException {
 		Scanner sc = new Scanner(System.in);

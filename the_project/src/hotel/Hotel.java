@@ -295,8 +295,8 @@ public class Hotel {
 	
 	/** 
 	 * Refreshing related
+	 * @throws ArrayException occurs upon an error, calls array exception and throws a custom exception
 	 */
-	
 	public void refreshHotel() throws ArrayException{
 		Refresher.refresh(this);
 	}

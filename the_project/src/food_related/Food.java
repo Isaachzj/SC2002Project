@@ -44,9 +44,10 @@ public class Food {
 	 * Instantiation of Food object with input name, price and description
 	 * Follows the Single Dependency principle as sole responsibility is to create a Food object
 	 * Also follows the Open-Closed principle as changes in the Display does not require a change in source code of modules
-	 * @param	name name of this food item
-	 * @param	price price of this food item
-	 * @param	description description of this food item
+	 * @param	name this is the name of this food item
+	 * @param	price this is the price of this food item
+	 * @param	description this is the description of this food item
+	 * @param	duration this is the duration of the food item
 	 */ 
 	public Food(String name, double price, String description, int duration) {
 		this.foodName = name;

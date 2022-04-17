@@ -80,6 +80,7 @@ public class Menu{
 
 	/**
 	 * creates a MenuManipulator object and adds a food item to this Menu
+	 * @throws ArrayException occurs upon an error, calls array exception and throws a custom exception
 	 */
 	public void addFood() throws ArrayException {
 		MenuManipulator mm = new MenuManipulator(this);
@@ -88,6 +89,7 @@ public class Menu{
 	
 	/**
 	 * creates a MenuManipulator object and removes a food item to this Menu
+	 * @throws ArrayException occurs upon an error, calls array exception and throws a custom exception
 	 */ 
 	public void removeFood() throws ArrayException {
 		MenuManipulator mm = new MenuManipulator(this);
@@ -96,6 +98,7 @@ public class Menu{
 	
 	/**
 	 * creates a MenuManipulator object and updates a food item to this Menu
+	 * @throws ArrayException occurs upon an error, calls array exception and throws a custom exception
 	 */
 	public void updateFood() throws ArrayException {
 		MenuManipulator mm = new MenuManipulator(this);
@@ -104,6 +107,7 @@ public class Menu{
 	
 	/**
 	 * creates a MenuManipulator object and gets a food item to this Menu
+	 * @return this is the Food object from the Menu (arraylist of food)
 	 */
 	public Food getFood() {
 		MenuManipulator mm = new MenuManipulator(this);

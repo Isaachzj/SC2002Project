@@ -22,6 +22,9 @@ public class GuestListManipulator implements AddGivenObject, RemoveGivenObject {
 	 */
 	private Hotel hotel;
 	
+	/**
+	 * This is the guest list manipulator object
+	 */
 	public GuestListManipulator(Hotel hotel) {
 		this.hotel = hotel;
 	}
