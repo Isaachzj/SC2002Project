@@ -1,6 +1,7 @@
 package guest;
 
 import java.io.FileInputStream;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -9,12 +10,25 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.StringTokenizer;
 
+/**
+ * This class is used for the purpose of serialization and deserialization
+ * 
+ * @author Isaac, YanKai, Tomoki, Davis, WenLu
+ *
+ */
 public class TextContactDetails {
+	/** 
+	 * This is the separator that will be used to separate text information of the various object attributes in the serialization process
+	 */	
 	public static final String SEPARATOR = "~";
-	/**
-	 * This class is used for the purposes of serialization and deserialization
-	 */
+	
 	// READING
+	/**
+	 * This method is used to return an array of ContactDetails objects and used in the deserialisation process
+	 * @param fileName is the file that contains the information for the ContactDetails objects
+	 * @return alr is the array containing all ContactDetails objects belonging to the Guests in a particular reservation
+	 * @throws IOException which is a checked exception
+	 */
 	public static ArrayList<ContactDetails> readCDs(String filename) throws IOException {
 		// read String from text file
 		ArrayList stringArray = (ArrayList)read(filename);
@@ -39,7 +53,12 @@ public class TextContactDetails {
 			return alr ;
 	}
 	
-	  /** Read the contents of the given file. */
+	  /** 
+	   * Read the contents of the given file. 
+	   * @param fileName is the file that contains the information for the ContactDetails object
+	   * @return data is the data from the text file in an ArrayList
+	   * @throws IOException which is a checked exception
+	   * */
 	  public static List read(String fileName) throws IOException {
 		List data = new ArrayList() ;
 	    Scanner scanner = new Scanner(new FileInputStream(fileName));
@@ -55,39 +74,45 @@ public class TextContactDetails {
 	  }	
 	
 	  // SAVING
-	public static void saveCDs(String cdFilename, List al) throws IOException { //List is the list of guest objects (Hotel guest list)
-			List alw = new ArrayList() ;// to store Guest data
-	
-	        for (int i = 0 ; i < al.size() ; i++) {
-	        	ContactDetails cd = ((Guest)al.get(i)).getContacts();
-					StringBuilder st =  new StringBuilder() ;
-					st.append(cd.getMobileNumber().trim());
-					st.append(SEPARATOR);
-					st.append(cd.getEmailAddress().trim());
-					st.append(SEPARATOR);
-					st.append(cd.getHomeAddress().trim()); 
-					st.append(SEPARATOR);
-					st.append(cd.getCountry().trim()); 
-			
-					alw.add(st.toString()) ;
-				}
-				write(cdFilename,alw);
-		}
-	
-	  /** Write fixed content to the given file. */
-	  public static void write(String fileName, List data) throws IOException  {
-	    PrintWriter out = new PrintWriter(new FileWriter(fileName));
-	
-	    try {
-			for (int i =0; i < data.size() ; i++) {
-	      		out.println((String)data.get(i));
+	   /**
+	    *  This method is used to save the serialize the objects into a text file
+	    *  @param fileName is the file that will contain the information for the Identity object
+	    *  @param al is the array of ContactDetails objects being passed in
+	    */
+		public static void saveCDs(String cdFilename, List al) throws IOException { //List is the list of guest objects (Hotel guest list)
+				List alw = new ArrayList() ;// to store Guest data
+		
+		        for (int i = 0 ; i < al.size() ; i++) {
+		        	ContactDetails cd = ((Guest)al.get(i)).getContacts();
+						StringBuilder st =  new StringBuilder() ;
+						st.append(cd.getMobileNumber().trim());
+						st.append(SEPARATOR);
+						st.append(cd.getEmailAddress().trim());
+						st.append(SEPARATOR);
+						st.append(cd.getHomeAddress().trim()); 
+						st.append(SEPARATOR);
+						st.append(cd.getCountry().trim()); 
+				
+						alw.add(st.toString()) ;
+					}
+					write(cdFilename,alw);
 			}
-	    }
-	    finally {
-	      out.close();
-	    }
-	  }
-
-
-
+		
+		  /** 
+		   * Write fixed content to the given file. 
+		   * @param data is the list containing the ContactDetails objects data in String format
+		   * @param fileName is the file that will contain the information for the ContactDetails object
+		   * */
+		  public static void write(String fileName, List data) throws IOException  {
+		    PrintWriter out = new PrintWriter(new FileWriter(fileName));
+		
+		    try {
+				for (int i =0; i < data.size() ; i++) {
+		      		out.println((String)data.get(i));
+				}
+		    }
+		    finally {
+		      out.close();
+		    }
+		  }
 }

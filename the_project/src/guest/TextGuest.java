@@ -84,41 +84,41 @@ public class TextGuest {
 	    *  @param fileName is the file that will contain the information for the Guest object
 	    *  @param al is the array of Guest objects being passed in
 	    */
-	public static void saveGuests(String guestFilename, List al) throws IOException { //List is the list of guest objects (Hotel guest list)
-		List alw = new ArrayList() ;// to store Guest data
-	
-	    for (int i = 0 ; i < al.size() ; i++) {
-				Guest guest = (Guest)al.get(i);
-				StringBuilder st =  new StringBuilder() ;
-				st.append(guest.getName().trim());
-				st.append(SEPARATOR);
-				st.append(guest.getNationality().trim());
-				st.append(SEPARATOR);
-				st.append(Integer.toString(guest.getGender().ordinal()).trim()); //convert enum index (int) to string then trim
-				
-				//save identity, creditCardInfo, ContactDetails too			
-					alw.add(st.toString()) ;
-				}
-				write(guestFilename,alw);
-		}
-	
-	  /** 
-	   * Write fixed content to the given file. 
-	   * @param data is the list containing the Guest objects data in String format
-	   * @param fileName is the file that will contain the information for the Guest object
-	   * */
-	  public static void write(String fileName, List data) throws IOException  {
-	    PrintWriter out = new PrintWriter(new FileWriter(fileName));
-	
-	    try {
-			for (int i =0; i < data.size() ; i++) {
-	      		out.println((String)data.get(i));
+		public static void saveGuests(String guestFilename, List al) throws IOException { //List is the list of guest objects (Hotel guest list)
+			List alw = new ArrayList() ;// to store Guest data
+		
+		    for (int i = 0 ; i < al.size() ; i++) {
+					Guest guest = (Guest)al.get(i);
+					StringBuilder st =  new StringBuilder() ;
+					st.append(guest.getName().trim());
+					st.append(SEPARATOR);
+					st.append(guest.getNationality().trim());
+					st.append(SEPARATOR);
+					st.append(Integer.toString(guest.getGender().ordinal()).trim()); //convert enum index (int) to string then trim
+					
+					//save identity, creditCardInfo, ContactDetails too			
+						alw.add(st.toString()) ;
+					}
+					write(guestFilename,alw);
 			}
-	    }
-	    finally {
-	      out.close();
-	    }
-	  }
+		
+		  /** 
+		   * Write fixed content to the given file. 
+		   * @param data is the list containing the Guest objects data in String format
+		   * @param fileName is the file that will contain the information for the Guest object
+		   * */
+		  public static void write(String fileName, List data) throws IOException  {
+		    PrintWriter out = new PrintWriter(new FileWriter(fileName));
+		
+		    try {
+				for (int i =0; i < data.size() ; i++) {
+		      		out.println((String)data.get(i));
+				}
+		    }
+		    finally {
+		      out.close();
+		    }
+		  }
 
 }
 
