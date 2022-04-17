@@ -36,8 +36,6 @@ public class CreditCardInfo {
 	 * @param CCN this is the guest's credit card number
 	 * @param CCB this is the guest's credit card bank
 	 * @param CCE this is the guest's credit card expiry
-	 * @param BA this is the guest's billing address
-	 * @param BN this is the guest's billing name
 	 */
 	public CreditCardInfo(String CCN, String CCB, String CCE) {
 		this.creditCardNum = CCN;

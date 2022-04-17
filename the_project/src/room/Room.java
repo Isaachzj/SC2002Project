@@ -10,14 +10,17 @@ import room_features.*;
 import room_rate.*;
 import list_methods.*;
 import reservation.*;
+
 /**
- * 
  * Follows the Liskov Substitution principle as this superclass
  * is replaceable with all its subclasses;
  * and the programme would still has its functionality 
->>>>>>> Stashed changes
+ * >>>>>>> Stashed changes
+ * 
+ * @author Isaac, Yan kai, Davis, Wenlu, Tomoki
+ * @version 7.0
+ * @since 2022-03-15
  */
-
 public abstract class Room 
 {
 	/**
@@ -80,16 +83,16 @@ public abstract class Room
 	 * to instantiate a Room object;
 	 * 
 	 * @param menu this contains the food items available to this room
-	 * @param this is the type of bed in this room.
+	 * @param bedType this is the type of bed in this room.
 	 * The enumeration for the bedType are SINGLE, QUEEN and KING
-	 * @param this is the type of view that a Room object has,
+	 * @param viewType this is the type of view that a Room object has,
 	 * that the guest is able to view from his room
 	 * The enumeration for the viewType are STANDARD, OCEAN, CITY
-	 * @param this is the number of beds in this room, used to initialize RoomFeatures;
-	 * @param this is the availability of wifi in this room.
+	 * @param numOfBed this is the number of beds in this room, used to initialize RoomFeatures;
+	 * @param wiFi this is the availability of wifi in this room.
 	 * wiFi; if indicated as 'true' means that there is wifi services in the room.
 	 * else if there is no wifi services in the room, it would be indicated as 'false'
-	 * @param this is the ability to smoke in this room.
+	 * @param smokeOut this is the ability to smoke in this room.
 	 * smokeOut; if indicated as 'true' means that smoking is allowed.
 	 * else if there is smoking is not allowed, it would be indicated as 'false'
 	 * @param weekDayPrice this is the bill incurred for the booking
