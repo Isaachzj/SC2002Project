@@ -169,7 +169,7 @@ public class MakeReservation {
 			
 			//if no rooms of requested type can accommodate the reservation, reservation is invalid
 			if (index==-1) {
-				System.out.println("Cannot make Reservation!\nProcess Terminated!");
+				System.out.println("Cannot make Reservation!\n");
 				return null;
 			}
 			
