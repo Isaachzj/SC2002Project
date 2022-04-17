@@ -26,6 +26,9 @@ import guest.TextGuest;
  *
  */
 public class TextReservation {
+	/** 
+	 * This is the separator that will be used to separate text information of the various object attributes in the serialization process
+	 */
 	public static final String SEPARATOR = "~";
 
 	// READING
@@ -34,7 +37,7 @@ public class TextReservation {
 	 * @param fileName is the file that contains the information for the Identity objects
 	 * @param room is the array of Room objects that have been assigned to the reservations
 	 * @param guestList is the array of guest lists where each guest list correspond to the guest(s) in each reservation
-	 * @return alr is the array containing all Identity objects belonging to the Guests in a particular reservation
+	 * @return alr which is the array containing all Identity objects belonging to the Guests in a particular reservation
 	 * @throws IOException which is a checked exception
 	 */
 	public static ArrayList<Reservation> readReservations(String fileName, ArrayList<Room> room, ArrayList<ArrayList<Guest>> guestList) throws IOException {

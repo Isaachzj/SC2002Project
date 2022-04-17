@@ -29,7 +29,7 @@ public static final String SEPARATOR = "~";
 	/**
 	 * This method is used to return an array of Identity objects and used in the deserialisation process
 	 * @param fileName is the file that contains the information for the Identity objects
-	 * @return alr is the array containing all Identity objects belonging to the Guests in a particular reservation
+	 * @return alr which is the array containing all Identity objects belonging to the Guests in a particular reservation
 	 * @throws IOException which is a checked exception
 	 */
 	public static ArrayList<Identity> readIDs(String fileName) throws IOException {

@@ -25,7 +25,7 @@ public class TextCreditCardInfo {
 	/**
 	 * This method is used to return an array of CreditCardInfo objects and used in the deserialisation process
 	 * @param fileName is the file that contains the information for the CreditCardInfo objects
-	 * @return alr is the array containing all CreditCardInfo objects belonging to the Guests in a particular reservation
+	 * @return alr which is the array containing all CreditCardInfo objects belonging to the Guests in a particular reservation
 	 * @throws IOException which is a checked exception
 	 */
 	// READING

@@ -19,7 +19,7 @@ public class ReservationListManipulator implements AddGivenObject, RemoveGivenOb
 	private Hotel hotel;
 	/**
 	 * This is the Reservation List Manipulator
-	 * @param hotel assigns hotel to ReservationListManipulator so that the ReservationListManipulator can manipulate the reservation list in this hotel
+	 * @param hotel assigns hotel object to ReservationListManipulator so that the ReservationListManipulator can manipulate the reservation list in this hotel
 	 */
 	public ReservationListManipulator(Hotel hotel) {
 		this.hotel = hotel;

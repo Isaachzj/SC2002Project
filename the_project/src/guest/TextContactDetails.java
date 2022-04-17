@@ -77,7 +77,7 @@ public class TextContactDetails {
 	   /**
 	    *  This method is used to save the serialize the objects into a text file
 	    *  @param fileName is the file that will contain the information for the ContactDetails objects
-	    *  @param al is the array of ContactDetails objects being passed in
+	    *  @param al which is the array of ContactDetails objects being passed in
 	    *  @throws IOException which is a checked exception
 	    */
 		public static void saveCDs(String fileName, List al) throws IOException { //List is the list of guest objects (Hotel guest list)

@@ -33,7 +33,7 @@ public class RoomRelated {
 	 * 3. Updates room features
 	 * 4. Check room status (availability)
 	 * 5. Room reports
-	 * @param hotel this is the Hotel object
+	 * @param hotel is the Hotel object
 	 * @throws ArrayException which is a custom exception that 
 	 * would be thrown with its message upon any error encountered
 	 */
