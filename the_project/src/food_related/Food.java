@@ -54,6 +54,17 @@ public class Food {
 		this.description = description;
 		this.prepDuration = duration;
 	}
+	/**
+	 * returns a copy of Food source object
+	 * @param source Food that is to copied
+	 */
+	
+	public Food(Food source) {
+		this.foodName = source.foodName;
+		this.price = source.price;
+		this.description = source.description;
+		this.prepDuration = source.prepDuration;
+	}
 	
 	/**
 	 * get methods
