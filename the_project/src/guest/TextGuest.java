@@ -35,9 +35,9 @@ public class TextGuest {
 	 * @returns returns the array of Guest objects in a particular reservation
 	 * @throws IOException which is a checked exception
 	 */
-	public static ArrayList<Guest> readGuests(String filename, ArrayList<Identity> ID, ArrayList<CreditCardInfo> CCD, ArrayList<ContactDetails> CD) throws IOException {
+	public static ArrayList<Guest> readGuests(String fileName, ArrayList<Identity> ID, ArrayList<CreditCardInfo> CCD, ArrayList<ContactDetails> CD) throws IOException {
 		// read String from text file
-		ArrayList stringArray = (ArrayList)read(filename);
+		ArrayList stringArray = (ArrayList)read(fileName);
 		ArrayList alr = new ArrayList() ;// to store Guests data
 	
 	    for (int i = 0 ; i < stringArray.size() ; i++) {
@@ -60,7 +60,7 @@ public class TextGuest {
 	
 	  /** 
 	   * Read the contents of the given file. 
-	   * @param fileName is the file that contains the information for the Guest object
+	   * @param fileName is the file that contains the information for the Guest objects
 	   * @return data is the data from the text file in an ArrayList
 	   * @throws IOException which is a checked exception
 	   * */
@@ -81,10 +81,11 @@ public class TextGuest {
 	  // SAVING
 	   /**
 	    *  This method is used to save the serialize the objects into a text file
-	    *  @param fileName is the file that will contain the information for the Guest object
+	    *  @param fileName is the file that will contain the information for the Guest objects
 	    *  @param al is the array of Guest objects being passed in
+	    *  @throws IOException which is a checked exception
 	    */
-		public static void saveGuests(String guestFilename, List al) throws IOException { //List is the list of guest objects (Hotel guest list)
+		public static void saveGuests(String fileName, List al) throws IOException { //List is the list of guest objects (Hotel guest list)
 			List alw = new ArrayList() ;// to store Guest data
 		
 		    for (int i = 0 ; i < al.size() ; i++) {
@@ -99,13 +100,14 @@ public class TextGuest {
 					//save identity, creditCardInfo, ContactDetails too			
 						alw.add(st.toString()) ;
 					}
-					write(guestFilename,alw);
+					write(fileName,alw);
 			}
 		
 		  /** 
 		   * Write fixed content to the given file. 
 		   * @param data is the list containing the Guest objects data in String format
-		   * @param fileName is the file that will contain the information for the Guest object
+		   * @param fileName is the file that will contain the information for the Guest objects
+		   * @throws IOException which is a checked exception
 		   * */
 		  public static void write(String fileName, List data) throws IOException  {
 		    PrintWriter out = new PrintWriter(new FileWriter(fileName));
