@@ -95,7 +95,7 @@ public class OrderManipulator implements AddGivenObject{
 		 * Add new food entry and quantity if not ordered before
 		 */
 		else {
-			order.getArray().add(new Food(food));
+			order.getArray().add(new Food(food)); //@ wen lu can you see this?
 			order.getQuantity().add(quantity);
 			System.out.println("Order Added successfully!");
 		}
