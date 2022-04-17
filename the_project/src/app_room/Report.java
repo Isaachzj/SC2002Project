@@ -24,6 +24,7 @@ public class Report {
 	/**
 	 * this method allows the printing of occupancy report (option 1) or the printing of
 	 * status report (option 2)
+	 * @param this is the Hotel object
 	 */
 	public static void info(Hotel hotel) {
 		Scanner sc = new Scanner(System.in);

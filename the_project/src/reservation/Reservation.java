@@ -116,21 +116,25 @@ public class Reservation {
 	/**
 	 * setCheckInDateTime() sets the checkInDateTime attribute of
 	 * the reservation object that called it
+	 * @param this is the checkin data and time
 	 */
 	public void setCheckInDateTime(LocalDateTime checkInDateTime) {this.checkInDateTime = checkInDateTime;}
 	/**
 	 * setCheckOutDateTime sets the checkOutDateTime attribute of
 	 * the reservation object that called it
+	 * @param this is the checkout date and time
 	 */
 	public void setCheckOutDateTime(LocalDateTime checkOutDateTime) {this.checkOutDateTime = checkOutDateTime;}
 	/**
 	 * setNumOfWeekday() sets the numOfWeekday attribute of
 	 * the reservation object that called it
+	 * @param this is the number of weekday
 	 */
 	public void setNumOfWeekday(long numOfWeekday) {this.numOfWeekday = numOfWeekday;}
 	/**
 	 * setNumOfWeekend() sets the numOfWeekend attribute of
 	 * the reservation object that called it
+	 * @param this is the number of weekend
 	 */
 	public void setNumOfWeekend(long numOfWeekend) {this.numOfWeekend = numOfWeekend;}
 	
@@ -159,6 +163,7 @@ public class Reservation {
 	/**
 	 * calcGrandTotal() calculates and returns the finalized bill for the
 	 * reservation object that called it. 
+	 * @return this returnsthe calculation of grand total bill incurred by guest
 	 */
 	public double calcGrandTotal() {
 		return GrandTotalTabulator.grandTotal(this);
